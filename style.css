@@ -455,3 +455,14 @@ footer{
   max-width: 420px;
   margin-top: 0.75rem;
 }
+/* FORCE HERO LAYOUT: text left, image right */
+.hero-inner{
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: start;
+  gap: 1.5rem;
+}
+
+.hero-media{
+  align-items: flex-end;
+}
