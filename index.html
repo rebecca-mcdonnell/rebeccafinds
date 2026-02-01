@@ -1,425 +1,259 @@
-/* =========================
-   rebeccafinds.ca OVERHAUL
-   Cream + blush base
-   Gold borders (no page perimeter)
-   Strong green accents
-   Tighter spacing, richer hierarchy
-   ========================= */
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>rebeccafinds.ca — Shoreline Jewelry</title>
+  <meta name="description" content="One-of-one shoreline jewelry made from beach-found stone and sea glass in Niagara, Canada." />
 
-:root{
-  --bg: #fbf6f2;
-  --blush: #f3e2e8;
-  --panel: #ffffff;
-  --panel-soft:#f7eeea;
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600,800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
 
-  --text:#2f2a27;
-  --muted:#7a6f68;
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Go to top">rebeccafinds.ca</a>
 
-  --gold:#c9a24a;
-  --gold-strong:#b8953d;
-  --gold-soft:#efe3c4;
+      <nav class="nav">
+        <a href="#collections">Collections</a>
+        <a href="#custom">Custom</a>
+        <a href="#how">How it works</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  --green:#2b6b4f;
-  --green-strong:#1f563f;
-  --green-soft:#8fb6a4;
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <div class="hero-tags">
+            <span class="tag">Niagara shoreline</span>
+            <span class="tag">One-of-one</span>
+            <span class="tag">Beach-found stone</span>
+          </div>
 
-  --r-lg: 22px;
-  --r-md: 16px;
-}
+          <h1>Shoreline finds, turned into keepsakes.</h1>
+          <p class="lede">
+            Cream + blush softness, gold framing, and deep green accents — a little vintage jewelry-box energy,
+            made from real pieces of the lake.
+          </p>
 
-/* Reset */
-*{ box-sizing:border-box; }
-html{ background: var(--bg); }
-body{
-  margin:0;
-  font-family:'Inter', system-ui, sans-serif;
-  color:var(--text);
-  line-height:1.65;
-  background:
-    radial-gradient(1100px 600px at 18% 0%, rgba(243,226,232,0.95) 0%, rgba(243,226,232,0) 55%),
-    radial-gradient(900px 500px at 90% 18%, rgba(201,162,74,0.14) 0%, rgba(201,162,74,0) 60%),
-    linear-gradient(to bottom, rgba(255,255,255,0.45), rgba(255,255,255,0)),
-    var(--bg);
-}
+          <div class="hero-actions">
+            <a class="button primary" href="#collections">Shop collections</a>
+            <a class="button ghost" href="#custom">Custom piece inquiry</a>
+          </div>
 
-/* Subtle texture = “not boring” */
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  background:
-    radial-gradient(2px 2px at 12px 18px, rgba(43,107,79,0.06) 0%, rgba(43,107,79,0) 60%),
-    radial-gradient(2px 2px at 42px 56px, rgba(201,162,74,0.06) 0%, rgba(201,162,74,0) 60%);
-  background-size: 72px 72px;
-  opacity: 0.55;
-}
+          <div class="hero-meta">
+            <div class="meta-item">
+              <div class="meta-kicker">Materials</div>
+              <div class="meta-value">Stone • Sea glass • Shell</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-kicker">Style</div>
+              <div class="meta-value">Minimalist • Elegant • Coastal</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-kicker">Made in</div>
+              <div class="meta-value">Ontario, Canada</div>
+            </div>
+          </div>
+        </div>
 
-/* Layout (tighter) */
-.wrap{
-  max-width:1100px;
-  margin:0 auto;
-  padding: 3.1rem 1.5rem;
-}
+        <div class="hero-card card">
+          <div class="card-topline">Featured right now</div>
+          <h3>Valentine’s Blush</h3>
+          <p>
+            Soft pink stones + warm gold hardware. Limited run, small-batch.
+          </p>
+          <a class="button small" href="#collections">View pieces</a>
+          <div class="mini-divider"></div>
+          <p class="muted">
+            Don’t see your perfect piece? Custom inquiries are open.
+          </p>
+          <a class="button small ghost" href="#custom">Start a custom</a>
+        </div>
+      </div>
+    </section>
 
-/* Typography */
-h1,h2,h3{
-  font-family:'Fraunces', serif;
-  font-weight:650;
-  letter-spacing:.2px;
-  margin:0;
-}
-h1{ font-size: 3.15rem; line-height:1.05; }
-h2{
-  font-size: 2.05rem;
-  padding-bottom: .35rem;
-  border-bottom: 4px solid var(--green);
-}
-h3{ font-size: 1.35rem; }
-p{ margin: .65rem 0; max-width: 760px; }
+    <!-- COLLECTIONS -->
+    <section id="collections" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Collections</h2>
+          <p class="muted">Three simple lanes so it’s easy to shop. Swap names any time.</p>
+        </div>
 
-.lede{
-  font-size: 1.05rem;
-  color: var(--text);
-  max-width: 720px;
-}
-.muted{ color: var(--muted); }
-.smallnote{ font-size: .9rem; }
+        <div class="collections-grid">
+          <article class="collection-tile">
+            <div class="tile-accent"></div>
+            <h3>Blush & Gold</h3>
+            <p class="muted">Romantic, soft pink stones, warm gold finishes.</p>
+            <div class="tile-actions">
+              <a class="button small" href="#contact">Shop this collection</a>
+              <a class="textlink" href="#custom">Custom in this style</a>
+            </div>
+          </article>
 
-/* Links */
-a{ color: var(--green-strong); text-underline-offset: 3px; }
-a:hover{ color: var(--green); }
+          <article class="collection-tile">
+            <div class="tile-accent"></div>
+            <h3>Sea Glass</h3>
+            <p class="muted">Lake-tumbled glass in clean, coastal tones.</p>
+            <div class="tile-actions">
+              <a class="button small" href="#contact">Shop this collection</a>
+              <a class="textlink" href="#custom">Custom in this style</a>
+            </div>
+          </article>
 
-/* Header */
-.site-header{
-  position:sticky;
-  top:0;
-  z-index:10;
-  background: rgba(251,246,242,0.93);
-  backdrop-filter: blur(10px);
-  border-bottom: 4px solid var(--gold);
-}
-.header-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding: 1.05rem 1.5rem;
-}
-.brand{
-  font-family:'Fraunces', serif;
-  font-size:1.35rem;
-  text-decoration:none;
-  color:var(--text);
-  padding: .35rem .85rem;
-  border-radius: 999px;
-  border: 2px solid var(--gold);
-  background: rgba(255,255,255,0.75);
-}
-.nav a{
-  margin-left: 1.15rem;
-  text-decoration:none;
-  color: var(--text);
-  font-weight:700;
-  position:relative;
-  padding-bottom: 4px;
-}
-.nav a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-6px;
-  width:0;
-  height:3px;
-  background: linear-gradient(to right, var(--green), var(--gold));
-  transition: width .22s ease;
-}
-.nav a:hover{ color: var(--green); }
-.nav a:hover::after{ width:100%; }
+          <article class="collection-tile">
+            <div class="tile-accent"></div>
+            <h3>Natural Greens</h3>
+            <p class="muted">Earthy, deep greens with elegant contrast.</p>
+            <div class="tile-actions">
+              <a class="button small" href="#contact">Shop this collection</a>
+              <a class="textlink" href="#custom">Custom in this style</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-/* Hero */
-.hero{
-  padding: 1.8rem 0 0;
-}
-.hero-inner{
-  display:grid;
-  grid-template-columns: 1.35fr 0.9fr;
-  gap: 1.2rem;
-  align-items: start;
-}
-.hero-tags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:.5rem;
-  margin-bottom: .9rem;
-}
-.tag{
-  display:inline-flex;
-  align-items:center;
-  gap:.45rem;
-  padding: .22rem .7rem;
-  border-radius: 999px;
-  border: 2px solid rgba(201,162,74,0.55);
-  background: rgba(255,255,255,0.75);
-  color: var(--green-strong);
-  font-weight: 750;
-  font-size: .92rem;
-}
-.tag::before{
-  content:"";
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background: var(--gold);
-}
-.hero-actions{
-  display:flex;
-  gap:.65rem;
-  margin-top: 1.05rem;
-  flex-wrap: wrap;
-}
-.hero-meta{
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: .85rem;
-  margin-top: 1.25rem;
-}
-.meta-item{
-  border: 2px solid rgba(201,162,74,0.35);
-  background: rgba(255,255,255,0.6);
-  border-radius: 14px;
-  padding: .85rem .9rem;
-}
-.meta-kicker{
-  font-size:.82rem;
-  font-weight:800;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  color: var(--green);
-}
-.meta-value{ font-weight:650; }
+    <!-- CUSTOM -->
+    <section id="custom" class="section alt">
+      <div class="wrap two-col">
+        <div>
+          <h2>Custom piece inquiry</h2>
+          <p class="lede">
+            Pick a stone from the “available rocks” gallery (coming next), choose a vibe, and I’ll design it with you.
+          </p>
 
-/* Sections */
-.section{
-  margin-top: 2.1rem;
-}
-.section.alt .wrap{
-  padding-top: 2.6rem;
-}
+          <ul class="bullets">
+            <li><strong>Choose:</strong> pendant, earrings, bracelet, or keychain</li>
+            <li><strong>Metal:</strong> gold or silver tone</li>
+            <li><strong>Style:</strong> delicate, chunky, minimal, or vintage</li>
+            <li><strong>Budget:</strong> I’ll suggest options that fit</li>
+          </ul>
 
-.section .wrap > .section-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
+          <div class="inline-actions">
+            <a class="button primary" href="#contact">Start inquiry</a>
+            <a class="button ghost" href="#how">See the process</a>
+          </div>
+        </div>
 
-/* Cards */
-.card{
-  background: var(--panel);
-  border-radius: var(--r-md);
-  padding: 1.75rem;
-  border: 3px solid var(--gold);
-  box-shadow: 0 18px 45px rgba(0,0,0,0.08);
-  position:relative;
-  overflow:hidden;
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-}
-.card::before{
-  content:"";
-  position:absolute;
-  top:0; left:0;
-  height: 10px;
-  width:100%;
-  background: linear-gradient(to right, var(--green), var(--gold), var(--green));
-}
-.card:hover{
-  transform: translateY(-3px);
-  box-shadow: 0 22px 55px rgba(0,0,0,0.10);
-  border-color: var(--gold-strong);
-}
-.card-topline{
-  font-size:.85rem;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  color: var(--green);
-  margin-bottom: .55rem;
-}
-.mini-divider{
-  height: 1px;
-  background: rgba(201,162,74,0.35);
-  margin: 1rem 0;
-}
+        <div class="card">
+          <div class="card-topline">What to send</div>
+          <ol class="steps">
+            <li>Which piece you want (pendant/earrings/etc.)</li>
+            <li>Your preferred metal (gold/silver)</li>
+            <li>A screenshot of the stone (when the gallery is up)</li>
+            <li>Your timeline (gift date or “no rush”)</li>
+          </ol>
+          <p class="muted">I’ll reply with a quick concept + options.</p>
+        </div>
+      </div>
+    </section>
 
-/* Buttons */
-.button{
-  display:inline-block;
-  padding: .75rem 1.45rem;
-  border-radius: 999px;
-  text-decoration:none;
-  font-weight:800;
-  letter-spacing:.3px;
-  border: 3px solid transparent;
-  position:relative;
-  overflow:hidden;
-  transition: transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
-}
-.button.small{ padding: .6rem 1.15rem; font-weight:800; }
-.button.primary{
-  color:#fff;
-  background: var(--green);
-  border-color: var(--green);
-}
-.button.primary:hover{
-  background: var(--green-strong);
-  border-color: var(--green-strong);
-  transform: translateY(-2px);
-}
-.button.ghost{
-  color: var(--green);
-  background: rgba(255,255,255,0.75);
-  border-color: rgba(43,107,79,0.35);
-}
-.button.ghost:hover{
-  border-color: var(--green);
-  transform: translateY(-2px);
-}
+    <!-- HOW IT WORKS -->
+    <section id="how" class="section">
+      <div class="wrap">
+        <h2>How it works</h2>
 
-/* Button shine */
-.button::after{
-  content:"";
-  position:absolute;
-  top:-60%;
-  left:-40%;
-  width:60%;
-  height:220%;
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.28) 45%, rgba(255,255,255,0) 100%);
-  transform: rotate(18deg);
-  transition: left .35s ease;
-}
-.button:hover::after{ left: 120%; }
+        <div class="how-grid">
+          <div class="how-card">
+            <div class="how-number">01</div>
+            <h3>Find</h3>
+            <p class="muted">Lake-worn stones & sea glass collected along the shoreline.</p>
+          </div>
 
-.textlink{
-  font-weight:800;
-  color: var(--green-strong);
-  text-decoration: underline;
-  text-decoration-color: rgba(43,107,79,0.35);
-  text-underline-offset: 3px;
-}
-.textlink:hover{ color: var(--green); text-decoration-color: rgba(43,107,79,0.75); }
+          <div class="how-card">
+            <div class="how-number">02</div>
+            <h3>Shape</h3>
+            <p class="muted">Cleaned, refined, and prepared for jewelry — preserving natural texture.</p>
+          </div>
 
-/* Collections: 3 across */
-.collections-grid{
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.1rem;
-}
-.collection-tile{
-  background: rgba(255,255,255,0.85);
-  border-radius: 18px;
-  border: 3px solid var(--gold);
-  padding: 1.35rem 1.3rem;
-  position:relative;
-  overflow:hidden;
-  box-shadow: 0 16px 36px rgba(0,0,0,0.07);
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-}
-.collection-tile:hover{
-  transform: translateY(-3px);
-  box-shadow: 0 22px 55px rgba(0,0,0,0.10);
-  border-color: var(--gold-strong);
-}
-.tile-accent{
-  position:absolute;
-  top:0; left:0;
-  height: 10px;
-  width:100%;
-  background: linear-gradient(to right, var(--gold), var(--green), var(--gold));
-}
-.tile-actions{
-  display:flex;
-  flex-direction:column;
-  gap:.55rem;
-  margin-top: .95rem;
-}
+          <div class="how-card">
+            <div class="how-number">03</div>
+            <h3>Set</h3>
+            <p class="muted">Paired with chain, findings, and finishes that feel elevated.</p>
+          </div>
 
-/* Two-col sections */
-.two-col{
-  display:grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 1.2rem;
-  align-items:start;
-}
+          <div class="how-card">
+            <div class="how-number">04</div>
+            <h3>Send</h3>
+            <p class="muted">Packaged carefully. Ready to gift or keep forever.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* Bullets & steps */
-.bullets{
-  margin: .9rem 0 0;
-  padding-left: 1.1rem;
-}
-.bullets li{
-  margin: .45rem 0;
-}
-.steps{
-  margin: .75rem 0 0;
-  padding-left: 1.15rem;
-}
-.steps li{ margin: .5rem 0; }
+    <!-- ABOUT -->
+    <section id="about" class="section alt">
+      <div class="wrap two-col">
+        <div>
+          <h2>About</h2>
+          <p class="lede">
+            I’m Rebecca — I collect shoreline stones and sea glass around Niagara and turn the best finds into wearable pieces.
+          </p>
+          <p class="muted">
+            This is slow, intentional work: one-of-one pieces, simple design, and materials that already have a story.
+          </p>
+        </div>
 
-/* How grid */
-.how-grid{
-  display:grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 1.05rem;
-}
-.how-card{
-  background: rgba(255,255,255,0.75);
-  border: 2px solid rgba(201,162,74,0.35);
-  border-radius: 16px;
-  padding: 1.05rem 1rem;
-  position:relative;
-}
-.how-number{
-  font-weight:900;
-  color: var(--green);
-  letter-spacing:.08em;
-}
+        <div class="card">
+          <div class="card-topline">Brand vibe</div>
+          <p><strong>Cream + blush</strong> base, <strong>gold framing</strong>, and <strong>green accents</strong> — elegant and calm, not loud.</p>
+          <div class="mini-divider"></div>
+          <p class="muted">If you want the site to feel less “minimal,” we add micro-details and stronger hierarchy (this overhaul does that).</p>
+        </div>
+      </div>
+    </section>
 
-/* Contact */
-.contact-card{ padding: 1.6rem; }
-.contact-grid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.2rem;
-}
-.social-links{
-  display:flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <p class="muted">Use this as your contact section for now (we can wire it to email later).</p>
 
-/* Footer */
-footer{
-  border-top: 4px solid var(--gold);
-  background: rgba(247,238,234,0.65);
-}
-.footer-inner{
-  display:flex;
-  justify-content:space-between;
-  gap:1rem;
-  align-items:center;
-  padding: 2rem 1.5rem;
-}
+        <div class="card contact-card">
+          <div class="contact-grid">
+            <div>
+              <h3>Quick message</h3>
+              <p class="muted">Tell me what you want made, metal preference, and timeline.</p>
+              <a class="button primary" href="mailto:hello@rebeccafinds.ca">Email me</a>
+              <p class="muted smallnote">If you don’t have email set up yet, we’ll swap this later.</p>
+            </div>
 
-/* Responsive */
-@media (max-width: 980px){
-  .hero-inner, .two-col{ grid-template-columns: 1fr; }
-  .how-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
-  .hero-meta{ grid-template-columns: 1fr; }
-}
-@media (max-width: 780px){
-  .collections-grid{ grid-template-columns: 1fr; }
-  .contact-grid{ grid-template-columns: 1fr; }
-  h1{ font-size: 2.55rem; }
-}
+            <div>
+              <h3>Social</h3>
+              <p class="muted">Link your Instagram here when you’re ready.</p>
+              <div class="social-links">
+                <a class="textlink" href="#" aria-label="Instagram link placeholder">Instagram (add link)</a>
+                <a class="textlink" href="#" aria-label="TikTok link placeholder">TikTok (add link)</a>
+              </div>
+              <div class="mini-divider"></div>
+              <p class="muted">Next we’ll add: “Available rocks” gallery.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div>© <span id="year"></span> rebeccafinds.ca — Niagara, Canada</div>
+      <div class="muted">One-of-one shoreline jewelry.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
