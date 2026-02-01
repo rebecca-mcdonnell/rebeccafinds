@@ -165,10 +165,9 @@ p{ margin: 10px 0; }
 }
 .hero-img img{
   width:100%;
-  height:auto;
   display:block;
-  /* If your hero image looks too huge, uncomment the next line: */
-  /* max-height: 420px; object-fit: cover; */
+  height: 420px;          /* keeps hero tidy */
+  object-fit: cover;      /* crop nicely */
 }
 
 .section{ padding: 46px 0; }
@@ -194,8 +193,10 @@ p{ margin: 10px 0; }
   display:grid;
   gap:14px;
 }
+
+/* ✅ 3 across like you asked */
 .products{
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .card{
@@ -394,4 +395,5 @@ p{ margin: 10px 0; }
   .modal-body{ grid-template-columns: 1fr; }
   .modal-img{ border-right:0; border-bottom:1px solid var(--line); }
   .modal-img img{ min-height: 320px; }
+  .hero-img img{ height: 360px; }
 }
