@@ -1,15 +1,16 @@
 /* =========================
-   rebeccafinds.ca
-   Cream + Blush base
-   Gold borders + strong green accents
-   Tighter spacing + 3-up collections
+   rebeccafinds.ca OVERHAUL
+   Cream + blush base
+   Gold borders (no page perimeter)
+   Strong green accents
+   Tighter spacing, richer hierarchy
    ========================= */
 
 :root{
-  --bg: #fbf6f2;               /* warm cream */
-  --blush: #f3e2e8;            /* blush wash */
+  --bg: #fbf6f2;
+  --blush: #f3e2e8;
   --panel: #ffffff;
-  --panel-soft:#f7eeea;        /* blush-cream */
+  --panel-soft:#f7eeea;
 
   --text:#2f2a27;
   --muted:#7a6f68;
@@ -22,88 +23,88 @@
   --green-strong:#1f563f;
   --green-soft:#8fb6a4;
 
-  --r-lg: 20px;
+  --r-lg: 22px;
   --r-md: 16px;
-
-  --b-section: 3px;            /* border strength */
-  --b-card: 3px;
-  --b-img: 3px;
 }
 
-/* ---------- Reset ---------- */
+/* Reset */
 *{ box-sizing:border-box; }
 html{ background: var(--bg); }
-
 body{
   margin:0;
   font-family:'Inter', system-ui, sans-serif;
   color:var(--text);
   line-height:1.65;
   background:
-    radial-gradient(1200px 600px at 18% 0%, rgba(243,226,232,0.95) 0%, rgba(243,226,232,0) 55%),
-    radial-gradient(900px 500px at 92% 16%, rgba(239,227,196,0.55) 0%, rgba(239,227,196,0) 60%),
+    radial-gradient(1100px 600px at 18% 0%, rgba(243,226,232,0.95) 0%, rgba(243,226,232,0) 55%),
+    radial-gradient(900px 500px at 90% 18%, rgba(201,162,74,0.14) 0%, rgba(201,162,74,0) 60%),
+    linear-gradient(to bottom, rgba(255,255,255,0.45), rgba(255,255,255,0)),
     var(--bg);
 }
 
-/* ---------- Layout (tighter) ---------- */
+/* Subtle texture = “not boring” */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(2px 2px at 12px 18px, rgba(43,107,79,0.06) 0%, rgba(43,107,79,0) 60%),
+    radial-gradient(2px 2px at 42px 56px, rgba(201,162,74,0.06) 0%, rgba(201,162,74,0) 60%);
+  background-size: 72px 72px;
+  opacity: 0.55;
+}
+
+/* Layout (tighter) */
 .wrap{
   max-width:1100px;
   margin:0 auto;
-  padding: 3.25rem 1.5rem;
+  padding: 3.1rem 1.5rem;
 }
 
-/* ---------- Typography ---------- */
+/* Typography */
 h1,h2,h3{
   font-family:'Fraunces', serif;
   font-weight:650;
   letter-spacing:.2px;
+  margin:0;
 }
-
-h1{ font-size: 3rem; margin:0 0 .55rem; }
-
+h1{ font-size: 3.15rem; line-height:1.05; }
 h2{
-  font-size: 2rem;
-  margin: 0 0 .9rem;
+  font-size: 2.05rem;
   padding-bottom: .35rem;
-  border-bottom: 4px solid var(--green); /* more green */
+  border-bottom: 4px solid var(--green);
 }
+h3{ font-size: 1.35rem; }
+p{ margin: .65rem 0; max-width: 760px; }
 
-h3{
-  margin-top: 0;
-  border-left: 6px solid var(--green);  /* more green */
-  padding-left: .9rem;
+.lede{
+  font-size: 1.05rem;
+  color: var(--text);
+  max-width: 720px;
 }
+.muted{ color: var(--muted); }
+.smallnote{ font-size: .9rem; }
 
-p{ max-width: 760px; margin: .65rem 0; }
+/* Links */
+a{ color: var(--green-strong); text-underline-offset: 3px; }
+a:hover{ color: var(--green); }
 
-/* ---------- Links (more green) ---------- */
-a{
-  color: var(--green-strong);
-  text-decoration-color: rgba(43,107,79,0.35);
-  text-underline-offset: 3px;
-}
-a:hover{
-  color: var(--green);
-  text-decoration-color: rgba(43,107,79,0.75);
-}
-
-/* ---------- Header ---------- */
+/* Header */
 .site-header{
   position:sticky;
   top:0;
   z-index:10;
   background: rgba(251,246,242,0.93);
   backdrop-filter: blur(10px);
-  border-bottom: 4px solid var(--gold); /* more gold */
+  border-bottom: 4px solid var(--gold);
 }
-
 .header-inner{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding: 1.05rem 1.5rem;     /* tighter */
+  padding: 1.05rem 1.5rem;
 }
-
 .brand{
   font-family:'Fraunces', serif;
   font-size:1.35rem;
@@ -112,84 +113,118 @@ a:hover{
   padding: .35rem .85rem;
   border-radius: 999px;
   border: 2px solid var(--gold);
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.75);
 }
-
-/* ---------- Nav (more green) ---------- */
-nav a{
-  margin-left: 1.25rem;
+.nav a{
+  margin-left: 1.15rem;
   text-decoration:none;
-  color:var(--text);
-  font-weight:600;
+  color: var(--text);
+  font-weight:700;
   position:relative;
   padding-bottom: 4px;
 }
-
-nav a::after{
+.nav a::after{
   content:"";
   position:absolute;
   left:0;
   bottom:-6px;
   width:0;
-  height:3px; /* stronger */
+  height:3px;
   background: linear-gradient(to right, var(--green), var(--gold));
   transition: width .22s ease;
 }
+.nav a:hover{ color: var(--green); }
+.nav a:hover::after{ width:100%; }
 
-nav a:hover{
+/* Hero */
+.hero{
+  padding: 1.8rem 0 0;
+}
+.hero-inner{
+  display:grid;
+  grid-template-columns: 1.35fr 0.9fr;
+  gap: 1.2rem;
+  align-items: start;
+}
+.hero-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+  margin-bottom: .9rem;
+}
+.tag{
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  padding: .22rem .7rem;
+  border-radius: 999px;
+  border: 2px solid rgba(201,162,74,0.55);
+  background: rgba(255,255,255,0.75);
+  color: var(--green-strong);
+  font-weight: 750;
+  font-size: .92rem;
+}
+.tag::before{
+  content:"";
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background: var(--gold);
+}
+.hero-actions{
+  display:flex;
+  gap:.65rem;
+  margin-top: 1.05rem;
+  flex-wrap: wrap;
+}
+.hero-meta{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .85rem;
+  margin-top: 1.25rem;
+}
+.meta-item{
+  border: 2px solid rgba(201,162,74,0.35);
+  background: rgba(255,255,255,0.6);
+  border-radius: 14px;
+  padding: .85rem .9rem;
+}
+.meta-kicker{
+  font-size:.82rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
   color: var(--green);
 }
-nav a:hover::after{
-  width:100%;
+.meta-value{ font-weight:650; }
+
+/* Sections */
+.section{
+  margin-top: 2.1rem;
+}
+.section.alt .wrap{
+  padding-top: 2.6rem;
 }
 
-/* ---------- Sections (more gold borders, tighter) ---------- */
-section{
-  margin: 2.25rem 0;           /* tighter */
-  padding: 1.6rem 1.4rem;      /* tighter */
-  border-radius: var(--r-lg);
-  background: rgba(255,255,255,0.6);
-  border: var(--b-section) solid var(--gold-strong);
-  box-shadow: 0 14px 34px rgba(0,0,0,0.06);
-  position: relative;
+.section .wrap > .section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-/* inner frame (gold) */
-section::before{
-  content:"";
-  position:absolute;
-  inset: 10px;
-  border-radius: calc(var(--r-lg) - 8px);
-  border: 2px solid rgba(201,162,74,0.35);
-  pointer-events:none;
-}
-
-/* green corner tick (subtle but visible) */
-section::after{
-  content:"";
-  position:absolute;
-  top: 12px;
-  right: 12px;
-  width: 14px;
-  height: 14px;
-  border-right: 4px solid var(--green);
-  border-top: 4px solid var(--green);
-  border-top-right-radius: 6px;
-  pointer-events:none;
-}
-
-/* ---------- Cards (more gold + green) ---------- */
+/* Cards */
 .card{
   background: var(--panel);
   border-radius: var(--r-md);
-  padding: 1.85rem;            /* tighter */
-  border: var(--b-card) solid var(--gold);
+  padding: 1.75rem;
+  border: 3px solid var(--gold);
   box-shadow: 0 18px 45px rgba(0,0,0,0.08);
   position:relative;
   overflow:hidden;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
-
-/* green accent bar */
 .card::before{
   content:"";
   position:absolute;
@@ -198,211 +233,60 @@ section::after{
   width:100%;
   background: linear-gradient(to right, var(--green), var(--gold), var(--green));
 }
-
-/* ---------- Images (gold frame) ---------- */
-img{
-  max-width:100%;
-  border-radius: 14px;
-  background:#fff;
-  padding: 6px;
-  border: var(--b-img) solid var(--gold);
-  box-shadow:
-    inset 0 0 0 2px rgba(239,227,196,0.75),
-    0 14px 32px rgba(0,0,0,0.06);
-}
-
-/* ---------- Buttons (gold forward, green hover) ---------- */
-.button{
-  display:inline-block;
-  margin-top: 1.25rem;
-  padding: .75rem 1.5rem;
-  border-radius: 999px;
-  text-decoration:none;
-  font-weight:700;
-  letter-spacing:.35px;
-  color:#fff;
-  background: linear-gradient(to bottom, var(--gold), var(--gold-strong));
-  border: 3px solid var(--gold-strong);
-  transition: transform .18s ease, background .18s ease, border-color .18s ease;
-}
-.button:hover{
-  background: var(--green);
-  border-color: var(--green);
-  transform: translateY(-2px);
-}
-
-/* ==========================================================
-   COLLECTIONS: force 3-in-a-row
-   Works with common class names (no HTML changes if you have
-   any of these containers)
-   ========================================================== */
-
-/* Common wrappers */
-.collections-grid,
-.collection-grid,
-.cards-grid,
-.grid,
-.card-grid,
-#collections .grid,
-#collections .cards,
-#collections .collections-grid{
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.1rem;
-  align-items: stretch;
-}
-
-/* Make each collection tile look like a luxe card */
-.collections-grid > *,
-.collection-grid > *,
-.cards-grid > *,
-.grid > *,
-.card-grid > *,
-#collections .grid > *,
-#collections .cards > *,
-#collections .collections-grid > *{
-  border: 3px solid var(--gold);
-  border-radius: 18px;
-  background: var(--panel);
-  box-shadow: 0 16px 36px rgba(0,0,0,0.07);
-  padding: 1.4rem;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Green accent stripe on each tile */
-.collections-grid > *::before,
-.collection-grid > *::before,
-.cards-grid > *::before,
-.grid > *::before,
-.card-grid > *::before,
-#collections .grid > *::before,
-#collections .cards > *::before,
-#collections .collections-grid > *::before{
-  content:"";
-  position:absolute;
-  top:0; left:0;
-  height: 8px;
-  width: 100%;
-  background: linear-gradient(to right, var(--green), var(--gold), var(--green));
-}
-
-/* Responsive: 2 columns tablet, 1 column phone */
-@media (max-width: 900px){
-  .collections-grid,
-  .collection-grid,
-  .cards-grid,
-  .grid,
-  .card-grid,
-  #collections .grid,
-  #collections .cards,
-  #collections .collections-grid{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 560px){
-  .collections-grid,
-  .collection-grid,
-  .cards-grid,
-  .grid,
-  .card-grid,
-  #collections .grid,
-  #collections .cards,
-  #collections .collections-grid{
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ---------- Footer ---------- */
-footer{
-  text-align:center;
-  padding: 2.75rem 1.5rem;
-  background: rgba(247,238,234,0.65);
-  border-top: 4px solid var(--gold);
-  color: var(--muted);
-}
-/* =========================
-   LUXURY DETAIL LAYER
-   Adds ornament + texture + polish
-   Paste at END of file
-   ========================= */
-
-/* Soft texture overlay (very subtle) */
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  background:
-    radial-gradient(900px 500px at 20% 0%, rgba(243,226,232,0.35) 0%, rgba(243,226,232,0) 55%),
-    radial-gradient(900px 500px at 85% 15%, rgba(201,162,74,0.10) 0%, rgba(201,162,74,0) 60%),
-    linear-gradient(to bottom, rgba(255,255,255,0.35), rgba(255,255,255,0));
-  mix-blend-mode: multiply;
-  opacity: 0.75;
-}
-
-/* Section heading ornament */
-h2{
-  position:relative;
-}
-
-h2::after{
-  content:"";
-  display:block;
-  height:3px;
-  width: 92px;
-  margin-top: 10px;
-  background: linear-gradient(to right, var(--green), var(--gold));
-  border-radius: 999px;
-}
-
-h2::before{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-12px;
-  width:10px;
-  height:10px;
-  border-radius:50%;
-  background: var(--gold);
-  box-shadow: 0 0 0 4px rgba(43,107,79,0.12);
-}
-
-/* Add delicate gold divider between paragraphs in cards (optional elegance) */
-.card p + p{
-  border-top: 1px solid rgba(201,162,74,0.25);
-  padding-top: 0.75rem;
-  margin-top: 0.75rem;
-}
-
-/* Card hover = boutique polish */
-.card,
-.collections-grid > *,
-.collection-grid > *,
-.cards-grid > *,
-.grid > *,
-.card-grid > *{
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-}
-
-.card:hover,
-.collections-grid > *:hover,
-.collection-grid > *:hover,
-.cards-grid > *:hover,
-.grid > *:hover,
-.card-grid > *:hover{
+.card:hover{
   transform: translateY(-3px);
   box-shadow: 0 22px 55px rgba(0,0,0,0.10);
   border-color: var(--gold-strong);
 }
-
-/* Buttons: add a subtle shine */
-.button{
-  position:relative;
-  overflow:hidden;
+.card-topline{
+  font-size:.85rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color: var(--green);
+  margin-bottom: .55rem;
+}
+.mini-divider{
+  height: 1px;
+  background: rgba(201,162,74,0.35);
+  margin: 1rem 0;
 }
 
+/* Buttons */
+.button{
+  display:inline-block;
+  padding: .75rem 1.45rem;
+  border-radius: 999px;
+  text-decoration:none;
+  font-weight:800;
+  letter-spacing:.3px;
+  border: 3px solid transparent;
+  position:relative;
+  overflow:hidden;
+  transition: transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
+}
+.button.small{ padding: .6rem 1.15rem; font-weight:800; }
+.button.primary{
+  color:#fff;
+  background: var(--green);
+  border-color: var(--green);
+}
+.button.primary:hover{
+  background: var(--green-strong);
+  border-color: var(--green-strong);
+  transform: translateY(-2px);
+}
+.button.ghost{
+  color: var(--green);
+  background: rgba(255,255,255,0.75);
+  border-color: rgba(43,107,79,0.35);
+}
+.button.ghost:hover{
+  border-color: var(--green);
+  transform: translateY(-2px);
+}
+
+/* Button shine */
 .button::after{
   content:"";
   position:absolute;
@@ -410,59 +294,132 @@ h2::before{
   left:-40%;
   width:60%;
   height:220%;
-  background: linear-gradient(
-    to right,
-    rgba(255,255,255,0) 0%,
-    rgba(255,255,255,0.35) 45%,
-    rgba(255,255,255,0) 100%
-  );
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.28) 45%, rgba(255,255,255,0) 100%);
   transform: rotate(18deg);
   transition: left .35s ease;
 }
+.button:hover::after{ left: 120%; }
 
-.button:hover::after{
-  left: 120%;
-}
-
-/* “Luxury tags” (use in HTML as <span class="tag">Niagara</span>) */
-.tag{
-  display:inline-flex;
-  align-items:center;
-  gap:.45rem;
-  padding: .25rem .75rem;
-  border-radius: 999px;
-  border: 2px solid rgba(201,162,74,0.55);
-  background: rgba(255,255,255,0.7);
+.textlink{
+  font-weight:800;
   color: var(--green-strong);
-  font-weight: 650;
-  font-size: .9rem;
+  text-decoration: underline;
+  text-decoration-color: rgba(43,107,79,0.35);
+  text-underline-offset: 3px;
+}
+.textlink:hover{ color: var(--green); text-decoration-color: rgba(43,107,79,0.75); }
+
+/* Collections: 3 across */
+.collections-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+.collection-tile{
+  background: rgba(255,255,255,0.85);
+  border-radius: 18px;
+  border: 3px solid var(--gold);
+  padding: 1.35rem 1.3rem;
+  position:relative;
+  overflow:hidden;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.07);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.collection-tile:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 22px 55px rgba(0,0,0,0.10);
+  border-color: var(--gold-strong);
+}
+.tile-accent{
+  position:absolute;
+  top:0; left:0;
+  height: 10px;
+  width:100%;
+  background: linear-gradient(to right, var(--gold), var(--green), var(--gold));
+}
+.tile-actions{
+  display:flex;
+  flex-direction:column;
+  gap:.55rem;
+  margin-top: .95rem;
 }
 
-.tag::before{
-  content:"";
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background: var(--gold);
+/* Two-col sections */
+.two-col{
+  display:grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.2rem;
+  align-items:start;
 }
 
-/* Gold “frame corners” on sections (subtle) */
-section{
+/* Bullets & steps */
+.bullets{
+  margin: .9rem 0 0;
+  padding-left: 1.1rem;
+}
+.bullets li{
+  margin: .45rem 0;
+}
+.steps{
+  margin: .75rem 0 0;
+  padding-left: 1.15rem;
+}
+.steps li{ margin: .5rem 0; }
+
+/* How grid */
+.how-grid{
+  display:grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.05rem;
+}
+.how-card{
+  background: rgba(255,255,255,0.75);
+  border: 2px solid rgba(201,162,74,0.35);
+  border-radius: 16px;
+  padding: 1.05rem 1rem;
   position:relative;
 }
-
-section .corner{
-  display:none; /* helper if you ever want HTML corners */
+.how-number{
+  font-weight:900;
+  color: var(--green);
+  letter-spacing:.08em;
 }
 
-/* visual corners without HTML */
-section{
-  background-image:
-    linear-gradient(var(--gold), var(--gold)),
-    linear-gradient(var(--gold), var(--gold)),
-    linear-gradient(var(--gold), var(--gold)),
-    linear-gradient(var(--gold), var(--gold));
-  background-size: 22px 3px, 3px 22px, 22px 3px, 3px 22px;
-  background-position: 18px 18px, 18px 18px, calc(100% - 18px) calc(100% - 18px), calc(100% - 18px) calc(100% - 18px);
-  background-repeat: no-repeat;
+/* Contact */
+.contact-card{ padding: 1.6rem; }
+.contact-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+.social-links{
+  display:flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Footer */
+footer{
+  border-top: 4px solid var(--gold);
+  background: rgba(247,238,234,0.65);
+}
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  align-items:center;
+  padding: 2rem 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .hero-inner, .two-col{ grid-template-columns: 1fr; }
+  .how-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .hero-meta{ grid-template-columns: 1fr; }
+}
+@media (max-width: 780px){
+  .collections-grid{ grid-template-columns: 1fr; }
+  .contact-grid{ grid-template-columns: 1fr; }
+  h1{ font-size: 2.55rem; }
 }
