@@ -26,7 +26,6 @@
 
       <nav class="nav">
         <a href="#shop">Shop</a>
-        <a href="#custom">Custom Stones</a>
         <a href="#about">About</a>
         <a href="#how">How it works</a>
         <a href="#contact" class="btn small">Contact</a>
@@ -47,7 +46,7 @@
           </p>
           <div class="hero-actions">
             <a class="btn" href="#shop">Shop Drop One</a>
-            <a class="btn ghost" href="#custom">Browse custom stones</a>
+            <a class="btn ghost" href="#how">See how it works</a>
           </div>
           <div class="trust">
             <span>🌊 One of one</span>
@@ -61,7 +60,7 @@
           <div class="hero-img">
             <img src="images/hero.jpg" alt="Shoreline stones photographed on a clean white background" />
           </div>
-          <p class="caption">Website: <strong>rebeccafinds.ca</strong></p>
+          <p class="caption">Tip: If hero is too big, shrink it in CSS under <code>.hero-img img</code>.</p>
         </div>
       </div>
     </section>
@@ -77,8 +76,13 @@
           <div class="mini-note">Website: <strong>rebeccafinds.ca</strong></div>
         </div>
 
-        <div class="grid products product-grid" id="productGrid">
-          <!-- Drop One cards (unchanged) -->
+        <div class="grid products" id="productGrid">
+
+          <!--
+            IMAGE NOTE:
+            These 10 images are currently referenced from the REPO ROOT because that’s where your PXL_*.jpg files are.
+            If you later move them into /images/drop1/, change src to: images/drop1/PXL_....jpg
+          -->
 
           <article class="card"
             data-name="Golden Drift"
@@ -89,7 +93,7 @@
           >
             <button class="card-btn" type="button" aria-label="Open Golden Drift">
               <div class="thumb">
-                <img src="images/drop1/golden-drift.jpg" alt="Golden Drift stone" loading="lazy">
+                <img src="PXL_20260201_165742693.jpg" alt="Golden Drift stone" loading="lazy">
               </div>
               <div class="meta">
                 <h3>Golden Drift</h3>
@@ -107,7 +111,7 @@
           >
             <button class="card-btn" type="button" aria-label="Open Moss Current">
               <div class="thumb">
-                <img src="images/drop1/moss-current.jpg" alt="Moss Current stone" loading="lazy">
+                <img src="PXL_20260201_165823167.jpg" alt="Moss Current stone" loading="lazy">
               </div>
               <div class="meta">
                 <h3>Moss Current</h3>
@@ -125,7 +129,7 @@
           >
             <button class="card-btn" type="button" aria-label="Open Blush Tide">
               <div class="thumb">
-                <img src="images/drop1/blush-tide.jpg" alt="Blush Tide stone" loading="lazy">
+                <img src="PXL_20260201_165832848.jpg" alt="Blush Tide stone" loading="lazy">
               </div>
               <div class="meta">
                 <h3>Blush Tide</h3>
@@ -143,7 +147,7 @@
           >
             <button class="card-btn" type="button" aria-label="Open Seafoam Echo">
               <div class="thumb">
-                <img src="images/drop1/seafoam-echo.jpg" alt="Seafoam Echo stone" loading="lazy">
+                <img src="PXL_20260201_165903325.jpg" alt="Seafoam Echo stone" loading="lazy">
               </div>
               <div class="meta">
                 <h3>Seafoam Echo</h3>
@@ -161,7 +165,7 @@
           >
             <button class="card-btn" type="button" aria-label="Open Tidal Stripe">
               <div class="thumb">
-                <img src="images/drop1/tidal-stripe.jpg" alt="Tidal Stripe stone" loading="lazy">
+                <img src="PXL_20260201_165920372.jpg" alt="Tidal Stripe stone" loading="lazy">
               </div>
               <div class="meta">
                 <h3>Tidal Stripe</h3>
@@ -179,7 +183,7 @@
           >
             <button class="card-btn" type="button" aria-label="Open Night Current">
               <div class="thumb">
-                <img src="images/drop1/night-current.jpg" alt="Night Current stone" loading="lazy">
+                <img src="PXL_20260201_165929967.jpg" alt="Night Current stone" loading="lazy">
               </div>
               <div class="meta">
                 <h3>Night Current</h3>
@@ -197,7 +201,7 @@
           >
             <button class="card-btn" type="button" aria-label="Open Wildflower Shore">
               <div class="thumb">
-                <img src="images/drop1/wildflower-shore.jpg" alt="Wildflower Shore stone" loading="lazy">
+                <img src="PXL_20260201_165954805.jpg" alt="Wildflower Shore stone" loading="lazy">
               </div>
               <div class="meta">
                 <h3>Wildflower Shore</h3>
@@ -215,7 +219,7 @@
           >
             <button class="card-btn" type="button" aria-label="Open Pale Horizon">
               <div class="thumb">
-                <img src="images/drop1/pale-horizon.jpg" alt="Pale Horizon stone" loading="lazy">
+                <img src="PXL_20260201_170004170.jpg" alt="Pale Horizon stone" loading="lazy">
               </div>
               <div class="meta">
                 <h3>Pale Horizon</h3>
@@ -233,7 +237,7 @@
           >
             <button class="card-btn" type="button" aria-label="Open Stonehaven">
               <div class="thumb">
-                <img src="images/drop1/stonehaven.jpg" alt="Stonehaven stone" loading="lazy">
+                <img src="PXL_20260201_170034170.jpg" alt="Stonehaven stone" loading="lazy">
               </div>
               <div class="meta">
                 <h3>Stonehaven</h3>
@@ -251,7 +255,7 @@
           >
             <button class="card-btn" type="button" aria-label="Open Harvest Shore">
               <div class="thumb">
-                <img src="images/drop1/harvest-shore.jpg" alt="Harvest Shore stone" loading="lazy">
+                <img src="PXL_20260201_170053059.jpg" alt="Harvest Shore stone" loading="lazy">
               </div>
               <div class="meta">
                 <h3>Harvest Shore</h3>
@@ -260,6 +264,8 @@
             </button>
           </article>
 
+          <!-- These last two are still using your original filenames.
+               Send me the remaining 2 PXL filenames and I’ll wire them up. -->
           <article class="card"
             data-name="Stillwater"
             data-size="XS"
@@ -300,136 +306,6 @@
 
         <div class="note">
           <p><strong>Tip:</strong> Want fewer uploads today? You can temporarily use your “4-in-one” photos as the <em>image</em> for each row, then swap in individual stone images later.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ✅ Available Stones / Custom Pieces -->
-    <section id="custom" class="section alt">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>Available Stones for Custom Pieces</h2>
-            <p class="muted">Pick a stone first — then we choose chain + style together. Tap a stone for details.</p>
-          </div>
-          <div class="mini-note">Custom inquiries: <strong>@rebecca.finds.ca</strong></div>
-        </div>
-
-        <div class="grid products product-grid" id="customGrid">
-          <!-- Replace names/prices with the ones we already chose earlier -->
-
-          <article class="card"
-            data-name="Custom Stone 01"
-            data-size="Stone only"
-            data-price="From $— CAD"
-            data-stone="(Your label here — e.g., greenstone / quartz)"
-            data-desc="Write your short, confident description here. Example: Ocean-toned green with natural dark patterning — a true one-of-one."
-          >
-            <button class="card-btn" type="button" aria-label="Open Custom Stone 01">
-              <div class="thumb">
-                <img src="images/custom/stone-01.jpg" alt="Custom Stone 01" loading="lazy">
-              </div>
-              <div class="meta">
-                <h3>Custom Stone 01</h3>
-                <p class="sub">Stone only • From $— CAD</p>
-              </div>
-            </button>
-          </article>
-
-          <article class="card"
-            data-name="Custom Stone 02"
-            data-size="Stone only"
-            data-price="From $— CAD"
-            data-stone="(Your label here)"
-            data-desc="Write your short description here."
-          >
-            <button class="card-btn" type="button" aria-label="Open Custom Stone 02">
-              <div class="thumb">
-                <img src="images/custom/stone-02.jpg" alt="Custom Stone 02" loading="lazy">
-              </div>
-              <div class="meta">
-                <h3>Custom Stone 02</h3>
-                <p class="sub">Stone only • From $— CAD</p>
-              </div>
-            </button>
-          </article>
-
-          <article class="card"
-            data-name="Custom Stone 03"
-            data-size="Stone only"
-            data-price="From $— CAD"
-            data-stone="(Your label here)"
-            data-desc="Write your short description here."
-          >
-            <button class="card-btn" type="button" aria-label="Open Custom Stone 03">
-              <div class="thumb">
-                <img src="images/custom/stone-03.jpg" alt="Custom Stone 03" loading="lazy">
-              </div>
-              <div class="meta">
-                <h3>Custom Stone 03</h3>
-                <p class="sub">Stone only • From $— CAD</p>
-              </div>
-            </button>
-          </article>
-
-          <article class="card"
-            data-name="Custom Stone 04"
-            data-size="Stone only"
-            data-price="From $— CAD"
-            data-stone="(Your label here)"
-            data-desc="Write your short description here."
-          >
-            <button class="card-btn" type="button" aria-label="Open Custom Stone 04">
-              <div class="thumb">
-                <img src="images/custom/stone-04.jpg" alt="Custom Stone 04" loading="lazy">
-              </div>
-              <div class="meta">
-                <h3>Custom Stone 04</h3>
-                <p class="sub">Stone only • From $— CAD</p>
-              </div>
-            </button>
-          </article>
-
-          <article class="card"
-            data-name="Custom Stone 05"
-            data-size="Stone only"
-            data-price="From $— CAD"
-            data-stone="(Your label here)"
-            data-desc="Write your short description here."
-          >
-            <button class="card-btn" type="button" aria-label="Open Custom Stone 05">
-              <div class="thumb">
-                <img src="images/custom/stone-05.jpg" alt="Custom Stone 05" loading="lazy">
-              </div>
-              <div class="meta">
-                <h3>Custom Stone 05</h3>
-                <p class="sub">Stone only • From $— CAD</p>
-              </div>
-            </button>
-          </article>
-
-          <article class="card"
-            data-name="Custom Stone 06"
-            data-size="Stone only"
-            data-price="From $— CAD"
-            data-stone="(Your label here)"
-            data-desc="Write your short description here."
-          >
-            <button class="card-btn" type="button" aria-label="Open Custom Stone 06">
-              <div class="thumb">
-                <img src="images/custom/stone-06.jpg" alt="Custom Stone 06" loading="lazy">
-              </div>
-              <div class="meta">
-                <h3>Custom Stone 06</h3>
-                <p class="sub">Stone only • From $— CAD</p>
-              </div>
-            </button>
-          </article>
-
-        </div>
-
-        <div class="note">
-          <p><strong>How custom works:</strong> Choose a stone → message me → we pick chain + style (gold/silver, length, pendant style) and I finish it for you.</p>
         </div>
       </div>
     </section>
@@ -536,8 +412,8 @@
           </div>
 
           <div class="modal-actions">
-            <a class="btn" href="#contact" id="mCTA">Ask about this piece</a>
-            <a class="btn ghost" href="#shop" data-close="1">Back</a>
+            <a class="btn" href="#contact" id="mCTA">Claim / Ask about this piece</a>
+            <a class="btn ghost" href="#shop" data-close="1">Back to Drop One</a>
           </div>
         </div>
       </div>
@@ -550,6 +426,8 @@
 
     // Modal logic
     const modal = document.getElementById("modal");
+    const grid = document.getElementById("productGrid");
+
     const mImg = document.getElementById("mImg");
     const mName = document.getElementById("mName");
     const mLine = document.getElementById("mLine");
@@ -582,14 +460,15 @@
       document.body.classList.remove("no-scroll");
     }
 
-    // ✅ Works for both grids
-    document.addEventListener("click", (e) => {
+    grid.addEventListener("click", (e) => {
       const cardBtn = e.target.closest(".card-btn");
-      if (cardBtn) {
-        const card = cardBtn.closest(".card");
-        if (card) openModal(card);
-        return;
-      }
+      if (!cardBtn) return;
+      const card = cardBtn.closest(".card");
+      if (!card) return;
+      openModal(card);
+    });
+
+    modal.addEventListener("click", (e) => {
       if (e.target.dataset.close) closeModal();
     });
 
@@ -599,4 +478,3 @@
   </script>
 </body>
 </html>
-
