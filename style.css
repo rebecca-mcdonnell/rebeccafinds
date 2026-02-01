@@ -322,3 +322,147 @@ footer{
   border-top: 4px solid var(--gold);
   color: var(--muted);
 }
+/* =========================
+   LUXURY DETAIL LAYER
+   Adds ornament + texture + polish
+   Paste at END of file
+   ========================= */
+
+/* Soft texture overlay (very subtle) */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(900px 500px at 20% 0%, rgba(243,226,232,0.35) 0%, rgba(243,226,232,0) 55%),
+    radial-gradient(900px 500px at 85% 15%, rgba(201,162,74,0.10) 0%, rgba(201,162,74,0) 60%),
+    linear-gradient(to bottom, rgba(255,255,255,0.35), rgba(255,255,255,0));
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+}
+
+/* Section heading ornament */
+h2{
+  position:relative;
+}
+
+h2::after{
+  content:"";
+  display:block;
+  height:3px;
+  width: 92px;
+  margin-top: 10px;
+  background: linear-gradient(to right, var(--green), var(--gold));
+  border-radius: 999px;
+}
+
+h2::before{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-12px;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 4px rgba(43,107,79,0.12);
+}
+
+/* Add delicate gold divider between paragraphs in cards (optional elegance) */
+.card p + p{
+  border-top: 1px solid rgba(201,162,74,0.25);
+  padding-top: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+/* Card hover = boutique polish */
+.card,
+.collections-grid > *,
+.collection-grid > *,
+.cards-grid > *,
+.grid > *,
+.card-grid > *{
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.card:hover,
+.collections-grid > *:hover,
+.collection-grid > *:hover,
+.cards-grid > *:hover,
+.grid > *:hover,
+.card-grid > *:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 22px 55px rgba(0,0,0,0.10);
+  border-color: var(--gold-strong);
+}
+
+/* Buttons: add a subtle shine */
+.button{
+  position:relative;
+  overflow:hidden;
+}
+
+.button::after{
+  content:"";
+  position:absolute;
+  top:-60%;
+  left:-40%;
+  width:60%;
+  height:220%;
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.35) 45%,
+    rgba(255,255,255,0) 100%
+  );
+  transform: rotate(18deg);
+  transition: left .35s ease;
+}
+
+.button:hover::after{
+  left: 120%;
+}
+
+/* “Luxury tags” (use in HTML as <span class="tag">Niagara</span>) */
+.tag{
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  padding: .25rem .75rem;
+  border-radius: 999px;
+  border: 2px solid rgba(201,162,74,0.55);
+  background: rgba(255,255,255,0.7);
+  color: var(--green-strong);
+  font-weight: 650;
+  font-size: .9rem;
+}
+
+.tag::before{
+  content:"";
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background: var(--gold);
+}
+
+/* Gold “frame corners” on sections (subtle) */
+section{
+  position:relative;
+}
+
+section .corner{
+  display:none; /* helper if you ever want HTML corners */
+}
+
+/* visual corners without HTML */
+section{
+  background-image:
+    linear-gradient(var(--gold), var(--gold)),
+    linear-gradient(var(--gold), var(--gold)),
+    linear-gradient(var(--gold), var(--gold)),
+    linear-gradient(var(--gold), var(--gold));
+  background-size: 22px 3px, 3px 22px, 22px 3px, 3px 22px;
+  background-position: 18px 18px, 18px 18px, calc(100% - 18px) calc(100% - 18px), calc(100% - 18px) calc(100% - 18px);
+  background-repeat: no-repeat;
+}
