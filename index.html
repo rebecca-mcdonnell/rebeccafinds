@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rebecca Finds — Shoreline Stones & Custom Pieces</title>
+  <meta name="description" content="Curated shoreline finds from Niagara—available stones for custom jewelry, small-batch collections, and one-of-one pieces." />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fonts (elegant + clean) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600,800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Top bar -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand-mark">✦</span>
+        <span class="brand-text">
+          <span class="brand-name">Rebecca Finds</span>
+          <span class="brand-sub">Niagara shoreline finds • custom pieces</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#collections">Collections</a>
+        <a href="#available">Available Rocks</a>
+        <a href="#about">About</a>
+        <a href="#how">How it works</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Collected with intention</p>
+          <h1>One-of-one shoreline stones<br/>turned into wearable pieces.</h1>
+          <p class="lead">
+            Small discoveries from the Niagara region—available stones for custom jewelry,
+            and occasional ready-to-shop drops.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#available">Browse available rocks</a>
+            <a class="btn btn-ghost" href="#collections">See collections</a>
+          </div>
+
+          <div class="hero-notes">
+            <div class="note">
+              <span class="dot dot-gold"></span>
+              <span>Handpicked shoreline stones</span>
+            </div>
+            <div class="note">
+              <span class="dot dot-pink"></span>
+              <span>Custom pendants & small batch</span>
+            </div>
+            <div class="note">
+              <span class="dot dot-mint"></span>
+              <span>St. Catharines • Niagara, ON</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-label="Featured image">
+          <!-- Replace this with your favorite hero photo -->
+          <img
+            src="assets/hero.jpg"
+            alt="A curated shoreline stone styled for jewelry"
+            onerror="this.style.display='none'; this.parentElement.classList.add('img-missing');"
+          />
+          <div class="hero-card-fallback">
+            <p><strong>Add a hero image:</strong></p>
+            <p>Put a photo at <code>assets/hero.jpg</code></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collections -->
+    <section id="collections" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Collections</h2>
+          <p class="subhead">Small-batch themes, curated like mini chapters.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Sea Glass</h3>
+            <p>Soft edges, glassy light—minimal settings that let the color speak.</p>
+            <p class="meta">Drop style: small-batch</p>
+          </article>
+
+          <article class="card">
+            <h3>Natural Green</h3>
+            <p>Earthy greens and mossy tones—quiet, vintage, and grounded.</p>
+            <p class="meta">Drop style: custom-first</p>
+          </article>
+
+          <article class="card">
+            <h3>Valentine Pink</h3>
+            <p>Warm blush stones—romantic but not loud. Delicate and wearable.</p>
+            <p class="meta">Drop style: limited</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Available rocks gallery -->
+    <section id="available" class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Available rocks for custom pieces</h2>
+          <p class="subhead">
+            Pick a stone below, then message me the code (ex: <strong>RF-03</strong>) and what you’d like made.
+          </p>
+        </div>
+
+        <div class="filters" aria-label="Gallery filters">
+          <button class="chip is-active" data-filter="all" type="button">All</button>
+          <button class="chip" data-filter="green" type="button">Green</button>
+          <button class="chip" data-filter="pink" type="button">Pink</button>
+          <button class="chip" data-filter="glass" type="button">Sea glass</button>
+          <button class="chip" data-filter="neutral" type="button">Neutral</button>
+        </div>
+
+        <div class="gallery" id="gallery">
+          <!--
+            HOW TO ADD MORE:
+            1) Upload images into assets/rocks/
+            2) Duplicate a <figure> block
+            3) Update:
+               - data-tags
+               - image src
+               - RF code, size, notes
+          -->
+
+          <figure class="tile" data-tags="green">
+            <button class="tile-btn" type="button" data-img="assets/rocks/rf-01.jpg" data-title="RF-01 • Green stone" data-notes="Best as a simple pendant.">
+              <div class="tile-img">
+                <img src="assets/rocks/rf-01.jpg" alt="Available rock RF-01" loading="lazy"
+                  onerror="this.style.display='none'; this.parentElement.classList.add('img-missing');" />
+                <div class="img-fallback">Add: <code>assets/rocks/rf-01.jpg</code></div>
+              </div>
+              <figcaption class="tile-cap">
+                <div class="cap-top">
+                  <strong>RF-01</strong>
+                  <span class="tag">green</span>
+                </div>
+                <div class="cap-bottom">
+                  <span>Size: small</span>
+                  <span>Notes: pendant-ready</span>
+                </div>
+              </figcaption>
+            </button>
+          </figure>
+
+          <figure class="tile" data-tags="pink">
+            <button class="tile-btn" type="button" data-img="assets/rocks/rf-02.jpg" data-title="RF-02 • Pink stone" data-notes="Perfect for Valentine pieces.">
+              <div class="tile-img">
+                <img src="assets/rocks/rf-02.jpg" alt="Available rock RF-02" loading="lazy"
+                  onerror="this.style.display='none'; this.parentElement.classList.add('img-missing');" />
+                <div class="img-fallback">Add: <code>assets/rocks/rf-02.jpg</code></div>
+              </div>
+              <figcaption class="tile-cap">
+                <div class="cap-top">
+                  <strong>RF-02</strong>
+                  <span class="tag">pink</span>
+                </div>
+                <div class="cap-bottom">
+                  <span>Size: small</span>
+                  <span>Notes: soft blush tone</span>
+                </div>
+              </figcaption>
+            </button>
+          </figure>
+
+          <figure class="tile" data-tags="glass">
+            <button class="tile-btn" type="button" data-img="assets/rocks/rf-03.jpg" data-title="RF-03 • Sea glass" data-notes="Minimal gold setting looks stunning.">
+              <div class="tile-img">
+                <img src="assets/rocks/rf-03.jpg" alt="Available rock RF-03" loading="lazy"
+                  onerror="this.style.display='none'; this.parentElement.classList.add('img-missing');" />
+                <div class="img-fallback">Add: <code>assets/rocks/rf-03.jpg</code></div>
+              </div>
+              <figcaption class="tile-cap">
+                <div class="cap-top">
+                  <strong>RF-03</strong>
+                  <span class="tag">sea glass</span>
+                </div>
+                <div class="cap-bottom">
+                  <span>Size: medium</span>
+                  <span>Notes: clean edges</span>
+                </div>
+              </figcaption>
+            </button>
+          </figure>
+
+          <figure class="tile" data-tags="neutral">
+            <button class="tile-btn" type="button" data-img="assets/rocks/rf-04.jpg" data-title="RF-04 • Neutral stone" data-notes="Beautiful everyday piece.">
+              <div class="tile-img">
+                <img src="assets/rocks/rf-04.jpg" alt="Available rock RF-04" loading="lazy"
+                  onerror="this.style.display='none'; this.parentElement.classList.add('img-missing');" />
+                <div class="img-fallback">Add: <code>assets/rocks/rf-04.jpg</code></div>
+              </div>
+              <figcaption class="tile-cap">
+                <div class="cap-top">
+                  <strong>RF-04</strong>
+                  <span class="tag">neutral</span>
+                </div>
+                <div class="cap-bottom">
+                  <span>Size: medium</span>
+                  <span>Notes: classic look</span>
+                </div>
+              </figcaption>
+            </button>
+          </figure>
+        </div>
+
+        <div class="soft-callout">
+          <p><strong>Want something custom?</strong> Choose a stone code (RF-01, RF-02, etc.) and tell me:</p>
+          <ul>
+            <li>Gold or silver?</li>
+            <li>Pendant, keychain, or something else?</li>
+            <li>Minimal or more detailed?</li>
+          </ul>
+          <p class="tiny">Tip: you can also request a “mystery pick” in your preferred color palette.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="wrap two-col">
+        <div>
+          <h2>About</h2>
+          <p class="subhead">A little shoreline magic, made real.</p>
+        </div>
+
+        <div class="prose">
+          <p>
+            I’m Rebecca—based in St. Catharines and constantly outside, collecting and photographing the kind of
+            small discoveries that make a day feel special.
+          </p>
+          <p>
+            Rebecca Finds is where my shoreline stones, sea glass, and quiet little treasures turn into
+            wearable pieces—simple, intentional, and one-of-one.
+          </p>
+          <p class="tiny">
+            (And yes—there are cats. Always.)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How it works</h2>
+          <p class="subhead">Easy, personal, and no-pressure.</p>
+        </div>
+
+        <ol class="steps">
+          <li>
+            <h3>Pick a stone</h3>
+            <p>Choose from the available rocks gallery (RF codes) or ask for a color theme.</p>
+          </li>
+          <li>
+            <h3>Tell me your vision</h3>
+            <p>Gold/silver, pendant/keychain, minimal/detailed—anything helps.</p>
+          </li>
+          <li>
+            <h3>I confirm details</h3>
+            <p>I’ll confirm the plan + timeline, and we’ll keep it simple.</p>
+          </li>
+          <li>
+            <h3>Made & shared</h3>
+            <p>Your piece is finished, photographed, and ready for pickup/shipping.</p>
+          </li>
+        </ol>
+
+        <div class="fineprint">
+          <p class="tiny">
+            Note: Stone availability changes quickly. If a stone is claimed, I’ll suggest the closest match.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="wrap two-col">
+        <div>
+          <h2>Contact</h2>
+          <p class="subhead">Message me to claim a stone or start a custom piece.</p>
+
+          <div class="contact-box">
+            <p class="tiny">Fastest:</p>
+            <p class="contact-line">
+              Instagram: <a href="https://www.instagram.com/rebecca.finds.ca/" target="_blank" rel="noopener">rebecca.finds.ca</a>
+            </p>
+
+            <p class="tiny">Or email:</p>
+            <!-- Replace with your real email -->
+            <p class="contact-line">
+              <a href="mailto:hello@rebeccafinds.ca">hello@rebeccafinds.ca</a>
+            </p>
+
+            <p class="tiny">When messaging, include:</p>
+            <ul class="tiny">
+              <li>Stone code (RF-__)</li>
+              <li>Gold or silver</li>
+              <li>Pendant / keychain / other</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mini-form">
+          <h3>Quick message template</h3>
+          <p class="tiny">Copy/paste into Instagram DM or email:</p>
+          <textarea readonly rows="9">Hi Rebecca! I’d love to claim: RF-__
+Metal: gold / silver
+Piece type: pendant / keychain / other
+Style: minimal / detailed
+Notes: </textarea>
+          <p class="tiny subtle">Replace RF-__ with your chosen stone code.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p class="tiny">© <span id="year"></span> Rebecca Finds • Niagara, ON</p>
+        <a class="tiny" href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Lightbox + filter script (tiny, built-in) -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" data-close="1"></div>
+    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Image preview">
+      <button class="lightbox-close" type="button" aria-label="Close" data-close="1">×</button>
+      <img id="lbImg" alt="" />
+      <div class="lightbox-meta">
+        <h4 id="lbTitle"></h4>
+        <p id="lbNotes" class="tiny"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Filters
+    const chips = document.querySelectorAll('.chip');
+    const tiles = document.querySelectorAll('.tile');
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('is-active'));
+        chip.classList.add('is-active');
+
+        const filter = chip.dataset.filter;
+        tiles.forEach(tile => {
+          const tags = (tile.dataset.tags || '').split(' ');
+          const show = filter === 'all' || tags.includes(filter);
+          tile.style.display = show ? '' : 'none';
+        });
+      });
+    });
+
+    // Lightbox
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lbImg');
+    const lbTitle = document.getElementById('lbTitle');
+    const lbNotes = document.getElementById('lbNotes');
+
+    document.querySelectorAll('.tile-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        lbImg.src = btn.dataset.img || '';
+        lbImg.alt = btn.dataset.title || 'Preview';
+        lbTitle.textContent = btn.dataset.title || '';
+        lbNotes.textContent = btn.dataset.notes || '';
+        lb.classList.add('is-open');
+        lb.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    lb.addEventListener('click', (e) => {
+      if (e.target && e.target.dataset && e.target.dataset.close) {
+        lb.classList.remove('is-open');
+        lb.setAttribute('aria-hidden', 'true');
+        lbImg.src = '';
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lb.classList.contains('is-open')) {
+        lb.classList.remove('is-open');
+        lb.setAttribute('aria-hidden', 'true');
+        lbImg.src = '';
+      }
+    });
+  </script>
+</body>
+</html>
