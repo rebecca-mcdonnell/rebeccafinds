@@ -1,33 +1,37 @@
 /* =========================
-   rebeccafinds.ca 
-   Pink + Cream Theme
+   rebeccafinds.ca
+   Pink + Cream with Gold & Green
    ========================= */
 
 :root {
-  --bg: #fbf6f2;          /* warm cream */
-  --panel: #ffffff;      /* white cards */
-  --panel-soft: #f4ebe6; /* soft blush-beige */
-  --text: #2f2a27;       /* soft charcoal */
+  --bg: #fbf6f2;            /* warm cream */
+  --panel: #ffffff;
+  --panel-soft: #f4ebe6;
+
+  --text: #2f2a27;
   --muted: #7a6f68;
 
-  --accent: #e7b3c5;     /* dusty pink */
-  --accent-strong: #d894ad;
-  --accent-light: #f2d6e0;
+  --gold: #c9a24a;          /* antique gold */
+  --gold-soft: #ead9b2;
 
-  --border: #eadfd8;
+  --green: #2b6b4f;         /* deep elegant green */
+  --green-soft: #6f9c86;
+
+  --border: var(--gold);
 }
 
-/* ---------- Base ---------- */
+/* ---------- Reset ---------- */
 * {
   box-sizing: border-box;
 }
 
+/* ---------- Base ---------- */
 body {
   margin: 0;
   font-family: 'Inter', system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* ---------- Typography ---------- */
@@ -43,7 +47,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.6em;
 }
 
 p {
@@ -61,9 +65,9 @@ p {
 .site-header {
   position: sticky;
   top: 0;
-  background: rgba(251, 246, 242, 0.9);
+  background: rgba(251, 246, 242, 0.92);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 2px solid var(--gold);
   z-index: 10;
 }
 
@@ -76,7 +80,7 @@ p {
 
 .brand {
   font-family: 'Fraunces', serif;
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   text-decoration: none;
   color: var(--text);
 }
@@ -87,15 +91,31 @@ nav a {
   text-decoration: none;
   color: var(--muted);
   font-weight: 500;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--green);
+  transition: width 0.25s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 nav a:hover {
-  color: var(--accent-strong);
+  color: var(--green);
 }
 
 /* ---------- Sections ---------- */
 section {
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--gold-soft);
 }
 
 section:last-child {
@@ -105,27 +125,44 @@ section:last-child {
 /* ---------- Cards / Galleries ---------- */
 .card {
   background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 14px;
+  border: 2px solid var(--gold);
+  border-radius: 16px;
   padding: 2rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+/* subtle green accent line */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: var(--green);
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
 }
 
 /* ---------- Buttons ---------- */
 .button {
   display: inline-block;
   margin-top: 1.5rem;
-  padding: 0.65rem 1.4rem;
+  padding: 0.65rem 1.5rem;
   border-radius: 999px;
-  background: var(--accent);
-  color: #fff;
+  background: transparent;
+  border: 2px solid var(--gold);
+  color: var(--text);
   text-decoration: none;
   font-weight: 500;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .button:hover {
-  background: var(--accent-strong);
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
   transform: translateY(-1px);
 }
 
@@ -136,4 +173,6 @@ footer {
   padding: 3rem 1.5rem;
   font-size: 0.9rem;
   color: var(--muted);
+  border-top: 2px solid var(--gold);
 }
+
