@@ -582,3 +582,5 @@ img{ max-width:100%; display:block; }
   }
   .deal-highlight strong{ font-size: 1.15rem; }
     }
+
+body{ outline: 6px solid hotpink !important; }
