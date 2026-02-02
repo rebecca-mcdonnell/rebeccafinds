@@ -650,3 +650,15 @@ body{ outline: 8px solid hotpink !important; }
     margin: 0 auto 12px;
   }
 }
+/* Deal highlight stays single-line + scales on mobile */
+.deal-highlight { text-align: center; margin-bottom: 18px; }
+.deal-top { display:block; font-weight: 700; margin-bottom: 6px; }
+.deal-line { display:inline-block; white-space: nowrap; }
+
+@media (max-width: 600px){
+  .deal-line { font-size: 0.9rem; }
+  .wrap { padding-left: 15px; padding-right: 15px; }
+  .products { gap: 16px; }
+  .product { border-radius: 16px; }
+  .product-media img { max-height: 260px; width: 100%; object-fit: contain; }
+}
