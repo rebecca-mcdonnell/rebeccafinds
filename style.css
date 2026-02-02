@@ -1,16 +1,20 @@
-:root{
-  --bg:#fbfaf8;
-  --panel:#ffffff;
-  --panel2:#f3f0ea;
+:root {
+  /* Backgrounds */
+  --bg: #fbf7f3;        /* soft cream */
+  --panel: #ffffff;    /* clean white cards */
+  --panel2: #f4ebe4;   /* warm blush-cream sections */
 
-  --text:#111312;
-  --muted:#56605a;
+  /* Text */
+  --text: #2f2a26;     /* soft charcoal */
+  --muted: #8a7f76;    /* warm taupe */
 
-  --accent:#c9a24a;     /* warm gold */
-  --accent2:#2b6b4f;    /* deep green */
-  --accent3:#e9d8cf;    /* soft blush */
-  --border:rgba(43,107,79,.18);
-  --shadow: 0 10px 30px rgba(17,19,18,.07);
+  /* Accents */
+  --accent: #d6b48c;   /* champagne gold */
+  --accent2: #e6c1c9;  /* blush pink */
+  --accent3: #cfa7b0;  /* dusty rose */
+
+  /* Borders */
+  --border: rgba(214,180,140,0.45);
 }
 
 *{ box-sizing:border-box; }
