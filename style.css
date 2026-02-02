@@ -612,3 +612,43 @@ img{ max-width:100%; display:block; }
   }
 
 }
+/* MOBILE SIZE FIX */
+@media (max-width: 768px) {
+
+  /* Hero section */
+  .hero {
+    padding: 40px 15px !important;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .hero p {
+    font-size: 0.9rem !important;
+  }
+
+  /* Featured / highlight stone */
+  .featured,
+  .highlight,
+  .feature-stone {
+    max-width: 90% !important;
+    margin: 0 auto 30px auto !important;
+  }
+
+  .featured img,
+  .highlight img,
+  .feature-stone img {
+    max-height: 260px !important;
+    width: auto !important;
+    object-fit: contain !important;
+  }
+
+  /* All stone images */
+  .stone img,
+  .card img,
+  .stone-card img {
+    max-height: 220px !important;
+    width: auto !important;
+    margin:
