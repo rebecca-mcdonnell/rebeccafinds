@@ -3,473 +3,302 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rebecca Finds — Collection Release</title>
+  <title>Rebecca Finds — Pay What You Think Is Fair</title>
+  <meta name="description" content="Shoreline stones & one-of-one jewelry pieces from Niagara, ON. Pay materials cost + pay what you think is fair." />
 
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600,800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <h1>Rebecca Finds</h1>
+    <a class="brand" href="#top" aria-label="Go to top">
+      <span class="brand-mark">✦</span>
+      <span class="brand-name">Rebecca Finds</span>
+    </a>
 
     <nav class="nav">
-      <a href="#available">Stones</a>
-      <a href="#how">How It Works</a>
+      <a href="#available">Available</a>
+      <a href="#how">How it works</a>
+      <a href="#fair">Pay what’s fair</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<section class="hero">
-  <div class="wrap hero-inner">
-    <h2>Collection Release</h2>
-    <p>Hand-selected shoreline stones • Custom jewelry • Niagara, ON</p>
+<main id="top">
 
-    <div class="pill-row">
-      <span class="pill">One-of-one finds</span>
-      <span class="pill">Custom hardware</span>
-      <span class="pill">Niagara shoreline</span>
-    </div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="kicker">Niagara, ON • shoreline stones • one-of-one</p>
+        <h1>Pay materials cost, then <span class="accent">pay what you think is fair.</span></h1>
+        <p class="subhead">
+          Every piece is hand-found, cleaned, and finished by me. This is my “build it together” pricing — honest, simple, and kind.
+        </p>
 
-    <div class="cta-row">
-      <a class="btn" href="#available">Shop stones</a>
-      <a class="btn btn-ghost" href="#contact">Contact Rebecca</a>
-    </div>
-  </div>
-</section>
-
-<section id="available" class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Available Stones</h2>
-      <p class="muted">
-        Each stone includes your choice of silver plated, gold, or wire wrap hardware.
-      </p>
-    </div>
-
-    <div class="grid">
-
-      <!-- TOP PICKS -->
-      <article class="card gold-highlight">
-        <div class="thumb">
-          <img src="stone-12.jpg" alt="Golden Shore"
-               onerror="this.closest('.thumb').classList.add('missing'); this.style.display='none';" />
-          <div class="placeholder">
-            <div class="ph-title">Image coming soon</div>
-            <div class="ph-sub">Golden Shore</div>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3>Golden Shore</h3>
-          <p class="material"><span>Rock material:</span> Jasper / Chert</p>
-          <p class="muted">Warm golden tones with natural shoreline polish.</p>
-
-          <div class="card-actions">
-            <a href="#contact" class="btn small">Claim</a>
-            <details>
-              <summary>Details</summary>
-              <ul class="features">
-                <li>One-of-one Niagara shoreline find</li>
-                <li>Hardware: silver plated • gold • wire wrap</li>
-              </ul>
-            </details>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="thumb">
-          <img src="stone-04.jpg" alt="Olive Shadow" class="olive-fix"
-               onerror="this.closest('.thumb').classList.add('missing'); this.style.display='none';" />
-          <div class="placeholder">
-            <div class="ph-title">Image coming soon</div>
-            <div class="ph-sub">Olive Shadow</div>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3>Olive Shadow</h3>
-          <p class="material"><span>Rock material:</span> Serpentine / Greenstone</p>
-          <p class="muted">Soft olive tones with subtle dark inclusions.</p>
-
-          <div class="card-actions">
-            <a href="#contact" class="btn small">Claim</a>
-            <details>
-              <summary>Details</summary>
-              <ul class="features">
-                <li>One-of-one Niagara shoreline find</li>
-                <li>Hardware: silver plated • gold • wire wrap</li>
-              </ul>
-            </details>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="thumb">
-          <img src="stone-01.jpg" alt="Midnight Gold Vein"
-               onerror="this.closest('.thumb').classList.add('missing'); this.style.display='none';" />
-          <div class="placeholder">
-            <div class="ph-title">Image coming soon</div>
-            <div class="ph-sub">Midnight Gold Vein</div>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3>Midnight Gold Vein</h3>
-          <p class="material"><span>Rock material:</span> Basalt with Quartz Vein</p>
-          <p class="muted">Dark base with warm natural veining.</p>
-
-          <div class="card-actions">
-            <a href="#contact" class="btn small">Claim</a>
-            <details>
-              <summary>Details</summary>
-              <ul class="features">
-                <li>One-of-one Niagara shoreline find</li>
-                <li>Hardware: silver plated • gold • wire wrap</li>
-              </ul>
-            </details>
-          </div>
-        </div>
-      </article>
-
-      <!-- REST OF COLLECTION -->
-      <article class="card">
-        <div class="thumb">
-          <img src="stone-02.jpg" alt="Peach Drift"
-               onerror="this.closest('.thumb').classList.add('missing'); this.style.display='none';" />
-          <div class="placeholder">
-            <div class="ph-title">Image coming soon</div>
-            <div class="ph-sub">Peach Drift</div>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3>Peach Drift</h3>
-          <p class="material"><span>Rock material:</span> Peach Quartz</p>
-          <p class="muted">Soft peach and cream tones.</p>
-
-          <div class="card-actions">
-            <a href="#contact" class="btn small">Claim</a>
-            <details>
-              <summary>Details</summary>
-              <ul class="features">
-                <li>One-of-one Niagara shoreline find</li>
-                <li>Hardware: silver plated • gold • wire wrap</li>
-              </ul>
-            </details>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="thumb">
-          <img src="stone-03.jpg" alt="Moss Coast"
-               onerror="this.closest('.thumb').classList.add('missing'); this.style.display='none';" />
-          <div class="placeholder">
-            <div class="ph-title">Image coming soon</div>
-            <div class="ph-sub">Moss Coast</div>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3>Moss Coast</h3>
-          <p class="material"><span>Rock material:</span> Greenstone</p>
-          <p class="muted">Green stone with dark inclusions.</p>
-
-          <div class="card-actions">
-            <a href="#contact" class="btn small">Claim</a>
-            <details>
-              <summary>Details</summary>
-              <ul class="features">
-                <li>One-of-one Niagara shoreline find</li>
-                <li>Hardware: silver plated • gold • wire wrap</li>
-              </ul>
-            </details>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="thumb">
-          <img src="stone-05.jpg" alt="Ink Marble"
-               onerror="this.closest('.thumb').classList.add('missing'); this.style.display='none';" />
-          <div class="placeholder">
-            <div class="ph-title">Image coming soon</div>
-            <div class="ph-sub">Ink Marble</div>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3>Ink Marble</h3>
-          <p class="material"><span>Rock material:</span> Zebra Jasper</p>
-          <p class="muted">Bold black and white marbling.</p>
-
-          <div class="card-actions">
-            <a href="#contact" class="btn small">Claim</a>
-            <details>
-              <summary>Details</summary>
-              <ul class="features">
-                <li>One-of-one Niagara shoreline find</li>
-                <li>Hardware: silver plated • gold • wire wrap</li>
-              </ul>
-            </details>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="thumb">
-          <img src="stone-06.jpg" alt="Speckle"
-               onerror="this.closest('.thumb').classList.add('missing'); this.style.display='none';" />
-          <div class="placeholder">
-            <div class="ph-title">Image coming soon</div>
-            <div class="ph-sub">Speckle</div>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3>Speckle</h3>
-          <p class="material"><span>Rock material:</span> Basalt / Diabase</p>
-          <p class="muted">Dark speckled shoreline stone.</p>
-
-          <div class="card-actions">
-            <a href="#contact" class="btn small">Claim</a>
-            <details>
-              <summary>Details</summary>
-              <ul class="features">
-                <li>One-of-one Niagara shoreline find</li>
-                <li>Hardware: silver plated • gold • wire wrap</li>
-              </ul>
-            </details>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="thumb">
-          <img src="stone-07.jpg" alt="Golden Veil"
-               onerror="this.closest('.thumb').classList.add('missing'); this.style.display='none';" />
-          <div class="placeholder">
-            <div class="ph-title">Image coming soon</div>
-            <div class="ph-sub">Golden Veil</div>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3>Golden Veil</h3>
-          <p class="material"><span>Rock material:</span> Quartzite</p>
-          <p class="muted">Pale stone with warm veining.</p>
-
-          <div class="card-actions">
-            <a href="#contact" class="btn small">Claim</a>
-            <details>
-              <summary>Details</summary>
-              <ul class="features">
-                <li>One-of-one Niagara shoreline find</li>
-                <li>Hardware: silver plated • gold • wire wrap</li>
-              </ul>
-            </details>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="thumb">
-          <img src="stone-08.jpg" alt="Blush Meadow"
-               onerror="this.closest('.thumb').classList.add('missing'); this.style.display='none';" />
-          <div class="placeholder">
-            <div class="ph-title">Image coming soon</div>
-            <div class="ph-sub">Blush Meadow</div>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3>Blush Meadow</h3>
-          <p class="material"><span>Rock material:</span> Unakite</p>
-          <p class="muted">Green and blush mottled surface.</p>
-
-          <div class="card-actions">
-            <a href="#contact" class="btn small">Claim</a>
-            <details>
-              <summary>Details</summary>
-              <ul class="features">
-                <li>One-of-one Niagara shoreline find</li>
-                <li>Hardware: silver plated • gold • wire wrap</li>
-              </ul>
-            </details>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="thumb">
-          <img src="stone-09.jpg" alt="Emerald Tide"
-               onerror="this.closest('.thumb').classList.add('missing'); this.style.display='none';" />
-          <div class="placeholder">
-            <div class="ph-title">Image coming soon</div>
-            <div class="ph-sub">Emerald Tide</div>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3>Emerald Tide</h3>
-          <p class="material"><span>Rock material:</span> Serpentine</p>
-          <p class="muted">Deep green with soft banding.</p>
-
-          <div class="card-actions">
-            <a href="#contact" class="btn small">Claim</a>
-            <details>
-              <summary>Details</summary>
-              <ul class="features">
-                <li>One-of-one Niagara shoreline find</li>
-                <li>Hardware: silver plated • gold • wire wrap</li>
-              </ul>
-            </details>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="thumb">
-          <img src="stone-10.jpg" alt="Driftwood Sand"
-               onerror="this.closest('.thumb').classList.add('missing'); this.style.display='none';" />
-          <div class="placeholder">
-            <div class="ph-title">Image coming soon</div>
-            <div class="ph-sub">Driftwood Sand</div>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3>Driftwood Sand</h3>
-          <p class="material"><span>Rock material:</span> Jasper</p>
-          <p class="muted">Warm tan with natural texture.</p>
-
-          <div class="card-actions">
-            <a href="#contact" class="btn small">Claim</a>
-            <details>
-              <summary>Details</summary>
-              <ul class="features">
-                <li>One-of-one Niagara shoreline find</li>
-                <li>Hardware: silver plated • gold • wire wrap</li>
-              </ul>
-            </details>
-          </div>
-        </div>
-      </article>
-
-      <!-- TINY STONE 1 (photo intentionally removed) -->
-      <article class="card">
-        <div class="thumb missing">
-          <div class="placeholder">
-            <div class="ph-title">Image coming soon</div>
-            <div class="ph-sub">Quiet Bay</div>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3>Quiet Bay</h3>
-          <p class="material"><span>Rock material:</span> Greenstone</p>
-          <p class="muted">Soft grey-green minimalist stone.</p>
-
-          <div class="card-actions">
-            <a href="#contact" class="btn small">Claim</a>
-            <details>
-              <summary>Details</summary>
-              <ul class="features">
-                <li>One-of-one Niagara shoreline find</li>
-                <li>Hardware: silver plated • gold • wire wrap</li>
-              </ul>
-            </details>
-          </div>
-        </div>
-      </article>
-
-      <!-- TINY STONE 2 (photo intentionally removed) -->
-      <article class="card">
-        <div class="thumb missing">
-          <div class="placeholder">
-            <div class="ph-title">Image coming soon</div>
-            <div class="ph-sub">Sunwashed Shore</div>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3>Sunwashed Shore</h3>
-          <p class="material"><span>Rock material:</span> Jasper</p>
-          <p class="muted">Golden base with dark flecks.</p>
-
-          <div class="card-actions">
-            <a href="#contact" class="btn small">Claim</a>
-            <details>
-              <summary>Details</summary>
-              <ul class="features">
-                <li>One-of-one Niagara shoreline find</li>
-                <li>Hardware: silver plated • gold • wire wrap</li>
-              </ul>
-            </details>
-          </div>
-        </div>
-      </article>
-
-      <!-- FOSSIL (SOLD) -->
-      <article class="card sold">
-        <div class="thumb missing">
-          <span class="badge sold-badge">SOLD</span>
-          <div class="placeholder">
-            <div class="ph-title">Sold</div>
-            <div class="ph-sub">Fossil Shell</div>
-          </div>
+        <div class="hero-cta">
+          <a class="btn" href="#available">View available pieces</a>
+          <a class="btn ghost" href="#how">How to claim</a>
         </div>
 
-        <div class="card-body">
-          <h3>Fossil Shell</h3>
-          <p class="material"><span>Rock material:</span> Fossil Shell in Limestone</p>
-          <p class="muted">Sold — included as a past find.</p>
-
-          <div class="card-actions">
-            <a href="#contact" class="btn small btn-ghost">Custom request</a>
-            <details>
-              <summary>Details</summary>
-              <ul class="features">
-                <li>Status: Sold</li>
-                <li>Message me for a similar vibe or a custom shoreline find</li>
-              </ul>
-            </details>
-          </div>
+        <div class="trust">
+          <div class="chip">💛 Transparent pricing</div>
+          <div class="chip">🌊 Found on Niagara shorelines</div>
+          <div class="chip">✨ One-of-one, never repeated</div>
+          <div class="chip">📦 Local pickup or shipping</div>
         </div>
-      </article>
+      </div>
 
-    </div>
-  </div>
-</section>
-
-<section id="how" class="section light">
-  <div class="wrap">
-    <h2>How It Works</h2>
-
-    <ol class="steps">
-      <li>Choose your stone</li>
-      <li>Select your hardware</li>
-      <li>Message Rebecca</li>
-      <li>Your piece is handcrafted</li>
-      <li>Shipped to you</li>
-    </ol>
-
-    <p class="note">
-      Hardware options: Silver plated • Gold • Wire wrap
-    </p>
-  </div>
-</section>
-
-<footer id="contact" class="footer">
-  <div class="wrap footer-inner">
-    <div>
-      <h3>Contact</h3>
-
-      <div class="contact-links">
-        <a href="mailto:rebecca.mcdonnell@outlook.com">📩 Email</a>
-        <a href="https://instagram.com/rebecca.finds.ca" target="_blank" rel="noopener">📷 Instagram</a>
+      <!-- OPTIONAL: hero image (keep if you have one) -->
+      <div class="hero-media" aria-label="Featured stone image">
+        <!-- Put your hero image filename here (or leave as is) -->
+        <img src="images/hero.jpg" alt="Featured shoreline stone from Rebecca Finds"
+             onerror="this.closest('.hero-media').classList.add('missing'); this.alt='Featured image coming soon'; this.style.display='none'; this.closest('.hero-media').insertAdjacentHTML('beforeend','<div class=&quot;missing-box&quot;>Featured image coming soon ✨</div>');" />
       </div>
     </div>
+  </section>
 
-    <div>
-      <p>© 2026 Rebecca Finds • rebeccafinds.ca</p>
+  <!-- PAY WHAT'S FAIR BANNER (viral concept) -->
+  <section id="fair" class="fair">
+    <div class="wrap fair-inner">
+      <div class="fair-card">
+        <h2>Community Pricing</h2>
+        <p class="fair-lead">
+          You cover my materials cost, then choose what feels fair for my time + the find.
+        </p>
+
+        <div class="fair-grid">
+          <div class="fair-box">
+            <p class="label">1) Materials cost</p>
+            <p class="big">$15</p>
+            <p class="muted">chain + findings + finishing supplies</p>
+          </div>
+
+          <div class="fair-box">
+            <p class="label">2) Pay what feels fair</p>
+            <p class="big">You decide</p>
+            <p class="muted">thank you for supporting the journey</p>
+          </div>
+
+          <div class="fair-box">
+            <p class="label">Optional guidance</p>
+            <p class="big">$25–$45</p>
+            <p class="muted">most people land here for one-of-one pieces</p>
+          </div>
+        </div>
+
+        <p class="tiny">
+          This model helps me keep exploring, learning, and creating. If you’re able to pay more, it funds the next hunt. If you can’t, you’re still welcome here.
+        </p>
+      </div>
     </div>
-  </div>
-</footer>
+  </section>
+
+  <!-- AVAILABLE -->
+  <section id="available" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Available pieces</h2>
+        <p class="muted">Claim by DM or email — first come, first claimed. I’ll confirm availability.</p>
+      </div>
+
+      <div class="grid">
+        <!-- CARD 1 -->
+        <article class="card">
+          <div class="img">
+            <img src="images/golden-shore.jpg" alt="Golden Shore stone"
+              onerror="this.closest('.img').classList.add('missing'); this.remove(); this.closest('.img').insertAdjacentHTML('beforeend','<div class=&quot;missing-box&quot;>Photo uploading ✨</div>');" />
+            <span class="badge">Top pick</span>
+          </div>
+          <div class="card-body">
+            <h3>Golden Shore</h3>
+            <p class="desc">Warm golden tones with shoreline texture — looks unreal in sunlight.</p>
+
+            <div class="meta">
+              <div class="meta-row">
+                <span class="pill">Materials: $15</span>
+                <span class="pill soft">Pay what’s fair</span>
+              </div>
+              <div class="meta-row">
+                <span class="small">Best for: pendant / charm</span>
+                <span class="small">Status: <strong>Available</strong></span>
+              </div>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn small" href="#contact">Claim this</a>
+              <a class="btn small ghost" href="#how">How it works</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="card">
+          <div class="img">
+            <img src="images/olive-shadow.jpg" alt="Olive Shadow stone"
+              onerror="this.closest('.img').classList.add('missing'); this.remove(); this.closest('.img').insertAdjacentHTML('beforeend','<div class=&quot;missing-box&quot;>Photo uploading ✨</div>');" />
+            <span class="badge">Top pick</span>
+          </div>
+          <div class="card-body">
+            <h3>Olive Shadow</h3>
+            <p class="desc">Deep green with soft shadows — earthy and minimal, very “quiet luxury.”</p>
+
+            <div class="meta">
+              <div class="meta-row">
+                <span class="pill">Materials: $15</span>
+                <span class="pill soft">Pay what’s fair</span>
+              </div>
+              <div class="meta-row">
+                <span class="small">Best for: pendant / statement</span>
+                <span class="small">Status: <strong>Available</strong></span>
+              </div>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn small" href="#contact">Claim this</a>
+              <a class="btn small ghost" href="#how">How it works</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="card">
+          <div class="img">
+            <img src="images/midnight-gold-vein.jpg" alt="Midnight Gold Vein stone"
+              onerror="this.closest('.img').classList.add('missing'); this.remove(); this.closest('.img').insertAdjacentHTML('beforeend','<div class=&quot;missing-box&quot;>Photo uploading ✨</div>');" />
+            <span class="badge">Top pick</span>
+          </div>
+          <div class="card-body">
+            <h3>Midnight Gold Vein</h3>
+            <p class="desc">Dark base with a lighter vein — moody, dramatic, and super wearable.</p>
+
+            <div class="meta">
+              <div class="meta-row">
+                <span class="pill">Materials: $15</span>
+                <span class="pill soft">Pay what’s fair</span>
+              </div>
+              <div class="meta-row">
+                <span class="small">Best for: pendant</span>
+                <span class="small">Status: <strong>Available</strong></span>
+              </div>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn small" href="#contact">Claim this</a>
+              <a class="btn small ghost" href="#how">How it works</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- OPTIONAL SOLD example (keep if you want) -->
+        <article class="card sold">
+          <div class="img">
+            <img src="images/sold-example.jpg" alt="Sold piece"
+              onerror="this.closest('.img').classList.add('missing'); this.remove(); this.closest('.img').insertAdjacentHTML('beforeend','<div class=&quot;missing-box&quot;>Sold piece ✨</div>');" />
+            <span class="badge sold-badge">Sold</span>
+          </div>
+          <div class="card-body">
+            <h3>Fossil (Sold)</h3>
+            <p class="desc">This one found a home. More fossils and shoreline pieces coming soon.</p>
+
+            <div class="meta">
+              <div class="meta-row">
+                <span class="pill">Materials: $15</span>
+                <span class="pill soft">Community pricing</span>
+              </div>
+              <div class="meta-row">
+                <span class="small">Status: <strong>Sold</strong></span>
+                <span class="small">Next drop: soon</span>
+              </div>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn small ghost" href="#contact">Join the list</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="section alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>How it works</h2>
+        <p class="muted">Simple and human. No weird checkout stress.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <p class="step-num">1</p>
+          <h3>Choose your piece</h3>
+          <p class="muted">Pick from the available stones above (first come, first claimed).</p>
+        </div>
+
+        <div class="step">
+          <p class="step-num">2</p>
+          <h3>Claim it</h3>
+          <p class="muted">DM me on Instagram or email me the stone name.</p>
+        </div>
+
+        <div class="step">
+          <p class="step-num">3</p>
+          <h3>Pay materials + fair price</h3>
+          <p class="muted">Materials are $15, then you choose what feels fair for the work + find.</p>
+        </div>
+
+        <div class="step">
+          <p class="step-num">4</p>
+          <h3>Pickup or ship</h3>
+          <p class="muted">Local pickup in Niagara or shipping available.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="wrap contact">
+      <div>
+        <h2>Claim / Contact</h2>
+        <p class="muted">Fastest: email. Include the stone name + pickup/shipping.</p>
+
+        <div class="contact-actions">
+          <a class="btn" href="mailto:rebecca.mcdonnell@outlook.com?subject=Rebecca%20Finds%20Claim&body=Stone%20name%3A%0AWhere%20are%20you%20located%3A%0APickup%20or%20shipping%3A%0AOffer%20(materials%20%2415%20%2B%20fair%20price)%3A%0A">Email to claim</a>
+
+          <!-- Replace with your IG link if you want -->
+          <a class="btn ghost" href="#" onclick="alert('Add your Instagram link here in index.html (search for href=&quot;#&quot; next to Instagram)'); return false;">Instagram DM</a>
+        </div>
+
+        <p class="tiny">© <span id="year"></span> Rebecca Finds • Niagara, Ontario</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>Pricing promise</h3>
+        <p class="muted">
+          I will always tell you the materials cost up front. If you’re able to pay more, you’re helping fund the next hunt and the next collection.
+        </p>
+        <div class="mini">
+          <div class="mini-row"><span>Materials</span><strong>$15</strong></div>
+          <div class="mini-row"><span>Fair price</span><strong>You choose</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
-
