@@ -3,217 +3,241 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rebecca Finds — Available Stones</title>
-  <meta name="description" content="Available stones for custom pieces." />
-
-  <style>
-    :root{
-      --bg:#fff8fb;
-      --card:#ffffff;
-      --text:#1f1f24;
-      --muted:#6a6670;
-      --border:rgba(0,0,0,.08);
-      --shadow:0 10px 30px rgba(0,0,0,.08);
-      --radius:18px;
-    }
-
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--text);
-      background: radial-gradient(1200px 600px at 20% 0%, #ffe6f1 0%, transparent 55%),
-                  radial-gradient(1200px 600px at 80% 0%, #e8fff4 0%, transparent 55%),
-                  var(--bg);
-    }
-
-    header{
-      padding:28px 18px 10px;
-      text-align:center;
-    }
-    h1{
-      margin:0 0 6px;
-      font-size: clamp(26px, 4vw, 38px);
-      letter-spacing:.2px;
-    }
-    p{
-      margin:0;
-      color:var(--muted);
-      font-size: 14px;
-      line-height:1.4;
-    }
-
-    .wrap{
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 18px;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap:14px;
-    }
-
-    /* tablet */
-    @media (min-width: 680px){
-      .grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); gap:16px; }
-    }
-
-    /* desktop */
-    @media (min-width: 980px){
-      .grid{ grid-template-columns: repeat(4, minmax(0, 1fr)); gap:18px; }
-    }
-
-    .card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      overflow:hidden;
-    }
-
-    .imgbox{
-      aspect-ratio: 1 / 1;
-      background:#fff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-
-    img{
-      width:100%;
-      height:100%;
-      object-fit: cover;
-      display:block;
-    }
-
-    .meta{
-      padding:10px 12px 12px;
-      display:flex;
-      align-items:baseline;
-      justify-content:space-between;
-      gap:10px;
-    }
-
-    .name{
-      font-weight:700;
-      font-size:14px;
-    }
-
-    .tag{
-      font-size:12px;
-      color:var(--muted);
-      white-space:nowrap;
-    }
-
-    footer{
-      padding: 18px;
-      text-align:center;
-      color:var(--muted);
-      font-size: 12px;
-    }
-
-    a { color: inherit; }
-  </style>
+  <title>Available Stones — Collection Release | rebeccafinds.ca</title>
+  <meta name="description" content="Available shoreline stones for custom pieces. Each stone includes your choice of pendant/chain: silver plated, gold, or wire." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600,800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <h1>Available Stones</h1>
-    <p>For custom pieces • Niagara finds • rebeccafinds.ca</p>
+  <header class="hero">
+    <div class="wrap">
+      <p class="kicker">rebeccafinds.ca</p>
+      <h1>Available Stones</h1>
+      <p class="subhead">
+        <strong>Collection Release</strong> — Niagara finds for custom pieces.
+      </p>
+
+      <div class="info-card">
+        <h2 class="info-title">What you’re choosing</h2>
+        <p class="info-text">
+          Pick a stone below — <strong>each stone comes with a pendant and/or chain of your choosing</strong>.
+          We offer <strong>silver plated</strong>, <strong>gold</strong>, and <strong>wire</strong> options.
+        </p>
+        <ul class="bullets">
+          <li>One-of-one shoreline finds</li>
+          <li>Made to order once you claim a stone</li>
+          <li>Message to request your pendant/chain style</li>
+        </ul>
+
+        <div class="cta-row">
+          <a class="btn" href="mailto:hello@rebeccafinds.ca?subject=Custom%20Piece%20Inquiry%20-%20Stone%20%23">Custom piece inquiry</a>
+          <a class="btn btn-ghost" href="https://rebeccafinds.ca" target="_blank" rel="noreferrer">Visit rebeccafinds.ca</a>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <main class="wrap">
-    <section class="grid">
+  <main class="wrap section" id="stones">
+    <div class="section-head">
+      <h2>Collection Release — Stones</h2>
+      <p class="muted">Tap a stone to view it larger. (Files expected: <code>stone-01.jpg</code> … <code>stone-13.jpg</code>)</p>
+    </div>
 
+    <div class="grid" aria-label="Available stones grid">
       <!-- 01 -->
-      <article class="card">
-        <div class="imgbox"><img src="stone-01.jpg" alt="Stone 01"></div>
-        <div class="meta"><div class="name">Stone 01</div><div class="tag">available</div></div>
+      <article class="card" id="stone-01">
+        <a class="image-link" href="stone-01.jpg" target="_blank" rel="noreferrer">
+          <img src="stone-01.jpg" alt="Stone 01" loading="lazy" />
+        </a>
+        <div class="card-body">
+          <div class="title-row">
+            <h3>Stone 01</h3>
+            <span class="pill">available</span>
+          </div>
+          <p class="small">Includes your choice of pendant/chain: silver plated, gold, or wire.</p>
+        </div>
       </article>
 
       <!-- 02 -->
-      <article class="card">
-        <div class="imgbox"><img src="stone-02.jpg" alt="Stone 02"></div>
-        <div class="meta"><div class="name">Stone 02</div><div class="tag">available</div></div>
+      <article class="card" id="stone-02">
+        <a class="image-link" href="stone-02.jpg" target="_blank" rel="noreferrer">
+          <img src="stone-02.jpg" alt="Stone 02" loading="lazy" />
+        </a>
+        <div class="card-body">
+          <div class="title-row">
+            <h3>Stone 02</h3>
+            <span class="pill">available</span>
+          </div>
+          <p class="small">Includes your choice of pendant/chain: silver plated, gold, or wire.</p>
+        </div>
       </article>
 
       <!-- 03 -->
-      <article class="card">
-        <div class="imgbox"><img src="stone-03.jpg" alt="Stone 03"></div>
-        <div class="meta"><div class="name">Stone 03</div><div class="tag">available</div></div>
+      <article class="card" id="stone-03">
+        <a class="image-link" href="stone-03.jpg" target="_blank" rel="noreferrer">
+          <img src="stone-03.jpg" alt="Stone 03" loading="lazy" />
+        </a>
+        <div class="card-body">
+          <div class="title-row">
+            <h3>Stone 03</h3>
+            <span class="pill">available</span>
+          </div>
+          <p class="small">Includes your choice of pendant/chain: silver plated, gold, or wire.</p>
+        </div>
       </article>
 
       <!-- 04 -->
-      <article class="card">
-        <div class="imgbox"><img src="stone-04.jpg" alt="Stone 04"></div>
-        <div class="meta"><div class="name">Stone 04</div><div class="tag">available</div></div>
+      <article class="card" id="stone-04">
+        <a class="image-link" href="stone-04.jpg" target="_blank" rel="noreferrer">
+          <img src="stone-04.jpg" alt="Stone 04" loading="lazy" />
+        </a>
+        <div class="card-body">
+          <div class="title-row">
+            <h3>Stone 04</h3>
+            <span class="pill">available</span>
+          </div>
+          <p class="small">Includes your choice of pendant/chain: silver plated, gold, or wire.</p>
+        </div>
       </article>
 
       <!-- 05 -->
-      <article class="card">
-        <div class="imgbox"><img src="stone-05.jpg" alt="Stone 05"></div>
-        <div class="meta"><div class="name">Stone 05</div><div class="tag">available</div></div>
+      <article class="card" id="stone-05">
+        <a class="image-link" href="stone-05.jpg" target="_blank" rel="noreferrer">
+          <img src="stone-05.jpg" alt="Stone 05" loading="lazy" />
+        </a>
+        <div class="card-body">
+          <div class="title-row">
+            <h3>Stone 05</h3>
+            <span class="pill">available</span>
+          </div>
+          <p class="small">Includes your choice of pendant/chain: silver plated, gold, or wire.</p>
+        </div>
       </article>
 
       <!-- 06 -->
-      <article class="card">
-        <div class="imgbox"><img src="stone-06.jpg" alt="Stone 06"></div>
-        <div class="meta"><div class="name">Stone 06</div><div class="tag">available</div></div>
+      <article class="card" id="stone-06">
+        <a class="image-link" href="stone-06.jpg" target="_blank" rel="noreferrer">
+          <img src="stone-06.jpg" alt="Stone 06" loading="lazy" />
+        </a>
+        <div class="card-body">
+          <div class="title-row">
+            <h3>Stone 06</h3>
+            <span class="pill">available</span>
+          </div>
+          <p class="small">Includes your choice of pendant/chain: silver plated, gold, or wire.</p>
+        </div>
       </article>
 
       <!-- 07 -->
-      <article class="card">
-        <div class="imgbox"><img src="stone-07.jpg" alt="Stone 07"></div>
-        <div class="meta"><div class="name">Stone 07</div><div class="tag">available</div></div>
+      <article class="card" id="stone-07">
+        <a class="image-link" href="stone-07.jpg" target="_blank" rel="noreferrer">
+          <img src="stone-07.jpg" alt="Stone 07" loading="lazy" />
+        </a>
+        <div class="card-body">
+          <div class="title-row">
+            <h3>Stone 07</h3>
+            <span class="pill">available</span>
+          </div>
+          <p class="small">Includes your choice of pendant/chain: silver plated, gold, or wire.</p>
+        </div>
       </article>
 
       <!-- 08 -->
-      <article class="card">
-        <div class="imgbox"><img src="stone-08.jpg" alt="Stone 08"></div>
-        <div class="meta"><div class="name">Stone 08</div><div class="tag">available</div></div>
+      <article class="card" id="stone-08">
+        <a class="image-link" href="stone-08.jpg" target="_blank" rel="noreferrer">
+          <img src="stone-08.jpg" alt="Stone 08" loading="lazy" />
+        </a>
+        <div class="card-body">
+          <div class="title-row">
+            <h3>Stone 08</h3>
+            <span class="pill">available</span>
+          </div>
+          <p class="small">Includes your choice of pendant/chain: silver plated, gold, or wire.</p>
+        </div>
       </article>
 
       <!-- 09 -->
-      <article class="card">
-        <div class="imgbox"><img src="stone-09.jpg" alt="Stone 09"></div>
-        <div class="meta"><div class="name">Stone 09</div><div class="tag">available</div></div>
+      <article class="card" id="stone-09">
+        <a class="image-link" href="stone-09.jpg" target="_blank" rel="noreferrer">
+          <img src="stone-09.jpg" alt="Stone 09" loading="lazy" />
+        </a>
+        <div class="card-body">
+          <div class="title-row">
+            <h3>Stone 09</h3>
+            <span class="pill">available</span>
+          </div>
+          <p class="small">Includes your choice of pendant/chain: silver plated, gold, or wire.</p>
+        </div>
       </article>
 
       <!-- 10 -->
-      <article class="card">
-        <div class="imgbox"><img src="stone-10.jpg" alt="Stone 10"></div>
-        <div class="meta"><div class="name">Stone 10</div><div class="tag">available</div></div>
+      <article class="card" id="stone-10">
+        <a class="image-link" href="stone-10.jpg" target="_blank" rel="noreferrer">
+          <img src="stone-10.jpg" alt="Stone 10" loading="lazy" />
+        </a>
+        <div class="card-body">
+          <div class="title-row">
+            <h3>Stone 10</h3>
+            <span class="pill">available</span>
+          </div>
+          <p class="small">Includes your choice of pendant/chain: silver plated, gold, or wire.</p>
+        </div>
       </article>
 
       <!-- 11 -->
-      <article class="card">
-        <div class="imgbox"><img src="stone-11.jpg" alt="Stone 11"></div>
-        <div class="meta"><div class="name">Stone 11</div><div class="tag">available</div></div>
+      <article class="card" id="stone-11">
+        <a class="image-link" href="stone-11.jpg" target="_blank" rel="noreferrer">
+          <img src="stone-11.jpg" alt="Stone 11" loading="lazy" />
+        </a>
+        <div class="card-body">
+          <div class="title-row">
+            <h3>Stone 11</h3>
+            <span class="pill">available</span>
+          </div>
+          <p class="small">Includes your choice of pendant/chain: silver plated, gold, or wire.</p>
+        </div>
       </article>
 
       <!-- 12 -->
-      <article class="card">
-        <div class="imgbox"><img src="stone-12.jpg" alt="Stone 12"></div>
-        <div class="meta"><div class="name">Stone 12</div><div class="tag">available</div></div>
+      <article class="card" id="stone-12">
+        <a class="image-link" href="stone-12.jpg" target="_blank" rel="noreferrer">
+          <img src="stone-12.jpg" alt="Stone 12" loading="lazy" />
+        </a>
+        <div class="card-body">
+          <div class="title-row">
+            <h3>Stone 12</h3>
+            <span class="pill">available</span>
+          </div>
+          <p class="small">Includes your choice of pendant/chain: silver plated, gold, or wire.</p>
+        </div>
       </article>
 
       <!-- 13 -->
-      <article class="card">
-        <div class="imgbox"><img src="stone-13.jpg" alt="Stone 13"></div>
-        <div class="meta"><div class="name">Stone 13</div><div class="tag">available</div></div>
+      <article class="card" id="stone-13">
+        <a class="image-link" href="stone-13.jpg" target="_blank" rel="noreferrer">
+          <img src="stone-13.jpg" alt="Stone 13" loading="lazy" />
+        </a>
+        <div class="card-body">
+          <div class="title-row">
+            <h3>Stone 13</h3>
+            <span class="pill">available</span>
+          </div>
+          <p class="small">Includes your choice of pendant/chain: silver plated, gold, or wire.</p>
+        </div>
       </article>
+    </div>
 
-    </section>
+    <footer class="footer">
+      <p><strong>Claiming a stone:</strong> message with the stone number + your preferred finish (silver plated / gold / wire) and whether you want a pendant, chain, or both.</p>
+      <p class="muted">© <span id="year"></span> rebeccafinds.ca</p>
+    </footer>
   </main>
 
-  <footer>
-    © <span id="y"></span> rebeccafinds.ca
-  </footer>
-
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
