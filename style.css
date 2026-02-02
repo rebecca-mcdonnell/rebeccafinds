@@ -176,23 +176,26 @@ h1{
 
 .thumb{
   position: relative;
-  padding: 12px 12px 0;
+  padding: 12px;
 }
 
+/* ✅ Fix “image inside an image”:
+   - remove the inner frame look
+   - crop extra background so stones look large + clean */
 .thumb img{
   width:100%;
-  height: 220px;
-  object-fit: contain;
-  object-position: center center;
+  height: 230px;
+  object-fit: cover;          /* crops away empty background */
+  object-position: center;
   border-radius: 14px;
-  border: 2px solid rgba(201,162,74,0.30);
   background: #fff;
   display:block;
 }
 
+/* Missing image placeholder only when file truly missing */
 .placeholder{
   display:none;
-  height: 220px;
+  height: 230px;
   border-radius: 14px;
   border: 2px dashed rgba(43,107,79,0.35);
   background: rgba(255,255,255,0.75);
@@ -208,16 +211,10 @@ h1{
   gap:6px;
 }
 
-.ph-title{
-  font-weight: 1000;
-  font-size: 14px;
-}
+.ph-title{ font-weight: 1000; font-size: 14px; }
+.ph-sub{ font-size: 12px; color: rgba(31,31,31,0.60); }
 
-.ph-sub{
-  font-size: 12px;
-  color: rgba(31,31,31,0.60);
-}
-
+/* Card body */
 .card-body{ padding: 12px 14px 14px; }
 
 .card h3{
@@ -230,11 +227,12 @@ h1{
   margin: 0 0 8px;
   font-size: 13px;
   line-height: 1.35;
-  color: rgba(31,31,31,0.82);
+  color: rgba(31,31,31,0.86);
 }
 
-.material strong{
-  color: rgba(31,31,31,0.95);
+.material span{
+  font-weight: 900;
+  color: rgba(31,31,31,0.75);
 }
 
 .card-body .muted{
@@ -286,8 +284,8 @@ summary::-webkit-details-marker{ display:none; }
 /* SOLD */
 .badge{
   position:absolute;
-  top: 14px;
-  right: 14px;
+  top: 18px;
+  right: 18px;
   padding: 6px 10px;
   border-radius: 999px;
   font-size: 12px;
@@ -302,13 +300,8 @@ summary::-webkit-details-marker{ display:none; }
   color: #fff;
 }
 
-.sold{
-  opacity: 0.92;
-}
-
-.sold .thumb img{
-  filter: grayscale(0.35) contrast(0.95);
-}
+.sold{ opacity: 0.92; }
+.sold .thumb img{ filter: grayscale(0.35) contrast(0.95); }
 
 /* How it works */
 .section.light{
@@ -364,10 +357,7 @@ summary::-webkit-details-marker{ display:none; }
 }
 
 /* Olive centering */
-.olive-fix{
-  object-fit: contain;
-  object-position: center center;
-}
+.olive-fix{ object-position: center; }
 
 /* Responsive */
 @media (max-width: 980px){
@@ -376,7 +366,8 @@ summary::-webkit-details-marker{ display:none; }
 
 @media (max-width: 620px){
   .grid{ grid-template-columns: 1fr; }
-  .thumb img, .placeholder{ height: 250px; }
+  .thumb img, .placeholder{ height: 260px; }
   .header-inner{ align-items:flex-start; flex-direction: column; }
 }
+
 
