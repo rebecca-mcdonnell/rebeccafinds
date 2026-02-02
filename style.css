@@ -584,3 +584,6 @@ img{ max-width:100%; display:block; }
     }
 
 body{ outline: 6px solid hotpink !important; }
+
+
+body { outline: 8px solid hotpink !important; }
