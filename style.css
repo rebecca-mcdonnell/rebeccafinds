@@ -538,3 +538,35 @@ img{ max-width:100%; display:block; }
   font-weight: 900;
   letter-spacing: .5px;
 }
+
+.deal-highlight {
+  background: linear-gradient(135deg, #f5eee6, #fbe8d9);
+  border: 2px solid #c9a24a;
+  color: #2b6b4f;
+
+  text-align: center;
+  font-family: 'Fraunces', serif;
+
+  padding: 18px 15px;
+  margin: 25px auto;
+  max-width: 900px;
+
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.deal-highlight strong {
+  font-size: 1.4rem;
+  color: #b88b2d;
+}
+
+.deal-highlight span {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  margin-top: 6px;
+  color: #555;
+}
