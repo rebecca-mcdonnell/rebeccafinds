@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rebecca Finds — Collection Release</title>
-  <meta name="description" content="Hand-selected shoreline stones and custom jewelry in Niagara, Ontario. Pay what you think is fair with a $15 minimum." />
+  <meta name="description" content="Hand-selected shoreline stones and custom jewelry in Niagara, Ontario. Pay what you think is fair with a minimum." />
 
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -31,9 +31,7 @@
   <div class="wrap hero-inner">
     <div class="hero-text">
       <h1>Collection Release</h1>
-      <p class="sub">
-        Hand-selected shoreline finds • custom jewelry • Niagara, ON
-      </p>
+      <p class="sub">Hand-selected shoreline finds • custom jewelry • Niagara, ON</p>
 
       <div class="hero-badges">
         <span class="badge">One-of-one pieces</span>
@@ -47,7 +45,8 @@
       </div>
 
       <p class="note">
-        Pricing model: <strong>Pay what you think is fair</strong> — <strong>$15 minimum</strong>.
+        Pricing model: <strong>Pay what you think is fair</strong> —
+        <strong><span data-min-price></span> minimum</strong>.
       </p>
     </div>
 
@@ -55,8 +54,7 @@
       <div class="hero-card-inner">
         <h2 class="card-title">New drops happen in waves ✨</h2>
         <p class="card-text">
-          If something says “Coming soon,” it means I’m photographing and posting it as fast as I can —
-          without rushing the magic.
+          If something shows “Image coming soon,” it means I’m photographing and posting it as fast as I can — without rushing the magic.
         </p>
         <a class="mini-link" href="education.html">Learn about stones →</a>
       </div>
@@ -105,7 +103,12 @@
       <!-- Stone 1 -->
       <article class="product">
         <div class="product-media">
-          <img src="stone-1.jpg" alt="Stone 1 photo" loading="lazy">
+          <img
+            src="golden-shore.jpg"
+            alt="Golden Shore stone photo"
+            loading="lazy"
+            onerror="this.outerHTML = comingSoonCard('Image coming soon','Golden Shore');"
+          >
         </div>
 
         <div class="product-body">
@@ -115,7 +118,7 @@
           </div>
 
           <p class="product-desc">
-            A warm golden shoreline stone with natural depth and soft movement. Smooth enough to hold,
+            A warm golden shoreline stone with natural depth and soft movement — smooth enough to hold,
             but still full of tiny details that catch light.
           </p>
 
@@ -127,18 +130,20 @@
 
           <div class="product-actions">
             <a class="btn btn-small" href="#contact">Claim / Ask</a>
-            <span class="price">Pay what you think is fair • $15 minimum</span>
+            <span class="price">Pay what you think is fair • <span data-min-price></span> minimum</span>
           </div>
         </div>
       </article>
 
       <!-- Stone 2 -->
       <article class="product">
-        <div class="product-media placeholder">
-          <div class="placeholder-inner">
-            <div class="placeholder-title">Image coming soon</div>
-            <div class="placeholder-sub">Stone 2</div>
-          </div>
+        <div class="product-media">
+          <img
+            src="olive-shadow.jpg"
+            alt="Olive Shadow stone photo"
+            loading="lazy"
+            onerror="this.outerHTML = comingSoonCard('Image coming soon','Olive Shadow');"
+          >
         </div>
 
         <div class="product-body">
@@ -153,25 +158,27 @@
           </p>
 
           <ul class="details">
-            <li><strong>Type:</strong> green stone (serpentine)</li>
+            <li><strong>Type:</strong> serpentine (confirmed)</li>
             <li><strong>Finish:</strong> natural</li>
             <li><strong>Best for:</strong> pendant or desk display</li>
           </ul>
 
           <div class="product-actions">
             <a class="btn btn-small" href="#contact">Claim / Ask</a>
-            <span class="price">Pay what you think is fair • $15 minimum</span>
+            <span class="price">Pay what you think is fair • <span data-min-price></span> minimum</span>
           </div>
         </div>
       </article>
 
       <!-- Stone 3 -->
       <article class="product">
-        <div class="product-media placeholder">
-          <div class="placeholder-inner">
-            <div class="placeholder-title">Image coming soon</div>
-            <div class="placeholder-sub">Stone 3</div>
-          </div>
+        <div class="product-media">
+          <img
+            src="midnight-gold-vein.jpg"
+            alt="Midnight Gold Vein stone photo"
+            loading="lazy"
+            onerror="this.outerHTML = comingSoonCard('Image coming soon','Midnight Gold Vein');"
+          >
         </div>
 
         <div class="product-body">
@@ -193,7 +200,7 @@
 
           <div class="product-actions">
             <a class="btn btn-small" href="#contact">Claim / Ask</a>
-            <span class="price">Pay what you think is fair • $15 minimum</span>
+            <span class="price">Pay what you think is fair • <span data-min-price></span> minimum</span>
           </div>
         </div>
       </article>
@@ -201,7 +208,12 @@
       <!-- Highlight fossil (not available) -->
       <article class="product">
         <div class="product-media">
-          <img src="fossil-highlight.jpg" alt="Highlight fossil (not available)" loading="lazy">
+          <img
+            src="fossil-highlight.jpg"
+            alt="Highlight fossil shell (not available)"
+            loading="lazy"
+            onerror="this.outerHTML = comingSoonCard('Image coming soon','Highlight Fossil');"
+          >
         </div>
 
         <div class="product-body">
@@ -212,7 +224,7 @@
 
           <p class="product-desc">
             My highlight fossil shell find — kept as a personal marker of “the day it all clicked.”
-            This one isn’t for sale, but it’s part of the story.
+            Not for sale, but part of the story.
           </p>
 
           <ul class="details">
@@ -261,15 +273,6 @@
         <span class="tiny muted">More to come</span>
       </article>
     </div>
-
-    <div class="callout">
-      <div class="callout-inner">
-        <p>
-          Want first dibs when these go live? Message me and I’ll send photos privately first.
-        </p>
-        <a class="btn btn-small" href="#contact">Message me</a>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -293,21 +296,13 @@
 
       <article class="tile">
         <h3>3) Pay what you think is fair</h3>
-        <p>
-          You choose your price based on value + your budget.
-          <strong>$15 minimum</strong> keeps materials and time covered.
-        </p>
+        <p>You choose your price based on value + your budget. The minimum keeps materials and time covered.</p>
       </article>
 
       <article class="tile">
         <h3>4) Optional: turn it into jewelry</h3>
         <p>Some stones can be set as pendants — message me and we’ll make it happen.</p>
       </article>
-    </div>
-
-    <div class="mini-row">
-      <a class="mini-link" href="education.html">Education page →</a>
-      <span class="tiny muted">More learning content coming soon</span>
     </div>
   </div>
 </section>
@@ -349,8 +344,29 @@
 </footer>
 
 <script>
+  // ✅ Set minimum ONCE here so it can't "go back"
+  const MINIMUM_PRICE = 20; // <-- change to 25 if you want
+
+  // Fill all spots that reference min price
+  document.querySelectorAll('[data-min-price]').forEach(el => {
+    el.textContent = `$${MINIMUM_PRICE}`;
+  });
+
+  // Footer year
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  // If an image is missing, swap in a matching placeholder automatically
+  function comingSoonCard(title, label){
+    return `
+      <div class="product-media placeholder">
+        <div class="placeholder-inner">
+          <div class="placeholder-title">${title}</div>
+          <div class="placeholder-sub">${label}</div>
+        </div>
+      </div>
+    `;
+  }
 </script>
 
 </body>
-  </html>
+</html>
