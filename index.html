@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rebecca Finds — Collection Release</title>
-  <meta name="description" content="Hand-selected shoreline stones and custom jewelry in Niagara, Ontario. Pay what you think is fair with a minimum." /
-  <link rel="stylesheet" href="style.css?v=2">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Hand-selected shoreline stones and custom jewelry in Niagara, Ontario. Pay what you think is fair with a minimum." />
+  <link rel="stylesheet" href="style.css?v=2" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -28,11 +28,15 @@
 
 <section class="hero">
   <div class="wrap hero-inner">
-<section class="deal-highlight">
-  ✨ Special Launch Offer ✨  
-  <strong>$20 Minimum</strong> — Pendant & Chain Included  
-  <span>Pay What You Think Is Fair 💛</span>
-</section>
+
+    <!-- Deal highlight (fixed: single line) -->
+    <section class="deal-highlight" aria-label="Special launch offer">
+      <span class="deal-top">✨ Special Launch Offer ✨</span>
+      <span class="deal-line">
+        <strong>$20 Minimum</strong> — Pendant &amp; Chain Included • Pay What You Think Is Fair 💛
+      </span>
+    </section>
+
     <div class="hero-text">
       <h1>Collection Release</h1>
       <p class="sub">Hand-selected shoreline finds • Custom jewelry • Niagara, ON</p>
@@ -202,9 +206,9 @@
       </article>
 
       <!-- 4 Highlight Fossil (Not for sale) -->
-      <article class="product">
+      <article class="product product-highlight">
         <div class="product-media">
-          <img data-img-key="fossil" src="" alt="Highlight fossil" loading="lazy">
+          <img data-img-key="fossil" src="" alt="Highlight fossil shell" loading="lazy">
         </div>
         <div class="product-body">
           <div class="product-top">
@@ -513,61 +517,21 @@
   // Set your minimum price ONCE here
   const MINIMUM_PRICE = 20; // change to 25 if you want
 
-  // Exact filenames from your screenshot (ALL in /images)
+  // Exact filenames from your /images folder
   // Dalmatian intentionally excluded
   const IMAGES = {
     stone1: "images/goldjaspermedium.jpg",        // Golden Shore
     stone2: "images/serpentinesmall.jpg",         // Olive Shadow
     stone3: "images/quartzveinmedium.jpg",        // Midnight Gold Vein
     fossil:  "images/fossil-highlight.jpg",       // Highlight Fossil
-
     stone4: "images/granitemedium.jpg",
     stone5: "images/petrifiedwoodmedium.jpg",
     stone6: "images/unakitemedium.jpg",
     stone7: "images/carnelianxsmall.jpg",
-    stone8: "images/serpentinemedium.jpg",
-    stone9: "images/serpentinemedium1.jpg"
+    stone8: "images/serpentinmedium.jpg",
+    stone9: "images/serpentinmedium1.jpg"
   };
 
-  // Fill min price
+  // Fill minimum price text
   document.querySelectorAll("[data-min-price]").forEach(el => {
-    el.textContent = "$" + MINIMUM_PRICE;
-  });
-
-  // Footer year
-  const y = document.getElementById("year");
-  if (y) y.textContent = new Date().getFullYear();
-
-  // Placeholder if an image ever fails
-  function comingSoonCard(title, label) {
-    return `
-      <div class="product-media placeholder">
-        <div class="placeholder-inner">
-          <div class="placeholder-title">${title}</div>
-          <div class="placeholder-sub">${label}</div>
-        </div>
-      </div>
-    `;
-  }
-
-  // Attach images + fallbacks
-  document.querySelectorAll("img[data-img-key]").forEach(img => {
-    const key = img.getAttribute("data-img-key");
-    const src = IMAGES[key];
-
-    const label =
-      key === "stone1" ? "Golden Shore" :
-      key === "stone2" ? "Olive Shadow" :
-      key === "stone3" ? "Midnight Gold Vein" :
-      key === "fossil" ? "Highlight Fossil" :
-      "Stone";
-
-    img.onerror = () => { img.outerHTML = comingSoonCard("Image coming soon", label); };
-
-    if (src) img.src = src;
-    else img.outerHTML = comingSoonCard("Image coming soon", label);
-  });
-</script>
-
-</body>
-</html>
+    el.textContent = "$" + 
