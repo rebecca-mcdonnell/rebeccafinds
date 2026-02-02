@@ -485,3 +485,31 @@ img{ max-width:100%; display:block; }
   .product-media{ border-right: 0; border-bottom: 1px solid rgba(43,107,79,.10); }
   .contact-grid{ grid-template-columns: 1fr; }
 }
+/* Soft divider accent (adds subtle "magic" without changing layout) */
+.soft-divider{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top: 14px;
+  opacity: .9;
+}
+
+.soft-divider .line{
+  height:1px;
+  flex:1;
+  background: rgba(43,107,79,.18);
+}
+
+.soft-divider .dot{
+  width:7px;
+  height:7px;
+  border-radius:99px;
+  background: rgba(201,162,74,.85);
+  border: 1px solid rgba(201,162,74,.45);
+}
+
+.soft-divider .leaf{
+  color: rgba(43,107,79,.85);
+  font-weight: 900;
+  letter-spacing: .5px;
+}
