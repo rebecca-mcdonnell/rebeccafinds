@@ -83,7 +83,7 @@
           </p>
         </header>
 
-        <!-- HIGHLIGHT (separate so top row can be golden/quartz/unakite) -->
+        <!-- HIGHLIGHT (smaller feature card) -->
         <article class="highlight-card" aria-label="Highlight fossil (not available)">
           <div class="highlight-media">
             <img
@@ -285,31 +285,7 @@
             </div>
           </article>
 
-          <!-- Dalmatian jasper -->
-          <article class="card">
-            <div class="card-media">
-              <img src="images/dalmatianjaspersmall.jpg" alt="Dalmatian jasper stone jewelry piece" loading="lazy"
-                   onerror="this.closest('.card-media').classList.add('no-image');" />
-              <span class="tag">Jewelry</span>
-            </div>
-            <div class="card-body">
-              <h3>Dalmatian Jasper — Playful Grounding</h3>
-              <p class="desc">
-                Creamy stone with natural black spotting — playful but still grounded. Chosen for its pattern, contrast, and
-                “you’ll never find this exact one again” charm.
-              </p>
-              <div class="meta">
-                <span class="chip">One of one</span>
-                <span class="chip">Natural spotting</span>
-              </div>
-              <div class="actions">
-                <a class="btn primary" href="#contact">Claim / inquire</a>
-                <a class="btn ghost" href="#how">Pay what feels fair</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Carnelian -->
+          <!-- Carnelian (if this still doesn't show, the file is not in /images or named differently) -->
           <article class="card">
             <div class="card-media">
               <img src="images/carneliansmall.jpg" alt="Carnelian stone jewelry piece" loading="lazy"
@@ -460,4 +436,64 @@
               </div>
             </div>
 
-            <p class="micro">❧ Thank you for valuing sl
+            <p class="micro">❧ Thank you for valuing slow creation and small discoveries.</p>
+          </div>
+
+          <div class="panel">
+            <h3>Claiming a piece</h3>
+            <ul class="list">
+              <li>Message me with the item name (or screenshot).</li>
+              <li>I’ll confirm availability and details.</li>
+              <li>We’ll finalize pickup/shipping and contribution.</li>
+            </ul>
+
+            <h3 class="mt">Custom requests</h3>
+            <p class="desc">
+              If you love the style but want a different stone, reach out. I’m building a growing gallery of shoreline finds
+              for future custom settings.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="wrap">
+        <header class="section-head">
+          <h2>Contact</h2>
+          <p>Questions, claims, custom requests, or just want to say hi — I’d love to hear from you.</p>
+        </header>
+
+        <div class="contact-box">
+          <div class="contact-item">
+            <p class="label">Email</p>
+            <p class="value"><a href="mailto:rebecca.mcdonnell@outlook.com">rebecca.mcdonnell@outlook.com</a></p>
+          </div>
+          <div class="contact-item">
+            <p class="label">Instagram</p>
+            <p class="value"><a href="https://instagram.com/rebecca.finds.ca" target="_blank" rel="noopener">@rebecca.finds.ca</a></p>
+          </div>
+          <div class="contact-item">
+            <p class="label">Website</p>
+            <p class="value">rebeccafinds.ca</p>
+          </div>
+        </div>
+
+        <p class="footer-micro">❧ Found, cleaned, curated, and shared with intention.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year"></span> Rebecca Finds • rebeccafinds.ca</p>
+      <a class="to-top" href="#top" aria-label="Back to top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
