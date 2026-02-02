@@ -3,521 +3,269 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rebecca Finds — Pay What’s Fair Stones</title>
-  <meta name="description" content="One-of-one shoreline finds from Niagara. Pay what you think is fair — $15 minimum." />
+  <title>Rebecca Finds — Pay What You Think Is Fair</title>
+  <meta name="description" content="One-of-one shoreline finds from Niagara, ON. $20 minimum + pay what you think is fair." />
 
-  <link rel="stylesheet" href="style.css" />
+  <!-- Cache-bust so your phone always loads the newest CSS -->
+  <link rel="stylesheet" href="style.css?v=RF_FINAL_1" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600,800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <a class="skip" href="#main">Skip to content</a>
 
-  <header class="site-header" role="banner">
-    <div class="wrap header-inner">
-      <div class="brand">
-        <div class="brand-mark" aria-hidden="true"></div>
-        <div class="brand-text">
-          <h1>Rebecca Finds</h1>
-          <p class="tagline">Niagara, ON • One-of-one shoreline finds</p>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Go to top">
+      <span class="brand-mark">✦</span>
+      <span class="brand-name">Rebecca Finds</span>
+    </a>
+
+    <nav class="nav" aria-label="Site navigation">
+      <a href="#available">Available</a>
+      <a href="#how">How it works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="kicker">Niagara, ON • shoreline finds • one-of-one</p>
+
+        <h1>$20 minimum,<br><span class="accent">then pay what you think is fair.</span></h1>
+
+        <p class="subhead">
+          I find stones by the water, clean and finish them by hand, and turn them into simple pieces you can wear.
+          No pressure pricing — just honest support.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn" href="#available">View available pieces</a>
+          <a class="btn ghost" href="#how">How to claim</a>
+        </div>
+
+        <div class="trust">
+          <div class="chip">💛 $20 minimum</div>
+          <div class="chip">🌊 Found on Niagara shorelines</div>
+          <div class="chip">✨ One-of-one</div>
+          <div class="chip">📦 Pickup or shipping</div>
         </div>
       </div>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="#pricing">Pay What’s Fair</a>
-        <a href="#available">Stones</a>
-        <a href="#how">How It Works</a>
-        <a href="#contact">Claim</a>
-      </nav>
+      <!-- HERO IMAGE (Golden) -->
+      <div class="hero-media" aria-label="Featured stone image">
+        <img
+          src="images/goldjaspermedium.jpg"
+          alt="Golden stone (Gold Jasper) — featured"
+          onerror="this.onerror=null; this.src='goldjaspermedium.jpg';"
+        />
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main id="main">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="wrap hero-inner">
-        <div class="hero-copy">
-          <div class="hero-kicker">
-            <span class="kicker-badge">Community Pricing</span>
-            <span class="kicker-text">Pay what you think is fair • <strong>$15 minimum</strong></span>
-          </div>
-
-          <h2>The million-dollar idea is simple.</h2>
-
-          <p>
-            I collect shoreline stones from Niagara and turn the best ones into one-of-one pieces.
-            You choose the stone. You choose what feels fair.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn" href="#available">Browse stones</a>
-            <a class="btn btn-ghost" href="#pricing">How “pay what’s fair” works</a>
-          </div>
-
-          <div class="hero-bullets" aria-label="Highlights">
-            <div class="pill">One-of-one finds</div>
-            <div class="pill">Pay what feels fair</div>
-            <div class="pill">$15 minimum</div>
-            <div class="pill">Local pickup / shipping</div>
-          </div>
-        </div>
-
-        <div class="hero-card" aria-label="Featured">
-          <div class="hero-card-top">
-            <div class="mini-title">Pinned favourites</div>
-            <div class="mini-sub">Golden Shore • Olive Shadow • Midnight Gold Vein</div>
-          </div>
-
-          <div class="featured-grid">
-            <article class="mini-stone">
-              <img src="stone-12.jpg" alt="Golden Shore shoreline stone" loading="lazy">
-              <div>
-                <div class="mini-name">Golden Shore</div>
-                <div class="mini-note">Golden jasper • warm + grounding</div>
-              </div>
-            </article>
-
-            <article class="mini-stone">
-              <img src="stone-04.jpg" alt="Olive Shadow shoreline stone" loading="lazy">
-              <div>
-                <div class="mini-name">Olive Shadow</div>
-                <div class="mini-note">Serpentine • deep olive fade</div>
-              </div>
-            </article>
-
-            <article class="mini-stone">
-              <img src="stone-09.jpg" alt="Midnight Gold Vein shoreline stone" loading="lazy">
-              <div>
-                <div class="mini-name">Midnight Gold Vein</div>
-                <div class="mini-note">Basalt + quartz vein • dramatic</div>
-              </div>
-            </article>
-          </div>
-
-          <div class="hero-card-bottom">
-            <span class="dot" aria-hidden="true"></span>
-            <span>Natural texture is part of the story. Nothing is mass-produced.</span>
-          </div>
-        </div>
+  <!-- AVAILABLE -->
+  <section id="available" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Available pieces</h2>
+        <p class="muted">Claim by email or Instagram DM — first come, first claimed. I’ll confirm availability.</p>
       </div>
-    </section>
 
-    <!-- PRICING -->
-    <section id="pricing" class="section section-alt">
-      <div class="wrap">
-        <div class="section-head">
-          <h3>Pay what you think is fair</h3>
-          <p class="muted">Minimum $15 • You decide the rest</p>
-        </div>
+      <div class="grid">
 
-        <div class="pricing-grid">
-          <article class="pricing-card">
-            <div class="pricing-top">
-              <div class="pricing-title">The rule</div>
-              <div class="pricing-amount">$15 minimum</div>
-            </div>
-            <p class="pricing-copy">
-              After that, you choose what feels fair based on the stone, the finish, and the time it took.
-              No awkwardness — just honesty.
-            </p>
-            <div class="pricing-tags">
-              <span class="chip">Transparent</span>
-              <span class="chip">Community-based</span>
-              <span class="chip">No inflated pricing</span>
-            </div>
-          </article>
-
-          <article class="pricing-card">
-            <div class="pricing-top">
-              <div class="pricing-title">Why it’s special</div>
-              <div class="pricing-amount">Trust-based</div>
-            </div>
-            <p class="pricing-copy">
-              This is for people who get it. If you love the piece and want to support the work,
-              you can. If you’re starting small, you still can.
-            </p>
-            <div class="pricing-tags">
-              <span class="chip">Collector energy</span>
-              <span class="chip">One-of-one</span>
-              <span class="chip">Fair</span>
-            </div>
-          </article>
-
-          <article class="pricing-card">
-            <div class="pricing-top">
-              <div class="pricing-title">What to include</div>
-              <div class="pricing-amount">Your choice</div>
-            </div>
-            <ul class="pricing-list">
-              <li>Stone complexity + rarity</li>
-              <li>Polish / finish time</li>
-              <li>Setting type (wire/pendant/etc.)</li>
-              <li>How much you want to support the project</li>
-            </ul>
-          </article>
-        </div>
-
-        <div class="promise">
-          <div class="promise-icon" aria-hidden="true"></div>
-          <div class="promise-text">
-            <strong>Promise:</strong> If I ever think your price is truly too low for the piece + work, I’ll say so kindly
-            and offer a simple alternative. No pressure, no drama.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- STONES -->
-    <section id="available" class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <h3>Stones</h3>
-          <p class="muted">Claim a stone + tell me what you think is fair (min $15).</p>
-        </div>
-
-        <div class="stone-grid">
-          <!-- PINNED TOP 3 -->
-          <article class="stone-card pinned">
-            <div class="stone-media">
-              <img src="stone-12.jpg" alt="Golden Shore stone" loading="lazy">
-              <div class="pin-badge" aria-label="Pinned">Pinned</div>
-              <div class="price-badge" aria-label="Minimum price">$15 min</div>
-            </div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Golden Shore</h4>
-                <p class="stone-sub">Golden jasper • smooth, warm, grounding</p>
-              </div>
-              <div class="stone-actions">
-                <a class="btn btn-sm" href="#contact">Claim + choose price</a>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-12.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status ok">Available</span></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="stone-card pinned">
-            <div class="stone-media">
-              <img src="stone-04.jpg" alt="Olive Shadow stone" loading="lazy">
-              <div class="pin-badge" aria-label="Pinned">Pinned</div>
-              <div class="price-badge" aria-label="Minimum price">$15 min</div>
-            </div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Olive Shadow</h4>
-                <p class="stone-sub">Serpentine • deep olive tone with a soft fade</p>
-              </div>
-              <div class="stone-actions">
-                <a class="btn btn-sm" href="#contact">Claim + choose price</a>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-04.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status ok">Available</span></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="stone-card pinned">
-            <div class="stone-media">
-              <img src="stone-09.jpg" alt="Midnight Gold Vein stone" loading="lazy">
-              <div class="pin-badge" aria-label="Pinned">Pinned</div>
-              <div class="price-badge" aria-label="Minimum price">$15 min</div>
-            </div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Midnight Gold Vein</h4>
-                <p class="stone-sub">Basalt + quartz vein • bold contrast, dramatic lines</p>
-              </div>
-              <div class="stone-actions">
-                <a class="btn btn-sm" href="#contact">Claim + choose price</a>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-09.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status ok">Available</span></div>
-              </div>
-            </div>
-          </article>
-
-          <!-- HIGHLIGHT FOSSIL (STONE 01) -->
-          <article class="stone-card highlight">
-            <div class="stone-media">
-              <img src="stone-01.jpg" alt="Highlight fossil" loading="lazy">
-              <div class="highlight-badge" aria-label="Highlight">Highlight Fossil</div>
-            </div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Highlight Fossil</h4>
-                <p class="stone-sub">Fossil specimen • favourite find (not for sale)</p>
-              </div>
-
-              <div class="stone-actions">
-                <span class="btn btn-sm btn-disabled" aria-disabled="true">Not available</span>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-01.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status no">Not available</span></div>
-              </div>
-            </div>
-          </article>
-
-          <!-- IMAGE COMING SOON (STONE 02 + 03) -->
-          <article class="stone-card soon">
-            <div class="stone-media">
-              <div class="coming-soon" role="img" aria-label="Image coming soon">
-                <div class="coming-title">Image coming soon</div>
-                <div class="coming-sub">Stone 02 • $15 minimum</div>
-              </div>
-            </div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Stone 02</h4>
-                <p class="stone-sub">Label ready • photo coming next shoot</p>
-              </div>
-
-              <div class="stone-actions">
-                <span class="btn btn-sm btn-disabled" aria-disabled="true">Coming soon</span>
-                <a class="btn btn-sm btn-ghost" href="#contact">Ask about it</a>
-              </div>
-
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-02.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status wait">Coming soon</span></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="stone-card soon">
-            <div class="stone-media">
-              <div class="coming-soon" role="img" aria-label="Image coming soon">
-                <div class="coming-title">Image coming soon</div>
-                <div class="coming-sub">Stone 03 • $15 minimum</div>
-              </div>
-            </div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Stone 03</h4>
-                <p class="stone-sub">Label ready • photo coming next shoot</p>
-              </div>
-
-              <div class="stone-actions">
-                <span class="btn btn-sm btn-disabled" aria-disabled="true">Coming soon</span>
-                <a class="btn btn-sm btn-ghost" href="#contact">Ask about it</a>
-              </div>
-
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-03.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status wait">Coming soon</span></div>
-              </div>
-            </div>
-          </article>
-
-          <!-- OTHER STONES (kept) -->
-          <article class="stone-card">
-            <div class="stone-media"><img src="stone-06.jpg" alt="Stone 06" loading="lazy"></div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Stone 06</h4>
-                <p class="stone-sub">Fine speckle • cool tones • clean + classic</p>
-              </div>
-              <div class="stone-actions">
-                <a class="btn btn-sm" href="#contact">Claim + choose price</a>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-06.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status ok">Available</span></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="stone-card">
-            <div class="stone-media"><img src="stone-07.jpg" alt="Stone 07" loading="lazy"></div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Stone 07</h4>
-                <p class="stone-sub">Muted green • smooth finish • understated</p>
-              </div>
-              <div class="stone-actions">
-                <a class="btn btn-sm" href="#contact">Claim + choose price</a>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-07.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status ok">Available</span></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="stone-card">
-            <div class="stone-media"><img src="stone-08.jpg" alt="Stone 08" loading="lazy"></div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Stone 08</h4>
-                <p class="stone-sub">Warm brown tones • rich • glossy look</p>
-              </div>
-              <div class="stone-actions">
-                <a class="btn btn-sm" href="#contact">Claim + choose price</a>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-08.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status ok">Available</span></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="stone-card">
-            <div class="stone-media"><img src="stone-10.jpg" alt="Stone 10" loading="lazy"></div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Stone 10</h4>
-                <p class="stone-sub">Soft blush • natural line detail • delicate</p>
-              </div>
-              <div class="stone-actions">
-                <a class="btn btn-sm" href="#contact">Claim + choose price</a>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-10.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status ok">Available</span></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="stone-card">
-            <div class="stone-media"><img src="stone-11.jpg" alt="Stone 11" loading="lazy"></div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Stone 11</h4>
-                <p class="stone-sub">Small + clean • minimal • everyday piece</p>
-              </div>
-              <div class="stone-actions">
-                <a class="btn btn-sm" href="#contact">Claim + choose price</a>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-11.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status ok">Available</span></div>
-              </div>
-            </div>
-          </article>
-
-          <!-- CARNELIAN (with safe fallback if file missing) -->
-          <article class="stone-card">
-            <div class="stone-media">
-              <img
-                src="stone-13.jpg"
-                alt="Carnelian"
-                loading="lazy"
-                onerror="this.style.display='none'; this.parentElement.querySelector('.coming-soon').style.display='flex';"
-              >
-              <div class="coming-soon" style="display:none" role="img" aria-label="Image coming soon">
-                <div class="coming-title">Image coming soon</div>
-                <div class="coming-sub">Carnelian • $15 minimum</div>
-              </div>
-            </div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Carnelian</h4>
-                <p class="stone-sub">Warm peach/orange glow • standout</p>
-              </div>
-              <div class="stone-actions">
-                <a class="btn btn-sm" href="#contact">Claim + choose price</a>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-13.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status ok">Available</span></div>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="note">
-          <strong>Pricing:</strong> Pay what you think is fair • <strong>$15 minimum</strong>. If you’re unsure, message me and I’ll suggest a range.
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW -->
-    <section id="how" class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <h3>How it works</h3>
-          <p class="muted">Simple, human, and fair.</p>
-        </div>
-
-        <div class="how-grid">
-          <article class="card">
-            <h4>1) Choose a stone</h4>
-            <p>Pick one you love and tap <strong>Claim</strong>.</p>
-          </article>
-          <article class="card">
-            <h4>2) Tell me what feels fair</h4>
-            <p>Minimum $15. After that, you choose based on the piece + your budget.</p>
-          </article>
-          <article class="card">
-            <h4>3) I make it wearable</h4>
-            <p>We confirm the setting (gold/silver, chain length), then I create the final piece.</p>
-          </article>
-        </div>
-
-        <div class="fineprint">
-          <p>This model works because the community is honest. If you want a “suggested range,” ask — I’ll give one.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section section-alt">
-      <div class="wrap">
-        <div class="section-head">
-          <h3>Claim a stone</h3>
-          <p class="muted">Message me the stone name + what you think is fair (min $15).</p>
-        </div>
-
-        <div class="contact-card">
-          <div class="contact-row">
-            <div>
-              <div class="label">Email</div>
-              <a class="text-link" href="mailto:rebecca.mcdonnell@outlook.com">rebecca.mcdonnell@outlook.com</a>
-            </div>
-
-            <div>
-              <div class="label">Website</div>
-              <a class="text-link" href="https://rebeccafinds.ca" target="_blank" rel="noopener">rebeccafinds.ca</a>
-            </div>
+        <!-- GOLDEN -->
+        <article class="card">
+          <div class="img">
+            <img
+              src="images/goldjaspermedium.jpg"
+              alt="Golden — Gold Jasper (medium)"
+              onerror="this.onerror=null; this.src='goldjaspermedium.jpg';"
+            />
+            <span class="badge">Top pick</span>
           </div>
 
-          <div class="contact-tip">
-            Copy/paste this: “I want <strong>Golden Shore</strong>. My fair price is <strong>$__</strong>. Gold or silver?”
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+          <div class="card-body">
+            <h3>Golden</h3>
+            <p class="desc">Warm golden-green tones with natural shoreline character.</p>
 
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <p>© <span id="year"></span> Rebecca Finds • Niagara, Ontario</p>
-      <p class="muted small">Pay what you think is fair • $15 minimum</p>
+            <div class="meta">
+              <div class="meta-row">
+                <span class="pill">Minimum $20</span>
+                <span class="pill soft">Pay what’s fair</span>
+              </div>
+              <div class="meta-row">
+                <span class="small">Best for: pendant</span>
+                <span class="small">Status: <strong>Available</strong></span>
+              </div>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn small" href="#contact">Claim this</a>
+              <a class="btn small ghost" href="#how">How it works</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- HIGHLIGHT FOSSIL -->
+        <article class="card">
+          <div class="img">
+            <img
+              src="images/fossil-highlight.jpg"
+              alt="Highlight Fossil"
+              onerror="this.onerror=null; this.src='fossil-highlight.jpg';"
+            />
+            <span class="badge">Highlight</span>
+          </div>
+
+          <div class="card-body">
+            <h3>Highlight Fossil</h3>
+            <p class="desc">A standout fossil piece — clean, bold, and one-of-one.</p>
+
+            <div class="meta">
+              <div class="meta-row">
+                <span class="pill">Minimum $20</span>
+                <span class="pill soft">Pay what’s fair</span>
+              </div>
+              <div class="meta-row">
+                <span class="small">Best for: pendant</span>
+                <span class="small">Status: <strong>Available</strong></span>
+              </div>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn small" href="#contact">Claim this</a>
+              <a class="btn small ghost" href="#how">How it works</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- GRANITE -->
+        <article class="card">
+          <div class="img">
+            <img
+              src="images/granitemedium.jpg"
+              alt="Granite (medium)"
+              onerror="this.onerror=null; this.src='granitemedium.jpg';"
+            />
+            <span class="badge">Classic</span>
+          </div>
+
+          <div class="card-body">
+            <h3>Granite</h3>
+            <p class="desc">Smooth, dark, and timeless — minimal and wearable.</p>
+
+            <div class="meta">
+              <div class="meta-row">
+                <span class="pill">Minimum $20</span>
+                <span class="pill soft">Pay what’s fair</span>
+              </div>
+              <div class="meta-row">
+                <span class="small">Best for: pendant</span>
+                <span class="small">Status: <strong>Available</strong></span>
+              </div>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn small" href="#contact">Claim this</a>
+              <a class="btn small ghost" href="#how">How it works</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="note muted">
+        Dalmatian stone has been removed from the collection.
+      </p>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <!-- HOW IT WORKS -->
+  <section id="how" class="section alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>How it works</h2>
+        <p class="muted">Simple and human. No weird checkout stress.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <p class="step-num">1</p>
+          <h3>Choose a piece</h3>
+          <p class="muted">Pick from the available stones above.</p>
+        </div>
+
+        <div class="step">
+          <p class="step-num">2</p>
+          <h3>Claim it</h3>
+          <p class="muted">Email or DM me the stone name.</p>
+        </div>
+
+        <div class="step">
+          <p class="step-num">3</p>
+          <h3>Pay $20 minimum + fair price</h3>
+          <p class="muted">$20 covers the minimum — you choose the rest.</p>
+        </div>
+
+        <div class="step">
+          <p class="step-num">4</p>
+          <h3>Pickup or ship</h3>
+          <p class="muted">Local pickup in Niagara or shipping available.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="wrap contact">
+      <div>
+        <h2>Claim / Contact</h2>
+        <p class="muted">Fastest: email. Include the stone name + pickup/shipping.</p>
+
+        <div class="contact-actions">
+          <a class="btn" href="mailto:rebecca.mcdonnell@outlook.com?subject=Rebecca%20Finds%20Claim&body=Stone%20name%3A%0AWhere%20are%20you%20located%3A%0APickup%20or%20shipping%3A%0AOffer%20(%2420%20minimum%20%2B%20fair%20price)%3A%0A">
+            Email to claim
+          </a>
+
+          <a class="btn ghost" href="https://instagram.com/rebecca.finds.ca" target="_blank" rel="noreferrer">
+            Instagram DM
+          </a>
+        </div>
+
+        <p class="tiny">© <span id="year"></span> Rebecca Finds • Niagara, Ontario • rebeccafinds.ca</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>Pricing promise</h3>
+        <p class="muted">
+          I’ll always be transparent: $20 minimum, then you choose what feels fair.
+          If you pay more, you’re funding the next hunt — thank you.
+        </p>
+        <div class="mini">
+          <div class="mini-row"><span>Minimum</span><strong>$20</strong></div>
+          <div class="mini-row"><span>Fair price</span><strong>You choose</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
+
 
 
 
