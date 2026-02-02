@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rebecca Finds — Collection Release</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rebecca Finds — Collection Release</title>
 
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,7 +15,7 @@
   <div class="wrap header-inner">
     <h1>Rebecca Finds</h1>
 
-    <nav>
+    <nav class="nav">
       <a href="#available">Stones</a>
       <a href="#how">How It Works</a>
       <a href="#contact">Contact</a>
@@ -24,199 +23,357 @@
   </div>
 </header>
 
-
 <section class="hero">
-  <div class="wrap">
+  <div class="wrap hero-inner">
     <h2>Collection Release</h2>
     <p>Hand-selected shoreline stones • Custom jewelry • Niagara, ON</p>
+
+    <div class="pill-row">
+      <span class="pill">One-of-one stones</span>
+      <span class="pill">Custom hardware</span>
+      <span class="pill">Niagara finds</span>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn" href="#available">Shop stones</a>
+      <a class="btn btn-ghost" href="#contact">Contact Rebecca</a>
+    </div>
   </div>
 </section>
 
-
 <section id="available" class="section">
   <div class="wrap">
-
-    <h2>Available Stones</h2>
-
-    <p class="section-sub">
-      Each stone includes your choice of silver plated, gold, golden medium, or wire wrap hardware.
-    </p>
-
+    <div class="section-head">
+      <h2>Available Stones</h2>
+      <p class="muted">
+        Each stone includes your choice of silver plated, gold, golden medium, or wire wrap hardware.
+      </p>
+    </div>
 
     <div class="grid">
 
-
       <!-- TOP PICKS -->
 
-      <article class="card">
-        <img src="stone-12.jpg" alt="Golden Shore">
-        <h3>Golden Shore</h3>
-        <p>Warm golden tones with natural shoreline polish.</p>
+      <article class="card gold-highlight">
+        <div class="thumb">
+          <img src="stone-12.jpg" alt="Golden Shore stone photo">
+        </div>
 
-        <div class="card-actions">
-          <a href="#contact" class="btn">Claim</a>
-          <a href="#details" class="btn btn-ghost">Details</a>
+        <div class="card-body">
+          <h3>Golden Shore</h3>
+          <p class="muted">Warm golden tones with natural shoreline polish.</p>
+
+          <div class="card-actions">
+            <a href="#contact" class="btn small">Claim</a>
+
+            <details>
+              <summary>Details</summary>
+              <ul class="features">
+                <li>One-of-one shoreline stone</li>
+                <li>Hardware: silver / gold / golden medium / wire wrap</li>
+                <li>Best for: pendant or keychain charm</li>
+              </ul>
+            </details>
+          </div>
         </div>
       </article>
 
-
       <article class="card">
-       <img src="stone-04.jpg" alt="Olive Shadow" class="olive-fix">
-        <h3>Olive Shadow</h3>
-        <p>Soft olive tones with subtle dark inclusions.</p>
+        <div class="thumb">
+          <img src="stone-04.jpg" alt="Olive Shadow stone photo" class="olive-fix">
+        </div>
 
-        <div class="card-actions">
-          <a href="#contact" class="btn">Claim</a>
-          <a href="#details" class="btn btn-ghost">Details</a>
+        <div class="card-body">
+          <h3>Olive Shadow</h3>
+          <p class="muted">Soft olive tones with subtle dark inclusions.</p>
+
+          <div class="card-actions">
+            <a href="#contact" class="btn small">Claim</a>
+
+            <details>
+              <summary>Details</summary>
+              <ul class="features">
+                <li>One-of-one shoreline stone</li>
+                <li>Hardware: silver / gold / golden medium / wire wrap</li>
+                <li>Best for: minimalist pendant</li>
+              </ul>
+            </details>
+          </div>
         </div>
       </article>
 
-
       <article class="card">
-        <img src="stone-01.jpg" alt="Midnight Gold Vein">
-        <h3>Midnight Gold Vein</h3>
-        <p>Dark base with warm natural veining.</p>
+        <div class="thumb">
+          <img src="stone-01.jpg" alt="Midnight Gold Vein stone photo">
+        </div>
 
-        <div class="card-actions">
-          <a href="#contact" class="btn">Claim</a>
-          <a href="#details" class="btn btn-ghost">Details</a>
+        <div class="card-body">
+          <h3>Midnight Gold Vein</h3>
+          <p class="muted">Dark base with warm natural veining.</p>
+
+          <div class="card-actions">
+            <a href="#contact" class="btn small">Claim</a>
+
+            <details>
+              <summary>Details</summary>
+              <ul class="features">
+                <li>One-of-one shoreline stone</li>
+                <li>Hardware: silver / gold / golden medium / wire wrap</li>
+                <li>Best for: statement pendant</li>
+              </ul>
+            </details>
+          </div>
         </div>
       </article>
-
-
 
       <!-- REST OF COLLECTION -->
 
       <article class="card">
-        <img src="stone-02.jpg">
-        <h3>Peach Drift</h3>
-        <p>Soft peach and cream tones.</p>
+        <div class="thumb">
+          <img src="stone-02.jpg" alt="Peach Drift stone photo">
+        </div>
 
-        <div class="card-actions">
-          <a href="#contact" class="btn">Claim</a>
-          <a class="btn btn-ghost">Details</a>
+        <div class="card-body">
+          <h3>Peach Drift</h3>
+          <p class="muted">Soft peach and cream tones.</p>
+
+          <div class="card-actions">
+            <a href="#contact" class="btn small">Claim</a>
+
+            <details>
+              <summary>Details</summary>
+              <ul class="features">
+                <li>One-of-one shoreline stone</li>
+                <li>Hardware: silver / gold / golden medium / wire wrap</li>
+                <li>Best for: dainty pendant</li>
+              </ul>
+            </details>
+          </div>
         </div>
       </article>
-
 
       <article class="card">
-        <img src="stone-03.jpg">
-        <h3>Moss Coast</h3>
-        <p>Green stone with dark inclusions.</p>
+        <div class="thumb">
+          <img src="stone-03.jpg" alt="Moss Coast stone photo">
+        </div>
 
-        <div class="card-actions">
-          <a href="#contact" class="btn">Claim</a>
-          <a class="btn btn-ghost">Details</a>
+        <div class="card-body">
+          <h3>Moss Coast</h3>
+          <p class="muted">Green stone with dark inclusions.</p>
+
+          <div class="card-actions">
+            <a href="#contact" class="btn small">Claim</a>
+
+            <details>
+              <summary>Details</summary>
+              <ul class="features">
+                <li>One-of-one shoreline stone</li>
+                <li>Hardware: silver / gold / golden medium / wire wrap</li>
+                <li>Best for: earthy pendant</li>
+              </ul>
+            </details>
+          </div>
         </div>
       </article>
-
 
       <article class="card">
-        <img src="stone-05.jpg">
-        <h3>Ink Marble</h3>
-        <p>Bold black and white marbling.</p>
+        <div class="thumb">
+          <img src="stone-05.jpg" alt="Ink Marble stone photo">
+        </div>
 
-        <div class="card-actions">
-          <a href="#contact" class="btn">Claim</a>
-          <a class="btn btn-ghost">Details</a>
+        <div class="card-body">
+          <h3>Ink Marble</h3>
+          <p class="muted">Bold black and white marbling.</p>
+
+          <div class="card-actions">
+            <a href="#contact" class="btn small">Claim</a>
+
+            <details>
+              <summary>Details</summary>
+              <ul class="features">
+                <li>One-of-one shoreline stone</li>
+                <li>Hardware: silver / gold / golden medium / wire wrap</li>
+                <li>Best for: high-contrast pendant</li>
+              </ul>
+            </details>
+          </div>
         </div>
       </article>
-
 
       <article class="card">
-        <img src="stone-06.jpg">
-        <h3>Storm Beach</h3>
-        <p>Dark speckled shoreline stone.</p>
+        <div class="thumb">
+          <img src="stone-06.jpg" alt="Storm Beach stone photo">
+        </div>
 
-        <div class="card-actions">
-          <a href="#contact" class="btn">Claim</a>
-          <a class="btn btn-ghost">Details</a>
+        <div class="card-body">
+          <h3>Storm Beach</h3>
+          <p class="muted">Dark speckled shoreline stone.</p>
+
+          <div class="card-actions">
+            <a href="#contact" class="btn small">Claim</a>
+
+            <details>
+              <summary>Details</summary>
+              <ul class="features">
+                <li>One-of-one shoreline stone</li>
+                <li>Hardware: silver / gold / golden medium / wire wrap</li>
+                <li>Best for: unisex pendant</li>
+              </ul>
+            </details>
+          </div>
         </div>
       </article>
-
 
       <article class="card">
-        <img src="stone-07.jpg">
-        <h3>Golden Veil</h3>
-        <p>Pale stone with warm veining.</p>
+        <div class="thumb">
+          <img src="stone-07.jpg" alt="Golden Veil stone photo">
+        </div>
 
-        <div class="card-actions">
-          <a href="#contact" class="btn">Claim</a>
-          <a class="btn btn-ghost">Details</a>
+        <div class="card-body">
+          <h3>Golden Veil</h3>
+          <p class="muted">Pale stone with warm veining.</p>
+
+          <div class="card-actions">
+            <a href="#contact" class="btn small">Claim</a>
+
+            <details>
+              <summary>Details</summary>
+              <ul class="features">
+                <li>One-of-one shoreline stone</li>
+                <li>Hardware: silver / gold / golden medium / wire wrap</li>
+                <li>Best for: soft coastal look</li>
+              </ul>
+            </details>
+          </div>
         </div>
       </article>
-
 
       <article class="card">
-        <img src="stone-08.jpg">
-        <h3>Blush Meadow</h3>
-        <p>Green and blush mottled surface.</p>
+        <div class="thumb">
+          <img src="stone-08.jpg" alt="Blush Meadow stone photo">
+        </div>
 
-        <div class="card-actions">
-          <a href="#contact" class="btn">Claim</a>
-          <a class="btn btn-ghost">Details</a>
+        <div class="card-body">
+          <h3>Blush Meadow</h3>
+          <p class="muted">Green and blush mottled surface.</p>
+
+          <div class="card-actions">
+            <a href="#contact" class="btn small">Claim</a>
+
+            <details>
+              <summary>Details</summary>
+              <ul class="features">
+                <li>One-of-one shoreline stone</li>
+                <li>Hardware: silver / gold / golden medium / wire wrap</li>
+                <li>Best for: romantic statement piece</li>
+              </ul>
+            </details>
+          </div>
         </div>
       </article>
-
 
       <article class="card">
-        <img src="stone-09.jpg">
-        <h3>Emerald Tide</h3>
-        <p>Deep green with soft banding.</p>
+        <div class="thumb">
+          <img src="stone-09.jpg" alt="Emerald Tide stone photo">
+        </div>
 
-        <div class="card-actions">
-          <a href="#contact" class="btn">Claim</a>
-          <a class="btn btn-ghost">Details</a>
+        <div class="card-body">
+          <h3>Emerald Tide</h3>
+          <p class="muted">Deep green with soft banding.</p>
+
+          <div class="card-actions">
+            <a href="#contact" class="btn small">Claim</a>
+
+            <details>
+              <summary>Details</summary>
+              <ul class="features">
+                <li>One-of-one shoreline stone</li>
+                <li>Hardware: silver / gold / golden medium / wire wrap</li>
+                <li>Best for: classic pendant</li>
+              </ul>
+            </details>
+          </div>
         </div>
       </article>
-
 
       <article class="card">
-        <img src="stone-10.jpg">
-        <h3>Driftwood Sand</h3>
-        <p>Warm tan with natural texture.</p>
+        <div class="thumb">
+          <img src="stone-10.jpg" alt="Driftwood Sand stone photo">
+        </div>
 
-        <div class="card-actions">
-          <a href="#contact" class="btn">Claim</a>
-          <a class="btn btn-ghost">Details</a>
+        <div class="card-body">
+          <h3>Driftwood Sand</h3>
+          <p class="muted">Warm tan with natural texture.</p>
+
+          <div class="card-actions">
+            <a href="#contact" class="btn small">Claim</a>
+
+            <details>
+              <summary>Details</summary>
+              <ul class="features">
+                <li>One-of-one shoreline stone</li>
+                <li>Hardware: silver / gold / golden medium / wire wrap</li>
+                <li>Best for: neutral everyday wear</li>
+              </ul>
+            </details>
+          </div>
         </div>
       </article>
-
 
       <article class="card">
-        <img src="stone-11.jpg">
-        <h3>Quiet Bay</h3>
-        <p>Soft grey-green minimalist stone.</p>
+        <div class="thumb">
+          <img src="stone-11.jpg" alt="Quiet Bay stone photo">
+        </div>
 
-        <div class="card-actions">
-          <a href="#contact" class="btn">Claim</a>
-          <a class="btn btn-ghost">Details</a>
+        <div class="card-body">
+          <h3>Quiet Bay</h3>
+          <p class="muted">Soft grey-green minimalist stone.</p>
+
+          <div class="card-actions">
+            <a href="#contact" class="btn small">Claim</a>
+
+            <details>
+              <summary>Details</summary>
+              <ul class="features">
+                <li>One-of-one shoreline stone</li>
+                <li>Hardware: silver / gold / golden medium / wire wrap</li>
+                <li>Best for: understated pendant</li>
+              </ul>
+            </details>
+          </div>
         </div>
       </article>
-
 
       <article class="card">
-        <img src="stone-13.jpg">
-        <h3>Sunwashed Shore</h3>
-        <p>Golden base with dark flecks.</p>
+        <div class="thumb">
+          <img src="stone-13.jpg" alt="Sunwashed Shore stone photo">
+        </div>
 
-        <div class="card-actions">
-          <a href="#contact" class="btn">Claim</a>
-          <a class="btn btn-ghost">Details</a>
+        <div class="card-body">
+          <h3>Sunwashed Shore</h3>
+          <p class="muted">Golden base with dark flecks.</p>
+
+          <div class="card-actions">
+            <a href="#contact" class="btn small">Claim</a>
+
+            <details>
+              <summary>Details</summary>
+              <ul class="features">
+                <li>One-of-one shoreline stone</li>
+                <li>Hardware: silver / gold / golden medium / wire wrap</li>
+                <li>Best for: bold everyday pendant</li>
+              </ul>
+            </details>
+          </div>
         </div>
       </article>
-
 
     </div>
-
   </div>
 </section>
 
-
-
 <section id="how" class="section light">
   <div class="wrap">
-
     <h2>How It Works</h2>
 
     <ol class="steps">
@@ -230,31 +387,26 @@
     <p class="note">
       Hardware options: Silver plated • Gold • Golden medium • Wire wrap
     </p>
-
   </div>
 </section>
 
-
-
 <footer id="contact" class="footer">
   <div class="wrap footer-inner">
-
     <div>
       <h3>Contact</h3>
 
       <div class="contact-links">
         <a href="mailto:rebecca.mcdonnell@outlook.com">📩 Email</a>
-        <a href="https://instagram.com/rebecca.finds.ca" target="_blank">📷 Instagram</a>
+        <a href="https://instagram.com/rebecca.finds.ca" target="_blank" rel="noopener">📷 Instagram</a>
       </div>
     </div>
 
     <div>
-      <p>© 2026 Rebecca Finds</p>
+      <p>© 2026 Rebecca Finds • rebeccafinds.ca</p>
     </div>
-
   </div>
 </footer>
 
-
 </body>
 </html>
+
