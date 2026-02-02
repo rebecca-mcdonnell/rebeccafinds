@@ -637,3 +637,16 @@ body{ outline: 8px solid hotpink !important; }
   }
 
 }
+
+@media (max-width: 768px) {
+  .stone-card img,
+  .stone img,
+  .stone-image img {
+    max-height: 220px;
+    width: auto;
+    max-width: 95%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+  }
+}
