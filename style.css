@@ -714,3 +714,27 @@ img, video { max-width: 100%; height: auto; }
   .details { margin: 10px 0 0; }
   .details li { margin: 6px 0; }
 }
+
+/* ===== MOBILE: shrink + stop giant cards ===== */
+@media (max-width: 600px) {
+  body { font-size: 15px; }
+  .wrap { padding-left: 14px; padding-right: 14px; }
+
+  h1 { font-size: 2rem; line-height: 1.05; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.15rem; }
+
+  .section { padding: 28px 0; }
+  .products { gap: 16px; }
+
+  .product { padding: 12px; }
+
+  .product-media img {
+    max-height: 240px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .btn { padding: 10px 12px; font-size: 0.95rem; }
+}
