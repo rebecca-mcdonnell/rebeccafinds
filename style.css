@@ -1,5 +1,5 @@
 :root{
-  --bg:#1f2622;
+  --bg:#2a332f;          /* lighter, warm green-charcoal */
   --panel:#151816;
   --text:#f3f3f3;
   --muted:#b8beb9;
@@ -351,11 +351,6 @@ img{ display:block; max-width:100%; }
   color: rgba(255,255,255,.85);
 }
 
-.note{
-  margin: 16px 0 0;
-  font-size: 13px;
-}
-
 /* RESPONSIVE */
 @media (max-width: 980px){
   .hero-inner{ grid-template-columns: 1fr; }
@@ -368,8 +363,4 @@ img{ display:block; max-width:100%; }
   .grid{ grid-template-columns: 1fr; }
   .nav{ gap: 6px; }
   .nav a{ padding: 8px 8px; }
-}
-
-
-
-
+  }
