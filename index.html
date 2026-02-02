@@ -3,478 +3,217 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rebecca Finds — Shoreline Stone Jewelry</title>
-  <meta name="description" content="One-of-one shoreline stone jewelry. Hand-collected in Niagara, Ontario." />
-  <link rel="stylesheet" href="style.css" />
+  <title>Rebecca Finds — Available Stones</title>
+  <meta name="description" content="Available stones for custom pieces." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600,700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fff8fb;
+      --card:#ffffff;
+      --text:#1f1f24;
+      --muted:#6a6670;
+      --border:rgba(0,0,0,.08);
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+      --radius:18px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 600px at 20% 0%, #ffe6f1 0%, transparent 55%),
+                  radial-gradient(1200px 600px at 80% 0%, #e8fff4 0%, transparent 55%),
+                  var(--bg);
+    }
+
+    header{
+      padding:28px 18px 10px;
+      text-align:center;
+    }
+    h1{
+      margin:0 0 6px;
+      font-size: clamp(26px, 4vw, 38px);
+      letter-spacing:.2px;
+    }
+    p{
+      margin:0;
+      color:var(--muted);
+      font-size: 14px;
+      line-height:1.4;
+    }
+
+    .wrap{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap:14px;
+    }
+
+    /* tablet */
+    @media (min-width: 680px){
+      .grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); gap:16px; }
+    }
+
+    /* desktop */
+    @media (min-width: 980px){
+      .grid{ grid-template-columns: repeat(4, minmax(0, 1fr)); gap:18px; }
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .imgbox{
+      aspect-ratio: 1 / 1;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+    }
+
+    .meta{
+      padding:10px 12px 12px;
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:10px;
+    }
+
+    .name{
+      font-weight:700;
+      font-size:14px;
+    }
+
+    .tag{
+      font-size:12px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    footer{
+      padding: 18px;
+      text-align:center;
+      color:var(--muted);
+      font-size: 12px;
+    }
+
+    a { color: inherit; }
+  </style>
 </head>
 
 <body>
-  <!-- Top Bar -->
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="#top" aria-label="Go to top">
-        <span class="brand-mark">RF</span>
-        <span class="brand-text">
-          <span class="brand-name">Rebecca Finds</span>
-          <span class="brand-tag">One-of-one shoreline stones • Niagara, ON</span>
-        </span>
-      </a>
-
-      <nav class="nav">
-        <a href="#shop">Shop</a>
-        <a href="#about">About</a>
-        <a href="#how">How it works</a>
-        <a href="#contact" class="btn small">Contact</a>
-      </nav>
-    </div>
+  <header>
+    <h1>Available Stones</h1>
+    <p>For custom pieces • Niagara finds • rebeccafinds.ca</p>
   </header>
 
-  <!-- Hero -->
-  <main id="top">
-    <section class="hero">
-      <div class="wrap hero-inner">
-        <div class="hero-copy">
-          <p class="pill">Drop One • 12 pieces • Limited</p>
-          <h1>Shoreline stones, made wearable.</h1>
-          <p class="lead">
-            Hand-collected along Lake Ontario in Niagara, then cleaned, polished, and finished into one-of-one pieces.
-            When it’s gone, it’s gone.
-          </p>
-          <div class="hero-actions">
-            <a class="btn" href="#shop">Shop Drop One</a>
-            <a class="btn ghost" href="#how">See how it works</a>
-          </div>
-          <div class="trust">
-            <span>🌊 One of one</span>
-            <span>🪨 Naturally shaped</span>
-            <span>✨ Hand-finished</span>
-            <span>📦 Ships from Ontario</span>
-          </div>
-        </div>
+  <main class="wrap">
+    <section class="grid">
 
-        <div class="hero-card">
-          <div class="hero-img">
-            <img src="images/hero.jpg" alt="Shoreline stones photographed on a clean white background" />
-          </div>
-          <p class="caption">Tip: If hero is too big, shrink it in CSS under <code>.hero-img img</code>.</p>
-        </div>
-      </div>
+      <!-- 01 -->
+      <article class="card">
+        <div class="imgbox"><img src="stone-01.jpg" alt="Stone 01"></div>
+        <div class="meta"><div class="name">Stone 01</div><div class="tag">available</div></div>
+      </article>
+
+      <!-- 02 -->
+      <article class="card">
+        <div class="imgbox"><img src="stone-02.jpg" alt="Stone 02"></div>
+        <div class="meta"><div class="name">Stone 02</div><div class="tag">available</div></div>
+      </article>
+
+      <!-- 03 -->
+      <article class="card">
+        <div class="imgbox"><img src="stone-03.jpg" alt="Stone 03"></div>
+        <div class="meta"><div class="name">Stone 03</div><div class="tag">available</div></div>
+      </article>
+
+      <!-- 04 -->
+      <article class="card">
+        <div class="imgbox"><img src="stone-04.jpg" alt="Stone 04"></div>
+        <div class="meta"><div class="name">Stone 04</div><div class="tag">available</div></div>
+      </article>
+
+      <!-- 05 -->
+      <article class="card">
+        <div class="imgbox"><img src="stone-05.jpg" alt="Stone 05"></div>
+        <div class="meta"><div class="name">Stone 05</div><div class="tag">available</div></div>
+      </article>
+
+      <!-- 06 -->
+      <article class="card">
+        <div class="imgbox"><img src="stone-06.jpg" alt="Stone 06"></div>
+        <div class="meta"><div class="name">Stone 06</div><div class="tag">available</div></div>
+      </article>
+
+      <!-- 07 -->
+      <article class="card">
+        <div class="imgbox"><img src="stone-07.jpg" alt="Stone 07"></div>
+        <div class="meta"><div class="name">Stone 07</div><div class="tag">available</div></div>
+      </article>
+
+      <!-- 08 -->
+      <article class="card">
+        <div class="imgbox"><img src="stone-08.jpg" alt="Stone 08"></div>
+        <div class="meta"><div class="name">Stone 08</div><div class="tag">available</div></div>
+      </article>
+
+      <!-- 09 -->
+      <article class="card">
+        <div class="imgbox"><img src="stone-09.jpg" alt="Stone 09"></div>
+        <div class="meta"><div class="name">Stone 09</div><div class="tag">available</div></div>
+      </article>
+
+      <!-- 10 -->
+      <article class="card">
+        <div class="imgbox"><img src="stone-10.jpg" alt="Stone 10"></div>
+        <div class="meta"><div class="name">Stone 10</div><div class="tag">available</div></div>
+      </article>
+
+      <!-- 11 -->
+      <article class="card">
+        <div class="imgbox"><img src="stone-11.jpg" alt="Stone 11"></div>
+        <div class="meta"><div class="name">Stone 11</div><div class="tag">available</div></div>
+      </article>
+
+      <!-- 12 -->
+      <article class="card">
+        <div class="imgbox"><img src="stone-12.jpg" alt="Stone 12"></div>
+        <div class="meta"><div class="name">Stone 12</div><div class="tag">available</div></div>
+      </article>
+
+      <!-- 13 -->
+      <article class="card">
+        <div class="imgbox"><img src="stone-13.jpg" alt="Stone 13"></div>
+        <div class="meta"><div class="name">Stone 13</div><div class="tag">available</div></div>
+      </article>
+
     </section>
-
-    <!-- Shop -->
-    <section id="shop" class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>Drop One</h2>
-            <p class="muted">Tap a piece for details. Mark sold pieces as “Sold out” (easy toggle).</p>
-          </div>
-          <div class="mini-note">Website: <strong>rebeccafinds.ca</strong></div>
-        </div>
-
-        <div class="grid products" id="productGrid">
-
-          <!--
-            IMAGE NOTE:
-            These 10 images are currently referenced from the REPO ROOT because that’s where your PXL_*.jpg files are.
-            If you later move them into /images/drop1/, change src to: images/drop1/PXL_....jpg
-          -->
-
-          <article class="card"
-            data-name="Golden Drift"
-            data-size="Medium"
-            data-price="$48 CAD"
-            data-stone="Likely quartzite / jasper blend"
-            data-desc="A warm, honey-toned shoreline stone shaped by years of lake movement. Subtle natural markings give this piece a grounded, everyday feel. One of one — when it’s gone, it’s gone."
-          >
-            <button class="card-btn" type="button" aria-label="Open Golden Drift">
-              <div class="thumb">
-                <img src="PXL_20260201_165742693.jpg" alt="Golden Drift stone" loading="lazy">
-              </div>
-              <div class="meta">
-                <h3>Golden Drift</h3>
-                <p class="sub">Medium • $48 CAD</p>
-              </div>
-            </button>
-          </article>
-
-          <article class="card"
-            data-name="Moss Current"
-            data-size="Small"
-            data-price="$38 CAD"
-            data-stone="Likely green jasper / altered basalt"
-            data-desc="Deep forest-green tones with natural speckling, collected along the Niagara shoreline. Smooth, earthy, and quietly luxe."
-          >
-            <button class="card-btn" type="button" aria-label="Open Moss Current">
-              <div class="thumb">
-                <img src="PXL_20260201_165823167.jpg" alt="Moss Current stone" loading="lazy">
-              </div>
-              <div class="meta">
-                <h3>Moss Current</h3>
-                <p class="sub">Small • $38 CAD</p>
-              </div>
-            </button>
-          </article>
-
-          <article class="card"
-            data-name="Blush Tide"
-            data-size="XS"
-            data-price="$28 CAD"
-            data-stone="Likely pink quartzite"
-            data-desc="A delicate blush-toned shoreline stone shaped by water and time. Minimal, romantic, and giftable."
-          >
-            <button class="card-btn" type="button" aria-label="Open Blush Tide">
-              <div class="thumb">
-                <img src="PXL_20260201_165832848.jpg" alt="Blush Tide stone" loading="lazy">
-              </div>
-              <div class="meta">
-                <h3>Blush Tide</h3>
-                <p class="sub">XS • $28 CAD</p>
-              </div>
-            </button>
-          </article>
-
-          <article class="card"
-            data-name="Seafoam Echo"
-            data-size="XS"
-            data-price="$32 CAD"
-            data-stone="Likely jasper / mixed minerals"
-            data-desc="A rare mix of seafoam tones and dark mineral patterning. Each angle reveals new detail — a true one-of-one."
-          >
-            <button class="card-btn" type="button" aria-label="Open Seafoam Echo">
-              <div class="thumb">
-                <img src="PXL_20260201_165903325.jpg" alt="Seafoam Echo stone" loading="lazy">
-              </div>
-              <div class="meta">
-                <h3>Seafoam Echo</h3>
-                <p class="sub">XS • $32 CAD</p>
-              </div>
-            </button>
-          </article>
-
-          <article class="card"
-            data-name="Tidal Stripe"
-            data-size="Medium"
-            data-price="$55 CAD"
-            data-stone="Likely banded jasper / metamorphic stone"
-            data-desc="Bold natural striping with dramatic contrast — one of the most eye-catching pieces in Drop One. Collector energy."
-          >
-            <button class="card-btn" type="button" aria-label="Open Tidal Stripe">
-              <div class="thumb">
-                <img src="PXL_20260201_165920372.jpg" alt="Tidal Stripe stone" loading="lazy">
-              </div>
-              <div class="meta">
-                <h3>Tidal Stripe</h3>
-                <p class="sub">Medium • $55 CAD</p>
-              </div>
-            </button>
-          </article>
-
-          <article class="card"
-            data-name="Night Current"
-            data-size="Small"
-            data-price="$40 CAD"
-            data-stone="Likely basalt / greenstone"
-            data-desc="Deep tones with subtle marbling. Smooth, strong, and quietly powerful — a sleek everyday statement."
-          >
-            <button class="card-btn" type="button" aria-label="Open Night Current">
-              <div class="thumb">
-                <img src="PXL_20260201_165929967.jpg" alt="Night Current stone" loading="lazy">
-              </div>
-              <div class="meta">
-                <h3>Night Current</h3>
-                <p class="sub">Small • $40 CAD</p>
-              </div>
-            </button>
-          </article>
-
-          <article class="card"
-            data-name="Wildflower Shore"
-            data-size="XS"
-            data-price="$32 CAD"
-            data-stone="Unakite-style jasper (green + blush inclusions)"
-            data-desc="A rare mix of soft green and blush-pink mineral inclusions. Playful, earthy, and totally unique."
-          >
-            <button class="card-btn" type="button" aria-label="Open Wildflower Shore">
-              <div class="thumb">
-                <img src="PXL_20260201_165954805.jpg" alt="Wildflower Shore stone" loading="lazy">
-              </div>
-              <div class="meta">
-                <h3>Wildflower Shore</h3>
-                <p class="sub">XS • $32 CAD</p>
-              </div>
-            </button>
-          </article>
-
-          <article class="card"
-            data-name="Pale Horizon"
-            data-size="XS"
-            data-price="$28 CAD"
-            data-stone="Likely quartzite"
-            data-desc="Soft coastal tones and a clean, polished finish. Minimal, calming, and easy to wear every day."
-          >
-            <button class="card-btn" type="button" aria-label="Open Pale Horizon">
-              <div class="thumb">
-                <img src="PXL_20260201_170004170.jpg" alt="Pale Horizon stone" loading="lazy">
-              </div>
-              <div class="meta">
-                <h3>Pale Horizon</h3>
-                <p class="sub">XS • $28 CAD</p>
-              </div>
-            </button>
-          </article>
-
-          <article class="card"
-            data-name="Stonehaven"
-            data-size="Medium"
-            data-price="$52 CAD"
-            data-stone="Likely jasper / quartz mix"
-            data-desc="Deep green with a natural cream vein — rugged and refined at the same time. A collector-style piece."
-          >
-            <button class="card-btn" type="button" aria-label="Open Stonehaven">
-              <div class="thumb">
-                <img src="PXL_20260201_170034170.jpg" alt="Stonehaven stone" loading="lazy">
-              </div>
-              <div class="meta">
-                <h3>Stonehaven</h3>
-                <p class="sub">Medium • $52 CAD</p>
-              </div>
-            </button>
-          </article>
-
-          <article class="card"
-            data-name="Harvest Shore"
-            data-size="Small"
-            data-price="$36 CAD"
-            data-stone="Likely jasper / sedimentary blend"
-            data-desc="Warm autumn tones with subtle mineral markings. Feels like sand, sunlight, and shoreline calm."
-          >
-            <button class="card-btn" type="button" aria-label="Open Harvest Shore">
-              <div class="thumb">
-                <img src="PXL_20260201_170053059.jpg" alt="Harvest Shore stone" loading="lazy">
-              </div>
-              <div class="meta">
-                <h3>Harvest Shore</h3>
-                <p class="sub">Small • $36 CAD</p>
-              </div>
-            </button>
-          </article>
-
-          <!-- These last two are still using your original filenames.
-               Send me the remaining 2 PXL filenames and I’ll wire them up. -->
-          <article class="card"
-            data-name="Stillwater"
-            data-size="XS"
-            data-price="$28 CAD"
-            data-stone="Likely greenstone / jasper"
-            data-desc="A calm lake-toned stone with gentle contrast. Minimal and soothing — a quiet little grounding piece."
-          >
-            <button class="card-btn" type="button" aria-label="Open Stillwater">
-              <div class="thumb">
-                <img src="images/drop1/stillwater.jpg" alt="Stillwater stone" loading="lazy">
-              </div>
-              <div class="meta">
-                <h3>Stillwater</h3>
-                <p class="sub">XS • $28 CAD</p>
-              </div>
-            </button>
-          </article>
-
-          <article class="card"
-            data-name="Rosecliff"
-            data-size="XS"
-            data-price="$30 CAD"
-            data-stone="Likely quartzite"
-            data-desc="A soft rose-toned shoreline stone with an organic shape and smooth finish. Elegant, feminine, one of one."
-          >
-            <button class="card-btn" type="button" aria-label="Open Rosecliff">
-              <div class="thumb">
-                <img src="images/drop1/rosecliff.jpg" alt="Rosecliff stone" loading="lazy">
-              </div>
-              <div class="meta">
-                <h3>Rosecliff</h3>
-                <p class="sub">XS • $30 CAD</p>
-              </div>
-            </button>
-          </article>
-
-        </div>
-
-        <div class="note">
-          <p><strong>Tip:</strong> Want fewer uploads today? You can temporarily use your “4-in-one” photos as the <em>image</em> for each row, then swap in individual stone images later.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section alt">
-      <div class="wrap two-col">
-        <div>
-          <h2>About</h2>
-          <p>
-            I collect shoreline stones from Niagara, Ontario — then clean, polish, and finish them into one-of-one pieces.
-            I love quiet mornings, tiny discoveries, and the feeling of taking a piece of the shoreline with you.
-          </p>
-          <p class="muted">Follow along: @rebecca.finds.ca</p>
-        </div>
-        <div class="panel">
-          <h3>What makes each piece special?</h3>
-          <ul class="bullets">
-            <li>Hand-collected in Niagara</li>
-            <li>Naturally shaped by the lake</li>
-            <li>One-of-one — never repeated</li>
-            <li>Clean, minimal finishing</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- How it works -->
-    <section id="how" class="section">
-      <div class="wrap">
-        <h2>How it works</h2>
-        <div class="steps">
-          <div class="step">
-            <span class="num">1</span>
-            <h3>Pick your piece</h3>
-            <p>Tap a stone to view details. Each one is unique.</p>
-          </div>
-          <div class="step">
-            <span class="num">2</span>
-            <h3>Confirm availability</h3>
-            <p>If it’s marked <strong>Sold out</strong>, it’s already found a home.</p>
-          </div>
-          <div class="step">
-            <span class="num">3</span>
-            <h3>Ship with care</h3>
-            <p>Orders ship from Ontario within 2–4 business days.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section alt">
-      <div class="wrap contact">
-        <div>
-          <h2>Contact</h2>
-          <p>Want a custom piece, a chain preference, or have a question?</p>
-          <p class="muted">
-            Email: <strong>YOUR_EMAIL_HERE</strong><br />
-            Instagram: <strong>@rebecca.finds.ca</strong><br />
-            Site: <strong>rebeccafinds.ca</strong>
-          </p>
-        </div>
-
-        <div class="panel">
-          <h3>Custom Piece Inquiry</h3>
-          <p class="muted">For now, DM on Instagram or email. (We can add a real form next.)</p>
-          <a class="btn" href="https://www.instagram.com/rebecca.finds.ca/" target="_blank" rel="noreferrer">DM on Instagram</a>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="wrap footer-inner">
-        <p>© <span id="year"></span> Rebecca Finds • rebeccafinds.ca</p>
-        <p class="muted">Hand-collected • One of one • Niagara, Ontario</p>
-      </div>
-    </footer>
   </main>
 
-  <!-- Product Modal -->
-  <div class="modal" id="modal" aria-hidden="true">
-    <div class="modal-backdrop" data-close="1"></div>
-
-    <div class="modal-card" role="dialog" aria-modal="true" aria-label="Product details">
-      <button class="modal-x" type="button" data-close="1" aria-label="Close">✕</button>
-
-      <div class="modal-body">
-        <div class="modal-img">
-          <img id="mImg" src="" alt="" />
-          <span id="mBadge" class="badge" hidden>Sold out</span>
-        </div>
-
-        <div class="modal-copy">
-          <h3 id="mName">Stone Name</h3>
-          <p class="sub" id="mLine">Size • Price</p>
-
-          <p class="muted" id="mStone">Likely stone type</p>
-          <p id="mDesc">Description goes here.</p>
-
-          <div class="fineprint">
-            <p><strong>Care:</strong> Avoid harsh chemicals. Wipe gently with a soft cloth.</p>
-            <p><strong>Shipping:</strong> Ships from Ontario within 2–4 business days.</p>
-          </div>
-
-          <div class="modal-actions">
-            <a class="btn" href="#contact" id="mCTA">Claim / Ask about this piece</a>
-            <a class="btn ghost" href="#shop" data-close="1">Back to Drop One</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <footer>
+    © <span id="y"></span> rebeccafinds.ca
+  </footer>
 
   <script>
-    // Year
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Modal logic
-    const modal = document.getElementById("modal");
-    const grid = document.getElementById("productGrid");
-
-    const mImg = document.getElementById("mImg");
-    const mName = document.getElementById("mName");
-    const mLine = document.getElementById("mLine");
-    const mStone = document.getElementById("mStone");
-    const mDesc = document.getElementById("mDesc");
-    const mBadge = document.getElementById("mBadge");
-
-    function openModal(card) {
-      const img = card.querySelector("img");
-      const sold = card.classList.contains("sold");
-
-      mImg.src = img.getAttribute("src");
-      mImg.alt = img.getAttribute("alt") || card.dataset.name;
-
-      mName.textContent = card.dataset.name || "Stone";
-      mLine.textContent = `${card.dataset.size || ""} • ${card.dataset.price || ""}`.trim();
-      mStone.textContent = card.dataset.stone || "Natural shoreline stone";
-      mDesc.textContent = card.dataset.desc || "";
-
-      mBadge.hidden = !sold;
-
-      modal.classList.add("open");
-      modal.setAttribute("aria-hidden", "false");
-      document.body.classList.add("no-scroll");
-    }
-
-    function closeModal() {
-      modal.classList.remove("open");
-      modal.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("no-scroll");
-    }
-
-    grid.addEventListener("click", (e) => {
-      const cardBtn = e.target.closest(".card-btn");
-      if (!cardBtn) return;
-      const card = cardBtn.closest(".card");
-      if (!card) return;
-      openModal(card);
-    });
-
-    modal.addEventListener("click", (e) => {
-      if (e.target.dataset.close) closeModal();
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
-    });
+    document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
