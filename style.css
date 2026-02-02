@@ -1,4 +1,4 @@
-:root{
+and:root{
   /* Backgrounds */
   --bg:#fbf7f3;        /* soft cream */
   --panel:#ffffff;     /* clean white cards */
@@ -583,7 +583,4 @@ img{ max-width:100%; display:block; }
   .deal-highlight strong{ font-size: 1.15rem; }
     }
 
-body{ outline: 6px solid hotpink !important; }
-
-
-body { outline: 8px solid hotpink !important; }
+body{ outline: 8px solid hotpink !important; }
