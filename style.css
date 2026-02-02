@@ -1,157 +1,390 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Available Stones • rebeccafinds.ca</title>
-  <meta name="description" content="Collection Release: one-of-one shoreline stones. Each stone comes with your choice of pendant and chain (silver plated, gold, or wire-wrapped)." />
+:root{
+  --bg1:#f9dfe9;
+  --bg2:#f6eaf3;
+  --text:#1f1f1f;
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600,800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  --green:#2b6b4f;
+  --gold:#c9a24a;
 
-  <link rel="stylesheet" href="style.css" />
-</head>
+  --shadow: 0 10px 26px rgba(0,0,0,0.10);
+  --radius: 18px;
+}
 
-<body>
-  <!-- Top Contact Bar -->
-  <div class="topbar">
-    <div class="wrap topbar-inner">
-      <div class="topbar-left">
-        <span class="dot"></span>
-        <span><strong>Custom pieces:</strong> choose your pendant + chain</span>
-      </div>
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+body{
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background: radial-gradient(900px 500px at 20% 10%, rgba(201,162,74,0.18), transparent 60%),
+              radial-gradient(900px 500px at 80% 20%, rgba(43,107,79,0.16), transparent 60%),
+              linear-gradient(180deg, var(--bg1), var(--bg2));
+}
 
-      <div class="topbar-right">
-        <a class="toplink" href="mailto:rebecca.mcdonnell@outlook.com?subject=Custom%20Piece%20Inquiry%20-%20rebeccafinds.ca">Email</a>
-        <span class="sep">•</span>
-        <a class="toplink" href="#contact">Contact</a>
-      </div>
-    </div>
-  </div>
+.wrap{
+  width:min(1100px, calc(100% - 32px));
+  margin:0 auto;
+}
 
-  <header class="hero">
-    <div class="wrap hero-inner">
-      <p class="kicker">Niagara finds • one-of-one stones • rebeccafinds.ca</p>
-      <h1>Collection Release</h1>
-      <p class="subhead">
-        Pick a stone, then pick your hardware.
-        <strong>Every stone comes with a pendant and/or chain of your choosing</strong>:
-        silver plated, gold, or wire-wrapped.
-      </p>
+a{ color:inherit; text-decoration:none; }
+a:hover{ text-decoration:underline; }
 
-      <div class="pill-row">
-        <span class="pill">Silver plated</span>
-        <span class="pill">Gold</span>
-        <span class="pill">Wire-wrapped</span>
-      </div>
+/* Topbar */
+.topbar{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(201,162,74,0.22);
+}
+.topbar-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding: 10px 0;
+}
+.topbar-left{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size: 13px;
+}
+.dot{
+  width:10px; height:10px;
+  border-radius:999px;
+  background: var(--green);
+  box-shadow: 0 0 0 3px rgba(201,162,74,0.22);
+}
+.topbar-right{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size: 13px;
+}
+.toplink{
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(43,107,79,0.20);
+  background: rgba(255,255,255,0.6);
+}
+.sep{ opacity:0.55; }
 
-      <div class="cta-row">
-        <a class="btn" href="#stones">View available stones</a>
-        <a class="btn ghost" href="#contact">Custom piece inquiry</a>
-      </div>
-    </div>
-  </header>
+/* Hero */
+.hero{ padding: 38px 0 18px; }
+.hero-inner{
+  background: rgba(255,255,255,0.55);
+  border: 2px solid rgba(201,162,74,0.25);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  padding: 26px 22px;
+}
+.kicker{
+  margin:0 0 10px;
+  font-size: 13px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(31,31,31,0.72);
+}
+h1{
+  font-family: Fraunces, serif;
+  font-weight: 800;
+  margin: 0 0 10px;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.05;
+}
+.subhead{
+  margin: 0 0 16px;
+  color: rgba(31,31,31,0.78);
+  font-size: 15px;
+  max-width: 70ch;
+}
+.pill-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom: 16px;
+}
+.pill{
+  border: 1px solid rgba(43,107,79,0.22);
+  background: rgba(255,255,255,0.70);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+.cta-row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 2px solid rgba(201,162,74,0.45);
+  background: linear-gradient(180deg, rgba(201,162,74,0.34), rgba(255,255,255,0.7));
+  box-shadow: 0 10px 18px rgba(0,0,0,0.10);
+  font-weight: 800;
+  font-size: 14px;
+}
+.btn:hover{ text-decoration:none; transform: translateY(-1px); }
+.btn:active{ transform: translateY(0px); }
+.btn.ghost{
+  border: 2px solid rgba(43,107,79,0.35);
+  background: rgba(255,255,255,0.65);
+}
+.btn.small{
+  padding: 9px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  white-space: nowrap;
+}
 
-  <main>
-    <section id="stones" class="section">
-      <div class="wrap section-head">
-        <h2>Available Stones</h2>
-        <p class="muted">
-          Tap <strong>Details</strong> to see the vibe + features. To claim one, email me with the stone name and your hardware choice.
-        </p>
-      </div>
+/* Sections */
+.section{ padding: 22px 0 26px; }
+.section-head h2{
+  font-family: Fraunces, serif;
+  margin: 0;
+  font-size: 28px;
+}
+.muted{ color: rgba(31,31,31,0.66); margin: 8px 0 0; }
 
-      <div class="wrap grid">
+/* Grid */
+.grid{
+  margin-top: 16px;
+  display:grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
 
-        <!-- TOP 3 (only re-ordered, not the only ones) -->
+/* Cards */
+.card{
+  background: rgba(255,255,255,0.78);
+  border-radius: var(--radius);
+  border: 2px solid rgba(43,107,79,0.28);
+  box-shadow: var(--shadow);
+  overflow:hidden;
+}
+.card:hover{
+  border-color: rgba(201,162,74,0.65);
+}
 
-        <!-- 1) GOLDEN SHORE -->
-        <article class="card gold-highlight">
-          <div class="thumb">
-            <img src="stone-12.jpg" alt="Golden Shore" loading="lazy" onerror="this.closest('.thumb').classList.add('missing'); this.style.display='none';">
-            <span class="badge accent-badge">TOP PICK</span>
-            <div class="placeholder">
-              <div class="ph-title">Golden Shore</div>
-              <div class="ph-sub">Photo uploading</div>
-            </div>
-          </div>
-          <div class="card-body">
-            <h3>Golden Shore</h3>
-            <p class="status in-stock">In stock</p>
+.thumb{
+  position: relative;
+  padding: 12px 12px 0;
+}
+.thumb img{
+  width:100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid rgba(201,162,74,0.30);
+  background: #fff;
+}
 
-            <div class="card-actions">
-              <details>
-                <summary>Details</summary>
-                <ul class="features">
-                  <li>Warm golden-tan tones</li>
-                  <li>Soft matte shoreline finish</li>
-                  <li>Perfect for gold hardware</li>
-                </ul>
-              </details>
+/* Placeholder when image missing */
+.placeholder{
+  display:none;
+  height: 190px;
+  border-radius: 14px;
+  border: 2px dashed rgba(43,107,79,0.35);
+  background: rgba(255,255,255,0.75);
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding: 12px;
+}
+.thumb.missing .placeholder{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.ph-title{
+  font-weight: 1000;
+  font-size: 14px;
+}
+.ph-sub{
+  font-size: 12px;
+  color: rgba(31,31,31,0.60);
+}
 
-              <a class="btn small" href="mailto:rebecca.mcdonnell@outlook.com?subject=Claim%20-%20Golden%20Shore%20(rebeccafinds.ca)">Claim</a>
-            </div>
-          </div>
-        </article>
+.card-body{ padding: 12px 14px 14px; }
+.card h3{
+  margin: 0 0 6px;
+  font-size: 15px;
+  line-height: 1.2;
+}
 
-        <!-- 2) OLIVE SHADOW -->
-        <article class="card">
-          <div class="thumb">
-            <img src="stone-11.jpg" alt="Olive Shadow" loading="lazy" onerror="this.closest('.thumb').classList.add('missing'); this.style.display='none';">
-            <div class="placeholder">
-              <div class="ph-title">Olive Shadow</div>
-              <div class="ph-sub">Photo uploading</div>
-            </div>
-          </div>
-          <div class="card-body">
-            <h3>Olive Shadow</h3>
-            <p class="status in-stock">In stock</p>
+/* Status pills */
+.status{
+  display:inline-block;
+  font-size: 12px;
+  font-weight: 900;
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin: 0 0 10px;
+  letter-spacing: .02em;
+}
+.in-stock{
+  color: rgba(31,31,31,0.85);
+  background: rgba(201,162,74,0.18);
+  border: 1px solid rgba(201,162,74,0.35);
+}
+.sold-status{
+  color: #2f2f2f;
+  background: rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.18);
+}
 
-            <div class="card-actions">
-              <details>
-                <summary>Details</summary>
-                <ul class="features">
-                  <li>Olive-grey with dark shadow patch</li>
-                  <li>Minimal + modern</li>
-                  <li>Great on a simple chain</li>
-                </ul>
-              </details>
+/* Details + Claim side-by-side */
+.card-actions{
+  margin-top: 10px;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: 12px;
+}
+.card-actions details{
+  flex: 1 1 auto;
+  min-width: 0;
+  border-top: 1px dashed rgba(43,107,79,0.28);
+  padding-top: 10px;
+}
+.card-actions .btn{
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
 
-              <a class="btn small" href="mailto:rebecca.mcdonnell@outlook.com?subject=Claim%20-%20Olive%20Shadow%20(rebeccafinds.ca)">Claim</a>
-            </div>
-          </div>
-        </article>
+/* Details */
+summary{
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 13px;
+  color: rgba(31,31,31,0.80);
+  list-style:none;
+}
+summary::-webkit-details-marker{ display:none; }
 
-        <!-- 3) MIDNIGHT GOLD VEIN -->
-        <article class="card">
-          <div class="thumb">
-            <img src="stone-09.jpg" alt="Midnight Gold Vein" loading="lazy" onerror="this.closest('.thumb').classList.add('missing'); this.style.display='none';">
-            <div class="placeholder">
-              <div class="ph-title">Midnight Gold Vein</div>
-              <div class="ph-sub">Photo uploading</div>
-            </div>
-          </div>
-          <div class="card-body">
-            <h3>Midnight Gold Vein</h3>
-            <p class="status in-stock">In stock</p>
+.features{
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: rgba(31,31,31,0.72);
+  font-size: 13px;
+}
+.features li{ margin: 6px 0; }
 
-            <div class="card-actions">
-              <details>
-                <summary>Details</summary>
-                <ul class="features">
-                  <li>Dark stone with warm gold vein</li>
-                  <li>Rich contrast</li>
-                  <li>Best with gold or wire</li>
-                </ul>
-              </details>
+.note{
+  font-size: 12px;
+  color: rgba(31,31,31,0.60);
+  padding: 12px 10px;
+  border-top: 1px dashed rgba(43,107,79,0.28);
+  flex: 1 1 auto;
+}
 
-              <a class="btn small" href="mailto:rebecca.mcdonnell@outlook.com?subject=Claim%20-%20Midnight%20Gold%20Vein%20(rebeccafinds.ca)">Claim</a>
-            </div>
-          </div>
-        </article>
+/* Badges */
+.badge{
+  position:absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 1000;
+  letter-spacing: .04em;
+  border: 2px solid rgba(255,255,255,0.8);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.12);
+}
+.accent-badge{
+  background: rgba(201,162,74,0.95);
+  color: #1f1a0b;
+}
+.sold-badge{
+  background: rgba(31,31,31,0.92);
+  color: #fff;
+}
 
-        <!-- REST OF THE STONES (keep them for tonight; placeh
+.sold .thumb img{
+  filter: grayscale(0.3) contrast(0.95);
+  opacity: 0.92;
+}
+
+/* Highlight card */
+.gold-highlight{
+  border-color: rgba(201,162,74,0.75);
+  box-shadow: 0 12px 28px rgba(201,162,74,0.20), var(--shadow);
+}
+
+/* Contact */
+.contact{ padding-bottom: 40px; }
+.contact-inner h2{
+  font-family: Fraunces, serif;
+  margin: 0 0 6px;
+}
+.contact-card{
+  margin-top: 14px;
+  background: rgba(255,255,255,0.78);
+  border-radius: 22px;
+  border: 2px solid rgba(43,107,79,0.28);
+  box-shadow: var(--shadow);
+  padding: 16px 16px 14px;
+}
+.contact-row{
+  display:grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 14px;
+  align-items:start;
+}
+.label{
+  margin: 0 0 6px;
+  font-weight: 1000;
+  font-size: 12px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: rgba(31,31,31,0.55);
+}
+.contact-link{
+  display:inline-flex;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 2px solid rgba(201,162,74,0.40);
+  background: rgba(255,255,255,0.75);
+  font-weight: 900;
+}
+.contact-text{
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 2px solid rgba(43,107,79,0.28);
+  background: rgba(255,255,255,0.75);
+  font-weight: 800;
+}
+.tiny{ font-size: 12px; }
+
+.footer{
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(43,107,79,0.28);
+  text-align:center;
+  color: rgba(31,31,31,0.60);
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 720px){
+  .grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .thumb img, .placeholder{ height: 170px; }
+  .contact-row{ grid-template-columns: 1fr; }
+}
+@media (max-width: 420px){
+  .thumb img, .placeholder{ height: 155px; }
+  .topbar-inner{ flex-direction: column; align-items:flex-start; }
+}
+
 
 
 
