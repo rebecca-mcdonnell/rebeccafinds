@@ -662,3 +662,55 @@ body{ outline: 8px solid hotpink !important; }
   .product { border-radius: 16px; }
   .product-media img { max-height: 260px; width: 100%; object-fit: contain; }
 }
+/* ========== Mobile shrink + overflow fix (drop-in) ========== */
+html, body { max-width: 100%; overflow-x: hidden; }
+
+img, video { max-width: 100%; height: auto; }
+
+/* Prevent anything from forcing wide layouts */
+.wrap, .hero-inner, .header-inner, .products, .product {
+  max-width: 100%;
+}
+
+/* Main mobile tuning */
+@media (max-width: 600px) {
+
+  /* Overall scale: smaller typography + tighter spacing */
+  body { font-size: 15px; }
+
+  .wrap { padding-left: 14px; padding-right: 14px; }
+
+  .site-header { padding: 10px 0; }
+  .nav { gap: 10px; flex-wrap: wrap; }
+
+  h1 { font-size: 2rem; line-height: 1.05; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.15rem; }
+
+  .hero { padding-top: 18px; padding-bottom: 22px; }
+  .section { padding-top: 28px; padding-bottom: 28px; }
+
+  /* Deal highlight stays on one line but doesn't explode layout */
+  .deal-highlight { padding: 10px 12px; }
+  .deal-line { font-size: 0.9rem; white-space: nowrap; }
+  .deal-line { max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+
+  /* Products: make cards feel smaller */
+  .products { gap: 16px; }
+  .product { padding: 12px; }
+
+  /* Images: keep them contained so they don’t feel massive */
+  .product-media img {
+    width: 100%;
+    max-height: 240px;
+    object-fit: contain;
+  }
+
+  /* Buttons smaller */
+  .btn { padding: 10px 12px; font-size: 0.95rem; }
+  .btn-small { padding: 9px 10px; font-size: 0.9rem; }
+
+  /* Reduce detail list spacing */
+  .details { margin: 10px 0 0; }
+  .details li { margin: 6px 0; }
+}
