@@ -3,475 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rebecca Finds — Shoreline Stones</title>
-  <meta name="description" content="Hand-selected shoreline stones from Niagara, ON — custom jewelry pieces coming soon." />
+  <title>Rebecca Finds — Collection Release</title>
+  <meta name="description" content="One-of-one shoreline jewelry and statement stones collected along Lake Ontario. Pay what feels fair. Niagara, ON." />
 
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600,800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip-link" href="#content">Skip to content</a>
 
-  <header class="site-header" role="banner">
+  <header class="site-header">
     <div class="wrap header-inner">
-      <div class="brand">
-        <div class="brand-mark" aria-hidden="true"></div>
-        <div class="brand-text">
-          <h1>Rebecca Finds</h1>
-          <p class="tagline">Niagara, ON • Shoreline stones • Custom jewelry soon</p>
-        </div>
-      </div>
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span class="brand-name">Rebecca Finds</span>
+      </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="#collections">Collections</a>
-        <a href="#available">Stones</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#jewelry">Jewelry</a>
+        <a href="#statement">Statement Stones</a>
         <a href="#how">How It Works</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero">
+  <main id="content">
+    <section id="top" class="hero">
       <div class="wrap hero-inner">
         <div class="hero-copy">
-          <h2>Small discoveries, made wearable.</h2>
-          <p>
-            One-of-one shoreline finds photographed in Niagara.
-            Pick a stone, claim it, and we’ll talk settings.
+          <p class="kicker">Niagara, ON • shoreline finds • one-of-one pieces</p>
+          <h1>Collection Release</h1>
+          <p class="lead">
+            Hand-selected stones and fossils collected along the shores of Lake Ontario — thoughtfully transformed into
+            wearable pieces and natural display finds.
           </p>
 
-          <div class="hero-actions">
-            <a class="btn" href="#available">Browse Stones</a>
-            <a class="btn btn-ghost" href="#how">How it works</a>
+          <div class="hero-badges" aria-label="Highlights">
+            <span class="pill">One of one</span>
+            <span class="pill">Found, not manufactured</span>
+            <span class="pill">Pay what feels fair</span>
           </div>
 
-          <div class="hero-bullets" aria-label="Highlights">
-            <div class="pill">One-of-one finds</div>
-            <div class="pill">Custom jewelry options</div>
-            <div class="pill">Local pickup / shipping</div>
-            <div class="pill">Simple + fair pricing</div>
+          <div class="hero-cta">
+            <a class="btn primary" href="#jewelry">Shop the drop</a>
+            <a class="btn ghost" href="#how">How it works</a>
           </div>
+
+          <p class="micro">
+            ❧ Collected with intention • shaped by water & time • curated for quiet beauty
+          </p>
         </div>
 
-        <div class="hero-card" aria-label="Featured">
-          <div class="hero-card-top">
-            <div class="mini-title">Pinned favourites</div>
-            <div class="mini-sub">Golden Shore • Olive Shadow • Midnight Gold Vein</div>
-          </div>
-
-          <div class="featured-grid">
-            <article class="mini-stone">
-              <img src="stone-12.jpg" alt="Golden Shore shoreline stone" loading="lazy">
-              <div>
-                <div class="mini-name">Golden Shore</div>
-                <div class="mini-note">Warm golden tones • smooth oval</div>
-              </div>
-            </article>
-
-            <article class="mini-stone">
-              <img src="stone-04.jpg" alt="Olive Shadow shoreline stone" loading="lazy">
-              <div>
-                <div class="mini-name">Olive Shadow</div>
-                <div class="mini-note">Olive green • soft gradient</div>
-              </div>
-            </article>
-
-            <article class="mini-stone">
-              <img src="stone-09.jpg" alt="Midnight Gold Vein shoreline stone" loading="lazy">
-              <div>
-                <div class="mini-name">Midnight Gold Vein</div>
-                <div class="mini-note">Dark base • striking vein</div>
-              </div>
-            </article>
-          </div>
-
-          <div class="hero-card-bottom">
-            <span class="dot" aria-hidden="true"></span>
-            <span>Every stone is naturally unique — marks + texture are part of it.</span>
+        <div class="hero-card">
+          <!-- Optional: swap this image to your hero photo -->
+          <img
+            src="images/hero.jpg"
+            alt="A curated selection of shoreline stones and sea glass"
+            loading="lazy"
+            onerror="this.closest('.hero-card').classList.add('no-image');"
+          />
+          <div class="hero-card-overlay">
+            <p class="hero-card-title">Winter Shoreline Finds</p>
+            <p class="hero-card-sub">Soft greens • warm gold • natural history</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="collections" class="section">
+    <!-- JEWELRY -->
+    <section id="jewelry" class="section">
       <div class="wrap">
-        <div class="section-head">
-          <h3>Collections</h3>
-          <p class="muted">Shop stones now. Full jewelry drops soon.</p>
-        </div>
+        <header class="section-head">
+          <h2>Featured Jewelry</h2>
+          <p>
+            Each piece features a naturally found stone, carefully selected and set by hand. No two are ever the same —
+            made to be worn close as a reminder of patience, fresh air, and small discoveries.
+          </p>
+        </header>
 
-        <div class="collections-grid">
-          <article class="card">
-            <h4>Stones for Custom Pieces</h4>
-            <p>Choose a stone — we’ll chat gold/silver, chain length, and settings.</p>
-            <a class="text-link" href="#available">Browse stones →</a>
-          </article>
-
-          <article class="card">
-            <h4>Sea Glass</h4>
-            <p>Ocean-polished pieces — delicate and bright.</p>
-            <span class="muted small">Coming soon</span>
-          </article>
-
-          <article class="card">
-            <h4>Valentine’s Pink</h4>
-            <p>Soft pink tones curated for a small seasonal release.</p>
-            <span class="muted small">Coming soon</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="available" class="section section-alt">
-      <div class="wrap">
-        <div class="section-head">
-          <h3>Stones</h3>
-          <p class="muted">Pinned top picks first. Fossil highlight is not for sale.</p>
-        </div>
-
-        <div class="stone-grid">
-          <!-- PINNED TOP 3 -->
-          <article class="stone-card pinned">
-            <div class="stone-media">
-              <img src="stone-12.jpg" alt="Golden Shore stone" loading="lazy">
-              <div class="pin-badge" aria-label="Pinned">Pinned</div>
+        <div class="grid">
+          <!-- CARD 1: Fossil highlight (Not available) -->
+          <article class="card featured">
+            <div class="card-media">
+              <img src="images/stone1.jpg" alt="Highlight fossil shell (not available)" loading="lazy"
+                   onerror="this.closest('.card-media').classList.add('no-image');" />
+              <span class="tag">Highlight fossil</span>
+              <span class="status">Not available</span>
             </div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Golden Shore</h4>
-                <p class="stone-sub">Golden jasper • smooth, warm, and grounding</p>
-              </div>
-              <div class="stone-actions">
-                <a class="btn btn-sm" href="#contact">Claim</a>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-12.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status ok">Available</span></div>
-              </div>
-            </div>
-          </article>
+            <div class="card-body">
+              <h3>Fossil Shell — Highlight Find</h3>
+              <p class="desc">
 
-          <article class="stone-card pinned">
-            <div class="stone-media">
-              <img src="stone-04.jpg" alt="Olive Shadow stone" loading="lazy">
-              <div class="pin-badge" aria-label="Pinned">Pinned</div>
-            </div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Olive Shadow</h4>
-                <p class="stone-sub">Serpentine • deep olive tone with a soft fade</p>
-              </div>
-              <div class="stone-actions">
-                <a class="btn btn-sm" href="#contact">Claim</a>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-04.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status ok">Available</span></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="stone-card pinned">
-            <div class="stone-media">
-              <img src="stone-09.jpg" alt="Midnight Gold Vein stone" loading="lazy">
-              <div class="pin-badge" aria-label="Pinned">Pinned</div>
-            </div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Midnight Gold Vein</h4>
-                <p class="stone-sub">Basalt with quartz vein • bold contrast, dramatic lines</p>
-              </div>
-              <div class="stone-actions">
-                <a class="btn btn-sm" href="#contact">Claim</a>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-09.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status ok">Available</span></div>
-              </div>
-            </div>
-          </article>
-
-          <!-- HIGHLIGHT FOSSIL (STONE 01) -->
-          <article class="stone-card highlight">
-            <div class="stone-media">
-              <img src="stone-01.jpg" alt="Highlight fossil" loading="lazy">
-              <div class="highlight-badge" aria-label="Highlight">Highlight Fossil</div>
-            </div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Highlight Fossil</h4>
-                <p class="stone-sub">Fossil specimen • a favourite find (not for sale)</p>
-              </div>
-
-              <div class="stone-actions">
-                <span class="btn btn-sm btn-disabled" aria-disabled="true">Not available</span>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-01.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status no">Not available</span></div>
-              </div>
-            </div>
-          </article>
-
-          <!-- IMAGE COMING SOON (STONE 02 + 03) -->
-          <article class="stone-card soon">
-            <div class="stone-media">
-              <div class="coming-soon" role="img" aria-label="Image coming soon">
-                <div class="coming-title">Image coming soon</div>
-                <div class="coming-sub">Stone 02</div>
-              </div>
-            </div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Rose Quartz</h4>
-                <p class="stone-sub">Soft blush tone • clean, rounded, wearable</p>
-              </div>
-
-              <div class="stone-actions">
-                <span class="btn btn-sm btn-disabled" aria-disabled="true">Coming soon</span>
-                <a class="btn btn-sm btn-ghost" href="#contact">Ask about it</a>
-              </div>
-
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-02.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status wait">Coming soon</span></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="stone-card soon">
-            <div class="stone-media">
-              <div class="coming-soon" role="img" aria-label="Image coming soon">
-                <div class="coming-title">Image coming soon</div>
-                <div class="coming-sub">Stone 03</div>
-              </div>
-            </div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Green Jasper</h4>
-                <p class="stone-sub">Rich green tones • earthy, natural, bold</p>
-              </div>
-
-              <div class="stone-actions">
-                <span class="btn btn-sm btn-disabled" aria-disabled="true">Coming soon</span>
-                <a class="btn btn-sm btn-ghost" href="#contact">Ask about it</a>
-              </div>
-
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-03.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status wait">Coming soon</span></div>
-              </div>
-            </div>
-          </article>
-
-          <!-- OTHER STONES (MINERAL-FORWARD) -->
-          <article class="stone-card">
-            <div class="stone-media"><img src="stone-05.jpg" alt="Dalmatian Jasper" loading="lazy"></div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Dalmatian Jasper</h4>
-                <p class="stone-sub">Spotted pattern • graphic, playful, high contrast</p>
-              </div>
-              <div class="stone-actions">
-                <a class="btn btn-sm" href="#contact">Claim</a>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-05.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status ok">Available</span></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="stone-card">
-            <div class="stone-media"><img src="stone-06.jpg" alt="Granite" loading="lazy"></div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Granite</h4>
-                <p class="stone-sub">Fine speckle • cool-toned, clean, classic</p>
-              </div>
-              <div class="stone-actions">
-                <a class="btn btn-sm" href="#contact">Claim</a>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-06.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status ok">Available</span></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="stone-card">
-            <div class="stone-media"><img src="stone-07.jpg" alt="Serpentine" loading="lazy"></div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Serpentine</h4>
-                <p class="stone-sub">Green-grey polish • smooth, understated, elegant</p>
-              </div>
-              <div class="stone-actions">
-                <a class="btn btn-sm" href="#contact">Claim</a>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-07.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status ok">Available</span></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="stone-card">
-            <div class="stone-media"><img src="stone-08.jpg" alt="Tiger Eye" loading="lazy"></div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Tiger Eye</h4>
-                <p class="stone-sub">Warm brown-gold tones • rich and glossy</p>
-              </div>
-              <div class="stone-actions">
-                <a class="btn btn-sm" href="#contact">Claim</a>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-08.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status ok">Available</span></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="stone-card">
-            <div class="stone-media"><img src="stone-10.jpg" alt="Pink Jasper" loading="lazy"></div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Pink Jasper</h4>
-                <p class="stone-sub">Soft blush stone • natural line detail</p>
-              </div>
-              <div class="stone-actions">
-                <a class="btn btn-sm" href="#contact">Claim</a>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-10.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status ok">Available</span></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="stone-card">
-            <div class="stone-media"><img src="stone-11.jpg" alt="Greenstone" loading="lazy"></div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Greenstone</h4>
-                <p class="stone-sub">Muted green-grey • small, minimal, clean</p>
-              </div>
-              <div class="stone-actions">
-                <a class="btn btn-sm" href="#contact">Claim</a>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-11.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status ok">Available</span></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="stone-card">
-            <div class="stone-media"><img src="stone-13.jpg" alt="Carnelian" loading="lazy"></div>
-            <div class="stone-body">
-              <div class="stone-title">
-                <h4>Carnelian</h4>
-                <p class="stone-sub">Orange-peach glow • warm, bright, standout piece</p>
-              </div>
-              <div class="stone-actions">
-                <a class="btn btn-sm" href="#contact">Claim</a>
-                <a class="btn btn-sm btn-ghost" href="#how">Details</a>
-              </div>
-              <div class="stone-meta">
-                <div class="meta-row"><span>File</span><span>stone-13.jpg</span></div>
-                <div class="meta-row"><span>Status</span><span class="status ok">Available</span></div>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="note">
-          <strong>Photo note:</strong> Stone 02 and 03 are labelled and ready — images coming next shoot.
-        </div>
-      </div>
-    </section>
-
-    <section id="how" class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <h3>How It Works</h3>
-          <p class="muted">Simple, clean, and clear.</p>
-        </div>
-
-        <div class="how-grid">
-          <article class="card">
-            <h4>1) Choose a stone</h4>
-            <p>Browse available stones and tap <strong>Claim</strong>.</p>
-          </article>
-          <article class="card">
-            <h4>2) We chat details</h4>
-            <p>Gold or silver, chain length, setting style — and timeline.</p>
-          </article>
-          <article class="card">
-            <h4>3) You get a one-of-one piece</h4>
-            <p>Made to suit your vibe. Local pickup or shipping available.</p>
-          </article>
-        </div>
-
-        <div class="fineprint">
-          <p>Natural texture + tiny marks are part of the story.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section section-alt">
-      <div class="wrap">
-        <div class="section-head">
-          <h3>Contact</h3>
-          <p class="muted">Claim a stone, ask a question, or request a custom piece.</p>
-        </div>
-
-        <div class="contact-card">
-          <div class="contact-row">
-            <div>
-              <div class="label">Email</div>
-              <a class="text-link" href="mailto:rebecca.mcdonnell@outlook.com">rebecca.mcdonnell@outlook.com</a>
-            </div>
-
-            <div>
-              <div class="label">Website</div>
-              <a class="text-link" href="https://rebeccafinds.ca" target="_blank" rel="noopener">rebeccafinds.ca</a>
-            </div>
-          </div>
-
-          <div class="contact-tip">
-            When you message, tell me the stone name (or file name) + whether you want gold or silver.
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <p>© <span id="year"></span> Rebecca Finds • Niagara, Ontario</p>
-      <p class="muted small">One-of-one shoreline finds</p>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-  </html>
