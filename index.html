@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rebecca Finds — Pay What You Think Is Fair</title>
-  <meta name="description" content="Shoreline stones & one-of-one jewelry pieces from Niagara, ON. Pay materials cost + pay what you think is fair." />
+  <meta name="description" content="One-of-one shoreline finds from Niagara, ON. Pay materials cost + pay what you think is fair." />
 
-  <link rel="stylesheet" href="style.css" />
+  <!-- Cache-bust so phones stop showing old CSS -->
+  <link rel="stylesheet" href="style.css?v=final9" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600,800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -21,7 +23,7 @@
       <span class="brand-name">Rebecca Finds</span>
     </a>
 
-    <nav class="nav">
+    <nav class="nav" aria-label="Site navigation">
       <a href="#available">Available</a>
       <a href="#how">How it works</a>
       <a href="#fair">Pay what’s fair</a>
@@ -37,9 +39,12 @@
     <div class="wrap hero-inner">
       <div class="hero-copy">
         <p class="kicker">Niagara, ON • shoreline stones • one-of-one</p>
+
         <h1>Pay materials cost, then <span class="accent">pay what you think is fair.</span></h1>
+
         <p class="subhead">
-          Every piece is hand-found, cleaned, and finished by me. This is my “build it together” pricing — honest, simple, and kind.
+          Every piece is hand-found, cleaned, and finished by me. This is my “build it together” pricing — honest,
+          simple, and kind.
         </p>
 
         <div class="hero-cta">
@@ -55,22 +60,25 @@
         </div>
       </div>
 
-      <!-- HERO IMAGE -->
+      <!-- HERO IMAGE
+           Uses "images/..." first; falls back to root if you haven't moved files yet.
+           Picked a strong hero from your set: stone-07.jpg (looks golden/shoreline). -->
       <div class="hero-media" aria-label="Featured stone image">
-        <img src="images/stone-04.jpg" alt="Featured shoreline stone from Rebecca Finds"
-             onerror="this.onerror=null; this.src='stone-04.jpg';" />
+        <img
+          src="images/stone-07.jpg"
+          alt="Featured shoreline stone"
+          onerror="this.onerror=null; this.src='stone-07.jpg';"
+        />
       </div>
     </div>
   </section>
 
   <!-- PAY WHAT'S FAIR -->
   <section id="fair" class="fair">
-    <div class="wrap fair-inner">
+    <div class="wrap">
       <div class="fair-card">
         <h2>Community Pricing</h2>
-        <p class="fair-lead">
-          You cover my materials cost, then choose what feels fair for my time + the find.
-        </p>
+        <p class="fair-lead">You cover my materials cost, then choose what feels fair for my time + the find.</p>
 
         <div class="fair-grid">
           <div class="fair-box">
@@ -93,7 +101,7 @@
         </div>
 
         <p class="tiny">
-          This model helps me keep exploring, learning, and creating. If you’re able to pay more, it funds the next hunt. If you can’t, you’re still welcome here.
+          If you’re able to pay more, it helps fund the next hunt. If you can’t, you’re still welcome here.
         </p>
       </div>
     </div>
@@ -109,13 +117,17 @@
 
       <div class="grid">
 
-        <!-- CARD 1 -->
+        <!-- 1) GOLDEN SHORE (mapped to stone-07.jpg – the golden-looking stone) -->
         <article class="card">
           <div class="img">
-            <img src="images/stone-01.jpg" alt="Golden Shore stone"
-                 onerror="this.onerror=null; this.src='stone-01.jpg';" />
+            <img
+              src="images/stone-07.jpg"
+              alt="Golden Shore stone"
+              onerror="this.onerror=null; this.src='stone-07.jpg';"
+            />
             <span class="badge">Top pick</span>
           </div>
+
           <div class="card-body">
             <h3>Golden Shore</h3>
             <p class="desc">Warm golden tones with shoreline texture — looks unreal in sunlight.</p>
@@ -138,13 +150,17 @@
           </div>
         </article>
 
-        <!-- CARD 2 -->
+        <!-- 2) OLIVE SHADOW (mapped to stone-03.jpg – your green stone) -->
         <article class="card">
           <div class="img">
-            <img src="images/stone-02.jpg" alt="Olive Shadow stone"
-                 onerror="this.onerror=null; this.src='stone-02.jpg';" />
+            <img
+              src="images/stone-03.jpg"
+              alt="Olive Shadow stone"
+              onerror="this.onerror=null; this.src='stone-03.jpg';"
+            />
             <span class="badge">Top pick</span>
           </div>
+
           <div class="card-body">
             <h3>Olive Shadow</h3>
             <p class="desc">Deep green with soft shadows — earthy and minimal, very “quiet luxury.”</p>
@@ -167,13 +183,17 @@
           </div>
         </article>
 
-        <!-- CARD 3 -->
+        <!-- 3) MIDNIGHT GOLD VEIN (mapped to stone-09.jpg – the darkest/most dramatic one in your set) -->
         <article class="card">
           <div class="img">
-            <img src="images/stone-03.jpg" alt="Midnight Gold Vein stone"
-                 onerror="this.onerror=null; this.src='stone-03.jpg';" />
+            <img
+              src="images/stone-09.jpg"
+              alt="Midnight Gold Vein stone"
+              onerror="this.onerror=null; this.src='stone-09.jpg';"
+            />
             <span class="badge">Top pick</span>
           </div>
+
           <div class="card-body">
             <h3>Midnight Gold Vein</h3>
             <p class="desc">Dark base with a lighter vein — moody, dramatic, and super wearable.</p>
@@ -196,35 +216,13 @@
           </div>
         </article>
 
-        <!-- SOLD EXAMPLE -->
-        <article class="card sold">
-          <div class="img">
-            <img src="images/stone-05.jpg" alt="Sold piece"
-                 onerror="this.onerror=null; this.src='stone-05.jpg';" />
-            <span class="badge sold-badge">Sold</span>
-          </div>
-          <div class="card-body">
-            <h3>Fossil (Sold)</h3>
-            <p class="desc">This one found a home. More fossils and shoreline pieces coming soon.</p>
-
-            <div class="meta">
-              <div class="meta-row">
-                <span class="pill">Materials: $15</span>
-                <span class="pill soft">Community pricing</span>
-              </div>
-              <div class="meta-row">
-                <span class="small">Status: <strong>Sold</strong></span>
-                <span class="small">Next drop: soon</span>
-              </div>
-            </div>
-
-            <div class="cta-row">
-              <a class="btn small ghost" href="#contact">Join the list</a>
-            </div>
-          </div>
-        </article>
-
       </div>
+
+      <!-- Small note (keeps it professional + not cluttered) -->
+      <p class="note muted">
+        More pieces and custom options coming soon. I’m keeping this first release small on purpose.
+      </p>
+
     </div>
   </section>
 
@@ -252,7 +250,7 @@
         <div class="step">
           <p class="step-num">3</p>
           <h3>Pay materials + fair price</h3>
-          <p class="muted">Materials are $15, then you choose what feels fair for the work + find.</p>
+          <p class="muted">Materials are $15, then you choose what feels fair.</p>
         </div>
 
         <div class="step">
@@ -272,19 +270,22 @@
         <p class="muted">Fastest: email. Include the stone name + pickup/shipping.</p>
 
         <div class="contact-actions">
-          <a class="btn" href="mailto:rebecca.mcdonnell@outlook.com?subject=Rebecca%20Finds%20Claim&body=Stone%20name%3A%0AWhere%20are%20you%20located%3A%0APickup%20or%20shipping%3A%0AOffer%20(materials%20%2415%20%2B%20fair%20price)%3A%0A">Email to claim</a>
+          <a class="btn" href="mailto:rebecca.mcdonnell@outlook.com?subject=Rebecca%20Finds%20Claim&body=Stone%20name%3A%0AWhere%20are%20you%20located%3A%0APickup%20or%20shipping%3A%0AOffer%20(materials%20%2415%20%2B%20fair%20price)%3A%0A">
+            Email to claim
+          </a>
 
-          <!-- Add your Instagram URL here -->
-          <a class="btn ghost" href="#" onclick="alert('Add your Instagram link here in index.html'); return false;">Instagram DM</a>
+          <a class="btn ghost" href="https://instagram.com/rebecca.finds.ca" target="_blank" rel="noreferrer">
+            Instagram DM
+          </a>
         </div>
 
-        <p class="tiny">© <span id="year"></span> Rebecca Finds • Niagara, Ontario</p>
+        <p class="tiny">© <span id="year"></span> Rebecca Finds • Niagara, Ontario • rebeccafinds.ca</p>
       </div>
 
       <div class="contact-card">
         <h3>Pricing promise</h3>
         <p class="muted">
-          I will always tell you the materials cost up front. If you’re able to pay more, you’re helping fund the next hunt and the next collection.
+          I’ll always tell you the materials cost up front. If you pay more, you’re funding the next hunt — thank you.
         </p>
         <div class="mini">
           <div class="mini-row"><span>Materials</span><strong>$15</strong></div>
