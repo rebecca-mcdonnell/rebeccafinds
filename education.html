@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rebecca Finds — Education</title>
+  <meta name="description" content="Learn about shoreline stones, fossils, and care tips — more to come." />
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">Rebecca Finds</a>
+
+    <nav class="nav">
+      <a href="index.html#available">Available Stones</a>
+      <a href="index.html#statement">Statement Pieces</a>
+      <a class="is-active" href="education.html">Education</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero hero-slim">
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <h1>Education</h1>
+      <p class="sub">Simple stone learning — calm, honest, and always evolving.</p>
+
+      <div class="hero-badges">
+        <span class="badge">Stones</span>
+        <span class="badge">Fossils</span>
+        <span class="badge">Care tips</span>
+      </div>
+
+      <p class="note"><strong>More to come ✨</strong> I’m adding photos, IDs, and guides as new finds are posted.</p>
+    </div>
+
+    <div class="hero-card">
+      <div class="hero-card-inner">
+        <h2 class="card-title">How I identify stones</h2>
+        <p class="card-text">
+          I use visible features (color, texture, grain, shine) + regional context. Some IDs are confirmed,
+          some are best-fit — and I’ll always tell you which is which.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Common Finds</h2>
+      <p class="muted">Quick notes now — deeper guides coming soon.</p>
+    </div>
+
+    <div class="grid grid-3">
+      <article class="tile">
+        <h3>🌿 Serpentine</h3>
+        <p>Green stone with a silky/waxy look. Grounded, calm energy. (Your green stone is confirmed serpentine.)</p>
+        <span class="tiny muted">More to come</span>
+      </article>
+
+      <article class="tile">
+        <h3>🐚 Fossils</h3>
+        <p>Ancient marine life preserved in stone — sometimes bold, sometimes subtle and magical.</p>
+        <span class="tiny muted">More to come</span>
+      </article>
+
+      <article class="tile">
+        <h3>🌊 Sea Glass</h3>
+        <p>Water-tumbled glass that becomes frosted over years. Clean, simple, luminous.</p>
+        <span class="tiny muted">More to come</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Care Tips</h2>
+      <p class="muted">Keep it pretty without overthinking it.</p>
+    </div>
+
+    <div class="grid grid-2">
+      <article class="tile">
+        <h3>Cleaning</h3>
+        <ul class="bullets">
+          <li>Soft cloth (microfiber is perfect)</li>
+          <li>Warm water only if needed</li>
+          <li>Avoid harsh chemicals and abrasives</li>
+        </ul>
+      </article>
+
+      <article class="tile">
+        <h3>Jewelry care</h3>
+        <ul class="bullets">
+          <li>Remove before showering or swimming</li>
+          <li>Store separately to avoid scratching</li>
+          <li>If a stone loosens, message me — we’ll fix it</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="callout">
+      <div class="callout-inner">
+        <p>Have a mystery stone? Send a photo — I’ll tell you if it’s confirmed or a best guess.</p>
+        <a class="btn btn-small" href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="tiny">© <span id="year"></span> Rebecca Finds • Niagara, ON • rebeccafinds.ca</div>
+    <div class="tiny muted">Education page — more to come ✨</div>
+  </div>
+</footer>
+
+<script>
+  const y = document.getElementById("year");
+  if (y) y.textContent = new Date().getFullYear();
+</script>
+
+</body>
+          </html>
