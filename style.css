@@ -584,3 +584,42 @@ img{ max-width:100%; display:block; }
     }
 
 body{ outline: 8px solid hotpink !important; }
+
+/* Mobile size refinement */
+@media (max-width: 768px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  .wrap {
+    padding: 0 14px;
+  }
+
+  .stone-card,
+  .card,
+  .item {
+    max-width: 92%;
+    margin: 0 auto 18px;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .stone-card img,
+  .card img,
+  .item img {
+    max-height: 280px;
+    object-fit: cover;
+  }
+
+}
