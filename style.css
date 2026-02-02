@@ -121,6 +121,20 @@ img{ max-width:100%; display:block; }
   display:flex;
   gap: 8px;
   flex-wrap: wrap;
+
+  /* Mobile image sizing fix */
+@media (max-width: 768px) {
+  .stone-card img,
+  .stone img,
+  .stone-image img {
+    max-height: 260px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+}
   margin: 10px 0 16px;
 }
 
