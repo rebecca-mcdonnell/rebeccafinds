@@ -1,206 +1,439 @@
-:root{
-  /* Warm creams */
-  --bg: #fbf7f3;
-  --panel: #ffffff;
-  --panel2: #f6efe9;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rebecca Finds — Collection Release</title>
+  <meta name="description" content="One-of-one shoreline stones and custom jewelry from Niagara, Ontario. Pay what feels fair." />
 
-  /* Text */
-  --text: #2f2a26;
-  --muted: #7b7169;
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
 
-  /* Accents */
-  --accent: #d6b48c;   /* champagne gold */
-  --accent2:#e6c1c9;   /* blush */
-  --accent3:#2f6b55;   /* soft evergreen */
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#">
+        <div class="brand-title">Rebecca Finds</div>
+        <div class="brand-sub">Niagara, ON • shoreline finds</div>
+      </a>
 
-  /* Borders + radius (thin but not sterile) */
-  --border: rgba(214,180,140,0.26);
-  --borderSoft: rgba(47,107,85,0.14);
-  --radius: 18px;
+      <nav class="nav">
+        <a href="#available">Stones</a>
+        <a href="#highlight">Highlight</a>
+        <a href="#how">How it works</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  /* Shadows (warm, subtle) */
-  --shadow: 0 10px 26px rgba(47,42,38,0.06);
-  --shadow2: 0 6px 18px rgba(47,42,38,0.05);
-}
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="kicker">Collection Release</p>
+          <h1>One-of-one shoreline stones — curated, photographed, and ready to claim.</h1>
+          <p class="lede">
+            Boutique beach finds from Niagara — but in a down-to-earth way. Some pieces are ready-to-wear, others are perfect for
+            custom pendants. Pricing is simple: <strong>Pay what you think is fair</strong> with a minimum.
+          </p>
 
-*{ box-sizing:border-box; }
-html,body{ height:100%; }
-body{
-  margin:0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color:var(--text);
-  line-height:1.6;
-  background:
-    radial-gradient(900px 520px at 18% 8%, rgba(230,193,201,0.16), transparent 58%),
-    radial-gradient(900px 520px at 85% 0%, rgba(47,107,85,0.10), transparent 58%),
-    radial-gradient(700px 520px at 50% 105%, rgba(214,180,140,0.10), transparent 55%),
-    var(--bg);
-}
+          <div class="pill-row">
+            <span class="pill">🐚 Fossils</span>
+            <span class="pill">🌊 Beach stones</span>
+            <span class="pill">✨ Custom jewelry</span>
+          </div>
 
-img{ max-width:100%; display:block; }
-a{ color:inherit; text-decoration:none; }
-strong{ font-weight:600; }
+          <div class="hero-cta">
+            <a class="btn" href="#available">Browse stones</a>
+            <a class="btn btn-ghost" href="#contact">Claim / ask a question</a>
+          </div>
 
-.wrap{
-  width:min(1080px, 92vw);
-  margin:0 auto;
-}
+          <p class="soft-note">
+            Every piece is collected by hand, cleaned, photographed, and shared with the same goal:
+            small discoveries that feel special — without being fussy.
+          </p>
+        </div>
 
-/* HEADER */
-.site-header{
-  position:sticky;
-  top:0;
-  z-index:20;
-  backdrop-filter: blur(10px);
-  background: rgba(251,247,243,0.76);
-  border-bottom: 1px solid var(--border);
-}
+        <!-- HERO HIGHLIGHT PHOTO (TOP RIGHT) -->
+        <aside class="hero-highlight" aria-label="Highlight fossil">
+          <div class="hero-highlight-media">
+            <img src="images/fossil-highlight.jpg" alt="Highlight fossil stone" loading="lazy">
+          </div>
 
-.header-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  padding:14px 0;
-}
+          <div class="hero-highlight-body">
+            <div class="badge-row">
+              <span class="badge badge-sold">Not available</span>
+              <span class="badge">Featured fossil</span>
+            </div>
 
-.brand{ display:flex; flex-direction:column; gap:2px; }
-.brand-title{
-  font-family: Fraunces, serif;
-  font-weight:700;
-  letter-spacing:0.2px;
-  font-size:18px;
-}
-.brand-sub{
-  font-size:12px;
-  color:var(--muted);
-  letter-spacing:0.14em;
-  text-transform:uppercase;
-}
+            <div class="hero-highlight-title">Highlight Fossil</div>
+            <p class="hero-highlight-text">
+              The signature piece of this drop — kept as a showcase because it’s too special to rush.
+            </p>
 
-.nav{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-}
-.nav a{
-  font-size:13px;
-  color:var(--muted);
-  padding:8px 10px;
-  border-radius:999px;
-  border:1px solid transparent;
-}
-.nav a:hover{
-  border-color:var(--border);
-  background: rgba(255,255,255,0.62);
-  color:var(--text);
-}
+            <a class="btn btn-ghost" href="#highlight">See the full story</a>
+          </div>
+        </aside>
+      </div>
 
-/* HERO */
-.hero{ padding:34px 0 18px; }
-.hero-inner{
-  display:grid;
-  grid-template-columns: 1.35fr 0.65fr;
-  gap:18px;
-  align-items:start;
-}
+      <!-- WARM INFO BANNER -->
+      <div class="wrap">
+        <div class="gentle-banner hero-banner">
+          <p>
+            <strong>Minimum:</strong> $20 • <strong>Pickup:</strong> Niagara • <strong>Shipping:</strong> ask •
+            <strong>Pendant + chain:</strong> tell me when you claim and I’ll confirm what’s possible.
+          </p>
+        </div>
+      </div>
+    </section>
 
-.kicker{
-  margin:0 0 10px;
-  font-size:12px;
-  letter-spacing:0.16em;
-  text-transform:uppercase;
-  color:var(--muted);
-}
+    <!-- AVAILABLE STONES -->
+    <section id="available" class="section section-soft">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Available Stones</h2>
+          <p class="muted">Claim by message. First come, first served. I’ll confirm availability + next steps.</p>
+        </div>
 
-.hero h1{
-  margin:0 0 10px;
-  font-family: Fraunces, serif;
-  font-size:40px;
-  line-height:1.08;
-}
+        <div class="grid">
+          <!-- Top row "best" order -->
+          <article class="card">
+            <div class="card-media">
+              <img src="images/goldjaspermedium.jpg" alt="Golden Shore stone" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <h3 class="card-title">Golden Shore</h3>
+                <span class="tag">Available</span>
+              </div>
+              <p class="card-text">
+                Warm golden tones with natural patterning — one of those pieces that looks like it’s holding sunlight.
+                Ideal for a statement pendant or a pocket stone that feels “lucky.”
+              </p>
+              <div class="meta">
+                <div><span class="meta-label">Minimum</span><span class="meta-value">$20</span></div>
+                <div><span class="meta-label">Best for</span><span class="meta-value">Pendant / statement</span></div>
+              </div>
+              <div class="actions"><a class="btn btn-ghost" href="#contact">Claim Golden Shore</a></div>
+            </div>
+          </article>
 
-.lede{
-  margin:0 0 14px;
-  color:var(--muted);
-  font-size:15px;
-}
+          <article class="card">
+            <div class="card-media">
+              <img src="images/quartzveinmedium.jpg" alt="Midnight Gold Vein stone" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <h3 class="card-title">Midnight Gold Vein</h3>
+                <span class="tag">Available</span>
+              </div>
+              <p class="card-text">
+                Dark, dramatic base with a bright vein that pops in the light. Photographs beautifully and feels instantly special.
+                Great for a simple chain so the stone does all the talking.
+              </p>
+              <div class="meta">
+                <div><span class="meta-label">Minimum</span><span class="meta-value">$20</span></div>
+                <div><span class="meta-label">Best for</span><span class="meta-value">Custom-ready</span></div>
+              </div>
+              <div class="actions"><a class="btn btn-ghost" href="#contact">Claim Midnight Gold Vein</a></div>
+            </div>
+          </article>
 
-.pill-row{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  margin:14px 0 16px;
-}
-.pill{
-  font-size:13px;
-  padding:8px 10px;
-  border:1px solid var(--border);
-  background: rgba(255,255,255,0.66);
-  border-radius:999px;
-}
+          <article class="card">
+            <div class="card-media">
+              <img src="images/unakitemedium.jpg" alt="Unakite stone" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <h3 class="card-title">Unakite</h3>
+                <span class="tag">Available</span>
+              </div>
+              <p class="card-text">
+                Soft green + blush tones that feel calm and grounding. Gentle, earthy, and flattering in every kind of light.
+              </p>
+              <div class="meta">
+                <div><span class="meta-label">Minimum</span><span class="meta-value">$20</span></div>
+                <div><span class="meta-label">Best for</span><span class="meta-value">Everyday pendant</span></div>
+              </div>
+              <div class="actions"><a class="btn btn-ghost" href="#contact">Claim Unakite</a></div>
+            </div>
+          </article>
 
-.hero-cta{ display:flex; gap:10px; flex-wrap:wrap; }
+          <article class="card">
+            <div class="card-media">
+              <img src="images/serpentinesmall.jpg" alt="Olive Shadow stone" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <h3 class="card-title">Olive Shadow</h3>
+                <span class="tag">Available</span>
+              </div>
+              <p class="card-text">
+                Deep olive-green with a smooth, moody polish potential. “Quiet expensive” but still down-to-earth and wearable.
+              </p>
+              <div class="meta">
+                <div><span class="meta-label">Minimum</span><span class="meta-value">$20</span></div>
+                <div><span class="meta-label">Best for</span><span class="meta-value">Custom-ready</span></div>
+              </div>
+              <div class="actions"><a class="btn btn-ghost" href="#contact">Claim Olive Shadow</a></div>
+            </div>
+          </article>
 
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:10px 14px;
-  border-radius:999px;
-  border:1px solid var(--border);
-  background: rgba(255,255,255,0.86);
-  box-shadow: var(--shadow2);
-  font-size:14px;
-}
-.btn:hover{ transform: translateY(-1px); background:#fff; }
-.btn-ghost{ background: transparent; box-shadow:none; }
-.btn-ghost:hover{ background: rgba(255,255,255,0.70); }
+          <!-- The rest of your /images stones (excluding dalmatian jasper) -->
+          <article class="card">
+            <div class="card-media">
+              <img src="images/carnelianxsmall.jpg" alt="Carnelian stone (extra small)" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <h3 class="card-title">Carnelian (XS)</h3>
+                <span class="tag">Available</span>
+              </div>
+              <p class="card-text">
+                A tiny fire-stone — warm orange-red glow. Perfect for a delicate pendant or an everyday little talisman.
+              </p>
+              <div class="meta">
+                <div><span class="meta-label">Minimum</span><span class="meta-value">$20</span></div>
+                <div><span class="meta-label">Best for</span><span class="meta-value">Delicate pendant</span></div>
+              </div>
+              <div class="actions"><a class="btn btn-ghost" href="#contact">Claim Carnelian (XS)</a></div>
+            </div>
+          </article>
 
-.soft-note{
-  margin:14px 0 0;
-  color:var(--muted);
-  font-size:14px;
-  border-left: 2px solid rgba(230,193,201,0.55);
-  padding-left:12px;
-}
+          <article class="card">
+            <div class="card-media">
+              <img src="images/granitemedium.jpg" alt="Granite stone" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <h3 class="card-title">Granite</h3>
+                <span class="tag">Available</span>
+              </div>
+              <p class="card-text">
+                Speckled, grounded, and classic — a solid statement stone with texture that looks great in natural light.
+              </p>
+              <div class="meta">
+                <div><span class="meta-label">Minimum</span><span class="meta-value">$20</span></div>
+                <div><span class="meta-label">Best for</span><span class="meta-value">Statement / desk</span></div>
+              </div>
+              <div class="actions"><a class="btn btn-ghost" href="#contact">Claim Granite</a></div>
+            </div>
+          </article>
 
-/* HERO CARD */
-.hero-card{
-  border-radius: var(--radius);
-  border:1px solid var(--border);
-  background: rgba(255,255,255,0.80);
-  box-shadow: var(--shadow);
-  padding:14px;
-}
+          <article class="card">
+            <div class="card-media">
+              <img src="images/petrifiedwoodmedium.jpg" alt="Petrified wood stone" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <h3 class="card-title">Petrified Wood</h3>
+                <span class="tag">Available</span>
+              </div>
+              <p class="card-text">
+                Earthy patterning with a wood-grain vibe — feels ancient and grounding. A favourite for collectors.
+              </p>
+              <div class="meta">
+                <div><span class="meta-label">Minimum</span><span class="meta-value">$20</span></div>
+                <div><span class="meta-label">Best for</span><span class="meta-value">Statement / collection</span></div>
+              </div>
+              <div class="actions"><a class="btn btn-ghost" href="#contact">Claim Petrified Wood</a></div>
+            </div>
+          </article>
 
-.mini-note{
-  font-size:13px;
-  color:var(--muted);
-  margin-bottom:12px;
-}
-.mini-note .dot{ margin:0 6px; opacity:0.6; }
+          <article class="card">
+            <div class="card-media">
+              <img src="images/serpentinmedium.jpg" alt="Serpentine stone (medium A)" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <h3 class="card-title">Serpentine (Medium A)</h3>
+                <span class="tag">Available</span>
+              </div>
+              <p class="card-text">
+                A richer green serpentine option — smooth and wearable. Great everyday size for a simple pendant.
+              </p>
+              <div class="meta">
+                <div><span class="meta-label">Minimum</span><span class="meta-value">$20</span></div>
+                <div><span class="meta-label">Best for</span><span class="meta-value">Everyday pendant</span></div>
+              </div>
+              <div class="actions"><a class="btn btn-ghost" href="#contact">Claim Serpentine (Medium A)</a></div>
+            </div>
+          </article>
 
-.mini-grid{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:10px;
-  margin-bottom:10px;
-}
+          <article class="card">
+            <div class="card-media">
+              <img src="images/serpentinmedium1.jpg" alt="Serpentine stone (medium B)" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <h3 class="card-title">Serpentine (Medium B)</h3>
+                <span class="tag">Available</span>
+              </div>
+              <p class="card-text">
+                A second medium serpentine — slightly different shape/pattern. Same lush green feel and custom potential.
+              </p>
+              <div class="meta">
+                <div><span class="meta-label">Minimum</span><span class="meta-value">$20</span></div>
+                <div><span class="meta-label">Best for</span><span class="meta-value">Custom-ready</span></div>
+              </div>
+              <div class="actions"><a class="btn btn-ghost" href="#contact">Claim Serpentine (Medium B)</a></div>
+            </div>
+          </article>
+        </div>
 
-.mini{
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:10px;
-  background: rgba(251,247,243,0.62);
-}
-.mini-label{
-  font-size:11px;
-  letter-spacing:0.14em;
-  text-transform:uppercase;
-  color:var(--muted);
-  margin-bottom:4px;
-}
-.mini-value{
-  font-family: Frau
+        <div class="gentle-banner">
+          <p><strong>Want help choosing?</strong> Tell me “everyday” or “statement” + your budget, and I’ll suggest the best stone.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHT (full story) -->
+    <section id="highlight" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Highlight Find</h2>
+          <p class="muted">The piece that started this drop — a special showcase item.</p>
+        </div>
+
+        <article class="highlight">
+          <div class="highlight-media">
+            <img src="images/fossil-highlight.jpg" alt="Highlight fossil stone" loading="lazy">
+          </div>
+
+          <div class="highlight-info">
+            <div class="badge-row">
+              <span class="badge badge-sold">Not available</span>
+              <span class="badge">Featured fossil</span>
+              <span class="badge">Niagara shoreline</span>
+            </div>
+
+            <h3>Highlight Fossil</h3>
+            <p>
+              A standout fossil piece with natural texture and contrast that photographs beautifully. I’m keeping this one as the
+              “signature” of the release — it’s the kind of find that reminds me why I collect in the first place.
+            </p>
+
+            <ul class="bullets">
+              <li><strong>Status:</strong> not for sale (showcase)</li>
+              <li><strong>Use:</strong> inspiration for future fossil pieces</li>
+              <li><strong>Ask:</strong> if you want a similar vibe, I’ll watch for one</li>
+            </ul>
+
+            <div class="claimbox">
+              <div class="claimbox-title">Want something like this?</div>
+              <p class="claimbox-text">
+                Message me with “fossil style” and your budget. If I have a similar piece (or find one soon), you’ll be first to know.
+              </p>
+              <a class="btn btn-ghost" href="#contact">Contact</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="section section-soft">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How it works</h2>
+          <p class="muted">Simple, personal, and fair.</p>
+        </div>
+
+        <div class="how">
+          <div class="how-card">
+            <h3>1) Browse</h3>
+            <p>Pick the stone that speaks to you — statement piece or custom-ready.</p>
+          </div>
+          <div class="how-card">
+            <h3>2) Claim</h3>
+            <p>Message me the name. I’ll confirm availability and answer questions fast.</p>
+          </div>
+          <div class="how-card">
+            <h3>3) Pay what’s fair</h3>
+            <p>Minimum is shown per stone. Paying more helps support the time + materials behind each piece.</p>
+          </div>
+          <div class="how-card">
+            <h3>4) Pickup / Ship</h3>
+            <p>Local Niagara pickup is easiest. Shipping can be arranged — just ask.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Education</h2>
+          <p class="muted">A little learning corner — simple info, no gatekeeping.</p>
+        </div>
+
+        <div class="edu">
+          <article class="edu-card">
+            <h3>What am I actually buying?</h3>
+            <p>
+              Each listing is a one-of-one shoreline find. I describe color, texture, and how it wears — and when I’m confident
+              about the mineral, I’ll say so. If I’m not 100% sure, I’ll be honest about that too.
+            </p>
+          </article>
+
+          <article class="edu-card">
+            <h3>How I clean + prep stones</h3>
+            <p>
+              Stones are washed, gently cleaned, and photographed in natural light. I keep the finish natural — no weird coatings.
+              If a piece is polished or sealed for jewelry strength, I’ll tell you.
+            </p>
+          </article>
+
+          <article class="edu-card">
+            <h3>Custom pendant questions</h3>
+            <p>
+              If you want a stone set as a pendant, message me the name + your style (simple / delicate / statement).
+              I’ll tell you what’s realistic for that shape and what chain options make the most sense.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-soft">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p class="muted">Claim a stone, ask about customs, or request a similar piece.</p>
+        </div>
+
+        <div class="contact">
+          <a class="contact-card" href="mailto:rebecca.mcdonnell@outlook.com">
+            <div class="contact-label">Email</div>
+            <div class="contact-value">rebecca.mcdonnell@outlook.com</div>
+            <div class="contact-muted">Fastest for claims + custom details.</div>
+          </a>
+
+          <a class="contact-card" href="https://rebeccafinds.ca" target="_blank" rel="noopener">
+            <div class="contact-label">Website</div>
+            <div class="contact-value">rebeccafinds.ca</div>
+            <div class="contact-muted">Browse the latest release.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <p>© <span id="year"></span> Rebecca Finds • Niagara, ON • rebeccafinds.ca</p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
