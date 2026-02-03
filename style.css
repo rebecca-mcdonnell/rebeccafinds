@@ -8,7 +8,7 @@
   --text: #2f2a26;
   --muted: #7b7169;
 
-  /* Boutique greens (keep as-is) */
+  /* Boutique greens (different on purpose) */
   --evergreen: #1f4f3d;
   --pine:      #2f6b55;
   --sage:      #7ea892;
@@ -37,7 +37,6 @@ body{
   color: var(--text);
   line-height: 1.55;
 
-  /* Same green rhythm, but now on Rose Pearl Cream */
   background:
     radial-gradient(900px 520px at 8% 0%, rgba(47,107,85,0.14), transparent 60%),
     radial-gradient(820px 520px at 88% 8%, rgba(230,193,201,0.26), transparent 58%),
@@ -189,7 +188,6 @@ h1{
 .section:not(.alt){
   background: linear-gradient(180deg, rgba(207,230,218,0.20), rgba(231,242,236,0.0));
 }
-/* Use panel2 (blush-cream) so it doesn't feel beige-only */
 .section.alt{
   background: linear-gradient(180deg, rgba(247,236,236,0.70), rgba(255,255,255,0.55));
   border-top: 1px solid var(--linePine);
@@ -317,15 +315,23 @@ h2{
   color: rgba(31,79,61,0.95);
   border-color: rgba(127,168,146,0.48);
 }
-.btn-full{ width:100%; margin-top: 10px; }
-.cta-row{ display:flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+.btn-full{ width:100%; }
+
+/* ✅ FIX: force button to bottom inside card body */
+.btn-full{ margin-top: auto; }
+
+/* A little breathing room above the button even when it’s pushed down */
+.body{ padding-bottom: 14px; }
 
 /* Grid */
 .grid{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
+  align-items: stretch;
 }
+
+/* ✅ FIX: make each card a column so body can stretch */
 .card{
   border-radius: calc(var(--r) + 6px);
   border: 1px solid var(--linePine);
@@ -333,6 +339,10 @@ h2{
   box-shadow: var(--shadow);
   overflow:hidden;
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .card::before{
   content:"";
@@ -380,7 +390,15 @@ h2{
   font-weight: 800;
 }
 
-.body{ padding: 12px 14px 14px; }
+/* ✅ FIX: body becomes flexible column */
+.body{
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
 .body h3{
   margin: 0 0 6px;
   font-family: Fraunces, serif;
@@ -494,6 +512,7 @@ h2{
   .featured-media{ border-right: 0; border-bottom: 1px solid var(--linePine); }
   .featured-media img{ max-height: 280px; }
 }
+
 @media (max-width: 640px){
   .wrap{ width: min(1100px, calc(100% - 22px)); }
   .header-inner{ padding: 10px 0; }
@@ -520,6 +539,3 @@ h2{
   .cta-row{ gap: 8px; }
   .cta-row .btn{ width: 100%; }
 }
-
-
-
