@@ -1,484 +1,243 @@
-:root{
-  /* Core palette (creamy / blush / champagne / soft sage) */
-  --bg: #fbf7f3;
-  --panel: #ffffff;
-  --panel2: #f6ede8;
-  --text: #2f2a26;
-  --muted: #7f746b;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rebecca Finds — Education</title>
+  <meta name="description" content="Learn about shoreline stones, fossils, and how Rebecca Finds pieces are made." />
 
-  --champagne: #d6b48c;  /* gold */
-  --blush: #e8c0c9;      /* pink line */
-  --sage: #6f8a78;       /* soft green accent */
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
 
-  --border: rgba(214,180,140,0.45);
-  --shadow: 0 10px 30px rgba(47,42,38,0.08);
+<body>
 
-  --radius: 18px;
-  --radius2: 26px;
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <h1>Rebecca Finds</h1>
+      <p class="tagline">Education • stones • fossils • shoreline magic</p>
+    </div>
 
-  --wrap: 1100px;
+    <nav class="nav">
+      <a href="index.html#jewelry">Back to Jewelry</a>
+      <a href="#stones">Stone Types</a>
+      <a href="#care">Care</a>
+      <a href="#fair">Fair Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
 
-  /* Type scale */
-  --h1: 26px;
-  --h2: 34px;
-  --h3: 22px;
-  --p: 16px;
-}
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <h2>Education</h2>
+      <p>
+        A gentle little guide to what you’re wearing — because your jewelry has a story.
+        These shoreline finds are naturally shaped, then carefully finished for wear.
+      </p>
 
-/* Base */
-*{ box-sizing:border-box; }
-html,body{ margin:0; padding:0; }
-body{
-  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: radial-gradient(1200px 900px at 20% 10%, rgba(232,192,201,0.25), transparent 50%),
-              radial-gradient(1200px 900px at 85% 0%, rgba(111,138,120,0.18), transparent 55%),
-              var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
+      <div class="hero-badges">
+        <span class="badge">🌊 Shoreline-formed</span>
+        <span class="badge">✨ Hand-finished</span>
+        <span class="badge">💛 One-of-one</span>
+      </div>
 
-img{ max-width:100%; display:block; }
-a{ color: inherit; text-decoration: none; }
-.wrap{ width:min(var(--wrap), calc(100% - 40px)); margin:0 auto; }
+      <div class="hero-actions">
+        <a class="btn" href="index.html#jewelry">Shop the jewelry</a>
+        <a class="btn ghost" href="#stones">Learn stone types</a>
+      </div>
+    </div>
 
-/* Header */
-.site-header{
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(251,247,243,0.82);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(214,180,140,0.35);
-}
+    <div class="hero-card">
+      <div class="mini-note">
+        <strong>What “shoreline” really means</strong>
+        <p class="muted">
+          These stones have been tumbled naturally by water and time. That’s why they feel soft in the hand —
+          and why no two are ever identical.
+        </p>
+      </div>
+      <div class="mini-line"></div>
+      <p class="muted tiny">
+        rebeccafinds.ca • Niagara, Ontario
+      </p>
+    </div>
+  </div>
+</section>
 
-.header-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap: 18px;
-  padding: 14px 0;
-}
+<main>
 
-.brand h1{
-  font-family: "Fraunces", serif;
-  font-size: var(--h1);
-  margin: 0;
-  letter-spacing: 0.2px;
-}
-.tagline{
-  margin: 2px 0 0;
-  color: var(--muted);
-  font-size: 13px;
-}
+  <section id="stones" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Stone Types You’ll See Here</h2>
+        <p class="muted">A simple, wearable-first guide (not a textbook).</p>
+      </div>
 
-.nav{
-  display:flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  justify-content:flex-end;
-}
-.nav a{
-  font-size: 13px;
-  color: var(--muted);
-  padding: 8px 10px;
-  border-radius: 999px;
-  border: 1px solid transparent;
-}
-.nav a:hover{
-  border-color: rgba(214,180,140,0.35);
-  background: rgba(255,255,255,0.55);
-  color: var(--text);
-}
+      <div class="grid-3">
+        <div class="card">
+          <h3>Serpentine</h3>
+          <p class="muted">
+            Usually green, calming, and earthy. Serpentine often polishes silky and looks amazing as an everyday pendant.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Jasper</h3>
+          <p class="muted">
+            A classic “wearable stone” — durable, rich color, and naturally varied. Golden jasper is warm and glowy.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Quartz Veins</h3>
+          <p class="muted">
+            Dark stone with a bright line or “thread” of quartz. These read bold and expensive when worn.
+          </p>
+        </div>
 
-/* Hero */
-.hero{
-  padding: 42px 0 18px;
-}
-.hero-inner{
-  display:grid;
-  grid-template-columns: 1.35fr 0.65fr;
-  gap: 18px;
-  align-items: start;
-}
-.hero h2{
-  font-family: "Fraunces", serif;
-  font-size: var(--h2);
-  margin: 0 0 10px;
-}
-.hero p{
-  margin: 0 0 16px;
-  font-size: var(--p);
-  color: var(--text);
-}
+        <div class="card">
+          <h3>Unakite</h3>
+          <p class="muted">
+            Soft green and blush tones together — it’s basically the Rebecca Finds palette in nature.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Granite</h3>
+          <p class="muted">
+            Speckled and timeless. Granite pieces are neutral, elevated, and easy to style with any outfit.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Petrified Wood</h3>
+          <p class="muted">
+            Ancient-looking bands and earthy warmth. Feels story-rich — like a tiny natural artifact you can wear.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-.hero-badges{
-  display:flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 10px 0 18px;
-}
-.badge{
-  font-size: 13px;
-  color: var(--text);
-  background: rgba(255,255,255,0.65);
-  border: 1px solid rgba(214,180,140,0.35);
-  padding: 8px 12px;
-  border-radius: 999px;
-}
+  <section id="care" class="section section-soft">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Jewelry Care</h2>
+        <p class="muted">Made for real life — with a little love.</p>
+      </div>
 
-.hero-actions{
-  display:flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+      <div class="how">
+        <div class="how-step">
+          <span class="step-num">1</span>
+          <div>
+            <h3>Water</h3>
+            <p class="muted">A quick rinse is fine. For long life, avoid soaking and remove before swimming/hot tubs.</p>
+          </div>
+        </div>
+        <div class="how-step">
+          <span class="step-num">2</span>
+          <div>
+            <h3>Perfume & lotions</h3>
+            <p class="muted">Put jewelry on last. Let products dry first to keep metal and finish looking fresh.</p>
+          </div>
+        </div>
+        <div class="how-step">
+          <span class="step-num">3</span>
+          <div>
+            <h3>Storage</h3>
+            <p class="muted">Store flat or hang. Avoid tossing into a bag with keys (your pendant deserves better).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-.hero-card{
-  background: rgba(255,255,255,0.8);
-  border: 1px solid rgba(214,180,140,0.4);
-  border-radius: var(--radius2);
-  box-shadow: var(--shadow);
-  padding: 16px;
-  position: relative;
-  overflow:hidden;
-}
-.hero-card:before{
-  content:"";
-  position:absolute;
-  inset: 0 0 auto 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--blush), rgba(214,180,140,0.7), rgba(111,138,120,0.6));
-}
-.mini-note strong{
-  font-family: "Fraunces", serif;
-  font-size: 18px;
-}
-.mini-note p{ margin: 8px 0 0; }
-.mini-line{
-  height: 1px;
-  background: rgba(214,180,140,0.35);
-  margin: 12px 0;
-}
+  <section id="fair" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Pay What You Think Is Fair</h2>
+        <p class="muted">What “fair” covers — so it feels good on both sides.</p>
+      </div>
 
-/* Sections */
-.section{
-  padding: 34px 0;
-}
-.section-soft{
-  background: linear-gradient(180deg, rgba(246,237,232,0.9), rgba(246,237,232,0.4));
-  border-top: 1px solid rgba(214,180,140,0.25);
-  border-bottom: 1px solid rgba(214,180,140,0.25);
-}
-.section-head h2{
-  font-family: "Fraunces", serif;
-  font-size: 28px;
-  margin: 0 0 6px;
-}
-.section-head p{ margin: 0 0 18px; }
+      <div class="about">
+        <div class="about-card">
+          <p>
+            This model is simple: you’re supporting the materials (pendants, chains, tools),
+            the time (finding, cleaning, finishing), and the fact that each piece is one-of-one.
+          </p>
+          <p class="muted">
+            There’s a <strong>$20 minimum</strong> for jewelry pieces. Many customers choose more depending on size and vibe —
+            and that helps me keep making these without cutting corners.
+          </p>
+        </div>
 
-.muted{ color: var(--muted); }
-.tiny{ font-size: 12.5px; }
+        <div class="about-card">
+          <h3>What you can ask me</h3>
+          <ul>
+            <li>“What would you price this at?”</li>
+            <li>“Do you have gold or silver chain options?”</li>
+            <li>“Can you make it more minimal / more bold?”</li>
+            <li>“Can you match a stone to my vibe?”</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-/* Buttons */
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap: 8px;
-  padding: 11px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(214,180,140,0.55);
-  background: rgba(214,180,140,0.22);
-  color: var(--text);
-  font-weight: 600;
-  box-shadow: 0 6px 18px rgba(47,42,38,0.06);
-}
-.btn:hover{
-  background: rgba(214,180,140,0.28);
-}
-.btn.ghost{
-  background: rgba(255,255,255,0.65);
-}
-.btn.small{
-  padding: 9px 12px;
-  font-size: 13px;
-}
+  <section id="faq" class="section section-soft">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>FAQ</h2>
+        <p class="muted">Quick answers, no stress.</p>
+      </div>
 
-/* Highlight */
-.highlight{
-  display:grid;
-  grid-template-columns: 0.52fr 1.48fr;
-  gap: 16px;
-  background: rgba(255,255,255,0.82);
-  border: 1px solid rgba(214,180,140,0.5);
-  border-radius: var(--radius2);
-  box-shadow: var(--shadow);
-  padding: 16px;
-  margin: 10px 0 22px;
-  position: relative;
-  overflow:hidden;
-}
-.highlight:after{
-  content:"";
-  position:absolute;
-  left: 16px;
-  right: 16px;
-  bottom: 0;
-  height: 2px;
-  background: rgba(232,192,201,0.75); /* the pink line you wanted */
-  border-radius: 99px;
-}
-.highlight-img{
-  width: 100%;
-  max-width: 190px; /* smaller, ~2/3 vibe */
-  margin: 0 auto;
-  border-radius: 16px;
-  border: 1px solid rgba(214,180,140,0.35);
-  box-shadow: 0 8px 20px rgba(47,42,38,0.10);
-  object-fit: cover;
-}
-.kicker{
-  display:inline-block;
-  font-size: 12px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--sage);
-  margin: 0 0 6px;
-}
-.highlight h3{
-  font-family: "Fraunces", serif;
-  font-size: 26px;
-  margin: 0;
-}
-.sub{ margin: 4px 0 10px; color: var(--muted); font-size: 14px; }
-.desc{ margin: 0 0 10px; }
+      <div class="how">
+        <div class="how-step">
+          <span class="step-num">Q</span>
+          <div>
+            <h3>Is every listing jewelry?</h3>
+            <p class="muted">Yes. You’re claiming a wearable piece. Pendant + chain is available for every item.</p>
+          </div>
+        </div>
+        <div class="how-step">
+          <span class="step-num">Q</span>
+          <div>
+            <h3>How do I claim?</h3>
+            <p class="muted">Email is fastest. DM works too. First clear “CLAIM + piece name” gets it.</p>
+          </div>
+        </div>
+        <div class="how-step">
+          <span class="step-num">Q</span>
+          <div>
+            <h3>Will you ship?</h3>
+            <p class="muted">If shipping is available for your release, I’ll confirm it when you claim.</p>
+          </div>
+        </div>
+      </div>
 
-.meta{
-  display:flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 10px 0 0;
-}
-.pill{
-  font-size: 12.5px;
-  color: var(--text);
-  background: rgba(255,255,255,0.7);
-  border: 1px solid rgba(214,180,140,0.35);
-  padding: 6px 10px;
-  border-radius: 999px;
-}
-.pill.price{
-  background: rgba(232,192,201,0.25);
-  border-color: rgba(232,192,201,0.55);
-}
-.pill.sold{
-  background: rgba(111,138,120,0.14);
-  border-color: rgba(111,138,120,0.45);
-}
+      <div class="note-box">
+        <p class="muted">
+          Want to go back? <a class="link" href="index.html#jewelry">Shop the jewelry here.</a>
+        </p>
+      </div>
+    </div>
+  </section>
 
-/* Stone list (side-by-side image + details) */
-.stone-list{
-  display:grid;
-  gap: 14px;
-}
+  <section class="section">
+    <div class="wrap">
+      <footer class="footer">
+        <p class="muted tiny">
+          © <span id="year"></span> Rebecca Finds • Niagara, Ontario • rebeccafinds.ca
+        </p>
+      </footer>
+    </div>
+  </section>
 
-.stone-card{
-  display:grid;
-  grid-template-columns: 280px 1fr;
-  gap: 16px;
-  align-items: start;
-  background: rgba(255,255,255,0.86);
-  border: 1px solid rgba(214,180,140,0.4);
-  border-radius: var(--radius2);
-  box-shadow: var(--shadow);
-  padding: 14px;
-  overflow:hidden;
-  position: relative;
-}
+</main>
 
-.stone-card:before{
-  content:"";
-  position:absolute;
-  inset: 0 0 auto 0;
-  height: 3px;
-  background: linear-gradient(90deg, rgba(111,138,120,0.55), rgba(214,180,140,0.55), rgba(232,192,201,0.7));
-}
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
-.stone-media{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding: 8px;
-}
-.stone-media img{
-  width: 100%;
-  max-width: 240px;
-  border-radius: 16px;
-  border: 1px solid rgba(214,180,140,0.35);
-  box-shadow: 0 10px 24px rgba(47,42,38,0.12);
-  object-fit: cover;
-}
-
-.stone-info h3{
-  font-family: "Fraunces", serif;
-  font-size: 24px;
-  margin: 2px 0 6px;
-}
-.actions{
-  display:flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 12px;
-}
-
-.note-box{
-  margin-top: 18px;
-  background: rgba(255,255,255,0.65);
-  border: 1px solid rgba(214,180,140,0.35);
-  border-radius: var(--radius2);
-  padding: 14px;
-}
-
-/* Cards grid */
-.grid-3{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-.card{
-  background: rgba(255,255,255,0.78);
-  border: 1px solid rgba(214,180,140,0.35);
-  border-radius: var(--radius2);
-  padding: 16px;
-  box-shadow: 0 8px 22px rgba(47,42,38,0.06);
-}
-.card h3{
-  font-family: "Fraunces", serif;
-  margin: 0 0 8px;
-}
-
-/* How */
-.how{
-  display:grid;
-  gap: 12px;
-}
-.how-step{
-  display:grid;
-  grid-template-columns: 44px 1fr;
-  gap: 12px;
-  background: rgba(255,255,255,0.78);
-  border: 1px solid rgba(214,180,140,0.35);
-  border-radius: var(--radius2);
-  padding: 14px;
-}
-.step-num{
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight: 700;
-  border: 1px solid rgba(232,192,201,0.6);
-  background: rgba(232,192,201,0.20);
-}
-
-/* About */
-.about{
-  display:grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 12px;
-}
-.about-card{
-  background: rgba(255,255,255,0.78);
-  border: 1px solid rgba(214,180,140,0.35);
-  border-radius: var(--radius2);
-  padding: 16px;
-  box-shadow: 0 8px 22px rgba(47,42,38,0.06);
-}
-.about-card h3{
-  font-family: "Fraunces", serif;
-  margin: 0 0 8px;
-}
-.about-card ul{
-  margin: 10px 0 0;
-  padding-left: 18px;
-  color: var(--muted);
-}
-
-/* Contact */
-.contact{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-.contact-card{
-  background: rgba(255,255,255,0.82);
-  border: 1px solid rgba(214,180,140,0.35);
-  border-radius: var(--radius2);
-  padding: 16px;
-  box-shadow: 0 10px 24px rgba(47,42,38,0.06);
-}
-.link{
-  text-decoration: underline;
-  text-decoration-color: rgba(232,192,201,0.75);
-  text-underline-offset: 4px;
-}
-.footer{
-  margin-top: 20px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(214,180,140,0.25);
-  text-align:center;
-}
-
-/* Responsive (mobile slightly smaller + cleaner) */
-@media (max-width: 920px){
-  .hero-inner{
-    grid-template-columns: 1fr;
-  }
-  .grid-3{
-    grid-template-columns: 1fr;
-  }
-  .about{
-    grid-template-columns: 1fr;
-  }
-  .contact{
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 720px){
-  :root{
-    --h1: 22px;
-    --h2: 30px;
-    --h3: 20px;
-    --p: 15px;
-  }
-
-  .wrap{ width: min(var(--wrap), calc(100% - 28px)); }
-
-  .header-inner{
-    align-items:flex-start;
-    flex-direction: column;
-  }
-  .nav{ justify-content:flex-start; }
-
-  .hero{ padding: 30px 0 14px; }
-
-  .highlight{
-    grid-template-columns: 1fr;
-  }
-  .highlight-img{
-    max-width: 160px; /* slightly smaller on mobile */
-  }
-
-  .stone-card{
-    grid-template-columns: 1fr; /* stack on mobile */
-  }
-  .stone-media img{
-    max-width: 260px;
-  }
-  .btn{
-    padding: 10px 12px;
-    font-size: 13px;
-  }
-}
+</body>
+</html>
