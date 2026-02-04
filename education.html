@@ -1,24 +1,31 @@
+<!-- education.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rebecca Finds — Education</title>
-  <meta name="description" content="A practical guide to shoreline stones: what to expect, care, sourcing, and custom options." />
+  <meta name="description" content="Learn about shoreline stones, sea glass, and how Rebecca Finds sources and prepares one-of-one pieces in Niagara, Ontario." />
 
-  <link rel="stylesheet" href="style.css?v=20" />
+  <link rel="stylesheet" href="style.css?v=12" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+  <!-- Sticky boutique banner (matches home; no “sale”) -->
+  <div class="drop-banner" role="note" aria-label="Curated Drop Notice">
+    <span class="drop-banner__big">CURATED DROP</span>
+    <span class="drop-banner__small">Most minimums are now <strong>$17</strong>. Sea Glass • Quartz Vein • Golden remain <strong>$20</strong>.</span>
+  </div>
+
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="index.html">Rebecca Finds</a>
+      <a class="brand" href="index.html" aria-label="Rebecca Finds Home">Rebecca Finds</a>
 
-      <nav class="nav">
-        <a href="index.html#featured">Highlight</a>
+      <nav class="nav" aria-label="Main Navigation">
         <a href="index.html#stones">Stones</a>
         <a href="index.html#how">How it works</a>
         <a href="education.html" aria-current="page">Education</a>
@@ -27,199 +34,263 @@
     </div>
   </header>
 
-  <section class="intro">
-    <div class="wrap intro-inner">
-      <div class="intro-left">
-        <h1>Education</h1>
-        <p class="lede">
-          Natural shoreline stone is defined by variation, texture, and mineral structure.
-          This guide explains what to expect and how to care for each piece.
-        </p>
+  <main>
 
-        <div class="intro-badges">
-          <span class="pill">Natural variation</span>
-          <span class="pill">Care &amp; handling</span>
-          <span class="pill">Custom options</span>
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="kicker">Niagara, Ontario • shoreline finds • one-of-one pieces</p>
+          <h1>Education</h1>
+          <p class="subhead">
+            A gentle guide to the materials behind Rebecca Finds—how shoreline stones form, how sea glass happens,
+            and what “pay what you think is fair” means in practice.
+          </p>
+
+          <div class="hero-notes">
+            <div class="note">
+              <h3>Natural, local, one-of-one</h3>
+              <p>
+                Every piece begins as a shoreline find. No two stones are identical—shape, pattern, and texture are the point.
+              </p>
+            </div>
+            <div class="note">
+              <h3>Simple care, real longevity</h3>
+              <p>
+                These pieces are meant to be handled and enjoyed. A few basic care habits will keep them looking beautiful.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card__frame">
+            <img
+              src="images/fossil-highlight.jpg"
+              alt="Fossil highlight stone"
+              loading="lazy"
+            />
+          </div>
+          <div class="hero-card__caption">
+            <span class="pill pill-muted">Reference piece</span>
+            <h2>Fossil Highlight</h2>
+            <p>
+              I keep this one as a “north star” for the collection—texture, story, and that feeling of holding something older than you.
+            </p>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="intro-right">
-        <div class="mini-panel">
-          <div class="mini-kicker">Core principle</div>
-          <p>
-            Stones are presented as natural materials — not factory-perfect objects.
-            Mineral lines, surface texture, and colour shifts are part of what makes each piece one-of-one.
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How shoreline stones become “collectible”</h2>
+          <p class="section-sub">
+            Water + time + movement shape stones in a way humans can’t replicate. That’s why they feel so special.
           </p>
-          <p class="mini-note">
-            Listings prioritize clarity and accuracy.
-          </p>
+        </div>
+
+        <div class="two-col">
+          <div class="panel">
+            <h3>Wave-tumbled shaping</h3>
+            <p>
+              Shorelines naturally smooth edges through constant rolling, rubbing, and impact. That soft finish is part of the magic—
+              it’s a natural polish created slowly over time.
+            </p>
+
+            <h3>Patterns are clues</h3>
+            <p>
+              Veins, speckles, banding, and color shifts often reflect how the stone formed or fractured, and what minerals moved through it.
+              Even when we use everyday names, the visual story is real.
+            </p>
+
+            <h3>One-of-one means exactly that</h3>
+            <p>
+              Even if two stones are the same “type,” they won’t share the same shape, exact color, or surface detail.
+              The uniqueness is the product.
+            </p>
+          </div>
+
+          <div class="panel panel-outline">
+            <h3>What I look for when I curate</h3>
+            <ul class="bullets">
+              <li><strong>Balance:</strong> shape that feels satisfying in-hand</li>
+              <li><strong>Contrast:</strong> veins, flecks, or clean color blocks</li>
+              <li><strong>Durability:</strong> stones that can be worn or displayed confidently</li>
+              <li><strong>Presence:</strong> the “I keep looking at it” factor</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <p class="fine">
+              Not every find makes it to the site. If it’s here, it’s because it has a quiet kind of impact.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section alt">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>What natural stone can show</h2>
-        <p class="muted">Features commonly seen in shoreline finds.</p>
+    <section class="section section-soft">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Sea glass, quartz veins, and why some minimums are higher</h2>
+          <p class="section-sub">
+            A little transparency about rarity, prep time, and what “premium” means in a shoreline context.
+          </p>
+        </div>
+
+        <div class="grid">
+
+          <article class="card">
+            <div class="card-media placeholder">
+              <div class="placeholder-inner">
+                <p class="placeholder-title">Sea Glass</p>
+                <p class="placeholder-sub">Naturally tumbled glass</p>
+              </div>
+              <span class="badge badge-premium">$20 minimum</span>
+            </div>
+            <div class="card-body">
+              <h3>Sea Glass</h3>
+              <p class="meta">Rarer find • more prep • always one-of-one</p>
+              <p>
+                Genuine sea glass takes a long time to form and can be surprisingly hard to find in “good” condition.
+                Pieces often need careful cleaning and sorting before they’re ready to become wearable.
+              </p>
+              <ul class="details">
+                <li><strong>Minimum:</strong> $20 (pay what you think is fair)</li>
+                <li><strong>Why:</strong> rarity + extra prep time</li>
+                <li><strong>Care:</strong> gentle wipe; avoid harsh chemicals</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="images/quartzveinmedium.jpg" alt="Quartz vein stone" loading="lazy">
+              <span class="badge badge-premium">$20 minimum</span>
+            </div>
+            <div class="card-body">
+              <h3>Quartz Veins</h3>
+              <p class="meta">Natural contrast • high visual impact</p>
+              <p>
+                Quartz veins form when mineral-rich fluids move through cracks and solidify. That bright line you see is essentially
+                a “healed fracture”—a natural signature that gives the stone instant presence.
+              </p>
+              <ul class="details">
+                <li><strong>Minimum:</strong> $20 (pay what you think is fair)</li>
+                <li><strong>Why:</strong> standout patterning + collector feel</li>
+                <li><strong>Care:</strong> store separately if it’s a featured display piece</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="images/goldjaspermedium.jpg" alt="Golden Shore stone" loading="lazy">
+              <span class="badge badge-premium">$20 minimum</span>
+            </div>
+            <div class="card-body">
+              <h3>Golden Tones</h3>
+              <p class="meta">Premium look • warm, luminous finish</p>
+              <p>
+                Some stones naturally read “gold” in a way that feels elevated—warm, bright, and instantly styleable.
+                These tend to be the ones people reach for first.
+              </p>
+              <ul class="details">
+                <li><strong>Minimum:</strong> $20 (pay what you think is fair)</li>
+                <li><strong>Why:</strong> premium visual impact</li>
+                <li><strong>Care:</strong> soft cloth polish (no abrasives)</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
       </div>
+    </section>
 
-      <div class="how-grid">
-        <div class="how-card">
-          <h3>Texture and tiny pits</h3>
-          <p>
-            Shoreline wear can create small pits, faint abrasions, or matte zones. These are normal in natural stone.
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Care guide</h2>
+          <p class="section-sub">
+            Keep it simple. Most pieces only need a soft cloth and a little common sense.
           </p>
         </div>
-        <div class="how-card">
-          <h3>Veins and mineral lines</h3>
-          <p>
-            Lighter lines are often mineral-filled seams (commonly quartz or similar). These can add strong contrast.
-          </p>
-        </div>
-        <div class="how-card">
-          <h3>Colour shifts by light</h3>
-          <p>
-            Greens can appear deeper indoors and brighter in daylight. Warm tones can intensify under sun.
-          </p>
-        </div>
-        <div class="how-card">
-          <h3>Natural structure</h3>
-          <p>
-            Small inclusions and subtle seams are part of formation and history. Each piece is assessed before listing.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Care and handling</h2>
-        <p class="muted">Simple steps for long-lasting clarity.</p>
-      </div>
+        <div class="two-col">
+          <div class="panel">
+            <h3>Stones</h3>
+            <ul class="bullets">
+              <li>Wipe with a soft, dry cloth to remove oils or dust</li>
+              <li>If needed: a tiny bit of mild soap + warm water, then dry fully</li>
+              <li>Avoid harsh cleaners or abrasive scrubbing</li>
+            </ul>
 
-      <div class="grid">
-        <article class="card">
-          <div class="body">
-            <h3>Everyday care</h3>
-            <ul class="detail-list">
-              <li><strong>Wipe gently:</strong> Soft cloth for dust and fingerprints.</li>
-              <li><strong>Avoid chemicals:</strong> Household cleaners can dull surfaces.</li>
-              <li><strong>Store separately:</strong> Prevent stones from scratching one another.</li>
+            <div class="divider"></div>
+
+            <h3>Jewelry pieces (general)</h3>
+            <ul class="bullets">
+              <li>Remove before swimming, showering, or using strong products</li>
+              <li>Store in a small pouch or separate spot to prevent scratching</li>
+              <li>If you ever feel unsure, message me—happy to guide you</li>
             </ul>
           </div>
-        </article>
 
-        <article class="card">
-          <div class="body">
-            <h3>Water guidance</h3>
-            <ul class="detail-list">
-              <li><strong>Quick rinse:</strong> Lukewarm water is generally safe.</li>
-              <li><strong>No long soaking:</strong> Especially for stones with seams or softer structure.</li>
-              <li><strong>Dry fully:</strong> Pat dry and air-dry before storage.</li>
+          <div class="panel panel-outline">
+            <h3>About the “minimum”</h3>
+            <p>
+              Minimums are not about pressure—they’re about sustainability. They cover the baseline cost of materials,
+              tools, and time so the project can continue.
+            </p>
+            <ul class="bullets">
+              <li><strong>$17 minimum</strong> for most pieces</li>
+              <li><strong>$20 minimum</strong> for Sea Glass, Quartz Vein, and Golden</li>
+              <li>Going above the minimum supports future drops (and is appreciated)</li>
             </ul>
+
+            <div class="divider"></div>
+
+            <p class="fine">
+              My goal is beautiful things that feel accessible—without pretending time and materials are free.
+            </p>
           </div>
-        </article>
+        </div>
+      </div>
+    </section>
 
-        <article class="card">
-          <div class="body">
-            <h3>Finish and shine</h3>
-            <ul class="detail-list">
-              <li><strong>Natural finish:</strong> Presented clean, not artificially glossy.</li>
-              <li><strong>Oils:</strong> Can attract dust and change surface feel.</li>
-              <li><strong>Best practice:</strong> Keep surfaces dry and handled gently.</li>
-            </ul>
+    <section class="section section-soft">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Questions + custom requests</h2>
+          <p class="section-sub">
+            Want a similar color story, a specific tone of green, or a stone that feels like “you”? Ask.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-row">
+            <span class="label">Instagram</span>
+            <span class="value">@rebecca.finds.ca</span>
           </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section alt">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Custom options</h2>
-        <p class="muted">How jewelry-suitable stones are selected and finished.</p>
-      </div>
-
-      <div class="how-grid">
-        <div class="how-card">
-          <h3>Suitability</h3>
-          <p>
-            Jewelry-ready pieces are selected for stable structure, comfortable profiles, and strong presentation in a setting.
-          </p>
-        </div>
-        <div class="how-card">
-          <h3>Materials</h3>
-          <p>
-            Chains and findings are selected for durability and comfort. Listings indicate when a pendant and chain are included.
-          </p>
-        </div>
-        <div class="how-card">
-          <h3>Style direction</h3>
-          <p>
-            Custom work ranges from simple chain selection to a more detailed setting approach, depending on the piece.
-          </p>
-        </div>
-        <div class="how-card">
-          <h3>Timeline</h3>
-          <p>
-            Custom work is handled with care and consistency. Timeframes depend on the requested finish and materials.
+          <div class="contact-row">
+            <span class="label">Email</span>
+            <span class="value">rebeccafinds.ca (reply here with your email if you want it clickable)</span>
+          </div>
+          <p class="fine">
+            When you message, tell me what you’re drawn to (greens, golds, contrast, calm neutrals) and whether it’s for wearing or display.
           </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Responsible collecting</h2>
-        <p class="muted">Local shoreline finds, presented with respect for the material.</p>
-      </div>
+  </main>
 
-      <article class="featured-card">
-        <div class="featured-media">
-          <img src="images/fossil-highlight.jpg" alt="A shoreline-found fossil highlight stone" loading="lazy">
-          <div class="flag-row">
-            <span class="flag">Niagara</span>
-            <span class="flag flag-quiet">Natural</span>
-          </div>
-        </div>
-
-        <div class="featured-body">
-          <h3>Local and low-waste</h3>
-          <p class="item-sub">
-            Pieces are collected locally and cleaned thoughtfully. The goal is a clear presentation that preserves natural character.
-          </p>
-
-          <ul class="detail-list">
-            <li><strong>Small-scale:</strong> Curated, one-of-one listings.</li>
-            <li><strong>Careful cleaning:</strong> Texture and structure are preserved.</li>
-            <li><strong>Clear listing:</strong> Status and minimums are displayed consistently.</li>
-          </ul>
-
-          <div class="cta-row">
-            <a class="btn btn-ghost" href="index.html#stones">Back to available stones</a>
-            <a class="btn" href="index.html#contact">Contact</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <footer class="footer">
+  <footer class="site-footer">
     <div class="wrap footer-inner">
-      <p>© <span id="year"></span> Rebecca Finds • Niagara, Ontario</p>
-      <p class="muted">rebeccafinds.ca</p>
+      <p class="footer-brand">Rebecca Finds</p>
+      <p class="fine">Local shoreline finds • one-of-one pieces • curated with care</p>
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
