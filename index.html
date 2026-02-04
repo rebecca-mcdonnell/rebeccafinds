@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>Rebecca Finds — Curated Drop</title>
   <meta name="description" content="One-of-one shoreline stones and jewelry. Niagara, Ontario." />
 
-  <link rel="stylesheet" href="style.css?v=301" />
+  <link rel="stylesheet" href="style.css?v=410" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,18 +14,18 @@
 
 <body>
 
-  <!-- Brand-first banner (no pricing first) -->
-  <div class="drop-banner">
+  <!-- Banner (brand-first, not price-first) -->
+  <div class="drop-banner" role="note" aria-label="Curated Drop">
     <span class="banner-main">CURATED DROP</span>
     <span class="banner-sub">One-of-one shoreline finds • Niagara</span>
   </div>
 
   <header class="site-header">
     <div class="wrap header-inner">
-      <a href="index.html" class="brand">Rebecca Finds</a>
+      <a href="index.html" class="brand" aria-label="Rebecca Finds Home">Rebecca Finds</a>
 
       <nav class="nav" aria-label="Main Navigation">
-        <a href="#stones">Stones</a>
+        <a href="#stones">Pieces</a>
         <a href="#how">How it works</a>
         <a href="education.html">Education</a>
         <a href="#contact">Contact</a>
@@ -36,136 +35,263 @@
 
   <main>
 
+    <!-- HERO (middle ground: warm + boutique, not essay) -->
     <section class="hero">
       <div class="wrap hero-inner">
-        <div>
+
+        <div class="hero-copy">
           <p class="kicker">Niagara • shoreline finds • one-of-one</p>
           <h1>Curated Shoreline Pieces</h1>
           <p class="hero-sub">
-            Hand-selected stones and simple, wearable pieces.<br>
-            Calm. Local. Naturally unique.
+            Hand-selected stones and simple wearable pieces — naturally unique, quietly luxurious, and thoughtfully priced.
           </p>
 
-          <div class="hero-tags">
+          <div class="hero-tags" aria-label="Values">
             <span>Local</span>
             <span>Low-waste</span>
             <span>Pay what feels fair</span>
           </div>
+
+          <div class="hero-mini">
+            <div class="mini">
+              <div class="mini-title">How to claim</div>
+              <div class="mini-text">Message the piece name + “pickup” or “shipping”.</div>
+            </div>
+            <div class="mini">
+              <div class="mini-title">Pricing</div>
+              <div class="mini-text">Minimums are listed per piece — choose what feels fair within that.</div>
+            </div>
+          </div>
         </div>
 
-        <div class="hero-feature">
-          <img src="images/highlight1.jpg" alt="Highlight piece" loading="lazy">
-          <p class="feature-note">Highlight • Not available</p>
-        </div>
+        <aside class="hero-feature" aria-label="Highlight">
+          <div class="feature-frame">
+            <img src="images/highlight1.jpg" alt="Highlight piece" loading="lazy">
+          </div>
+          <div class="feature-caption">
+            <span class="pill">Highlight • not available</span>
+            <p>
+              This is the “tone-setter” for the drop — here for inspiration and to show the style of pieces I love to curate.
+            </p>
+          </div>
+        </aside>
+
       </div>
     </section>
 
 
+    <!-- PRODUCTS -->
     <section id="stones" class="section">
       <div class="wrap">
         <div class="section-head">
-          <h2 class="section-title">Available Pieces</h2>
-          <p class="section-sub">Tap a piece, message the name to claim.</p>
+          <h2 class="section-title">Pieces</h2>
+          <p class="section-sub">Every piece is one-of-one. If it calls to you, it’s yours to claim.</p>
         </div>
 
-        <!-- Cards generated here -->
         <div id="grid" class="grid" aria-live="polite"></div>
 
         <div class="tiny-note">
           <span class="dot"></span>
-          Minimums are listed per piece (most are $17; select premium pieces are $20).
+          Most pieces have a $17 minimum. Sea Glass, Quartz Vein, and Golden remain $20.
         </div>
       </div>
     </section>
 
 
+    <!-- HOW IT WORKS (middle ground: clear + short) -->
     <section id="how" class="section soft">
       <div class="wrap">
         <div class="section-head">
           <h2 class="section-title">How it works</h2>
+          <p class="section-sub">Simple, calm, and transparent.</p>
         </div>
 
         <div class="steps">
           <div class="step">
             <h4>1) Choose</h4>
-            <p>Pick the piece that speaks to you.</p>
+            <p>Browse the pieces and pick the one you feel drawn to.</p>
           </div>
+
           <div class="step">
-            <h4>2) Price</h4>
-            <p>Pay what feels fair (within the minimum shown).</p>
+            <h4>2) Pay what feels fair</h4>
+            <p>Each piece lists a minimum. You choose the final amount within that minimum.</p>
           </div>
+
           <div class="step">
-            <h4>3) Claim</h4>
-            <p>Message to arrange pickup/shipping.</p>
+            <h4>3) Claim + arrange</h4>
+            <p>Message the name to claim. We’ll confirm availability and do pickup/shipping.</p>
           </div>
         </div>
       </div>
     </section>
 
 
+    <!-- CONTACT -->
     <section id="contact" class="section">
       <div class="wrap">
         <div class="section-head">
           <h2 class="section-title">Contact</h2>
+          <p class="section-sub">To claim a piece, send the name + pickup/shipping.</p>
         </div>
 
         <div class="contact-box">
-          <p><strong>Instagram:</strong> @rebecca.finds.ca</p>
-          <p><strong>Location:</strong> Niagara Region</p>
-          <p class="fine">Send the piece name to claim. I’ll confirm availability + next steps.</p>
+          <div class="contact-row"><span class="label">Instagram</span><span class="value">@rebecca.finds.ca</span></div>
+          <div class="contact-row"><span class="label">Location</span><span class="value">Niagara Region</span></div>
+          <p class="fine">Tip: include the piece name exactly as shown on the site.</p>
         </div>
       </div>
     </section>
 
   </main>
 
+
   <footer class="footer">
     <div class="wrap">
-      <p>Rebecca Finds • One-of-one shoreline pieces</p>
+      <p class="footer-text">Rebecca Finds • One-of-one shoreline pieces</p>
     </div>
   </footer>
 
 
   <script>
     /*
-      ✅ EDIT YOUR LIST HERE (ONE PLACE)
-      - image: must match EXACT filename in /images
-      - name: what you want it called
-      - note: short vibe line
-      - min: 17 for most; 20 for Sea Glass / Quartz Vein / Golden
-      - status: "Available" or "Not available"
+      ✅ ONLY EDIT HERE
+      Your actual filenames are: 1a.jpg, 1b.jpg, 2.jpg ... 15.jpg, highlight1.jpg
 
-      IMPORTANT:
-      - You said Tidepool + Coastal Jade are the same → keep ONE name only.
-      - You said #3 is Petrified Wood → set that name here on the correct image.
-      - If you aren’t sure which photo is which yet, leave “Stone 1a” etc for now,
-        then rename later without touching any layout code.
+      If a name isn’t final tonight, keep the “Collection No.” name for now —
+      but every card will still have a full description.
     */
 
     const pieces = [
-      { image: "1a.jpg", name: "Stone 1a", note: "One-of-one • shoreline find", min: 17, status: "Available" },
-      { image: "1b.jpg", name: "Stone 1b", note: "One-of-one • shoreline find", min: 17, status: "Available" },
-
-      { image: "2.jpg",  name: "Stone 2",  note: "One-of-one • shoreline find", min: 17, status: "Available" },
-
-      // If your “Stone #3 = Petrified Wood”, rename the correct photo here:
-      { image: "3.jpg",  name: "Petrified Wood", note: "Earthy • natural grain", min: 17, status: "Available" },
-
-      { image: "4.jpg",  name: "Stone 4",  note: "One-of-one • shoreline find", min: 17, status: "Available" },
-      { image: "5.jpg",  name: "Stone 5",  note: "One-of-one • shoreline find", min: 17, status: "Available" },
-      { image: "6.jpg",  name: "Stone 6",  note: "One-of-one • shoreline find", min: 17, status: "Available" },
-      { image: "7.jpg",  name: "Stone 7",  note: "One-of-one • shoreline find", min: 17, status: "Available" },
-      { image: "8.jpg",  name: "Stone 8",  note: "One-of-one • shoreline find", min: 17, status: "Available" },
-      { image: "9.jpg",  name: "Stone 9",  note: "One-of-one • shoreline find", min: 17, status: "Available" },
-      { image: "10.jpg", name: "Stone 10", note: "One-of-one • shoreline find", min: 17, status: "Available" },
-      { image: "11.jpg", name: "Stone 11", note: "One-of-one • shoreline find", min: 17, status: "Available" },
-      { image: "12.jpg", name: "Stone 12", note: "One-of-one • shoreline find", min: 17, status: "Available" },
-      { image: "13.jpg", name: "Stone 13", note: "One-of-one • shoreline find", min: 17, status: "Available" },
-      { image: "14.jpg", name: "Stone 14", note: "One-of-one • shoreline find", min: 17, status: "Available" },
-      { image: "15.jpg", name: "Stone 15", note: "One-of-one • shoreline find", min: 17, status: "Available" },
+      {
+        image: "1a.jpg",
+        name: "Collection No. 1a",
+        tagline: "Warm neutrals • softly polished",
+        description: "A quietly luminous piece with a smooth shoreline finish. This one feels calm and refined — easy to style in a space, or keep near your desk as a grounding little treasure.",
+        min: 17,
+        status: "Available"
+      },
+      {
+        image: "1b.jpg",
+        name: "Collection No. 1b",
+        tagline: "Golden-speckled • pocket-sized presence",
+        description: "Subtle golden tones with a natural, time-worn finish. A beautiful “small statement” — understated, tactile, and satisfying to hold.",
+        min: 17,
+        status: "Available"
+      },
+      {
+        image: "2.jpg",
+        name: "Collection No. 2",
+        tagline: "High contrast • dramatic detail",
+        description: "Strong contrast and bold patterning give this piece instant presence. It photographs beautifully, but looks even richer in person — a true shelf-worthy statement stone.",
+        min: 20, /* set this to 20 if this is your Quartz Vein */
+        status: "Available"
+      },
+      {
+        image: "3.jpg",
+        name: "Petrified Wood",
+        tagline: "Earthy grain • grounded feel",
+        description: "Warm, natural grain and an ancient feel. Petrified wood has that rare mix of softness and strength — a piece that feels collected, not manufactured.",
+        min: 17,
+        status: "Available"
+      },
+      {
+        image: "4.jpg",
+        name: "Collection No. 4",
+        tagline: "Amber warmth • minimal shape",
+        description: "A clean, simple silhouette with warm shoreline tones. This is the kind of piece that looks intentional anywhere you place it — timeless and easy.",
+        min: 17,
+        status: "Available"
+      },
+      {
+        image: "5.jpg",
+        name: "Collection No. 5",
+        tagline: "Deep tones • moody finish",
+        description: "A darker, moodier piece with a glossy look in certain light. If you love contrast and depth, this one brings that quiet drama without being loud.",
+        min: 17,
+        status: "Available"
+      },
+      {
+        image: "6.jpg",
+        name: "Collection No. 6",
+        tagline: "Green patterning • natural texture",
+        description: "A richly patterned green-toned stone with a shoreline-smoothed surface. It has that “coastal gallery” feeling — organic, elegant, and one-of-one.",
+        min: 17,
+        status: "Available"
+      },
+      {
+        image: "7.jpg",
+        name: "Collection No. 7",
+        tagline: "Soft sea-tones • airy look",
+        description: "Lighter tones with a gentle, sea-washed feel. This piece reads fresh and calm — like something you’d find in a curated coastal boutique.",
+        min: 17,
+        status: "Available"
+      },
+      {
+        image: "8.jpg",
+        name: "Collection No. 8",
+        tagline: "Green-blue detail • striking accent",
+        description: "A vivid, eye-catching piece with unique color. It’s the kind of stone that stops people mid-scroll — a small but powerful focal point.",
+        min: 17,
+        status: "Available"
+      },
+      {
+        image: "9.jpg",
+        name: "Collection No. 9",
+        tagline: "Classic neutral • speckled character",
+        description: "A classic, neutral-toned stone with subtle speckling. It’s understated in the best way — the kind of piece that always looks ‘right’ in any setting.",
+        min: 17,
+        status: "Available"
+      },
+      {
+        image: "10.jpg",
+        name: "Collection No. 10",
+        tagline: "Warm tone • smooth edges",
+        description: "Warm shoreline color with a natural polish. A simple, satisfying piece — great as a small display stone or a meaningful little gift.",
+        min: 17,
+        status: "Available"
+      },
+      {
+        image: "11.jpg",
+        name: "Sea Glass",
+        tagline: "Lake-tumbled • rare find",
+        description: "True sea glass takes time — shaped by water, softened by movement, and found one piece at a time. This is a premium shoreline material with a gentle glow.",
+        min: 20,
+        status: "Available"
+      },
+      {
+        image: "12.jpg",
+        name: "Collection No. 12",
+        tagline: "Green-blue • jewelry-ready",
+        description: "A vivid green-blue piece with a clean, wearable look. If you love that ‘stone-jewelry’ feel, this one has the right scale and impact.",
+        min: 17,
+        status: "Available"
+      },
+      {
+        image: "13.jpg",
+        name: "Collection No. 13",
+        tagline: "Patterned green • bold texture",
+        description: "A patterned stone with real character — the kind of natural detail you can’t replicate. It feels collected, intentional, and distinctly one-of-one.",
+        min: 17,
+        status: "Available"
+      },
+      {
+        image: "14.jpg",
+        name: "Collection No. 14",
+        tagline: "Light neutral • soft presence",
+        description: "A lighter-toned piece with a gentle, clean finish. It’s simple and elegant — perfect for someone who loves quiet beauty and minimal styling.",
+        min: 17,
+        status: "Available"
+      },
+      {
+        image: "15.jpg",
+        name: "Golden (Premium)",
+        tagline: "Golden tones • standout piece",
+        description: "A premium-feeling golden stone with a naturally elevated look. This one reads ‘special’ immediately — warm, luminous, and made for the top row of any collection.",
+        min: 20,
+        status: "Available"
+      }
     ];
 
-    // Build cards
     const grid = document.getElementById("grid");
 
     function badgeClass(min){
@@ -183,7 +309,8 @@
         </div>
         <div class="card-body">
           <h3>${p.name}</h3>
-          <p class="meta">${p.note}</p>
+          <p class="tagline">${p.tagline}</p>
+          <p class="desc">${p.description}</p>
           <p class="status">${p.status}</p>
         </div>
       `;
