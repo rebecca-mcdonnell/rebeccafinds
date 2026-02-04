@@ -6,7 +6,7 @@
   <title>Rebecca Finds — Curated Drop</title>
   <meta name="description" content="One-of-one shoreline stones and jewelry. Niagara, Ontario." />
 
-  <link rel="stylesheet" href="style.css?v=621" />
+  <link rel="stylesheet" href="style.css?v=622" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -210,27 +210,6 @@ Thank you!`;
 
   return `mailto:${CLAIM_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
-<script>
-const CLAIM_EMAIL = "rebecca.mcdonnell@outlook.com";
-
-function buildMailto(pieceName){
-  const subject = `Claim — ${pieceName}`;
-  const body =
-`Hi Rebecca!
-
-I’d love to claim: ${pieceName}
-
-Option:
-- Pendant + chain
-- Stone-only
-- Custom
-
-Pickup or shipping?
-
-Thank you!`;
-
-  return `mailto:${CLAIM_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-}
 
 const pieces = [
   {
@@ -346,8 +325,6 @@ const pieces = [
     status:"Available"
   }
 ];
-</script>
-
 
 const grid = document.getElementById("grid");
 
@@ -359,14 +336,13 @@ pieces.forEach((p, idx) => {
 
   // Dual image: tap to switch (instead of stacking)
   if (p.images && Array.isArray(p.images) && p.images.length >= 2) {
-    const imgId = `swap-${idx}`;
     media = `
       <div class="card-media dual-swap" data-img-a="images/${p.images[0]}" data-img-b="images/${p.images[1]}">
-        <img id="${imgId}"
-             src="images/${p.images[0]}"
-             alt="${p.name} (view 1)"
-             loading="lazy"
-             decoding="async">
+        <img
+          src="images/${p.images[0]}"
+          alt="${p.name} (view 1)"
+          loading="lazy"
+          decoding="async">
         <div class="swap-dots" aria-label="Two photo views">
           <button class="dot-btn is-on" type="button" aria-label="View 1"></button>
           <button class="dot-btn" type="button" aria-label="View 2"></button>
@@ -376,10 +352,11 @@ pieces.forEach((p, idx) => {
   } else {
     media = `
       <div class="card-media">
-        <img src="images/${p.image}"
-             alt="${p.name}"
-             loading="lazy"
-             decoding="async">
+        <img
+          src="images/${p.image}"
+          alt="${p.name}"
+          loading="lazy"
+          decoding="async">
       </div>`;
   }
 
@@ -387,7 +364,6 @@ pieces.forEach((p, idx) => {
 
   card.innerHTML = `
     ${media}
-
     <div class="card-body">
       <h3>${p.name}</h3>
       <p class="tagline">${p.tagline}</p>
@@ -420,15 +396,13 @@ document.querySelectorAll(".dual-swap").forEach((wrap) => {
   function setState(showA){
     onA = showA;
     img.src = showA ? a : b;
-    img.alt = showA ? (img.alt.replace("(view 2)", "(view 1)")) : (img.alt.replace("(view 1)", "(view 2)"));
     dots.forEach((d) => d.classList.remove("is-on"));
     (showA ? dots[0] : dots[1]).classList.add("is-on");
   }
 
-  // tap image or "tap to switch"
+  // tap image/hint area to toggle
   wrap.addEventListener("click", (e) => {
     const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : "";
-    // allow clicking anywhere in the media area except links (there are none)
     if (tag === "button" || tag === "img" || tag === "div") {
       setState(!onA);
     }
