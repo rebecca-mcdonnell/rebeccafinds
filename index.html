@@ -1,24 +1,31 @@
-\<!DOCTYPE html>
+<!-- index.html -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rebecca Finds — Collection Release</title>
-  <meta name="description" content="One-of-one shoreline stones and sea glass from Niagara, Ontario. Pay what you think is fair with clear minimums." />
+  <title>Rebecca Finds — Curated Drop</title>
+  <meta name="description" content="One-of-one shoreline stones and jewelry from Niagara, Ontario. Pay what you think is fair with transparent minimums." />
 
-  <link rel="stylesheet" href="style.css?v=22" />
+  <link rel="stylesheet" href="style.css?v=12" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+  <!-- Sticky boutique banner (no “sale”) -->
+  <div class="drop-banner" role="note" aria-label="Curated Drop Notice">
+    <span class="drop-banner__big">CURATED DROP</span>
+    <span class="drop-banner__small">Most minimums are now <strong>$17</strong>. Sea Glass • Quartz Vein • Golden remain <strong>$20</strong>.</span>
+  </div>
+
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="index.html">Rebecca Finds</a>
+      <a class="brand" href="index.html" aria-label="Rebecca Finds Home">Rebecca Finds</a>
 
-      <nav class="nav">
-        <a href="#featured">Highlight</a>
+      <nav class="nav" aria-label="Main Navigation">
         <a href="#stones">Stones</a>
         <a href="#how">How it works</a>
         <a href="education.html">Education</a>
@@ -27,545 +34,346 @@
     </div>
   </header>
 
-  <!-- TOP BANNER (LESS WORDY) -->
-  <section class="intro">
-    <div class="wrap intro-inner">
-      <div class="intro-left">
-        <h1>Drop One</h1>
-        <p class="lede">
-          Niagara shoreline finds — one-of-one pieces, priced to stay genuinely accessible.
-        </p>
+  <main>
 
-        <div class="intro-badges">
-          <span class="pill">Niagara, ON</span>
-          <span class="pill">Pay what feels fair</span>
-          <span class="pill">Clear minimums</span>
-        </div>
-      </div>
-
-      <div class="intro-right">
-        <div class="mini-panel">
-          <div class="mini-kicker">Pricing (simple)</div>
-          <p>
-            <strong>Pay what you think is fair</strong> — start at the listed minimum.
-            If you’re able to add more, it supports time, supplies, and future drops.
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="kicker">Niagara, Ontario • shoreline finds • one-of-one pieces</p>
+          <h1>Curated Drop</h1>
+          <p class="subhead">
+            A small release of hand-selected shoreline stones and simple, wearable pieces—made with a
+            “pay what you think is fair” approach so beautiful things can stay within reach.
           </p>
-          <p class="mini-note">
-            Claims are handled in the order received. Local pickup or shipping.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- FEATURED / HIGHLIGHT -->
-  <section id="featured" class="section featured">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Highlight Stone</h2>
-        <p class="muted">A signature example of the collection standard.</p>
-      </div>
-
-      <article class="featured-card">
-        <div class="featured-media">
-          <img src="images/highlight1.jpg" alt="Highlight stone" loading="lazy">
-          <div class="flag-row">
-            <span class="flag">Highlight</span>
-            <span class="flag flag-quiet">Not available</span>
+          <div class="hero-notes">
+            <div class="note">
+              <h3>Pay what you think is fair</h3>
+              <p>
+                Choose a price that feels right for you—within the stated minimum. Minimums help cover
+                materials, tools, time, and keep this local practice sustainable.
+              </p>
+            </div>
+            <div class="note">
+              <h3>Transparent minimums</h3>
+              <p>
+                Most pieces: <strong>$17 minimum</strong>. Premium/rarer picks:
+                <strong>Sea Glass, Quartz Vein, Golden</strong> stay at <strong>$20 minimum</strong>.
+              </p>
+            </div>
           </div>
         </div>
 
-        <div class="featured-body">
-          <h3>Highlight Stone</h3>
-          <p class="item-sub">
-            A display piece that shows the finish + character standard for this release.
-          </p>
-
-          <ul class="detail-list">
-            <li><strong>Origin:</strong> Niagara shoreline find.</li>
-            <li><strong>Finish:</strong> Cleaned gently to preserve natural character.</li>
-            <li><strong>Status:</strong> Display piece (not available).</li>
-          </ul>
-
-          <div class="cta-row">
-            <a class="btn btn-ghost" href="#stones">View available stones</a>
-            <a class="btn" href="#contact">Custom inquiry</a>
+        <div class="hero-card">
+          <div class="hero-card__frame">
+            <img
+              src="images/fossil-highlight.jpg"
+              alt="Highlight fossil stone"
+              loading="lazy"
+            />
           </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- STONES GRID -->
-  <section id="stones" class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Available Pieces</h2>
-        <p class="muted">Each one is unique. Claims are handled in the order received.</p>
-      </div>
-
-      <div class="grid">
-
-        <!-- 1a/1b CAROUSEL CARD -->
-        <article class="card">
-          <div class="media carousel" data-images="images/1a.jpg,images/1b.jpg">
-            <img src="images/1a.jpg" alt="Golden Shore stone (photo 1)" loading="lazy">
-            <span class="tag">Available</span>
-
-            <!-- simple next button -->
-            <button class="carousel-btn" type="button" aria-label="Next photo">Next ▸</button>
-          </div>
-          <div class="body">
-            <h3>Golden Shore</h3>
-            <p class="item-sub">
-              Warm golden shoreline tones with subtle speckling — two-sided character and a soft polish.
+          <div class="hero-card__caption">
+            <span class="pill pill-muted">Highlight • Not available</span>
+            <h2>Fossil Highlight</h2>
+            <p>
+              This is my “keeper” piece for the drop—here for inspiration and to set the tone.
+              If you want something with a similar feel, message me and we’ll find your match.
             </p>
-
-            <div class="meta">
-              <div><span class="k">Minimum</span><span class="v">$20</span></div>
-              <div><span class="k">Material</span><span class="v">Jasper / iron-stained quartz</span></div>
-            </div>
-
-            <ul class="detail-list">
-              <li><strong>Look:</strong> Golden-yellow with natural mineral flecks.</li>
-              <li><strong>Feel:</strong> Smooth, substantial, easy to hold.</li>
-              <li><strong>Notes:</strong> Click “Next” to view the other side.</li>
-            </ul>
-
-            <a class="btn btn-full" href="#contact">Claim Golden Shore</a>
           </div>
-        </article>
-
-        <!-- 2 -->
-        <article class="card">
-          <div class="media">
-            <img src="images/2.jpg" alt="Midnight Vein stone" loading="lazy">
-            <span class="tag">Available</span>
-          </div>
-          <div class="body">
-            <h3>Midnight Vein</h3>
-            <p class="item-sub">A dark base crossed with a pale quartz vein — naturally dramatic and high contrast.</p>
-
-            <div class="meta">
-              <div><span class="k">Minimum</span><span class="v">$20</span></div>
-              <div><span class="k">Material</span><span class="v">Quartz with dark mineral inclusions</span></div>
-            </div>
-
-            <ul class="detail-list">
-              <li><strong>Look:</strong> Deep tone with a bright natural vein line.</li>
-              <li><strong>Use:</strong> Statement display piece or custom concept.</li>
-              <li><strong>Note:</strong> Veins are part of the stone’s structure.</li>
-            </ul>
-
-            <a class="btn btn-full" href="#contact">Claim Midnight Vein</a>
-          </div>
-        </article>
-
-        <!-- 3 -->
-        <article class="card">
-          <div class="media">
-            <img src="images/3.jpg" alt="Driftwood Clay stone" loading="lazy">
-            <span class="tag">Available</span>
-          </div>
-          <div class="body">
-            <h3>Driftwood Clay</h3>
-            <p class="item-sub">Reddish-brown, shoreline-smoothed, earthy and minimalist — a warm neutral piece.</p>
-
-            <div class="meta">
-              <div><span class="k">Minimum</span><span class="v">$17</span></div>
-              <div><span class="k">Material</span><span class="v">Sandstone / sedimentary stone</span></div>
-            </div>
-
-            <ul class="detail-list">
-              <li><strong>Look:</strong> Clay-toned with natural surface marks.</li>
-              <li><strong>Feel:</strong> Rounded edges from wave-wear.</li>
-              <li><strong>Style:</strong> Quiet, grounded, timeless.</li>
-            </ul>
-
-            <a class="btn btn-full" href="#contact">Claim Driftwood Clay</a>
-          </div>
-        </article>
-
-        <!-- 4 -->
-        <article class="card">
-          <div class="media">
-            <img src="images/4.jpg" alt="Ember Glow stone" loading="lazy">
-            <span class="tag">Available</span>
-          </div>
-          <div class="body">
-            <h3>Ember Glow</h3>
-            <p class="item-sub">Translucent orange-red with warmth and depth — small, but visually powerful.</p>
-
-            <div class="meta">
-              <div><span class="k">Minimum</span><span class="v">$17</span></div>
-              <div><span class="k">Material</span><span class="v">Carnelian / chalcedony</span></div>
-            </div>
-
-            <ul class="detail-list">
-              <li><strong>Look:</strong> Glows when light hits it.</li>
-              <li><strong>Size:</strong> Petite keepsake feel.</li>
-              <li><strong>Care:</strong> Soft cloth; avoid abrasive scrub.</li>
-            </ul>
-
-            <a class="btn btn-full" href="#contact">Claim Ember Glow</a>
-          </div>
-        </article>
-
-        <!-- 5 -->
-        <article class="card">
-          <div class="media">
-            <img src="images/5.jpg" alt="Storm Mist stone" loading="lazy">
-            <span class="tag">Available</span>
-          </div>
-          <div class="body">
-            <h3>Storm Mist</h3>
-            <p class="item-sub">Muted grey-blue with soft marbling — calm, balanced, and quietly striking.</p>
-
-            <div class="meta">
-              <div><span class="k">Minimum</span><span class="v">$20</span></div>
-              <div><span class="k">Material</span><span class="v">Quartzite / metamorphic stone</span></div>
-            </div>
-
-            <ul class="detail-list">
-              <li><strong>Look:</strong> Cool tones with natural movement.</li>
-              <li><strong>Feel:</strong> Smooth and grounding.</li>
-              <li><strong>Style:</strong> Modern, minimal, wearable aesthetic.</li>
-            </ul>
-
-            <a class="btn btn-full" href="#contact">Claim Storm Mist</a>
-          </div>
-        </article>
-
-        <!-- 6 -->
-        <article class="card">
-          <div class="media">
-            <img src="images/6.jpg" alt="Forest Net stone" loading="lazy">
-            <span class="tag">Available</span>
-          </div>
-          <div class="body">
-            <h3>Forest Net</h3>
-            <p class="item-sub">Dark green with a natural webbed pattern — rich, grounding, and tactile.</p>
-
-            <div class="meta">
-              <div><span class="k">Minimum</span><span class="v">$20</span></div>
-              <div><span class="k">Material</span><span class="v">Serpentine / greenstone</span></div>
-            </div>
-
-            <ul class="detail-list">
-              <li><strong>Look:</strong> Deep green with fine patterning.</li>
-              <li><strong>Feel:</strong> Solid, “worry-stone” satisfying.</li>
-              <li><strong>Vibe:</strong> Natural luxury — not flashy, just good.</li>
-            </ul>
-
-            <a class="btn btn-full" href="#contact">Claim Forest Net</a>
-          </div>
-        </article>
-
-        <!-- 7 -->
-        <article class="card">
-          <div class="media">
-            <img src="images/7.jpg" alt="Pale Meadow stone" loading="lazy">
-            <span class="tag">Available</span>
-          </div>
-          <div class="body">
-            <h3>Pale Meadow</h3>
-            <p class="item-sub">Light green with gentle yellow undertones — fresh, clean, and soothing.</p>
-
-            <div class="meta">
-              <div><span class="k">Minimum</span><span class="v">$20</span></div>
-              <div><span class="k">Material</span><span class="v">Greenstone / jasper</span></div>
-            </div>
-
-            <ul class="detail-list">
-              <li><strong>Look:</strong> Soft meadow tones with subtle warmth.</li>
-              <li><strong>Style:</strong> Simple, bright, and elegant.</li>
-              <li><strong>Care:</strong> Soft cloth; avoid harsh cleaners.</li>
-            </ul>
-
-            <a class="btn btn-full" href="#contact">Claim Pale Meadow</a>
-          </div>
-        </article>
-
-        <!-- 9 -->
-        <article class="card">
-          <div class="media">
-            <img src="images/9.jpg" alt="River Smoke stone" loading="lazy">
-            <span class="tag">Available</span>
-          </div>
-          <div class="body">
-            <h3>River Smoke</h3>
-            <p class="item-sub">Smooth grey-beige with subtle mineral markings — sleek and modern.</p>
-
-            <div class="meta">
-              <div><span class="k">Minimum</span><span class="v">$20</span></div>
-              <div><span class="k">Material</span><span class="v">Quartzite / river stone</span></div>
-            </div>
-
-            <ul class="detail-list">
-              <li><strong>Look:</strong> Clean neutral with natural streaking.</li>
-              <li><strong>Feel:</strong> Very smooth and satisfying to hold.</li>
-              <li><strong>Style:</strong> Minimal, elevated, everyday piece.</li>
-            </ul>
-
-            <a class="btn btn-full" href="#contact">Claim River Smoke</a>
-          </div>
-        </article>
-
-        <!-- 10 -->
-        <article class="card">
-          <div class="media">
-            <img src="images/10.jpg" alt="Amber Drift stone" loading="lazy">
-            <span class="tag">Available</span>
-          </div>
-          <div class="body">
-            <h3>Amber Drift</h3>
-            <p class="item-sub">Warm amber-brown with gentle translucence — cozy, natural, timeless.</p>
-
-            <div class="meta">
-              <div><span class="k">Minimum</span><span class="v">$17</span></div>
-              <div><span class="k">Material</span><span class="v">Jasper / iron-stained stone</span></div>
-            </div>
-
-            <ul class="detail-list">
-              <li><strong>Look:</strong> Autumn warmth with depth.</li>
-              <li><strong>Feel:</strong> Rounded, smooth edges.</li>
-              <li><strong>Note:</strong> One-of-one tone and shape.</li>
-            </ul>
-
-            <a class="btn btn-full" href="#contact">Claim Amber Drift</a>
-          </div>
-        </article>
-
-        <!-- 11 SEA GLASS -->
-        <article class="card">
-          <div class="media">
-            <img src="images/11.jpg" alt="Glacier Mist sea glass" loading="lazy">
-            <span class="tag">Sea glass</span>
-          </div>
-          <div class="body">
-            <h3>Glacier Mist</h3>
-            <p class="item-sub">Genuine frosted pale-blue sea glass — wave-shaped, matte, and rare-feeling.</p>
-
-            <div class="meta">
-              <div><span class="k">Minimum</span><span class="v">$17</span></div>
-              <div><span class="k">Material</span><span class="v">Authentic sea glass</span></div>
-            </div>
-
-            <ul class="detail-list">
-              <li><strong>Look:</strong> Soft blue, naturally frosted surface.</li>
-              <li><strong>Feel:</strong> Satin-matte, smooth edges.</li>
-              <li><strong>Note:</strong> This is the only sea glass in this drop.</li>
-            </ul>
-
-            <a class="btn btn-full" href="#contact">Claim Glacier Mist</a>
-          </div>
-        </article>
-
-        <!-- 12 -->
-        <article class="card">
-          <div class="media">
-            <img src="images/12.jpg" alt="Tidepool Stone" loading="lazy">
-            <span class="tag">Available</span>
-          </div>
-          <div class="body">
-            <h3>Tidepool Stone</h3>
-            <p class="item-sub">Blue-green stone with dark inclusions — organic, oceanic, visually rich.</p>
-
-            <div class="meta">
-              <div><span class="k">Minimum</span><span class="v">$20</span></div>
-              <div><span class="k">Material</span><span class="v">Green jasper / ocean stone</span></div>
-            </div>
-
-            <ul class="detail-list">
-              <li><strong>Look:</strong> Sea-toned with natural spotting.</li>
-              <li><strong>Feel:</strong> Smooth, glossy finish.</li>
-              <li><strong>Style:</strong> Bold colour, easy to love.</li>
-            </ul>
-
-            <a class="btn btn-full" href="#contact">Claim Tidepool Stone</a>
-          </div>
-        </article>
-
-        <!-- 13 -->
-        <article class="card">
-          <div class="media">
-            <img src="images/13.jpg" alt="Zebra Coast stone" loading="lazy">
-            <span class="tag">Available</span>
-          </div>
-          <div class="body">
-            <h3>Zebra Coast</h3>
-            <p class="item-sub">Cream and charcoal striping — naturally bold patterning and a true statement piece.</p>
-
-            <div class="meta">
-              <div><span class="k">Minimum</span><span class="v">$20</span></div>
-              <div><span class="k">Material</span><span class="v">Banded quartz / gneiss</span></div>
-            </div>
-
-            <ul class="detail-list">
-              <li><strong>Look:</strong> High-contrast stripes, graphic feel.</li>
-              <li><strong>Feel:</strong> Smooth and solid in hand.</li>
-              <li><strong>Note:</strong> Patterning is 100% natural.</li>
-            </ul>
-
-            <a class="btn btn-full" href="#contact">Claim Zebra Coast</a>
-          </div>
-        </article>
-
-        <!-- 14 -->
-        <article class="card">
-          <div class="media">
-            <img src="images/14.jpg" alt="Pearl Current stone" loading="lazy">
-            <span class="tag">Available</span>
-          </div>
-          <div class="body">
-            <h3>Pearl Current</h3>
-            <p class="item-sub">Soft ivory tone with a warm vein line — elegant, quiet, and luminous.</p>
-
-            <div class="meta">
-              <div><span class="k">Minimum</span><span class="v">$17</span></div>
-              <div><span class="k">Material</span><span class="v">Quartz / limestone blend</span></div>
-            </div>
-
-            <ul class="detail-list">
-              <li><strong>Look:</strong> Creamy base with gentle mineral banding.</li>
-              <li><strong>Feel:</strong> Smooth, rounded shoreline shape.</li>
-              <li><strong>Style:</strong> Clean, calm, refined.</li>
-            </ul>
-
-            <a class="btn btn-full" href="#contact">Claim Pearl Current</a>
-          </div>
-        </article>
-
-        <!-- 15 -->
-        <article class="card">
-          <div class="media">
-            <img src="images/15.jpg" alt="Rust Peak stone" loading="lazy">
-            <span class="tag">Available</span>
-          </div>
-          <div class="body">
-            <h3>Rust Peak</h3>
-            <p class="item-sub">Milky quartz with rust-toned mineral deposits — raw-meets-refined character.</p>
-
-            <div class="meta">
-              <div><span class="k">Minimum</span><span class="v">$20</span></div>
-              <div><span class="k">Material</span><span class="v">Quartz with iron oxide</span></div>
-            </div>
-
-            <ul class="detail-list">
-              <li><strong>Look:</strong> Cloudy quartz with natural rust warmth.</li>
-              <li><strong>Feel:</strong> Solid, sculptural silhouette.</li>
-              <li><strong>Note:</strong> Mineral deposits are natural features.</li>
-            </ul>
-
-            <a class="btn btn-full" href="#contact">Claim Rust Peak</a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section id="how" class="section alt">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>How it works</h2>
-        <p class="muted">Clear, consistent, and simple.</p>
-      </div>
-
-      <div class="how-grid">
-        <div class="how-card">
-          <h3>1) Choose a piece</h3>
-          <p>Select a listed stone and reference the piece name when claiming.</p>
-        </div>
-
-        <div class="how-card">
-          <h3>2) Confirm pricing</h3>
-          <p>Each listing includes a minimum. If you add more, it supports time, supplies, and future drops.</p>
-        </div>
-
-        <div class="how-card">
-          <h3>3) Pickup or shipping</h3>
-          <p>Local Niagara meetups are available. Shipping can be easily arranged.</p>
         </div>
       </div>
+    </section>
 
-      <div class="cta-row" style="margin-top:16px;">
-        <a class="btn btn-ghost" href="education.html">Stone care &amp; sourcing guide</a>
+    <section id="stones" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Stones & Pieces</h2>
+          <p class="section-sub">
+            Everything here is one-of-one. If something calls to you, grab it—there’s only one.
+            To claim: DM or email with the name of the piece.
+          </p>
+        </div>
+
+        <div class="grid">
+
+          <!-- Golden (stays $20 minimum) -->
+          <article class="card">
+            <div class="card-media">
+              <img src="images/goldjaspermedium.jpg" alt="Golden Shore stone" loading="lazy">
+              <span class="badge badge-premium">$20 minimum</span>
+            </div>
+            <div class="card-body">
+              <h3>Golden Shore</h3>
+              <p class="meta">Statement stone • warm golden tones • polished presence</p>
+              <p>
+                A luminous, golden shoreline find with a naturally “finished” look.
+                This one reads like a little piece of sunlight—simple, bold, and easy to style.
+              </p>
+              <ul class="details">
+                <li><strong>Minimum:</strong> $20 (pay what you think is fair)</li>
+                <li><strong>Why:</strong> premium look + standout visual impact</li>
+                <li><strong>Status:</strong> Available</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Quartz Vein (stays $20 minimum) -->
+          <article class="card">
+            <div class="card-media">
+              <img src="images/quartzveinmedium.jpg" alt="Quartz Vein stone" loading="lazy">
+              <span class="badge badge-premium">$20 minimum</span>
+            </div>
+            <div class="card-body">
+              <h3>Midnight Quartz Vein</h3>
+              <p class="meta">Statement stone • dramatic contrast • vein detail</p>
+              <p>
+                Dark base with a bright quartz line running through—high contrast, moody, and striking.
+                It’s the kind of piece that looks expensive even when it’s sitting quietly on a shelf.
+              </p>
+              <ul class="details">
+                <li><strong>Minimum:</strong> $20 (pay what you think is fair)</li>
+                <li><strong>Why:</strong> standout pattern + elevated “collector” feel</li>
+                <li><strong>Status:</strong> Available</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Unakite (most are $17) -->
+          <article class="card">
+            <div class="card-media">
+              <img src="images/unakitemedium.jpg" alt="Unakite stone" loading="lazy">
+              <span class="badge">$17 minimum</span>
+            </div>
+            <div class="card-body">
+              <h3>Soft Unakite</h3>
+              <p class="meta">Statement stone • natural blush + green • calm energy</p>
+              <p>
+                A gentle mix of mossy greens and warm blush tones—this is a “comfort stone” with real depth.
+                It photographs beautifully and looks even better in person.
+              </p>
+              <ul class="details">
+                <li><strong>Minimum:</strong> $17 (pay what you think is fair)</li>
+                <li><strong>Notes:</strong> one-of-one shoreline find</li>
+                <li><strong>Status:</strong> Available</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Petrified Wood (Stone #3) -->
+          <article class="card">
+            <div class="card-media">
+              <img src="images/petrifiedwoodmedium.jpg" alt="Petrified wood stone" loading="lazy">
+              <span class="badge">$17 minimum</span>
+            </div>
+            <div class="card-body">
+              <h3>Petrified Wood</h3>
+              <p class="meta">Stone #3 • earthy patterning • grounded + classic</p>
+              <p>
+                This is the one that feels ancient—in the best way. Subtle grain, natural warmth, and a
+                “found object” charm that makes it look curated, not manufactured.
+              </p>
+              <ul class="details">
+                <li><strong>Minimum:</strong> $17 (pay what you think is fair)</li>
+                <li><strong>Notes:</strong> earthy tones, great for display or intention setting</li>
+                <li><strong>Status:</strong> Available</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Granite -->
+          <article class="card">
+            <div class="card-media">
+              <img src="images/granitemedium.jpg" alt="Granite stone" loading="lazy">
+              <span class="badge">$17 minimum</span>
+            </div>
+            <div class="card-body">
+              <h3>Granite Classic</h3>
+              <p class="meta">Statement stone • speckled texture • timeless neutral</p>
+              <p>
+                A strong, grounded stone with a clean, speckled look. If you like neutral décor and
+                quietly confident pieces, this fits right in.
+              </p>
+              <ul class="details">
+                <li><strong>Minimum:</strong> $17 (pay what you think is fair)</li>
+                <li><strong>Notes:</strong> durable, display-friendly</li>
+                <li><strong>Status:</strong> Available</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Coastal Jade (merged; no Tidepool listing) -->
+          <article class="card">
+            <div class="card-media">
+              <img src="images/serpentinesmall.jpg" alt="Coastal Jade green stone" loading="lazy">
+              <span class="badge">$17 minimum</span>
+            </div>
+            <div class="card-body">
+              <h3>Coastal Jade</h3>
+              <p class="meta">Green stone • smooth look • ocean-worn</p>
+              <p>
+                The polished green you keep coming back to—fresh, coastal, and wearable.
+                (This is the one that was previously labeled “Tidepool.” Now it’s simply Coastal Jade.)
+              </p>
+              <ul class="details">
+                <li><strong>Minimum:</strong> $17 (pay what you think is fair)</li>
+                <li><strong>Notes:</strong> clean green tone, boutique feel</li>
+                <li><strong>Status:</strong> Available</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Serpentine (additional option using your other images) -->
+          <article class="card">
+            <div class="card-media">
+              <img src="images/serpentinmedium.jpg" alt="Serpentine medium stone" loading="lazy">
+              <span class="badge">$17 minimum</span>
+            </div>
+            <div class="card-body">
+              <h3>Olive Shadow</h3>
+              <p class="meta">Green stone • deeper tone • glossy when lit</p>
+              <p>
+                A deeper, richer green that reads almost velvety under warm light.
+                If Coastal Jade is “fresh,” this one is “moody.”
+              </p>
+              <ul class="details">
+                <li><strong>Minimum:</strong> $17 (pay what you think is fair)</li>
+                <li><strong>Notes:</strong> deeper green variation</li>
+                <li><strong>Status:</strong> Available</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Carnelian XS -->
+          <article class="card">
+            <div class="card-media">
+              <img src="images/carnelianxsmall.jpg" alt="Carnelian extra small stone" loading="lazy">
+              <span class="badge">$17 minimum</span>
+            </div>
+            <div class="card-body">
+              <h3>Carnelian Spark</h3>
+              <p class="meta">Tiny treasure • warm ember tone • pocket-sized</p>
+              <p>
+                A small piece with big personality—like a little ember. Perfect as a sweet add-on,
+                a pocket stone, or a first “shoreline find” for someone new.
+              </p>
+              <ul class="details">
+                <li><strong>Minimum:</strong> $17 (pay what you think is fair)</li>
+                <li><strong>Notes:</strong> tiny, giftable, one-of-one</li>
+                <li><strong>Status:</strong> Available</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Sea Glass (no image provided; use placeholder card) -->
+          <article class="card">
+            <div class="card-media placeholder">
+              <div class="placeholder-inner">
+                <p class="placeholder-title">Sea Glass</p>
+                <p class="placeholder-sub">Image coming soon</p>
+              </div>
+              <span class="badge badge-premium">$20 minimum</span>
+            </div>
+            <div class="card-body">
+              <h3>Sea Glass</h3>
+              <p class="meta">Rarer find • extra prep • always one-of-one</p>
+              <p>
+                True sea glass takes time—time to find, time to clean, time to sort and match.
+                It’s one of the most special shoreline materials because the lake does the shaping.
+              </p>
+              <ul class="details">
+                <li><strong>Minimum:</strong> $20 (pay what you think is fair)</li>
+                <li><strong>Why:</strong> rarer + more time to prep</li>
+                <li><strong>Status:</strong> Available (photo coming soon)</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <p class="muted">Claims and custom inquiries.</p>
+    <section id="how" class="section section-soft">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How it works</h2>
+          <p class="section-sub">
+            This is simple on purpose: choose what you love, pay what feels fair (within the minimum),
+            and you’re supporting a local, low-waste, small-batch practice.
+          </p>
+        </div>
+
+        <div class="two-col">
+          <div class="panel">
+            <h3>1) Pick your piece</h3>
+            <p>
+              Everything is one-of-one. If you see something you love, message me with the name of the stone/piece.
+            </p>
+            <h3>2) Choose your price</h3>
+            <p>
+              Pay what you think is fair—based on the minimum shown. Minimums keep materials and time covered,
+              and help this stay sustainable and local.
+            </p>
+            <h3>3) Claim + arrange pickup/shipping</h3>
+            <p>
+              I’ll confirm availability, total, and pickup/shipping details. Local Niagara pickup is easiest.
+            </p>
+          </div>
+
+          <div class="panel panel-outline">
+            <h3>Minimums (transparent + consistent)</h3>
+            <ul class="bullets">
+              <li><strong>$17 minimum</strong> for most stones/pieces in this drop</li>
+              <li><strong>$20 minimum</strong> for <strong>Sea Glass</strong>, <strong>Quartz Vein</strong>, and <strong>Golden</strong></li>
+              <li>Want to go above the minimum? It helps fund tools, chains, glue, and future finds</li>
+              <li>Want to stay right at the minimum? That’s welcome too</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <p class="fine">
+              The goal is beautiful, local, sustainable pieces that don’t feel gatekept.
+              If you’re unsure what’s fair, tell me your budget and we’ll make it work.
+            </p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="contact-card">
-        <p class="contact-line"><strong>Email:</strong> <a href="mailto:rebecca.mcdonnell@outlook.com">rebecca.mcdonnell@outlook.com</a></p>
-        <p class="contact-line"><strong>Instagram:</strong> <a href="https://www.instagram.com/rebecca.finds.ca/" target="_blank" rel="noopener">@rebecca.finds.ca</a></p>
-        <p class="contact-note">Include the piece name and preferred pickup or shipping option.</p>
+    <section id="contact" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p class="section-sub">To claim a piece, ask a question, or request a custom idea—reach out.</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-row">
+            <span class="label">Email</span>
+            <span class="value">rebeccafinds.ca (reply here with your email if you want it clickable)</span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Instagram</span>
+            <span class="value">@rebecca.finds.ca</span>
+          </div>
+          <div class="contact-row">
+            <span class="label">Location</span>
+            <span class="value">Niagara Region, Ontario</span>
+          </div>
+          <p class="fine">
+            Tip: When you message, include the piece name and whether you’re local pickup or shipping.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="footer">
+  </main>
+
+  <footer class="site-footer">
     <div class="wrap footer-inner">
-      <p>© <span id="year"></span> Rebecca Finds • Niagara, Ontario</p>
-      <p class="muted">rebeccafinds.ca</p>
+      <p class="footer-brand">Rebecca Finds</p>
+      <p class="fine">Local shoreline finds • one-of-one pieces • pay what you think is fair</p>
     </div>
   </footer>
 
-  <!-- CAROUSEL + YEAR -->
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Golden Shore (1a/1b) carousel: swaps image src on button click
-    document.querySelectorAll(".carousel").forEach((wrap) => {
-      const img = wrap.querySelector("img");
-      const btn = wrap.querySelector(".carousel-btn");
-      const list = (wrap.getAttribute("data-images") || "").split(",").map(s => s.trim()).filter(Boolean);
-      if (!img || !btn || list.length < 2) return;
-
-      let idx = 0;
-      btn.addEventListener("click", () => {
-        idx = (idx + 1) % list.length;
-        img.src = list[idx];
-        img.alt = "Golden Shore stone (photo " + (idx + 1) + ")";
-      });
-    });
-  </script>
-
-  <!-- Tiny CSS assist (safe even if your style.css changes) -->
-  <style>
-    /* ensures images don't blow up the cards */
-    .card .media img,
-    .featured-media img{
-      width:100%;
-      height:360px;
-      object-fit:contain;
-      display:block;
-    }
-    @media (max-width: 640px){
-      .card .media img,
-      .featured-media img{ height:280px; }
-    }
-    .carousel{ position:relative; }
-    .carousel-btn{
-      position:absolute;
-      right:10px;
-      bottom:10px;
-      border:1px solid var(--border, rgba(214,180,140,0.35));
-      background:rgba(255,255,255,0.88);
-      padding:8px 10px;
-      border-radius:12px;
-      font:600 12px/1.1 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      cursor:pointer;
-    }
-    .carousel-btn:hover{ background:rgba(255,255,255,0.96); }
-  </style>
 </body>
 </html>
