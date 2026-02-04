@@ -7,7 +7,7 @@
   <title>Rebecca Finds — Curated Drop</title>
   <meta name="description" content="One-of-one shoreline stones and jewelry. Niagara, Ontario." />
 
-  <link rel="stylesheet" href="style.css?v=200">
+  <link rel="stylesheet" href="style.css?v=301" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,210 +15,182 @@
 
 <body>
 
-<!-- Banner -->
-<div class="drop-banner">
-  <span class="banner-main">CURATED DROP</span>
-  <span class="banner-sub">One-of-one shoreline finds • Niagara</span>
-</div>
-
-<header class="site-header">
-  <div class="wrap header-inner">
-
-    <a href="index.html" class="brand">Rebecca Finds</a>
-
-    <nav class="nav">
-      <a href="#stones">Stones</a>
-      <a href="#how">How it Works</a>
-      <a href="education.html">Education</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
+  <!-- Brand-first banner (no pricing first) -->
+  <div class="drop-banner">
+    <span class="banner-main">CURATED DROP</span>
+    <span class="banner-sub">One-of-one shoreline finds • Niagara</span>
   </div>
-</header>
 
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="brand">Rebecca Finds</a>
 
-<!-- Hero -->
-<section class="hero">
+      <nav class="nav" aria-label="Main Navigation">
+        <a href="#stones">Stones</a>
+        <a href="#how">How it works</a>
+        <a href="education.html">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <div class="wrap hero-inner">
+  <main>
 
-    <div>
-      <p class="kicker">Niagara • shoreline finds • one-of-one</p>
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div>
+          <p class="kicker">Niagara • shoreline finds • one-of-one</p>
+          <h1>Curated Shoreline Pieces</h1>
+          <p class="hero-sub">
+            Hand-selected stones and simple, wearable pieces.<br>
+            Calm. Local. Naturally unique.
+          </p>
 
-      <h1>Curated Shoreline Pieces</h1>
+          <div class="hero-tags">
+            <span>Local</span>
+            <span>Low-waste</span>
+            <span>Pay what feels fair</span>
+          </div>
+        </div>
 
-      <p class="hero-sub">
-        Hand-selected stones and simple jewelry.<br>
-        Thoughtfully priced. Naturally unique.
-      </p>
-
-      <div class="hero-tags">
-        <span>Local</span>
-        <span>Low-waste</span>
-        <span>Pay what feels fair</span>
+        <div class="hero-feature">
+          <img src="images/highlight1.jpg" alt="Highlight piece" loading="lazy">
+          <p class="feature-note">Highlight • Not available</p>
+        </div>
       </div>
-    </div>
+    </section>
 
 
-    <div class="hero-feature">
-      <img src="images/fossil-highlight.jpg" alt="Fossil highlight">
-      <p class="feature-note">Highlight • Not for sale</p>
-    </div>
+    <section id="stones" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">Available Pieces</h2>
+          <p class="section-sub">Tap a piece, message the name to claim.</p>
+        </div>
 
-  </div>
+        <!-- Cards generated here -->
+        <div id="grid" class="grid" aria-live="polite"></div>
 
-</section>
-
-
-<!-- Stones -->
-<section id="stones" class="section">
-
-  <div class="wrap">
-
-    <h2 class="section-title">Available Pieces</h2>
-
-    <div class="grid">
-
-      <!-- Golden -->
-      <article class="card">
-        <img src="images/goldjaspermedium.jpg" alt="Golden Shore">
-        <h3>Golden Shore</h3>
-        <p>Warm gold tones • Statement</p>
-        <span class="price">Minimum $20</span>
-      </article>
-
-      <!-- Quartz -->
-      <article class="card">
-        <img src="images/quartzveinmedium.jpg" alt="Quartz Vein">
-        <h3>Midnight Quartz Vein</h3>
-        <p>High contrast • Natural line</p>
-        <span class="price">Minimum $20</span>
-      </article>
-
-      <!-- Unakite -->
-      <article class="card">
-        <img src="images/unakitemedium.jpg" alt="Unakite">
-        <h3>Soft Unakite</h3>
-        <p>Blush + green • Calm tone</p>
-        <span class="price">Minimum $17</span>
-      </article>
-
-      <!-- Petrified Wood -->
-      <article class="card">
-        <img src="images/petrifiedwoodmedium.jpg" alt="Petrified Wood">
-        <h3>Petrified Wood</h3>
-        <p>Earthy • Natural grain</p>
-        <span class="price">Minimum $17</span>
-      </article>
-
-      <!-- Granite -->
-      <article class="card">
-        <img src="images/granitemedium.jpg" alt="Granite">
-        <h3>Granite Classic</h3>
-        <p>Neutral • Timeless</p>
-        <span class="price">Minimum $17</span>
-      </article>
-
-      <!-- Coastal Jade -->
-      <article class="card">
-        <img src="images/serpentinesmall.jpg" alt="Coastal Jade">
-        <h3>Coastal Jade</h3>
-        <p>Fresh green • Smooth</p>
-        <span class="price">Minimum $17</span>
-      </article>
-
-      <!-- Olive Shadow -->
-      <article class="card">
-        <img src="images/serpentinmedium.jpg" alt="Olive Shadow">
-        <h3>Olive Shadow</h3>
-        <p>Deep green • Moody</p>
-        <span class="price">Minimum $17</span>
-      </article>
-
-      <!-- Carnelian -->
-      <article class="card">
-        <img src="images/carnelianxsmall.jpg" alt="Carnelian">
-        <h3>Carnelian Spark</h3>
-        <p>Small • Warm glow</p>
-        <span class="price">Minimum $17</span>
-      </article>
-
-      <!-- Sea Glass -->
-      <article class="card placeholder">
-        <div class="placeholder-box">Sea Glass<br><small>Image soon</small></div>
-        <h3>Sea Glass</h3>
-        <p>Rare • Lake-tumbled</p>
-        <span class="price">Minimum $20</span>
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- How -->
-<section id="how" class="section soft">
-
-  <div class="wrap">
-
-    <h2 class="section-title">How It Works</h2>
-
-    <div class="steps">
-
-      <div>
-        <h4>1. Choose</h4>
-        <p>Find the piece that speaks to you.</p>
+        <div class="tiny-note">
+          <span class="dot"></span>
+          Minimums are listed per piece (most are $17; select premium pieces are $20).
+        </div>
       </div>
+    </section>
 
-      <div>
-        <h4>2. Price</h4>
-        <p>Pay what feels fair (within minimum).</p>
+
+    <section id="how" class="section soft">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">How it works</h2>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <h4>1) Choose</h4>
+            <p>Pick the piece that speaks to you.</p>
+          </div>
+          <div class="step">
+            <h4>2) Price</h4>
+            <p>Pay what feels fair (within the minimum shown).</p>
+          </div>
+          <div class="step">
+            <h4>3) Claim</h4>
+            <p>Message to arrange pickup/shipping.</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div>
-        <h4>3. Claim</h4>
-        <p>Message to arrange pickup/shipping.</p>
+
+    <section id="contact" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">Contact</h2>
+        </div>
+
+        <div class="contact-box">
+          <p><strong>Instagram:</strong> @rebecca.finds.ca</p>
+          <p><strong>Location:</strong> Niagara Region</p>
+          <p class="fine">Send the piece name to claim. I’ll confirm availability + next steps.</p>
+        </div>
       </div>
+    </section>
 
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>Rebecca Finds • One-of-one shoreline pieces</p>
     </div>
-
-  </div>
-
-</section>
+  </footer>
 
 
-<!-- Contact -->
-<section id="contact" class="section">
+  <script>
+    /*
+      ✅ EDIT YOUR LIST HERE (ONE PLACE)
+      - image: must match EXACT filename in /images
+      - name: what you want it called
+      - note: short vibe line
+      - min: 17 for most; 20 for Sea Glass / Quartz Vein / Golden
+      - status: "Available" or "Not available"
 
-  <div class="wrap">
+      IMPORTANT:
+      - You said Tidepool + Coastal Jade are the same → keep ONE name only.
+      - You said #3 is Petrified Wood → set that name here on the correct image.
+      - If you aren’t sure which photo is which yet, leave “Stone 1a” etc for now,
+        then rename later without touching any layout code.
+    */
 
-    <h2 class="section-title">Contact</h2>
+    const pieces = [
+      { image: "1a.jpg", name: "Stone 1a", note: "One-of-one • shoreline find", min: 17, status: "Available" },
+      { image: "1b.jpg", name: "Stone 1b", note: "One-of-one • shoreline find", min: 17, status: "Available" },
 
-    <div class="contact-box">
+      { image: "2.jpg",  name: "Stone 2",  note: "One-of-one • shoreline find", min: 17, status: "Available" },
 
-      <p><strong>Instagram:</strong> @rebecca.finds.ca</p>
-      <p><strong>Location:</strong> Niagara Region</p>
+      // If your “Stone #3 = Petrified Wood”, rename the correct photo here:
+      { image: "3.jpg",  name: "Petrified Wood", note: "Earthy • natural grain", min: 17, status: "Available" },
 
-      <p class="fine">
-        Send the name of the piece to claim.
-      </p>
+      { image: "4.jpg",  name: "Stone 4",  note: "One-of-one • shoreline find", min: 17, status: "Available" },
+      { image: "5.jpg",  name: "Stone 5",  note: "One-of-one • shoreline find", min: 17, status: "Available" },
+      { image: "6.jpg",  name: "Stone 6",  note: "One-of-one • shoreline find", min: 17, status: "Available" },
+      { image: "7.jpg",  name: "Stone 7",  note: "One-of-one • shoreline find", min: 17, status: "Available" },
+      { image: "8.jpg",  name: "Stone 8",  note: "One-of-one • shoreline find", min: 17, status: "Available" },
+      { image: "9.jpg",  name: "Stone 9",  note: "One-of-one • shoreline find", min: 17, status: "Available" },
+      { image: "10.jpg", name: "Stone 10", note: "One-of-one • shoreline find", min: 17, status: "Available" },
+      { image: "11.jpg", name: "Stone 11", note: "One-of-one • shoreline find", min: 17, status: "Available" },
+      { image: "12.jpg", name: "Stone 12", note: "One-of-one • shoreline find", min: 17, status: "Available" },
+      { image: "13.jpg", name: "Stone 13", note: "One-of-one • shoreline find", min: 17, status: "Available" },
+      { image: "14.jpg", name: "Stone 14", note: "One-of-one • shoreline find", min: 17, status: "Available" },
+      { image: "15.jpg", name: "Stone 15", note: "One-of-one • shoreline find", min: 17, status: "Available" },
+    ];
 
-    </div>
+    // Build cards
+    const grid = document.getElementById("grid");
 
-  </div>
+    function badgeClass(min){
+      return min >= 20 ? "badge badge-premium" : "badge";
+    }
 
-</section>
+    pieces.forEach(p => {
+      const card = document.createElement("article");
+      card.className = "card";
 
+      card.innerHTML = `
+        <div class="card-media">
+          <img src="images/${p.image}" alt="${p.name}" loading="lazy">
+          <span class="${badgeClass(p.min)}">Minimum $${p.min}</span>
+        </div>
+        <div class="card-body">
+          <h3>${p.name}</h3>
+          <p class="meta">${p.note}</p>
+          <p class="status">${p.status}</p>
+        </div>
+      `;
 
-<footer class="footer">
-
-  <div class="wrap">
-    <p>Rebecca Finds • One-of-one shoreline pieces</p>
-  </div>
-
-</footer>
+      grid.appendChild(card);
+    });
+  </script>
 
 </body>
 </html>
