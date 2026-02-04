@@ -6,7 +6,7 @@
   <title>Rebecca Finds — Curated Drop</title>
   <meta name="description" content="One-of-one shoreline stones and jewelry. Niagara, Ontario." />
 
-  <link rel="stylesheet" href="style.css?v=620" />
+  <link rel="stylesheet" href="style.css?v=621" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -65,7 +65,7 @@
 
         <aside class="hero-feature" aria-label="Highlight">
           <div class="feature-frame">
-            <img src="images/highlight1.jpg" alt="Highlight piece" loading="lazy">
+            <img src="images/highlight1.jpg" alt="Highlight piece (not available)" loading="lazy" decoding="async">
           </div>
           <div class="feature-caption">
             <span class="pill">Highlight • not available</span>
@@ -116,7 +116,7 @@
 
           <div class="option-card">
             <h4>Custom pieces</h4>
-            <p>Have a vibe, a length, a color, or a budget in mind? Email me and we’ll design it together.</p>
+            <p>Have a style, a length, a color, or a budget in mind? Email me and we’ll design it together.</p>
           </div>
         </div>
 
@@ -210,13 +210,34 @@ Thank you!`;
 
   return `mailto:${CLAIM_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
+<script>
+const CLAIM_EMAIL = "rebecca.mcdonnell@outlook.com";
+
+function buildMailto(pieceName){
+  const subject = `Claim — ${pieceName}`;
+  const body =
+`Hi Rebecca!
+
+I’d love to claim: ${pieceName}
+
+Option:
+- Pendant + chain
+- Stone-only
+- Custom
+
+Pickup or shipping?
+
+Thank you!`;
+
+  return `mailto:${CLAIM_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
 
 const pieces = [
   {
     images:["1a.jpg","1b.jpg"],
     name:"Golden",
     tagline:"Warm gold tones • premium presence",
-    description:"A premium-feeling golden stone with a naturally elevated look. Warm, luminous, and special.",
+    description:"A luminous golden shoreline stone with an elevated, heirloom-like feel. Warm, radiant, and quietly special.",
     min:20,
     status:"Available"
   },
@@ -224,129 +245,141 @@ const pieces = [
     image:"2.jpg",
     name:"Quartz Vein",
     tagline:"High contrast • natural vein detail",
-    description:"A dramatic shoreline stone with a bright quartz line. Collector-level piece.",
+    description:"A striking shoreline piece marked by a bright quartz line. Dramatic, rare, and collector-worthy.",
     min:20,
     status:"Available"
   },
   {
     image:"3.jpg",
     name:"Petrified Wood",
-    tagline:"Earthy grain • grounded feel",
-    description:"Warm, natural grain with an ancient, grounded presence.",
+    tagline:"Earthy grain • grounded presence",
+    description:"Ancient textures and warm grain come together in this deeply grounding, timeless piece.",
     min:17,
     status:"Available"
   },
   {
     image:"4.jpg",
-    name:"Collection No. 4",
-    tagline:"Amber warmth • minimal shape",
-    description:"Clean silhouette with warm shoreline tones.",
+    name:"Amber Shore",
+    tagline:"Honey warmth • soft coastal glow",
+    description:"Golden-amber shoreline tones with a gentle, sunlit warmth. Calm, comforting, and easy to love.",
     min:17,
     status:"Available"
   },
   {
     image:"5.jpg",
-    name:"Collection No. 5",
-    tagline:"Deep tones • moody finish",
-    description:"Darker piece with quiet drama and depth.",
+    name:"Midnight Drift",
+    tagline:"Deep tones • quiet drama",
+    description:"A darker coastal stone with depth and mystery. Subtle, moody, and beautifully balanced.",
     min:17,
     status:"Available"
   },
   {
     image:"6.jpg",
-    name:"Collection No. 6",
-    tagline:"Green patterning • natural texture",
-    description:"Rich green tones with coastal gallery energy.",
+    name:"Olive Current",
+    tagline:"Rich green • flowing pattern",
+    description:"Natural green movement and organic patterning give this piece a fresh, coastal elegance.",
     min:17,
     status:"Available"
   },
   {
     image:"7.jpg",
-    name:"Collection No. 7",
-    tagline:"Soft sea-tones • airy look",
-    description:"Light, calm, and easy to love.",
+    name:"Sea Mist",
+    tagline:"Soft tones • airy presence",
+    description:"Light, delicate shoreline colours with a calm, breezy feel. Effortless and serene.",
     min:17,
     status:"Available"
   },
   {
     image:"8.jpg",
     name:"Coastal Jade",
-    tagline:"Fresh green • smooth, coastal feel",
-    description:"Bright jade tone with natural polish.",
+    tagline:"Fresh green • smooth finish",
+    description:"A vibrant jade-toned stone with a soft natural polish. Bright, uplifting, and full of life.",
     min:17,
     status:"Available"
   },
   {
     image:"9.jpg",
-    name:"Collection No. 9",
+    name:"Pebble Gray",
     tagline:"Classic neutral • speckled character",
-    description:"Understated and timeless.",
+    description:"A timeless gray shoreline stone with subtle texture. Understated, versatile, and enduring.",
     min:17,
     status:"Available"
   },
   {
     image:"10.jpg",
-    name:"Collection No. 10",
-    tagline:"Warm tone • smooth edges",
-    description:"Soft polish and warm shoreline colour.",
+    name:"Sunset Sand",
+    tagline:"Warm beige • coastal glow",
+    description:"Soft sandy tones touched with warmth, reminiscent of golden-hour shoreline light.",
     min:17,
     status:"Available"
   },
   {
     image:"11.jpg",
-    name:"Collection No. 11",
-    tagline:"Clean contrast • gallery feel",
-    description:"Photographs beautifully and shines in person.",
+    name:"Silverline",
+    tagline:"Clean contrast • gallery-worthy",
+    description:"A high-contrast stone that photographs beautifully and feels like a curated gallery piece.",
     min:17,
     status:"Available"
   },
   {
     image:"13.jpg",
-    name:"Collection No. 13",
-    tagline:"Patterned stone • bold character",
-    description:"One-of-a-kind patterning with strong presence.",
+    name:"Wild Pattern",
+    tagline:"Bold markings • natural artistry",
+    description:"Striking organic patterns make this stone feel like a piece of wearable landscape art.",
     min:17,
     status:"Available"
   },
   {
     image:"14.jpg",
-    name:"Collection No. 14",
-    tagline:"Light neutral • soft presence",
-    description:"Gentle, clean, and elegant.",
+    name:"Soft Linen",
+    tagline:"Light neutral • gentle elegance",
+    description:"Pale, clean tones with a soft presence. Refined, minimal, and endlessly wearable.",
     min:17,
     status:"Available"
   },
   {
     image:"15.jpg",
-    name:"Collection No. 15",
-    tagline:"Warm tone • calm statement",
-    description:"Quietly beautiful and grounded.",
+    name:"Hearthstone",
+    tagline:"Warm depth • grounding energy",
+    description:"Rich, comforting tones with a steady, grounding feel. A stone that feels like home.",
     min:17,
     status:"Available"
   }
 ];
+</script>
+
 
 const grid = document.getElementById("grid");
 
-pieces.forEach(p => {
-
+pieces.forEach((p, idx) => {
   const card = document.createElement("article");
   card.className = "card";
 
   let media = "";
 
-  if(p.images){
+  // Dual image: tap to switch (instead of stacking)
+  if (p.images && Array.isArray(p.images) && p.images.length >= 2) {
+    const imgId = `swap-${idx}`;
     media = `
-      <div class="card-media dual">
-        <div class="media-grid">
-          <img src="images/${p.images[0]}">
-          <img src="images/${p.images[1]}">
+      <div class="card-media dual-swap" data-img-a="images/${p.images[0]}" data-img-b="images/${p.images[1]}">
+        <img id="${imgId}"
+             src="images/${p.images[0]}"
+             alt="${p.name} (view 1)"
+             loading="lazy"
+             decoding="async">
+        <div class="swap-dots" aria-label="Two photo views">
+          <button class="dot-btn is-on" type="button" aria-label="View 1"></button>
+          <button class="dot-btn" type="button" aria-label="View 2"></button>
         </div>
+        <button class="swap-hint" type="button" aria-label="Tap to switch photo">Tap to switch</button>
       </div>`;
   } else {
     media = `
       <div class="card-media">
-        <img src="images/${p.image}">
+        <img src="images/${p.image}"
+             alt="${p.name}"
+             loading="lazy"
+             decoding="async">
       </div>`;
   }
 
@@ -373,8 +406,39 @@ pieces.forEach(p => {
   `;
 
   grid.appendChild(card);
+});
 
+// Wire up the dual-swap cards
+document.querySelectorAll(".dual-swap").forEach((wrap) => {
+  const img = wrap.querySelector("img");
+  const dots = wrap.querySelectorAll(".dot-btn");
+  const a = wrap.getAttribute("data-img-a");
+  const b = wrap.getAttribute("data-img-b");
+
+  let onA = true;
+
+  function setState(showA){
+    onA = showA;
+    img.src = showA ? a : b;
+    img.alt = showA ? (img.alt.replace("(view 2)", "(view 1)")) : (img.alt.replace("(view 1)", "(view 2)"));
+    dots.forEach((d) => d.classList.remove("is-on"));
+    (showA ? dots[0] : dots[1]).classList.add("is-on");
+  }
+
+  // tap image or "tap to switch"
+  wrap.addEventListener("click", (e) => {
+    const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : "";
+    // allow clicking anywhere in the media area except links (there are none)
+    if (tag === "button" || tag === "img" || tag === "div") {
+      setState(!onA);
+    }
+  });
+
+  // dots explicit
+  if (dots[0]) dots[0].addEventListener("click", (e) => { e.stopPropagation(); setState(true); });
+  if (dots[1]) dots[1].addEventListener("click", (e) => { e.stopPropagation(); setState(false); });
 });
 </script>
 
-
+</body>
+</html>
