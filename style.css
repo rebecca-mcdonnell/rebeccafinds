@@ -368,4 +368,26 @@ h1{
   .card-media img{ height:210px; padding:6px; }
   .card-media.dual .media-grid img{ height:210px; padding:6px; }
   .banner-sub{ font-size:.90rem; }
+
+  /* Slightly larger product images */
+.card-media img{
+  width: 100%;
+  height: 280px;       /* was likely ~240-260 */
+  object-fit: cover;
+  display: block;
+}
+
+.card-media.dual .media-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.card-media.dual .media-grid img{
+  height: 220px;       /* keeps the dual images balanced */
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+
 }
