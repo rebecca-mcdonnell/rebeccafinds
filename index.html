@@ -6,7 +6,8 @@
   <title>Rebecca Finds — Curated Drop</title>
   <meta name="description" content="One-of-one shoreline stones and jewelry. Niagara, Ontario." />
 
-  <link rel="stylesheet" href="style.css?v=623" />
+  <!-- Bump this number anytime you change CSS to force refresh -->
+  <link rel="stylesheet" href="style.css?v=701" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -188,7 +189,6 @@
   </footer>
 
 
-
   <script>
 const CLAIM_EMAIL = "rebecca.mcdonnell@outlook.com";
 
@@ -213,6 +213,7 @@ Thank you!`;
 
 const pieces = [
   {
+    slug: "golden",
     images:["1a.jpg","1b.jpg"],
     name:"Golden",
     tagline:"Warm gold tones • premium presence",
@@ -221,6 +222,7 @@ const pieces = [
     status:"Available"
   },
   {
+    slug: "quartz-vein",
     image:"2.jpg",
     name:"Quartz Vein",
     tagline:"High contrast • natural vein detail",
@@ -229,6 +231,7 @@ const pieces = [
     status:"Available"
   },
   {
+    slug: "petrified-wood",
     image:"3.jpg",
     name:"Petrified Wood",
     tagline:"Earthy grain • grounded presence",
@@ -237,6 +240,7 @@ const pieces = [
     status:"Available"
   },
   {
+    slug: "amber-shore",
     image:"4.jpg",
     name:"Amber Shore",
     tagline:"Honey warmth • soft coastal glow",
@@ -245,6 +249,7 @@ const pieces = [
     status:"Available"
   },
   {
+    slug: "midnight-drift",
     image:"5.jpg",
     name:"Midnight Drift",
     tagline:"Deep tones • quiet drama",
@@ -253,6 +258,7 @@ const pieces = [
     status:"Available"
   },
   {
+    slug: "olive-current",
     image:"6.jpg",
     name:"Olive Current",
     tagline:"Rich green • flowing pattern",
@@ -261,6 +267,7 @@ const pieces = [
     status:"Available"
   },
   {
+    slug: "sea-mist",
     image:"7.jpg",
     name:"Sea Mist",
     tagline:"Soft tones • airy presence",
@@ -269,6 +276,7 @@ const pieces = [
     status:"Available"
   },
   {
+    slug: "coastal-jade",
     image:"8.jpg",
     name:"Coastal Jade",
     tagline:"Fresh green • smooth finish",
@@ -277,6 +285,7 @@ const pieces = [
     status:"Available"
   },
   {
+    slug: "pebble-gray",
     image:"9.jpg",
     name:"Pebble Gray",
     tagline:"Classic neutral • speckled character",
@@ -285,6 +294,7 @@ const pieces = [
     status:"Available"
   },
   {
+    slug: "sunset-sand",
     image:"10.jpg",
     name:"Sunset Sand",
     tagline:"Warm beige • coastal glow",
@@ -293,6 +303,7 @@ const pieces = [
     status:"Available"
   },
   {
+    slug: "silverline",
     image:"11.jpg",
     name:"Silverline",
     tagline:"Clean contrast • gallery-worthy",
@@ -301,6 +312,7 @@ const pieces = [
     status:"Available"
   },
   {
+    slug: "wild-pattern",
     image:"13.jpg",
     name:"Wild Pattern",
     tagline:"Bold markings • natural artistry",
@@ -309,6 +321,7 @@ const pieces = [
     status:"Available"
   },
   {
+    slug: "soft-linen",
     image:"14.jpg",
     name:"Soft Linen",
     tagline:"Light neutral • gentle elegance",
@@ -317,6 +330,7 @@ const pieces = [
     status:"Available"
   },
   {
+    slug: "hearthstone",
     image:"15.jpg",
     name:"Hearthstone",
     tagline:"Warm depth • grounding energy",
@@ -328,13 +342,13 @@ const pieces = [
 
 const grid = document.getElementById("grid");
 
-pieces.forEach((p, idx) => {
+pieces.forEach((p) => {
   const card = document.createElement("article");
-  card.className = "card";
+  card.className = `card card--${p.slug}`;
 
   let media = "";
 
-  // Dual image: tap to switch (instead of stacking)
+  // Golden: tap-to-switch between 1a / 1b
   if (p.images && Array.isArray(p.images) && p.images.length >= 2) {
     media = `
       <div class="card-media dual-swap" data-img-a="images/${p.images[0]}" data-img-b="images/${p.images[1]}">
@@ -384,13 +398,12 @@ pieces.forEach((p, idx) => {
   grid.appendChild(card);
 });
 
-// Wire up the dual-swap cards
+// Dual-swap behavior
 document.querySelectorAll(".dual-swap").forEach((wrap) => {
   const img = wrap.querySelector("img");
   const dots = wrap.querySelectorAll(".dot-btn");
   const a = wrap.getAttribute("data-img-a");
   const b = wrap.getAttribute("data-img-b");
-
   let onA = true;
 
   function setState(showA){
@@ -400,19 +413,15 @@ document.querySelectorAll(".dual-swap").forEach((wrap) => {
     (showA ? dots[0] : dots[1]).classList.add("is-on");
   }
 
-  // tap image/hint area to toggle
   wrap.addEventListener("click", (e) => {
     const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : "";
-    if (tag === "button" || tag === "img" || tag === "div") {
-      setState(!onA);
-    }
+    if (tag === "button" || tag === "img" || tag === "div") setState(!onA);
   });
 
-  // dots explicit
   if (dots[0]) dots[0].addEventListener("click", (e) => { e.stopPropagation(); setState(true); });
   if (dots[1]) dots[1].addEventListener("click", (e) => { e.stopPropagation(); setState(false); });
 });
-</script>
+  </script>
 
 </body>
 </html>
