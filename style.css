@@ -482,3 +482,9 @@ a{ color:inherit; text-decoration:none; }
   .card-media{ height: 270px; }
   .card-media.dual-swap{ height: 245px; }
 }
+/* ===== Final fix for Sea Mist (was "sticky") ===== */
+
+.card--sea-mist .card-media img{
+  object-position: 50% 78%;   /* pushes image down more */
+  transform: scale(0.96);    /* tiny shrink so it sits nicely */
+}
