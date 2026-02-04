@@ -1,296 +1,283 @@
-<!-- education.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rebecca Finds — Education</title>
-  <meta name="description" content="Learn about shoreline stones, sea glass, and how Rebecca Finds sources and prepares one-of-one pieces in Niagara, Ontario." />
+:root{
 
-  <link rel="stylesheet" href="style.css?v=12" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-</head>
+  --bg:#fbf7f3;
+  --panel:#ffffff;
+  --soft:#f4efe9;
 
-<body>
+  --text:#2f2a26;
+  --muted:#7a726a;
 
-  <!-- Sticky boutique banner (matches home; no “sale”) -->
-  <div class="drop-banner" role="note" aria-label="Curated Drop Notice">
-    <span class="drop-banner__big">CURATED DROP</span>
-    <span class="drop-banner__small">Most minimums are now <strong>$17</strong>. Sea Glass • Quartz Vein • Golden remain <strong>$20</strong>.</span>
-  </div>
+  --green:#2f6b55;
+  --green2:#3f8a6f;
 
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="index.html" aria-label="Rebecca Finds Home">Rebecca Finds</a>
+  --gold:#d6b48c;
+  --gold2:#e9d2ab;
 
-      <nav class="nav" aria-label="Main Navigation">
-        <a href="index.html#stones">Stones</a>
-        <a href="index.html#how">How it works</a>
-        <a href="education.html" aria-current="page">Education</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  --border:rgba(214,180,140,.4);
 
-  <main>
+  --radius:18px;
+  --shadow:0 8px 20px rgba(0,0,0,.05);
+}
 
-    <section class="hero">
-      <div class="wrap hero-inner">
-        <div class="hero-copy">
-          <p class="kicker">Niagara, Ontario • shoreline finds • one-of-one pieces</p>
-          <h1>Education</h1>
-          <p class="subhead">
-            A gentle guide to the materials behind Rebecca Finds—how shoreline stones form, how sea glass happens,
-            and what “pay what you think is fair” means in practice.
-          </p>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,sans-serif;
+  line-height:1.5;
+}
 
-          <div class="hero-notes">
-            <div class="note">
-              <h3>Natural, local, one-of-one</h3>
-              <p>
-                Every piece begins as a shoreline find. No two stones are identical—shape, pattern, and texture are the point.
-              </p>
-            </div>
-            <div class="note">
-              <h3>Simple care, real longevity</h3>
-              <p>
-                These pieces are meant to be handled and enjoyed. A few basic care habits will keep them looking beautiful.
-              </p>
-            </div>
-          </div>
-        </div>
+img{width:100%;display:block}
 
-        <div class="hero-card">
-          <div class="hero-card__frame">
-            <img
-              src="images/fossil-highlight.jpg"
-              alt="Fossil highlight stone"
-              loading="lazy"
-            />
-          </div>
-          <div class="hero-card__caption">
-            <span class="pill pill-muted">Reference piece</span>
-            <h2>Fossil Highlight</h2>
-            <p>
-              I keep this one as a “north star” for the collection—texture, story, and that feeling of holding something older than you.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+.wrap{
+  max-width:1100px;
+  margin:auto;
+  padding:0 18px;
+}
 
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>How shoreline stones become “collectible”</h2>
-          <p class="section-sub">
-            Water + time + movement shape stones in a way humans can’t replicate. That’s why they feel so special.
-          </p>
-        </div>
 
-        <div class="two-col">
-          <div class="panel">
-            <h3>Wave-tumbled shaping</h3>
-            <p>
-              Shorelines naturally smooth edges through constant rolling, rubbing, and impact. That soft finish is part of the magic—
-              it’s a natural polish created slowly over time.
-            </p>
+/* Banner */
+.drop-banner{
+  position:sticky;
+  top:0;
+  z-index:1000;
 
-            <h3>Patterns are clues</h3>
-            <p>
-              Veins, speckles, banding, and color shifts often reflect how the stone formed or fractured, and what minerals moved through it.
-              Even when we use everyday names, the visual story is real.
-            </p>
+  background:linear-gradient(90deg,
+    rgba(47,107,85,.2),
+    rgba(214,180,140,.25));
 
-            <h3>One-of-one means exactly that</h3>
-            <p>
-              Even if two stones are the same “type,” they won’t share the same shape, exact color, or surface detail.
-              The uniqueness is the product.
-            </p>
-          </div>
+  border-bottom:1px solid var(--border);
+  text-align:center;
+  padding:10px;
+}
 
-          <div class="panel panel-outline">
-            <h3>What I look for when I curate</h3>
-            <ul class="bullets">
-              <li><strong>Balance:</strong> shape that feels satisfying in-hand</li>
-              <li><strong>Contrast:</strong> veins, flecks, or clean color blocks</li>
-              <li><strong>Durability:</strong> stones that can be worn or displayed confidently</li>
-              <li><strong>Presence:</strong> the “I keep looking at it” factor</li>
-            </ul>
+.banner-main{
+  font-weight:900;
+  letter-spacing:.2em;
+}
 
-            <div class="divider"></div>
+.banner-sub{
+  display:block;
+  font-size:.9rem;
+  color:var(--muted);
+}
 
-            <p class="fine">
-              Not every find makes it to the site. If it’s here, it’s because it has a quiet kind of impact.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="section section-soft">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Sea glass, quartz veins, and why some minimums are higher</h2>
-          <p class="section-sub">
-            A little transparency about rarity, prep time, and what “premium” means in a shoreline context.
-          </p>
-        </div>
+/* Header */
+.site-header{
+  background:rgba(251,247,243,.9);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
 
-        <div class="grid">
+.header-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 0;
+}
 
-          <article class="card">
-            <div class="card-media placeholder">
-              <div class="placeholder-inner">
-                <p class="placeholder-title">Sea Glass</p>
-                <p class="placeholder-sub">Naturally tumbled glass</p>
-              </div>
-              <span class="badge badge-premium">$20 minimum</span>
-            </div>
-            <div class="card-body">
-              <h3>Sea Glass</h3>
-              <p class="meta">Rarer find • more prep • always one-of-one</p>
-              <p>
-                Genuine sea glass takes a long time to form and can be surprisingly hard to find in “good” condition.
-                Pieces often need careful cleaning and sorting before they’re ready to become wearable.
-              </p>
-              <ul class="details">
-                <li><strong>Minimum:</strong> $20 (pay what you think is fair)</li>
-                <li><strong>Why:</strong> rarity + extra prep time</li>
-                <li><strong>Care:</strong> gentle wipe; avoid harsh chemicals</li>
-              </ul>
-            </div>
-          </article>
+.brand{
+  font-family:Fraunces,serif;
+  font-weight:800;
+  text-decoration:none;
+  color:var(--text);
+}
 
-          <article class="card">
-            <div class="card-media">
-              <img src="images/quartzveinmedium.jpg" alt="Quartz vein stone" loading="lazy">
-              <span class="badge badge-premium">$20 minimum</span>
-            </div>
-            <div class="card-body">
-              <h3>Quartz Veins</h3>
-              <p class="meta">Natural contrast • high visual impact</p>
-              <p>
-                Quartz veins form when mineral-rich fluids move through cracks and solidify. That bright line you see is essentially
-                a “healed fracture”—a natural signature that gives the stone instant presence.
-              </p>
-              <ul class="details">
-                <li><strong>Minimum:</strong> $20 (pay what you think is fair)</li>
-                <li><strong>Why:</strong> standout patterning + collector feel</li>
-                <li><strong>Care:</strong> store separately if it’s a featured display piece</li>
-              </ul>
-            </div>
-          </article>
+.nav a{
+  margin-left:12px;
+  text-decoration:none;
+  font-weight:600;
+  color:var(--text);
+}
 
-          <article class="card">
-            <div class="card-media">
-              <img src="images/goldjaspermedium.jpg" alt="Golden Shore stone" loading="lazy">
-              <span class="badge badge-premium">$20 minimum</span>
-            </div>
-            <div class="card-body">
-              <h3>Golden Tones</h3>
-              <p class="meta">Premium look • warm, luminous finish</p>
-              <p>
-                Some stones naturally read “gold” in a way that feels elevated—warm, bright, and instantly styleable.
-                These tend to be the ones people reach for first.
-              </p>
-              <ul class="details">
-                <li><strong>Minimum:</strong> $20 (pay what you think is fair)</li>
-                <li><strong>Why:</strong> premium visual impact</li>
-                <li><strong>Care:</strong> soft cloth polish (no abrasives)</li>
-              </ul>
-            </div>
-          </article>
 
-        </div>
-      </div>
-    </section>
+/* Hero */
+.hero{
+  padding:40px 0 30px;
+}
 
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Care guide</h2>
-          <p class="section-sub">
-            Keep it simple. Most pieces only need a soft cloth and a little common sense.
-          </p>
-        </div>
+.hero-inner{
+  display:grid;
+  grid-template-columns:1.3fr .7fr;
+  gap:24px;
+}
 
-        <div class="two-col">
-          <div class="panel">
-            <h3>Stones</h3>
-            <ul class="bullets">
-              <li>Wipe with a soft, dry cloth to remove oils or dust</li>
-              <li>If needed: a tiny bit of mild soap + warm water, then dry fully</li>
-              <li>Avoid harsh cleaners or abrasive scrubbing</li>
-            </ul>
+.kicker{
+  color:var(--green);
+  font-weight:700;
+}
 
-            <div class="divider"></div>
+h1{
+  font-family:Fraunces,serif;
+  font-size:2.6rem;
+  margin:.3em 0;
+}
 
-            <h3>Jewelry pieces (general)</h3>
-            <ul class="bullets">
-              <li>Remove before swimming, showering, or using strong products</li>
-              <li>Store in a small pouch or separate spot to prevent scratching</li>
-              <li>If you ever feel unsure, message me—happy to guide you</li>
-            </ul>
-          </div>
+.hero-sub{
+  font-size:1.05rem;
+  color:var(--muted);
+}
 
-          <div class="panel panel-outline">
-            <h3>About the “minimum”</h3>
-            <p>
-              Minimums are not about pressure—they’re about sustainability. They cover the baseline cost of materials,
-              tools, and time so the project can continue.
-            </p>
-            <ul class="bullets">
-              <li><strong>$17 minimum</strong> for most pieces</li>
-              <li><strong>$20 minimum</strong> for Sea Glass, Quartz Vein, and Golden</li>
-              <li>Going above the minimum supports future drops (and is appreciated)</li>
-            </ul>
+.hero-tags span{
+  display:inline-block;
+  margin:8px 6px 0 0;
+  padding:5px 10px;
 
-            <div class="divider"></div>
+  border:1px solid var(--gold);
+  border-radius:999px;
 
-            <p class="fine">
-              My goal is beautiful things that feel accessible—without pretending time and materials are free.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+  font-weight:600;
+  font-size:.85rem;
+}
 
-    <section class="section section-soft">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Questions + custom requests</h2>
-          <p class="section-sub">
-            Want a similar color story, a specific tone of green, or a stone that feels like “you”? Ask.
-          </p>
-        </div>
+.hero-feature{
+  border:2px solid var(--gold);
+  border-radius:var(--radius);
+  padding:10px;
+  background:white;
+  box-shadow:var(--shadow);
+}
 
-        <div class="contact-card">
-          <div class="contact-row">
-            <span class="label">Instagram</span>
-            <span class="value">@rebecca.finds.ca</span>
-          </div>
-          <div class="contact-row">
-            <span class="label">Email</span>
-            <span class="value">rebeccafinds.ca (reply here with your email if you want it clickable)</span>
-          </div>
-          <p class="fine">
-            When you message, tell me what you’re drawn to (greens, golds, contrast, calm neutrals) and whether it’s for wearing or display.
-          </p>
-        </div>
-      </div>
-    </section>
+.feature-note{
+  text-align:center;
+  font-size:.85rem;
+  color:var(--muted);
+}
 
-  </main>
 
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <p class="footer-brand">Rebecca Finds</p>
-      <p class="fine">Local shoreline finds • one-of-one pieces • curated with care</p>
-    </div>
-  </footer>
+/* Sections */
+.section{
+  padding:36px 0;
+}
 
-</body>
-</html>
+.soft{
+  background:var(--soft);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+.section-title{
+  font-family:Fraunces,serif;
+  font-size:1.9rem;
+  margin-bottom:20px;
+
+  border-bottom:3px solid var(--green);
+  display:inline-block;
+}
+
+
+/* Grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  padding-bottom:12px;
+}
+
+.card img{
+  height:220px;
+  object-fit:cover;
+}
+
+.card h3{
+  font-family:Fraunces,serif;
+  margin:12px;
+}
+
+.card p{
+  margin:0 12px;
+  color:var(--muted);
+  font-weight:600;
+}
+
+.price{
+  display:block;
+  margin:10px 12px 0;
+
+  font-weight:700;
+  color:var(--green);
+}
+
+.placeholder-box{
+  height:220px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+
+  background:linear-gradient(
+    rgba(47,107,85,.1),
+    rgba(214,180,140,.15));
+}
+
+
+/* Steps */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.steps h4{
+  color:var(--green);
+}
+
+
+/* Contact */
+.contact-box{
+  background:white;
+  border:1px solid var(--gold);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+
+.fine{
+  font-size:.9rem;
+  color:var(--muted);
+}
+
+
+/* Footer */
+.footer{
+  border-top:1px solid var(--border);
+  padding:24px 0;
+  text-align:center;
+  background:white;
+}
+
+
+/* Mobile */
+@media(max-width:900px){
+
+  .hero-inner{
+    grid-template-columns:1fr;
+  }
+
+  .grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  h1{
+    font-size:2.1rem;
+  }
+
+}
