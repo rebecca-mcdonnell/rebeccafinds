@@ -1,379 +1,224 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rebecca Finds — Curated Drop</title>
-  <meta name="description" content="One-of-one shoreline stones and jewelry from Niagara, Ontario. Pay what you think is fair with transparent minimums." />
 
-  <link rel="stylesheet" href="style.css?v=12" />
+  <title>Rebecca Finds — Curated Drop</title>
+  <meta name="description" content="One-of-one shoreline stones and jewelry. Niagara, Ontario." />
+
+  <link rel="stylesheet" href="style.css?v=200">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- Sticky boutique banner (no “sale”) -->
-  <div class="drop-banner" role="note" aria-label="Curated Drop Notice">
-    <span class="drop-banner__big">CURATED DROP</span>
-    <span class="drop-banner__small">Most minimums are now <strong>$17</strong>. Sea Glass • Quartz Vein • Golden remain <strong>$20</strong>.</span>
+<!-- Banner -->
+<div class="drop-banner">
+  <span class="banner-main">CURATED DROP</span>
+  <span class="banner-sub">One-of-one shoreline finds • Niagara</span>
+</div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+
+    <a href="index.html" class="brand">Rebecca Finds</a>
+
+    <nav class="nav">
+      <a href="#stones">Stones</a>
+      <a href="#how">How it Works</a>
+      <a href="education.html">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<!-- Hero -->
+<section class="hero">
+
+  <div class="wrap hero-inner">
+
+    <div>
+      <p class="kicker">Niagara • shoreline finds • one-of-one</p>
+
+      <h1>Curated Shoreline Pieces</h1>
+
+      <p class="hero-sub">
+        Hand-selected stones and simple jewelry.<br>
+        Thoughtfully priced. Naturally unique.
+      </p>
+
+      <div class="hero-tags">
+        <span>Local</span>
+        <span>Low-waste</span>
+        <span>Pay what feels fair</span>
+      </div>
+    </div>
+
+
+    <div class="hero-feature">
+      <img src="images/fossil-highlight.jpg" alt="Fossil highlight">
+      <p class="feature-note">Highlight • Not for sale</p>
+    </div>
+
   </div>
 
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="index.html" aria-label="Rebecca Finds Home">Rebecca Finds</a>
+</section>
 
-      <nav class="nav" aria-label="Main Navigation">
-        <a href="#stones">Stones</a>
-        <a href="#how">How it works</a>
-        <a href="education.html">Education</a>
-        <a href="#contact">Contact</a>
-      </nav>
+
+<!-- Stones -->
+<section id="stones" class="section">
+
+  <div class="wrap">
+
+    <h2 class="section-title">Available Pieces</h2>
+
+    <div class="grid">
+
+      <!-- Golden -->
+      <article class="card">
+        <img src="images/goldjaspermedium.jpg" alt="Golden Shore">
+        <h3>Golden Shore</h3>
+        <p>Warm gold tones • Statement</p>
+        <span class="price">Minimum $20</span>
+      </article>
+
+      <!-- Quartz -->
+      <article class="card">
+        <img src="images/quartzveinmedium.jpg" alt="Quartz Vein">
+        <h3>Midnight Quartz Vein</h3>
+        <p>High contrast • Natural line</p>
+        <span class="price">Minimum $20</span>
+      </article>
+
+      <!-- Unakite -->
+      <article class="card">
+        <img src="images/unakitemedium.jpg" alt="Unakite">
+        <h3>Soft Unakite</h3>
+        <p>Blush + green • Calm tone</p>
+        <span class="price">Minimum $17</span>
+      </article>
+
+      <!-- Petrified Wood -->
+      <article class="card">
+        <img src="images/petrifiedwoodmedium.jpg" alt="Petrified Wood">
+        <h3>Petrified Wood</h3>
+        <p>Earthy • Natural grain</p>
+        <span class="price">Minimum $17</span>
+      </article>
+
+      <!-- Granite -->
+      <article class="card">
+        <img src="images/granitemedium.jpg" alt="Granite">
+        <h3>Granite Classic</h3>
+        <p>Neutral • Timeless</p>
+        <span class="price">Minimum $17</span>
+      </article>
+
+      <!-- Coastal Jade -->
+      <article class="card">
+        <img src="images/serpentinesmall.jpg" alt="Coastal Jade">
+        <h3>Coastal Jade</h3>
+        <p>Fresh green • Smooth</p>
+        <span class="price">Minimum $17</span>
+      </article>
+
+      <!-- Olive Shadow -->
+      <article class="card">
+        <img src="images/serpentinmedium.jpg" alt="Olive Shadow">
+        <h3>Olive Shadow</h3>
+        <p>Deep green • Moody</p>
+        <span class="price">Minimum $17</span>
+      </article>
+
+      <!-- Carnelian -->
+      <article class="card">
+        <img src="images/carnelianxsmall.jpg" alt="Carnelian">
+        <h3>Carnelian Spark</h3>
+        <p>Small • Warm glow</p>
+        <span class="price">Minimum $17</span>
+      </article>
+
+      <!-- Sea Glass -->
+      <article class="card placeholder">
+        <div class="placeholder-box">Sea Glass<br><small>Image soon</small></div>
+        <h3>Sea Glass</h3>
+        <p>Rare • Lake-tumbled</p>
+        <span class="price">Minimum $20</span>
+      </article>
+
     </div>
-  </header>
 
-  <main>
+  </div>
 
-    <section class="hero">
-      <div class="wrap hero-inner">
-        <div class="hero-copy">
-          <p class="kicker">Niagara, Ontario • shoreline finds • one-of-one pieces</p>
-          <h1>Curated Drop</h1>
-          <p class="subhead">
-            A small release of hand-selected shoreline stones and simple, wearable pieces—made with a
-            “pay what you think is fair” approach so beautiful things can stay within reach.
-          </p>
+</section>
 
-          <div class="hero-notes">
-            <div class="note">
-              <h3>Pay what you think is fair</h3>
-              <p>
-                Choose a price that feels right for you—within the stated minimum. Minimums help cover
-                materials, tools, time, and keep this local practice sustainable.
-              </p>
-            </div>
-            <div class="note">
-              <h3>Transparent minimums</h3>
-              <p>
-                Most pieces: <strong>$17 minimum</strong>. Premium/rarer picks:
-                <strong>Sea Glass, Quartz Vein, Golden</strong> stay at <strong>$20 minimum</strong>.
-              </p>
-            </div>
-          </div>
-        </div>
 
-        <div class="hero-card">
-          <div class="hero-card__frame">
-            <img
-              src="images/fossil-highlight.jpg"
-              alt="Highlight fossil stone"
-              loading="lazy"
-            />
-          </div>
-          <div class="hero-card__caption">
-            <span class="pill pill-muted">Highlight • Not available</span>
-            <h2>Fossil Highlight</h2>
-            <p>
-              This is my “keeper” piece for the drop—here for inspiration and to set the tone.
-              If you want something with a similar feel, message me and we’ll find your match.
-            </p>
-          </div>
-        </div>
+<!-- How -->
+<section id="how" class="section soft">
+
+  <div class="wrap">
+
+    <h2 class="section-title">How It Works</h2>
+
+    <div class="steps">
+
+      <div>
+        <h4>1. Choose</h4>
+        <p>Find the piece that speaks to you.</p>
       </div>
-    </section>
 
-    <section id="stones" class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Stones & Pieces</h2>
-          <p class="section-sub">
-            Everything here is one-of-one. If something calls to you, grab it—there’s only one.
-            To claim: DM or email with the name of the piece.
-          </p>
-        </div>
-
-        <div class="grid">
-
-          <!-- Golden (stays $20 minimum) -->
-          <article class="card">
-            <div class="card-media">
-              <img src="images/goldjaspermedium.jpg" alt="Golden Shore stone" loading="lazy">
-              <span class="badge badge-premium">$20 minimum</span>
-            </div>
-            <div class="card-body">
-              <h3>Golden Shore</h3>
-              <p class="meta">Statement stone • warm golden tones • polished presence</p>
-              <p>
-                A luminous, golden shoreline find with a naturally “finished” look.
-                This one reads like a little piece of sunlight—simple, bold, and easy to style.
-              </p>
-              <ul class="details">
-                <li><strong>Minimum:</strong> $20 (pay what you think is fair)</li>
-                <li><strong>Why:</strong> premium look + standout visual impact</li>
-                <li><strong>Status:</strong> Available</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Quartz Vein (stays $20 minimum) -->
-          <article class="card">
-            <div class="card-media">
-              <img src="images/quartzveinmedium.jpg" alt="Quartz Vein stone" loading="lazy">
-              <span class="badge badge-premium">$20 minimum</span>
-            </div>
-            <div class="card-body">
-              <h3>Midnight Quartz Vein</h3>
-              <p class="meta">Statement stone • dramatic contrast • vein detail</p>
-              <p>
-                Dark base with a bright quartz line running through—high contrast, moody, and striking.
-                It’s the kind of piece that looks expensive even when it’s sitting quietly on a shelf.
-              </p>
-              <ul class="details">
-                <li><strong>Minimum:</strong> $20 (pay what you think is fair)</li>
-                <li><strong>Why:</strong> standout pattern + elevated “collector” feel</li>
-                <li><strong>Status:</strong> Available</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Unakite (most are $17) -->
-          <article class="card">
-            <div class="card-media">
-              <img src="images/unakitemedium.jpg" alt="Unakite stone" loading="lazy">
-              <span class="badge">$17 minimum</span>
-            </div>
-            <div class="card-body">
-              <h3>Soft Unakite</h3>
-              <p class="meta">Statement stone • natural blush + green • calm energy</p>
-              <p>
-                A gentle mix of mossy greens and warm blush tones—this is a “comfort stone” with real depth.
-                It photographs beautifully and looks even better in person.
-              </p>
-              <ul class="details">
-                <li><strong>Minimum:</strong> $17 (pay what you think is fair)</li>
-                <li><strong>Notes:</strong> one-of-one shoreline find</li>
-                <li><strong>Status:</strong> Available</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Petrified Wood (Stone #3) -->
-          <article class="card">
-            <div class="card-media">
-              <img src="images/petrifiedwoodmedium.jpg" alt="Petrified wood stone" loading="lazy">
-              <span class="badge">$17 minimum</span>
-            </div>
-            <div class="card-body">
-              <h3>Petrified Wood</h3>
-              <p class="meta">Stone #3 • earthy patterning • grounded + classic</p>
-              <p>
-                This is the one that feels ancient—in the best way. Subtle grain, natural warmth, and a
-                “found object” charm that makes it look curated, not manufactured.
-              </p>
-              <ul class="details">
-                <li><strong>Minimum:</strong> $17 (pay what you think is fair)</li>
-                <li><strong>Notes:</strong> earthy tones, great for display or intention setting</li>
-                <li><strong>Status:</strong> Available</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Granite -->
-          <article class="card">
-            <div class="card-media">
-              <img src="images/granitemedium.jpg" alt="Granite stone" loading="lazy">
-              <span class="badge">$17 minimum</span>
-            </div>
-            <div class="card-body">
-              <h3>Granite Classic</h3>
-              <p class="meta">Statement stone • speckled texture • timeless neutral</p>
-              <p>
-                A strong, grounded stone with a clean, speckled look. If you like neutral décor and
-                quietly confident pieces, this fits right in.
-              </p>
-              <ul class="details">
-                <li><strong>Minimum:</strong> $17 (pay what you think is fair)</li>
-                <li><strong>Notes:</strong> durable, display-friendly</li>
-                <li><strong>Status:</strong> Available</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Coastal Jade (merged; no Tidepool listing) -->
-          <article class="card">
-            <div class="card-media">
-              <img src="images/serpentinesmall.jpg" alt="Coastal Jade green stone" loading="lazy">
-              <span class="badge">$17 minimum</span>
-            </div>
-            <div class="card-body">
-              <h3>Coastal Jade</h3>
-              <p class="meta">Green stone • smooth look • ocean-worn</p>
-              <p>
-                The polished green you keep coming back to—fresh, coastal, and wearable.
-                (This is the one that was previously labeled “Tidepool.” Now it’s simply Coastal Jade.)
-              </p>
-              <ul class="details">
-                <li><strong>Minimum:</strong> $17 (pay what you think is fair)</li>
-                <li><strong>Notes:</strong> clean green tone, boutique feel</li>
-                <li><strong>Status:</strong> Available</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Serpentine (additional option using your other images) -->
-          <article class="card">
-            <div class="card-media">
-              <img src="images/serpentinmedium.jpg" alt="Serpentine medium stone" loading="lazy">
-              <span class="badge">$17 minimum</span>
-            </div>
-            <div class="card-body">
-              <h3>Olive Shadow</h3>
-              <p class="meta">Green stone • deeper tone • glossy when lit</p>
-              <p>
-                A deeper, richer green that reads almost velvety under warm light.
-                If Coastal Jade is “fresh,” this one is “moody.”
-              </p>
-              <ul class="details">
-                <li><strong>Minimum:</strong> $17 (pay what you think is fair)</li>
-                <li><strong>Notes:</strong> deeper green variation</li>
-                <li><strong>Status:</strong> Available</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Carnelian XS -->
-          <article class="card">
-            <div class="card-media">
-              <img src="images/carnelianxsmall.jpg" alt="Carnelian extra small stone" loading="lazy">
-              <span class="badge">$17 minimum</span>
-            </div>
-            <div class="card-body">
-              <h3>Carnelian Spark</h3>
-              <p class="meta">Tiny treasure • warm ember tone • pocket-sized</p>
-              <p>
-                A small piece with big personality—like a little ember. Perfect as a sweet add-on,
-                a pocket stone, or a first “shoreline find” for someone new.
-              </p>
-              <ul class="details">
-                <li><strong>Minimum:</strong> $17 (pay what you think is fair)</li>
-                <li><strong>Notes:</strong> tiny, giftable, one-of-one</li>
-                <li><strong>Status:</strong> Available</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Sea Glass (no image provided; use placeholder card) -->
-          <article class="card">
-            <div class="card-media placeholder">
-              <div class="placeholder-inner">
-                <p class="placeholder-title">Sea Glass</p>
-                <p class="placeholder-sub">Image coming soon</p>
-              </div>
-              <span class="badge badge-premium">$20 minimum</span>
-            </div>
-            <div class="card-body">
-              <h3>Sea Glass</h3>
-              <p class="meta">Rarer find • extra prep • always one-of-one</p>
-              <p>
-                True sea glass takes time—time to find, time to clean, time to sort and match.
-                It’s one of the most special shoreline materials because the lake does the shaping.
-              </p>
-              <ul class="details">
-                <li><strong>Minimum:</strong> $20 (pay what you think is fair)</li>
-                <li><strong>Why:</strong> rarer + more time to prep</li>
-                <li><strong>Status:</strong> Available (photo coming soon)</li>
-              </ul>
-            </div>
-          </article>
-
-        </div>
+      <div>
+        <h4>2. Price</h4>
+        <p>Pay what feels fair (within minimum).</p>
       </div>
-    </section>
 
-    <section id="how" class="section section-soft">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>How it works</h2>
-          <p class="section-sub">
-            This is simple on purpose: choose what you love, pay what feels fair (within the minimum),
-            and you’re supporting a local, low-waste, small-batch practice.
-          </p>
-        </div>
-
-        <div class="two-col">
-          <div class="panel">
-            <h3>1) Pick your piece</h3>
-            <p>
-              Everything is one-of-one. If you see something you love, message me with the name of the stone/piece.
-            </p>
-            <h3>2) Choose your price</h3>
-            <p>
-              Pay what you think is fair—based on the minimum shown. Minimums keep materials and time covered,
-              and help this stay sustainable and local.
-            </p>
-            <h3>3) Claim + arrange pickup/shipping</h3>
-            <p>
-              I’ll confirm availability, total, and pickup/shipping details. Local Niagara pickup is easiest.
-            </p>
-          </div>
-
-          <div class="panel panel-outline">
-            <h3>Minimums (transparent + consistent)</h3>
-            <ul class="bullets">
-              <li><strong>$17 minimum</strong> for most stones/pieces in this drop</li>
-              <li><strong>$20 minimum</strong> for <strong>Sea Glass</strong>, <strong>Quartz Vein</strong>, and <strong>Golden</strong></li>
-              <li>Want to go above the minimum? It helps fund tools, chains, glue, and future finds</li>
-              <li>Want to stay right at the minimum? That’s welcome too</li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <p class="fine">
-              The goal is beautiful, local, sustainable pieces that don’t feel gatekept.
-              If you’re unsure what’s fair, tell me your budget and we’ll make it work.
-            </p>
-          </div>
-        </div>
+      <div>
+        <h4>3. Claim</h4>
+        <p>Message to arrange pickup/shipping.</p>
       </div>
-    </section>
 
-    <section id="contact" class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Contact</h2>
-          <p class="section-sub">To claim a piece, ask a question, or request a custom idea—reach out.</p>
-        </div>
-
-        <div class="contact-card">
-          <div class="contact-row">
-            <span class="label">Email</span>
-            <span class="value">rebeccafinds.ca (reply here with your email if you want it clickable)</span>
-          </div>
-          <div class="contact-row">
-            <span class="label">Instagram</span>
-            <span class="value">@rebecca.finds.ca</span>
-          </div>
-          <div class="contact-row">
-            <span class="label">Location</span>
-            <span class="value">Niagara Region, Ontario</span>
-          </div>
-          <p class="fine">
-            Tip: When you message, include the piece name and whether you’re local pickup or shipping.
-          </p>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <p class="footer-brand">Rebecca Finds</p>
-      <p class="fine">Local shoreline finds • one-of-one pieces • pay what you think is fair</p>
     </div>
-  </footer>
+
+  </div>
+
+</section>
+
+
+<!-- Contact -->
+<section id="contact" class="section">
+
+  <div class="wrap">
+
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact-box">
+
+      <p><strong>Instagram:</strong> @rebecca.finds.ca</p>
+      <p><strong>Location:</strong> Niagara Region</p>
+
+      <p class="fine">
+        Send the name of the piece to claim.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer class="footer">
+
+  <div class="wrap">
+    <p>Rebecca Finds • One-of-one shoreline pieces</p>
+  </div>
+
+</footer>
 
 </body>
 </html>
