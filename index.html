@@ -1,385 +1,389 @@
-:root{
-  --bg:#fbf7f3;
-  --panel:#ffffff;
-  --soft:#f4efe9;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rebecca Finds — Curated Drop</title>
+  <meta name="description" content="One-of-one shoreline stones and jewelry. Niagara, Ontario." />
 
-  --text:#2f2a26;
-  --muted:#7a726a;
+  <link rel="stylesheet" href="style.css?v=510" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
 
-  --green:#2f6b55;
-  --gold:#d6b48c;
+<body>
 
-  --border:rgba(214,180,140,.42);
-  --radius:18px;
-  --shadow:0 10px 26px rgba(0,0,0,.06);
-}
+  <!-- Banner (brand-first, not price-first) -->
+  <div class="drop-banner" role="note" aria-label="Curated Drop">
+    <span class="banner-main">CURATED DROP</span>
+    <span class="banner-sub">One-of-one shoreline finds • Niagara</span>
+  </div>
 
-*{ box-sizing:border-box; }
-html,body{ margin:0; padding:0; }
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  line-height:1.55;
-}
-img{ width:100%; display:block; }
-.wrap{ max-width:1100px; margin:0 auto; padding:0 18px; }
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="brand" aria-label="Rebecca Finds Home">Rebecca Finds</a>
 
-/* Banner */
-.drop-banner{
-  position:sticky; top:0; z-index:1000;
-  text-align:center;
-  padding:9px 12px;
-  background:linear-gradient(90deg, rgba(47,107,85,.20), rgba(214,180,140,.24));
-  border-bottom:1px solid var(--border);
-}
-.banner-main{ font-weight:900; letter-spacing:.18em; text-transform:uppercase; }
-.banner-sub{
-  display:block; margin-top:2px;
-  color:rgba(47,42,38,.78);
-  font-weight:650; font-size:.92rem;
-}
+      <nav class="nav" aria-label="Main Navigation">
+        <a href="#stones">Pieces</a>
+        <a href="#options">Jewelry</a>
+        <a href="#how">How it works</a>
+        <a href="education.html">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-/* Header */
-.site-header{
-  background:rgba(251,247,243,.86);
-  backdrop-filter: blur(10px);
-  border-bottom:1px solid var(--border);
-}
-.header-inner{
-  display:flex; justify-content:space-between; align-items:center;
-  padding:12px 0; gap:14px;
-}
-.brand{
-  font-family:Fraunces, serif;
-  font-weight:800;
-  color:var(--text);
-  text-decoration:none;
-  letter-spacing:.02em;
-  padding:6px 10px;
-  border-radius:12px;
-  border:1px solid rgba(214,180,140,.28);
-  background:rgba(255,255,255,.55);
-}
-.nav{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
-.nav a{
-  color:var(--text); text-decoration:none;
-  font-weight:700;
-  padding:7px 10px;
-  border-radius:12px;
-  border:1px solid transparent;
-}
-.nav a:hover{ border-color:var(--border); background:rgba(255,255,255,.55); }
+  <main>
 
-/* Hero */
-.hero{ padding:28px 0 18px; }
-.hero-inner{
-  display:grid;
-  grid-template-columns: 1.22fr .78fr;
-  gap:18px;
-  align-items:start;
-}
-.kicker{ margin:0 0 6px; color:var(--green); font-weight:800; font-size:.98rem; }
-h1{
-  font-family:Fraunces, serif;
-  margin:.1em 0 .25em;
-  font-size:clamp(1.95rem, 3.1vw, 2.7rem);
-  line-height:1.08;
-}
-.hero-sub{ margin:0; color:var(--muted); font-weight:650; font-size:1.02rem; }
-.hero-tags{ margin-top:10px; }
-.hero-tags span{
-  display:inline-block;
-  margin:8px 8px 0 0;
-  padding:6px 10px;
-  border-radius:999px;
-  border:1px solid rgba(214,180,140,.7);
-  background:rgba(255,255,255,.55);
-  font-weight:700;
-  font-size:.88rem;
-}
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-inner">
 
-/* Mini info boxes */
-.hero-mini{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-  margin-top:12px;
-}
-.mini{
-  background:rgba(255,255,255,.62);
-  border:1px solid rgba(214,180,140,.35);
-  border-radius:14px;
-  padding:10px 10px 9px;
-}
-.mini-title{ font-weight:900; color:var(--green); font-size:.88rem; }
-.mini-text{ color:var(--muted); font-weight:650; font-size:.93rem; margin-top:3px; }
+        <div class="hero-copy">
+          <p class="kicker">Niagara • shoreline finds • one-of-one</p>
+          <h1>Curated Shoreline Pieces</h1>
+          <p class="hero-sub">
+            Hand-selected stones and simple wearable pieces — naturally unique, quietly luxurious, and thoughtfully priced.
+          </p>
 
-/* Highlight (smaller + centered) */
-.hero-feature{
-  background:rgba(255,255,255,.62);
-  border:2px solid rgba(214,180,140,.85);
-  border-radius:var(--radius);
-  padding:8px;
-  box-shadow:var(--shadow);
-  max-width:380px;
-  margin-left:auto;
-}
-.feature-frame img{
-  width:100%;
-  max-height:240px;
-  object-fit:contain;
-  object-position:center;
-  background:#fff;
-  padding:8px;
-  border-radius:calc(var(--radius) - 8px);
-  border:1px solid rgba(47,107,85,.18);
-}
-.feature-caption{ padding:10px 4px 0; }
-.pill{
-  display:inline-block;
-  padding:6px 10px;
-  border-radius:999px;
-  border:1px solid rgba(214,180,140,.55);
-  background:rgba(255,255,255,.70);
-  font-weight:900;
-  font-size:.86rem;
-}
-.feature-caption p{ margin:8px 0 0; color:var(--muted); font-weight:650; }
+          <div class="hero-tags" aria-label="Values">
+            <span>Local</span>
+            <span>Low-waste</span>
+            <span>Pay what feels fair</span>
+          </div>
 
-/* Sections */
-.section{ padding:30px 0; }
-.soft{
-  background:var(--soft);
-  border-top:1px solid rgba(214,180,140,.25);
-  border-bottom:1px solid rgba(214,180,140,.25);
-}
-.section-head{
-  display:flex; align-items:flex-end; justify-content:space-between;
-  gap:16px;
-  padding-bottom:10px;
-  border-bottom:1px solid rgba(214,180,140,.25);
-  margin-bottom:18px;
-}
-.section-title{
-  font-family:Fraunces, serif;
-  font-size:1.75rem;
-  margin:0;
-  display:inline-block;
-  padding-bottom:6px;
-  border-bottom:3px solid rgba(47,107,85,.75);
-}
-.section-sub{ margin:0; color:var(--muted); font-weight:650; }
+          <div class="hero-mini">
+            <div class="mini">
+              <div class="mini-title">Included</div>
+              <div class="mini-text">Most pieces can be claimed as a pendant with a chain.</div>
+            </div>
+            <div class="mini">
+              <div class="mini-title">Custom</div>
+              <div class="mini-text">Custom pieces + options available — just ask.</div>
+            </div>
+          </div>
+        </div>
 
-/* Options */
-.options-grid{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:14px;
-  margin-top:16px;
-}
-.option-card{
-  background:rgba(255,255,255,.70);
-  border:1px solid rgba(214,180,140,.40);
-  border-radius:var(--radius);
-  padding:14px;
-  box-shadow:0 8px 18px rgba(0,0,0,.04);
-}
-.option-card h4{
-  margin:0 0 6px;
-  color:var(--green);
-  font-weight:900;
-}
-.option-card p{ margin:0; color:var(--muted); font-weight:650; }
-.fine-note{
-  margin:14px 0 0;
-  color:rgba(47,42,38,.78);
-  font-weight:650;
-}
+        <aside class="hero-feature" aria-label="Highlight">
+          <div class="feature-frame">
+            <img src="images/highlight1.jpg" alt="Highlight piece" loading="lazy">
+          </div>
+          <div class="feature-caption">
+            <span class="pill">Highlight • not available</span>
+            <p>
+              This is the tone-setter for the drop — here to show the kind of texture and story I love to curate.
+            </p>
+          </div>
+        </aside>
 
-/* Grid */
-.grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; }
-.card{
-  background:rgba(255,255,255,.70);
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  overflow:hidden;
-  box-shadow:var(--shadow);
-  position:relative;
-}
-.card::after{
-  content:"";
-  position:absolute;
-  inset:10px;
-  border:1px dashed rgba(47,107,85,.14);
-  border-radius:calc(var(--radius) - 10px);
-  pointer-events:none;
-}
+      </div>
+    </section>
 
-/* Media */
-.card-media{
-  position:relative;
-  padding:10px;
-  background:linear-gradient(180deg, rgba(47,107,85,.08), rgba(214,180,140,.10));
-  border-bottom:1px solid rgba(214,180,140,.22);
-}
 
-/* Single image centered */
-.card-media img{
-  height:230px;
-  width:100%;
-  object-fit:contain;
-  object-position:center;
-  background:#fff;
-  padding:8px;
-  border-radius:calc(var(--radius) - 10px);
-  border:1px solid rgba(214,180,140,.35);
-  box-shadow:0 6px 16px rgba(0,0,0,.05);
-}
+    <!-- PRODUCTS -->
+    <section id="stones" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">Pieces</h2>
+          <p class="section-sub">Every piece is one-of-one. If it calls to you, it’s yours to claim.</p>
+        </div>
 
-/* Dual image (Golden) */
-.card-media.dual .media-grid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:10px;
-}
-.card-media.dual .media-grid img{
-  height:230px;
-  width:100%;
-  object-fit:contain;
-  object-position:center;
-  background:#fff;
-  padding:8px;
-  border-radius:calc(var(--radius) - 10px);
-  border:1px solid rgba(214,180,140,.35);
-  box-shadow:0 6px 16px rgba(0,0,0,.05);
-}
+        <div id="grid" class="grid" aria-live="polite"></div>
 
-.badge{
-  position:absolute;
-  top:16px;
-  left:16px;
-  padding:6px 10px;
-  border-radius:999px;
-  background:rgba(255,255,255,.86);
-  border:1px solid rgba(214,180,140,.55);
-  font-weight:900;
-  font-size:.9rem;
-  z-index:2;
-}
-.badge-premium{ border-color:rgba(47,107,85,.35); }
+        <div class="tiny-note">
+          <span class="dot"></span>
+          Most pieces have a $17 minimum. Quartz Vein and Golden remain $20.
+        </div>
+      </div>
+    </section>
 
-.card-body{ padding:14px 14px 16px; position:relative; z-index:1; }
-.card-body h3{ margin:0 0 6px; font-family:Fraunces, serif; font-size:1.22rem; }
-.tagline{ margin:0 0 10px; color:rgba(47,107,85,.92); font-weight:850; }
 
-.pills-row{ display:flex; gap:8px; flex-wrap:wrap; margin:0 0 10px; }
-.format-pill{
-  display:inline-block;
-  padding:6px 10px;
-  border-radius:999px;
-  border:1px solid rgba(47,107,85,.18);
-  background:rgba(255,255,255,.62);
-  color:rgba(47,42,38,.80);
-  font-weight:800;
-  font-size:.86rem;
-}
+    <!-- JEWELRY OPTIONS (short, boutique, not wordy) -->
+    <section id="options" class="section soft">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">Jewelry options</h2>
+          <p class="section-sub">Choose simple, or make it personal.</p>
+        </div>
 
-.desc{ margin:0 0 10px; color:rgba(47,42,38,.78); font-weight:650; }
-.status{ margin:0; color:rgba(47,42,38,.82); font-weight:800; }
+        <div class="options-grid">
+          <div class="option-card">
+            <h4>Pendant + chain</h4>
+            <p>Most pieces can be finished as a pendant and come with a chain — ready to wear.</p>
+          </div>
 
-/* Steps */
-.steps{ display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; }
-.step{
-  background:rgba(255,255,255,.62);
-  border:1px solid rgba(214,180,140,.35);
-  border-radius:var(--radius);
-  padding:14px;
-  box-shadow:0 8px 18px rgba(0,0,0,.04);
-}
-.step h4{ margin:0 0 6px; color:var(--green); font-weight:900; }
-.step p{ margin:0; color:var(--muted); font-weight:650; }
+          <div class="option-card">
+            <h4>Stone-only</h4>
+            <p>If you’d rather keep it as a statement stone, you can claim it that way too.</p>
+          </div>
 
-/* Contact */
-.contact-box{
-  background:rgba(255,255,255,.70);
-  border:1px solid rgba(214,180,140,.55);
-  border-radius:var(--radius);
-  padding:16px;
-  box-shadow:var(--shadow);
-}
-.contact-row{
-  display:flex; gap:12px;
-  padding:10px 0;
-  border-bottom:1px solid rgba(214,180,140,.18);
-}
-.contact-row:last-of-type{ border-bottom:none; }
-.label{ width:86px; color:rgba(47,107,85,.92); font-weight:900; }
-.value{ color:rgba(47,42,38,.86); font-weight:750; }
+          <div class="option-card">
+            <h4>Custom pieces</h4>
+            <p>Have a vibe, a length, a color, or a budget in mind? Message me and we’ll design it together.</p>
+          </div>
+        </div>
 
-.message-template{
-  margin-top:12px;
-  padding:12px;
-  border-radius:16px;
-  background:rgba(47,107,85,.06);
-  border:1px solid rgba(47,107,85,.14);
-}
-.template-title{
-  font-weight:900;
-  color:var(--green);
-  margin-bottom:6px;
-}
-.template-body{
-  color:rgba(47,42,38,.80);
-  font-weight:650;
-}
-.fine{
-  margin:10px 0 0;
-  color:var(--muted);
-  font-weight:650;
-}
+        <p class="fine-note">
+          Not sure what to choose? Tell me the piece name and how you’d like to use it (wear, gift, display) — I’ll guide you.
+        </p>
+      </div>
+    </section>
 
-/* Tiny note */
-.tiny-note{
-  display:flex; align-items:center; gap:10px;
-  margin-top:14px;
-  color:var(--muted);
-  font-weight:650;
-  font-size:.95rem;
-}
-.dot{
-  width:10px; height:10px;
-  border-radius:999px;
-  background:linear-gradient(90deg, rgba(47,107,85,.85), rgba(214,180,140,.9));
-}
 
-/* Footer */
-.footer{
-  border-top:1px solid rgba(214,180,140,.25);
-  background:rgba(255,255,255,.42);
-  text-align:center;
-  padding:22px 0;
-}
-.footer-text{
-  margin:0;
-  color:rgba(47,42,38,.78);
-  font-weight:650;
-}
+    <!-- HOW IT WORKS -->
+    <section id="how" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">How it works</h2>
+          <p class="section-sub">Simple, calm, and transparent.</p>
+        </div>
 
-/* Responsive */
-@media (max-width: 980px){
-  .hero-inner{ grid-template-columns:1fr; }
-  .hero-mini{ grid-template-columns:1fr; }
-  .grid{ grid-template-columns: repeat(2, 1fr); }
-  .steps{ grid-template-columns:1fr; }
-  .options-grid{ grid-template-columns:1fr; }
-  .section-head{ flex-direction:column; align-items:flex-start; }
-  .hero-feature{ max-width:100%; margin-left:0; }
-  .feature-frame img{ max-height:220px; padding:6px; }
-}
-@media (max-width: 600px){
-  .grid{ grid-template-columns:1fr; }
-  .card-media img{ height:210px; padding:6px; }
-  .card-media.dual .media-grid img{ height:210px; padding:6px; }
-  .banner-sub{ font-size:.90rem; }
-}
+        <div class="steps">
+          <div class="step">
+            <h4>1) Choose</h4>
+            <p>Browse the pieces and pick the one you feel drawn to.</p>
+          </div>
+
+          <div class="step">
+            <h4>2) Pay what feels fair</h4>
+            <p>Each piece lists a minimum. You choose the final amount within that minimum.</p>
+          </div>
+
+          <div class="step">
+            <h4>3) Claim + arrange</h4>
+            <p>Message the name to claim, plus: pendant + chain, stone-only, or custom.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section soft">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-sub">To claim a piece, send the name + your option.</p>
+        </div>
+
+        <div class="contact-box">
+          <div class="contact-row"><span class="label">Instagram</span><span class="value">@rebecca.finds.ca</span></div>
+          <div class="contact-row"><span class="label">Location</span><span class="value">Niagara Region</span></div>
+
+          <div class="message-template">
+            <div class="template-title">Message template</div>
+            <div class="template-body">
+              “Hi! I’d love to claim <strong>[piece name]</strong> — <strong>pendant + chain</strong> / <strong>stone-only</strong> / <strong>custom</strong>. Pickup or shipping?”
+            </div>
+          </div>
+
+          <p class="fine">Tip: include the piece name exactly as shown on the site.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="wrap">
+      <p class="footer-text">Rebecca Finds • One-of-one shoreline pieces</p>
+    </div>
+  </footer>
+
+
+  <script>
+    /*
+      ✅ Your real filenames:
+      1a.jpg, 1b.jpg, 2.jpg ... 15.jpg, highlight1.jpg
+
+      Locked rules:
+      - Golden = 1a + 1b (same stone) → one listing with two photos
+      - Quartz = 2 (minimum 20)
+      - Coastal Jade duplicate removed (keep 8; remove 12)
+    */
+
+    const pieces = [
+      {
+        images: ["1a.jpg", "1b.jpg"],
+        name: "Golden",
+        tagline: "Warm gold tones • premium presence",
+        description: "A premium-feeling golden stone with a naturally elevated look. This one reads ‘special’ immediately — warm, luminous, and made for the top row of any collection.",
+        min: 20,
+        status: "Available",
+        format: "Pendant + chain available"
+      },
+      {
+        image: "2.jpg",
+        name: "Quartz Vein",
+        tagline: "High contrast • natural vein detail",
+        description: "A dramatic shoreline stone with a bright quartz line cutting through the surface. Bold, elevated, and instantly ‘collector’ — one of the premium pieces in the drop.",
+        min: 20,
+        status: "Available",
+        format: "Pendant + chain available"
+      },
+      {
+        image: "3.jpg",
+        name: "Petrified Wood",
+        tagline: "Earthy grain • grounded feel",
+        description: "Warm, natural grain and an ancient feel. Petrified wood has that rare mix of softness and strength — a piece that feels collected, not manufactured.",
+        min: 17,
+        status: "Available",
+        format: "Pendant + chain available"
+      },
+      {
+        image: "4.jpg",
+        name: "Collection No. 4",
+        tagline: "Amber warmth • minimal shape",
+        description: "A clean, simple silhouette with warm shoreline tones. This is the kind of piece that looks intentional anywhere you place it — timeless and easy.",
+        min: 17,
+        status: "Available",
+        format: "Pendant + chain available"
+      },
+      {
+        image: "5.jpg",
+        name: "Collection No. 5",
+        tagline: "Deep tones • moody finish",
+        description: "A darker, moodier piece with a glossy look in certain light. If you love contrast and depth, this one brings that quiet drama without being loud.",
+        min: 17,
+        status: "Available",
+        format: "Pendant + chain available"
+      },
+      {
+        image: "6.jpg",
+        name: "Collection No. 6",
+        tagline: "Green patterning • natural texture",
+        description: "A richly patterned green-toned stone with a shoreline-smoothed surface. It has that ‘coastal gallery’ feeling — organic, elegant, and one-of-one.",
+        min: 17,
+        status: "Available",
+        format: "Pendant + chain available"
+      },
+      {
+        image: "7.jpg",
+        name: "Collection No. 7",
+        tagline: "Soft sea-tones • airy look",
+        description: "Lighter tones with a gentle, sea-washed feel. This piece reads fresh and calm — like something you’d find in a curated coastal boutique.",
+        min: 17,
+        status: "Available",
+        format: "Pendant + chain available"
+      },
+      {
+        image: "8.jpg",
+        name: "Coastal Jade",
+        tagline: "Fresh green • smooth, coastal feel",
+        description: "A clean, ocean-worn green with a naturally polished look. This is that bright, easy-to-love jade tone — simple, wearable, and very boutique.",
+        min: 17,
+        status: "Available",
+        format: "Pendant + chain available"
+      },
+      {
+        image: "9.jpg",
+        name: "Collection No. 9",
+        tagline: "Classic neutral • speckled character",
+        description: "A classic, neutral-toned stone with subtle speckling. It’s understated in the best way — the kind of piece that always looks ‘right’ in any setting.",
+        min: 17,
+        status: "Available",
+        format: "Pendant + chain available"
+      },
+      {
+        image: "10.jpg",
+        name: "Collection No. 10",
+        tagline: "Warm tone • smooth edges",
+        description: "Warm shoreline color with a natural polish. A simple, satisfying piece — great as a small display stone or a meaningful little gift.",
+        min: 17,
+        status: "Available",
+        format: "Pendant + chain available"
+      },
+      {
+        image: "11.jpg",
+        name: "Collection No. 11",
+        tagline: "Clean contrast • gallery feel",
+        description: "A piece with strong visual clarity — it photographs beautifully and reads even richer in person. It has that curated, ‘kept for a reason’ feeling.",
+        min: 17,
+        status: "Available",
+        format: "Pendant + chain available"
+      },
+      /* 12.jpg removed (duplicate of Coastal Jade) */
+      {
+        image: "13.jpg",
+        name: "Collection No. 13",
+        tagline: "Patterned stone • bold character",
+        description: "A patterned stone with real character — the kind of natural detail you can’t replicate. It feels collected, intentional, and distinctly one-of-one.",
+        min: 17,
+        status: "Available",
+        format: "Pendant + chain available"
+      },
+      {
+        image: "14.jpg",
+        name: "Collection No. 14",
+        tagline: "Light neutral • soft presence",
+        description: "A lighter-toned piece with a gentle, clean finish. It’s simple and elegant — perfect for someone who loves quiet beauty and minimal styling.",
+        min: 17,
+        status: "Available",
+        format: "Pendant + chain available"
+      },
+      {
+        image: "15.jpg",
+        name: "Collection No. 15",
+        tagline: "Warm tone • calm statement",
+        description: "A warm, grounded piece with an easy presence. Not loud — just quietly beautiful, with that shoreline finish you can feel in your hand.",
+        min: 17,
+        status: "Available",
+        format: "Pendant + chain available"
+      }
+    ];
+
+    const grid = document.getElementById("grid");
+
+    function badgeClass(min){
+      return min >= 20 ? "badge badge-premium" : "badge";
+    }
+
+    function formatPill(text){
+      return `<span class="format-pill">${text}</span>`;
+    }
+
+    function renderMedia(p){
+      if (p.images && Array.isArray(p.images) && p.images.length === 2){
+        return `
+          <div class="card-media dual">
+            <span class="${badgeClass(p.min)}">Minimum $${p.min}</span>
+            <div class="media-grid">
+              <img src="images/${p.images[0]}" alt="${p.name} photo 1" loading="lazy">
+              <img src="images/${p.images[1]}" alt="${p.name} photo 2" loading="lazy">
+            </div>
+          </div>
+        `;
+      }
+      return `
+        <div class="card-media">
+          <img src="images/${p.image}" alt="${p.name}" loading="lazy">
+          <span class="${badgeClass(p.min)}">Minimum $${p.min}</span>
+        </div>
+      `;
+    }
+
+    pieces.forEach(p => {
+      const card = document.createElement("article");
+      card.className = "card";
+
+      card.innerHTML = `
+        ${renderMedia(p)}
+        <div class="card-body">
+          <h3>${p.name}</h3>
+          <p class="tagline">${p.tagline}</p>
+          <div class="pills-row">
+            ${p.format ? formatPill(p.format) : ""}
+          </div>
+          <p class="desc">${p.description}</p>
+          <p class="status">${p.status}</p>
+        </div>
+      `;
+
+      grid.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>
