@@ -6,7 +6,7 @@
   <title>Rebecca Finds — Curated Drop</title>
   <meta name="description" content="One-of-one shoreline stones and jewelry. Niagara, Ontario." />
 
-  <link rel="stylesheet" href="style.css?v=510" />
+  <link rel="stylesheet" href="style.css?v=620" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -14,7 +14,6 @@
 
 <body>
 
-  <!-- Banner (brand-first, not price-first) -->
   <div class="drop-banner" role="note" aria-label="Curated Drop">
     <span class="banner-main">CURATED DROP</span>
     <span class="banner-sub">One-of-one shoreline finds • Niagara</span>
@@ -36,7 +35,6 @@
 
   <main>
 
-    <!-- HERO -->
     <section class="hero">
       <div class="wrap hero-inner">
 
@@ -56,11 +54,11 @@
           <div class="hero-mini">
             <div class="mini">
               <div class="mini-title">Included</div>
-              <div class="mini-text">Most pieces can be claimed as a pendant with a chain.</div>
+              <div class="mini-text">Most pieces can be claimed as a pendant + chain (or stone-only).</div>
             </div>
             <div class="mini">
-              <div class="mini-title">Custom</div>
-              <div class="mini-text">Custom pieces + options available — just ask.</div>
+              <div class="mini-title">Pricing</div>
+              <div class="mini-text">Minimums are listed per piece — pay based on your perceived value.</div>
             </div>
           </div>
         </div>
@@ -81,18 +79,23 @@
     </section>
 
 
-    <!-- PRODUCTS -->
     <section id="stones" class="section">
       <div class="wrap">
         <div class="section-head">
           <h2 class="section-title">Pieces</h2>
-          <p class="section-sub">Every piece is one-of-one. If it calls to you, it’s yours to claim.</p>
+          <p class="section-sub">Every piece is one-of-one. Claim as pendant + chain, stone-only, or custom.</p>
         </div>
 
         <div id="grid" class="grid" aria-live="polite"></div>
 
+        <div class="tiny-note">
+          <span class="dot"></span>
+          Most pieces have a $17 minimum. Quartz Vein and Golden remain $20.
+        </div>
+      </div>
+    </section>
 
-    <!-- JEWELRY OPTIONS (short, boutique, not wordy) -->
+
     <section id="options" class="section soft">
       <div class="wrap">
         <div class="section-head">
@@ -113,18 +116,17 @@
 
           <div class="option-card">
             <h4>Custom pieces</h4>
-            <p>Have a vibe, a length, a color, or a budget in mind? Message me and we’ll design it together.</p>
+            <p>Have a vibe, a length, a color, or a budget in mind? Email me and we’ll design it together.</p>
           </div>
         </div>
 
         <p class="fine-note">
-          Not sure what to choose? Tell me the piece name and how you’d like to use it (wear, gift, display) — I’ll guide you.
+          Not sure what to choose? Tell me the piece name and how you want to use it (wear, gift, display) — I’ll guide you.
         </p>
       </div>
     </section>
 
 
-    <!-- HOW IT WORKS -->
     <section id="how" class="section">
       <div class="wrap">
         <div class="section-head">
@@ -140,19 +142,18 @@
 
           <div class="step">
             <h4>2) Pay what feels fair</h4>
-          <p>Each piece lists a minimum. You choose your final amount based on your perceived value.</p>  
-</div>
+            <p>Each piece lists a minimum. You choose your final amount based on your perceived value.</p>
+          </div>
 
           <div class="step">
             <h4>3) Claim + arrange</h4>
-            <p>Message the name to claim, plus: pendant + chain, stone-only, or custom.</p>
+            <p>Email the piece name, your option (pendant + chain / stone-only / custom), and pickup or shipping.</p>
           </div>
         </div>
       </div>
     </section>
 
 
-    <!-- CONTACT -->
     <section id="contact" class="section soft">
       <div class="wrap">
         <div class="section-head">
@@ -161,13 +162,14 @@
         </div>
 
         <div class="contact-box">
-          <div class="contact-row"><span class="label">Instagram</span><span class="value">@rebecca.finds.ca</span></div>
+          <div class="contact-row"><span class="label">Email</span><span class="value">rebecca.mcdonnell@outlook.com</span></div>
           <div class="contact-row"><span class="label">Location</span><span class="value">Niagara Region</span></div>
 
           <div class="message-template">
-            <div class="template-title">Message template</div>
+            <div class="template-title">Email template</div>
             <div class="template-body">
-              “Hi! I’d love to claim <strong>[piece name]</strong> — <strong>pendant + chain</strong> / <strong>stone-only</strong> / <strong>custom</strong>. Pickup or shipping?”
+              Subject: Claim — [piece name]<br>
+              Message: Hi Rebecca! I’d love to claim <strong>[piece name]</strong> — pendant + chain / stone-only / custom. Pickup or shipping?
             </div>
           </div>
 
@@ -197,6 +199,29 @@
       - Coastal Jade duplicate removed (keep 8; remove 12)
     */
 
+    const CLAIM_EMAIL = "rebecca.mcdonnell@outlook.com";
+
+    function buildMailto(pieceName){
+      const subject = `Claim — ${pieceName}`;
+      const body =
+`Hi Rebecca!
+
+I’d love to claim: ${pieceName}
+
+Option (choose one):
+- Pendant + chain
+- Stone-only
+- Custom request
+
+Pickup or shipping?
+(If shipping, please include your city/postal code.)
+
+Thank you!`;
+
+      // encode safely for mailto
+      return `mailto:${CLAIM_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+
     const pieces = [
       {
         images: ["1a.jpg", "1b.jpg"],
@@ -220,163 +245,4 @@
         image: "3.jpg",
         name: "Petrified Wood",
         tagline: "Earthy grain • grounded feel",
-        description: "Warm, natural grain and an ancient feel. Petrified wood has that rare mix of softness and strength — a piece that feels collected, not manufactured.",
-        min: 17,
-        status: "Available",
-        format: "Pendant + chain available"
-      },
-      {
-        image: "4.jpg",
-        name: "Collection No. 4",
-        tagline: "Amber warmth • minimal shape",
-        description: "A clean, simple silhouette with warm shoreline tones. This is the kind of piece that looks intentional anywhere you place it — timeless and easy.",
-        min: 17,
-        status: "Available",
-        format: "Pendant + chain available"
-      },
-      {
-        image: "5.jpg",
-        name: "Collection No. 5",
-        tagline: "Deep tones • moody finish",
-        description: "A darker, moodier piece with a glossy look in certain light. If you love contrast and depth, this one brings that quiet drama without being loud.",
-        min: 17,
-        status: "Available",
-        format: "Pendant + chain available"
-      },
-      {
-        image: "6.jpg",
-        name: "Collection No. 6",
-        tagline: "Green patterning • natural texture",
-        description: "A richly patterned green-toned stone with a shoreline-smoothed surface. It has that ‘coastal gallery’ feeling — organic, elegant, and one-of-one.",
-        min: 17,
-        status: "Available",
-        format: "Pendant + chain available"
-      },
-      {
-        image: "7.jpg",
-        name: "Collection No. 7",
-        tagline: "Soft sea-tones • airy look",
-        description: "Lighter tones with a gentle, sea-washed feel. This piece reads fresh and calm — like something you’d find in a curated coastal boutique.",
-        min: 17,
-        status: "Available",
-        format: "Pendant + chain available"
-      },
-      {
-        image: "8.jpg",
-        name: "Coastal Jade",
-        tagline: "Fresh green • smooth, coastal feel",
-        description: "A clean, ocean-worn green with a naturally polished look. This is that bright, easy-to-love jade tone — simple, wearable, and very boutique.",
-        min: 17,
-        status: "Available",
-        format: "Pendant + chain available"
-      },
-      {
-        image: "9.jpg",
-        name: "Collection No. 9",
-        tagline: "Classic neutral • speckled character",
-        description: "A classic, neutral-toned stone with subtle speckling. It’s understated in the best way — the kind of piece that always looks ‘right’ in any setting.",
-        min: 17,
-        status: "Available",
-        format: "Pendant + chain available"
-      },
-      {
-        image: "10.jpg",
-        name: "Collection No. 10",
-        tagline: "Warm tone • smooth edges",
-        description: "Warm shoreline color with a natural polish. A simple, satisfying piece — great as a small display stone or a meaningful little gift.",
-        min: 17,
-        status: "Available",
-        format: "Pendant + chain available"
-      },
-      {
-        image: "11.jpg",
-        name: "Collection No. 11",
-        tagline: "Clean contrast • gallery feel",
-        description: "A piece with strong visual clarity — it photographs beautifully and reads even richer in person. It has that curated, ‘kept for a reason’ feeling.",
-        min: 17,
-        status: "Available",
-        format: "Pendant + chain available"
-      },
-      /* 12.jpg removed (duplicate of Coastal Jade) */
-      {
-        image: "13.jpg",
-        name: "Collection No. 13",
-        tagline: "Patterned stone • bold character",
-        description: "A patterned stone with real character — the kind of natural detail you can’t replicate. It feels collected, intentional, and distinctly one-of-one.",
-        min: 17,
-        status: "Available",
-        format: "Pendant + chain available"
-      },
-      {
-        image: "14.jpg",
-        name: "Collection No. 14",
-        tagline: "Light neutral • soft presence",
-        description: "A lighter-toned piece with a gentle, clean finish. It’s simple and elegant — perfect for someone who loves quiet beauty and minimal styling.",
-        min: 17,
-        status: "Available",
-        format: "Pendant + chain available"
-      },
-      {
-        image: "15.jpg",
-        name: "Collection No. 15",
-        tagline: "Warm tone • calm statement",
-        description: "A warm, grounded piece with an easy presence. Not loud — just quietly beautiful, with that shoreline finish you can feel in your hand.",
-        min: 17,
-        status: "Available",
-        format: "Pendant + chain available"
-      }
-    ];
-
-    const grid = document.getElementById("grid");
-
-    function badgeClass(min){
-      return min >= 20 ? "badge badge-premium" : "badge";
-    }
-
-    function formatPill(text){
-      return `<span class="format-pill">${text}</span>`;
-    }
-
-    function renderMedia(p){
-      if (p.images && Array.isArray(p.images) && p.images.length === 2){
-        return `
-          <div class="card-media dual">
-            <span class="${badgeClass(p.min)}">Minimum $${p.min}</span>
-            <div class="media-grid">
-              <img src="images/${p.images[0]}" alt="${p.name} photo 1" loading="lazy">
-              <img src="images/${p.images[1]}" alt="${p.name} photo 2" loading="lazy">
-            </div>
-          </div>
-        `;
-      }
-      return `
-        <div class="card-media">
-          <img src="images/${p.image}" alt="${p.name}" loading="lazy">
-          <span class="${badgeClass(p.min)}">Minimum $${p.min}</span>
-        </div>
-      `;
-    }
-
-    pieces.forEach(p => {
-      const card = document.createElement("article");
-      card.className = "card";
-
-      card.innerHTML = `
-        ${renderMedia(p)}
-        <div class="card-body">
-          <h3>${p.name}</h3>
-          <p class="tagline">${p.tagline}</p>
-          <div class="pills-row">
-            ${p.format ? formatPill(p.format) : ""}
-          </div>
-          <p class="desc">${p.description}</p>
-          <p class="status">${p.status}</p>
-        </div>
-      `;
-
-      grid.appendChild(card);
-    });
-  </script>
-
-</body>
-</html>
+        description: "Warm, natural grain and an ancient feel. Petrified wood has th
