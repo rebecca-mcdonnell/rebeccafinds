@@ -188,61 +188,193 @@
   </footer>
 
 
+
   <script>
-    /*
-      ✅ Your real filenames:
-      1a.jpg, 1b.jpg, 2.jpg ... 15.jpg, highlight1.jpg
+const CLAIM_EMAIL = "rebecca.mcdonnell@outlook.com";
 
-      Locked rules:
-      - Golden = 1a + 1b (same stone) → one listing with two photos
-      - Quartz = 2 (minimum 20)
-      - Coastal Jade duplicate removed (keep 8; remove 12)
-    */
-
-    const CLAIM_EMAIL = "rebecca.mcdonnell@outlook.com";
-
-    function buildMailto(pieceName){
-      const subject = `Claim — ${pieceName}`;
-      const body =
+function buildMailto(pieceName){
+  const subject = `Claim — ${pieceName}`;
+  const body =
 `Hi Rebecca!
 
 I’d love to claim: ${pieceName}
 
-Option (choose one):
+Option:
 - Pendant + chain
 - Stone-only
-- Custom request
+- Custom
 
 Pickup or shipping?
-(If shipping, please include your city/postal code.)
 
 Thank you!`;
 
-      // encode safely for mailto
-      return `mailto:${CLAIM_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    }
+  return `mailto:${CLAIM_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
 
-    const pieces = [
-      {
-        images: ["1a.jpg", "1b.jpg"],
-        name: "Golden",
-        tagline: "Warm gold tones • premium presence",
-        description: "A premium-feeling golden stone with a naturally elevated look. This one reads ‘special’ immediately — warm, luminous, and made for the top row of any collection.",
-        min: 20,
-        status: "Available",
-        format: "Pendant + chain available"
-      },
-      {
-        image: "2.jpg",
-        name: "Quartz Vein",
-        tagline: "High contrast • natural vein detail",
-        description: "A dramatic shoreline stone with a bright quartz line cutting through the surface. Bold, elevated, and instantly ‘collector’ — one of the premium pieces in the drop.",
-        min: 20,
-        status: "Available",
-        format: "Pendant + chain available"
-      },
-      {
-        image: "3.jpg",
-        name: "Petrified Wood",
-        tagline: "Earthy grain • grounded feel",
-        description: "Warm, natural grain and an ancient feel. Petrified wood has th
+const pieces = [
+  {
+    images:["1a.jpg","1b.jpg"],
+    name:"Golden",
+    tagline:"Warm gold tones • premium presence",
+    description:"A premium-feeling golden stone with a naturally elevated look. Warm, luminous, and special.",
+    min:20,
+    status:"Available"
+  },
+  {
+    image:"2.jpg",
+    name:"Quartz Vein",
+    tagline:"High contrast • natural vein detail",
+    description:"A dramatic shoreline stone with a bright quartz line. Collector-level piece.",
+    min:20,
+    status:"Available"
+  },
+  {
+    image:"3.jpg",
+    name:"Petrified Wood",
+    tagline:"Earthy grain • grounded feel",
+    description:"Warm, natural grain with an ancient, grounded presence.",
+    min:17,
+    status:"Available"
+  },
+  {
+    image:"4.jpg",
+    name:"Collection No. 4",
+    tagline:"Amber warmth • minimal shape",
+    description:"Clean silhouette with warm shoreline tones.",
+    min:17,
+    status:"Available"
+  },
+  {
+    image:"5.jpg",
+    name:"Collection No. 5",
+    tagline:"Deep tones • moody finish",
+    description:"Darker piece with quiet drama and depth.",
+    min:17,
+    status:"Available"
+  },
+  {
+    image:"6.jpg",
+    name:"Collection No. 6",
+    tagline:"Green patterning • natural texture",
+    description:"Rich green tones with coastal gallery energy.",
+    min:17,
+    status:"Available"
+  },
+  {
+    image:"7.jpg",
+    name:"Collection No. 7",
+    tagline:"Soft sea-tones • airy look",
+    description:"Light, calm, and easy to love.",
+    min:17,
+    status:"Available"
+  },
+  {
+    image:"8.jpg",
+    name:"Coastal Jade",
+    tagline:"Fresh green • smooth, coastal feel",
+    description:"Bright jade tone with natural polish.",
+    min:17,
+    status:"Available"
+  },
+  {
+    image:"9.jpg",
+    name:"Collection No. 9",
+    tagline:"Classic neutral • speckled character",
+    description:"Understated and timeless.",
+    min:17,
+    status:"Available"
+  },
+  {
+    image:"10.jpg",
+    name:"Collection No. 10",
+    tagline:"Warm tone • smooth edges",
+    description:"Soft polish and warm shoreline colour.",
+    min:17,
+    status:"Available"
+  },
+  {
+    image:"11.jpg",
+    name:"Collection No. 11",
+    tagline:"Clean contrast • gallery feel",
+    description:"Photographs beautifully and shines in person.",
+    min:17,
+    status:"Available"
+  },
+  {
+    image:"13.jpg",
+    name:"Collection No. 13",
+    tagline:"Patterned stone • bold character",
+    description:"One-of-a-kind patterning with strong presence.",
+    min:17,
+    status:"Available"
+  },
+  {
+    image:"14.jpg",
+    name:"Collection No. 14",
+    tagline:"Light neutral • soft presence",
+    description:"Gentle, clean, and elegant.",
+    min:17,
+    status:"Available"
+  },
+  {
+    image:"15.jpg",
+    name:"Collection No. 15",
+    tagline:"Warm tone • calm statement",
+    description:"Quietly beautiful and grounded.",
+    min:17,
+    status:"Available"
+  }
+];
+
+const grid = document.getElementById("grid");
+
+pieces.forEach(p => {
+
+  const card = document.createElement("article");
+  card.className = "card";
+
+  let media = "";
+
+  if(p.images){
+    media = `
+      <div class="card-media dual">
+        <div class="media-grid">
+          <img src="images/${p.images[0]}">
+          <img src="images/${p.images[1]}">
+        </div>
+      </div>`;
+  } else {
+    media = `
+      <div class="card-media">
+        <img src="images/${p.image}">
+      </div>`;
+  }
+
+  const mailto = buildMailto(p.name);
+
+  card.innerHTML = `
+    ${media}
+
+    <div class="card-body">
+      <h3>${p.name}</h3>
+      <p class="tagline">${p.tagline}</p>
+
+      <p class="price-line">
+        Minimum $${p.min} • pay based on your perceived value
+      </p>
+
+      <p class="desc">${p.description}</p>
+      <p class="status">${p.status}</p>
+
+      <a class="claim-btn" href="${mailto}">
+        Claim via email
+      </a>
+    </div>
+  `;
+
+  grid.appendChild(card);
+
+});
+</script>
+
+
