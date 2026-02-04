@@ -1,28 +1,18 @@
-/* =========================================================
-   Rebecca Finds — style.css
-   Boutique creams + greens + gold
-   ========================================================= */
-
 :root{
-  /* Backgrounds */
-  --bg: #fbf7f3;        /* soft cream */
-  --panel: #ffffff;     /* cards */
-  --panel2:#f6efe9;     /* soft blush cream sections */
+  --bg:#fbf7f3;
+  --panel:#ffffff;
+  --panel2:#f6efe9;
 
-  /* Text */
-  --text:#2f2a26;       /* warm charcoal */
-  --muted:#7b7169;      /* warm taupe */
+  --text:#2f2a26;
+  --muted:#7b7169;
 
-  /* Accents */
-  --accent:#d6b48c;     /* champagne gold */
-  --accent2:#e6c1c9;    /* blush */
-  --accent3:#2f6b55;    /* evergreen */
+  --accent:#d6b48c;   /* champagne gold */
+  --accent2:#e6c1c9;  /* blush */
+  --accent3:#2f6b55;  /* evergreen */
 
-  /* Lines */
   --border: rgba(214,180,140,0.34);
   --borderSoft: rgba(47,107,85,0.14);
 
-  /* Radius + shadow */
   --radius:18px;
   --shadow: 0 10px 26px rgba(47,42,38,0.06);
   --shadow2: 0 6px 18px rgba(47,42,38,0.05);
@@ -37,39 +27,33 @@ body{
   background:var(--bg);
   line-height:1.55;
 }
-
-img{ max-width:100%; height:auto; }
+img{ max-width:100%; height:auto; display:block; }
 a{ color:inherit; text-decoration:none; }
-.wrap{
-  width:min(1100px, 92vw);
-  margin:0 auto;
-}
 
-/* =========================================================
-   Top banner + header
-   ========================================================= */
+.wrap{ width:min(1100px, 92vw); margin:0 auto; }
 
+/* Banner */
 .drop-banner{
   background: linear-gradient(90deg, rgba(47,107,85,0.12), rgba(214,180,140,0.14));
   border-bottom: 1px solid var(--border);
   padding: 10px 0;
   text-align:center;
-  font-family: Inter, system-ui, sans-serif;
 }
 .banner-main{
   display:block;
   letter-spacing:0.16em;
-  font-weight:700;
+  font-weight:800;
   color:var(--accent3);
-  font-size: 12px;
+  font-size:12px;
 }
 .banner-sub{
   display:block;
   margin-top:3px;
   color:var(--muted);
-  font-size: 12px;
+  font-size:12px;
 }
 
+/* Header */
 .site-header{
   position: sticky;
   top: 0;
@@ -109,13 +93,8 @@ a{ color:inherit; text-decoration:none; }
   background: rgba(255,255,255,0.6);
 }
 
-/* =========================================================
-   Hero
-   ========================================================= */
-
-.hero{
-  padding: 28px 0 8px;
-}
+/* Hero */
+.hero{ padding: 28px 0 8px; }
 .hero-inner{
   display:grid;
   grid-template-columns: 1.3fr 0.7fr;
@@ -126,7 +105,6 @@ a{ color:inherit; text-decoration:none; }
   margin:0 0 8px;
   color: var(--accent3);
   letter-spacing:0.08em;
-  text-transform: lowercase;
   font-size: 12px;
 }
 .hero h1{
@@ -141,7 +119,6 @@ a{ color:inherit; text-decoration:none; }
   color: var(--muted);
   max-width: 60ch;
 }
-
 .hero-tags{
   display:flex;
   gap: 8px;
@@ -154,9 +131,7 @@ a{ color:inherit; text-decoration:none; }
   border-radius: 999px;
   border: 1px solid var(--border);
   background: rgba(255,255,255,0.72);
-  color: var(--text);
 }
-
 .hero-mini{
   display:grid;
   grid-template-columns: 1fr 1fr;
@@ -170,7 +145,7 @@ a{ color:inherit; text-decoration:none; }
   box-shadow: var(--shadow2);
 }
 .mini-title{
-  font-weight: 700;
+  font-weight: 800;
   font-size: 12px;
   color: var(--accent3);
   letter-spacing: 0.06em;
@@ -206,10 +181,7 @@ a{ color:inherit; text-decoration:none; }
   height:100%;
   object-fit: cover;
 }
-.feature-caption{
-  color: var(--muted);
-  font-size: 13px;
-}
+.feature-caption{ color: var(--muted); font-size: 13px; }
 .pill{
   display:inline-block;
   padding: 6px 10px;
@@ -217,15 +189,12 @@ a{ color:inherit; text-decoration:none; }
   background: rgba(47,107,85,0.10);
   border: 1px solid var(--borderSoft);
   color: var(--accent3);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 12px;
   margin-bottom: 8px;
 }
 
-/* =========================================================
-   Sections
-   ========================================================= */
-
+/* Sections */
 .section{ padding: 22px 0; }
 .section.soft{
   background: linear-gradient(180deg, rgba(246,239,233,0.92), rgba(251,247,243,0.65));
@@ -251,7 +220,6 @@ a{ color:inherit; text-decoration:none; }
   font-size: 13px;
   max-width: 62ch;
 }
-
 .tiny-note{
   margin-top: 12px;
   color: var(--muted);
@@ -268,17 +236,12 @@ a{ color:inherit; text-decoration:none; }
   box-shadow: 0 0 0 4px rgba(214,180,140,0.16);
 }
 
-/* =========================================================
-   Product grid + cards
-   ========================================================= */
-
+/* Grid + cards */
 .grid{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
-
-/* Card */
 .card{
   background: var(--panel);
   border: 1px solid var(--border);
@@ -289,43 +252,29 @@ a{ color:inherit; text-decoration:none; }
   flex-direction: column;
 }
 
-/* === IMPORTANT: Stable image framing system === */
+/* Bigger images + stable centering */
 .card-media{
   position: relative;
-  height: 300px;               /* master frame */
-  background: rgba(246,239,233,0.6);
+  height: 310px; /* bigger */
+  background: rgba(246,239,233,0.60);
   border-bottom: 1px solid var(--border);
   display:flex;
-  align-items:center;          /* keeps images vertically centered */
+  align-items:center;
   justify-content:center;
   overflow:hidden;
 }
-
-/* default image */
 .card-media img{
-  width: 100%;
-  height: 100%;
+  width:100%;
+  height:100%;
   object-fit: cover;
   object-position: 50% 50%;
-  display:block;
   transform: scale(1);
   transition: transform 180ms ease;
 }
 
-/* Subtle hover polish */
-.card:hover .card-media img{
-  transform: scale(1.01);
-}
+/* Dual swap height (Golden) */
+.card-media.dual-swap{ height: 285px; }
 
-/* Dual-swap (Golden 1a/1b) — same frame, slightly shorter for balance */
-.card-media.dual-swap{
-  height: 270px;
-}
-.card-media.dual-swap img{
-  object-position: 50% 50%;
-}
-
-/* Dots + hint button (doesn’t affect centering) */
 .swap-dots{
   position:absolute;
   left: 12px;
@@ -346,7 +295,6 @@ a{ color:inherit; text-decoration:none; }
   background: rgba(47,107,85,0.55);
   border-color: rgba(47,107,85,0.55);
 }
-
 .swap-hint{
   position:absolute;
   right: 12px;
@@ -386,19 +334,9 @@ a{ color:inherit; text-decoration:none; }
   border-left: 3px solid rgba(47,107,85,0.35);
   padding-left: 10px;
 }
-.desc{
-  margin:0;
-  color: var(--muted);
-  font-size: 13px;
-}
-.status{
-  margin:0;
-  font-weight: 700;
-  font-size: 12px;
-  color: var(--accent3);
-}
+.desc{ margin:0; color: var(--muted); font-size: 13px; }
+.status{ margin:0; font-weight: 800; font-size: 12px; color: var(--accent3); }
 
-/* Claim button */
 .claim-btn{
   margin-top: 6px;
   display:inline-flex;
@@ -408,8 +346,7 @@ a{ color:inherit; text-decoration:none; }
   border-radius: 12px;
   border: 1px solid var(--border);
   background: linear-gradient(180deg, rgba(47,107,85,0.12), rgba(214,180,140,0.12));
-  color: var(--text);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 13px;
 }
 .claim-btn:hover{
@@ -417,92 +354,38 @@ a{ color:inherit; text-decoration:none; }
   box-shadow: 0 8px 18px rgba(47,42,38,0.06);
 }
 
-/* =========================================================
-   Per-stone art direction (YOUR NOTES)
-   Order in your JS array:
-   1 Golden, 2 Quartz Vein, 3 Petrified, 4 Amber, 5 Midnight,
-   6 Olive, 7 Sea Mist, 8 Coastal Jade, 9 Pebble Gray,
-   10 Sunset Sand, 11 Silverline, 12 Wild Pattern,
-   13 Soft Linen, 14 Hearthstone
-   ========================================================= */
-
-/* First two: shrink a tiny bit */
-.grid .card:nth-child(1) .card-media img,
-.grid .card:nth-child(2) .card-media img{
-  transform: scale(0.985);
-}
-
-/* Shrink a tiny bit: Olive, Midnight, Golden, Petrified Wood */
-.grid .card:nth-child(1) .card-media img,  /* Golden */
-.grid .card:nth-child(3) .card-media img,  /* Petrified Wood */
-.grid .card:nth-child(5) .card-media img,  /* Midnight Drift */
-.grid .card:nth-child(6) .card-media img{  /* Olive Current */
-  transform: scale(0.975);
-}
-
-/* Bring Sunset Sand down a bit (lower crop) */
-.grid .card:nth-child(10) .card-media img{
-  object-position: 50% 62%;
-}
-
-/* Bring Sea Mist down even more */
-.grid .card:nth-child(7) .card-media img{
-  object-position: 50% 68%;
-}
-
-/* =========================================================
-   Options + steps + contact
-   ========================================================= */
-
+/* Options + steps + contact */
 .options-grid{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
 }
-.option-card{
+.option-card, .step{
   background: rgba(255,255,255,0.84);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 14px;
   box-shadow: var(--shadow2);
 }
-.option-card h4{
+.option-card h4, .step h4{
   margin:0 0 6px;
   font-family: Fraunces, serif;
   font-weight: 800;
 }
-.option-card p{
+.option-card p, .step p{
   margin:0;
   color: var(--muted);
   font-size: 13px;
 }
-.fine-note, .fine{
-  color: var(--muted);
-  font-size: 12px;
-  margin-top: 12px;
-}
-
 .steps{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
 }
-.step{
-  background: rgba(255,255,255,0.84);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 14px;
-  box-shadow: var(--shadow2);
-}
-.step h4{
-  margin:0 0 6px;
-  font-family: Fraunces, serif;
-  font-weight: 800;
-}
-.step p{
-  margin:0;
+.fine-note, .fine{
   color: var(--muted);
-  font-size: 13px;
+  font-size: 12px;
+  margin-top: 12px;
 }
 
 .contact-box{
@@ -526,10 +409,7 @@ a{ color:inherit; text-decoration:none; }
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-.value{
-  font-weight: 700;
-  font-size: 13px;
-}
+.value{ font-weight: 800; font-size: 13px; }
 
 .message-template{
   margin-top: 14px;
@@ -562,12 +442,31 @@ a{ color:inherit; text-decoration:none; }
 }
 
 /* =========================================================
-   Responsive
+   Your specific photo fixes (by slug)
    ========================================================= */
 
+/* Sunset Sand: come down a bit */
+.card--sunset-sand .card-media img{
+  object-position: 50% 62%;
+}
+
+/* Sea Mist: come down more */
+.card--sea-mist .card-media img{
+  object-position: 50% 72%;
+}
+
+/* Tiny shrink set */
+.card--golden .card-media img,
+.card--quartz-vein .card-media img,
+.card--petrified-wood .card-media img,
+.card--midnight-drift .card-media img,
+.card--olive-current .card-media img{
+  transform: scale(0.975);
+}
+
+/* Responsive */
 @media (max-width: 980px){
   .hero-inner{ grid-template-columns: 1fr; }
-  .feature-frame{ height: 220px; }
   .grid{ grid-template-columns: repeat(2, 1fr); }
   .options-grid{ grid-template-columns: 1fr; }
   .steps{ grid-template-columns: 1fr; }
@@ -580,37 +479,6 @@ a{ color:inherit; text-decoration:none; }
 
   .grid{ grid-template-columns: 1fr; }
 
-  .card-media{ height: 255px; }
-  .card-media.dual-swap{ height: 235px; }
-
-  /* Keep your art-direction on mobile too */
-  .grid .card:nth-child(10) .card-media img{ object-position: 50% 62%; }
-  .grid .card:nth-child(7) .card-media img{ object-position: 50% 68%; }
+  .card-media{ height: 270px; }
+  .card-media.dual-swap{ height: 245px; }
 }
-
-/* ===== Per-piece framing fixes (crop + tiny scale) ===== */
-
-.grid .card .card-media img{
-  object-position: 50% 50%;
-  transform: scale(1);
-}
-
-/* Bring Sunset Sand DOWN */
-.grid .card:nth-child(10) .card-media img{
-  object-position: 50% 62%;
-}
-
-/* Bring Sea Mist down MORE */
-.grid .card:nth-child(7) .card-media img{
-  object-position: 50% 72%;
-}
-
-/* Tiny shrink: Golden, Quartz, Petrified, Midnight, Olive */
-.grid .card:nth-child(1) .card-media img,
-.grid .card:nth-child(2) .card-media img,
-.grid .card:nth-child(3) .card-media img,
-.grid .card:nth-child(5) .card-media img,
-.grid .card:nth-child(6) .card-media img{
-  transform: scale(0.975);
-}
-
