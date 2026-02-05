@@ -3,425 +3,309 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rebecca Finds — Curated Drop</title>
-  <meta name="description" content="One-of-one shoreline stones and jewelry. Niagara, Ontario." />
+  <title>Rebecca Finds — Collection Release</title>
+  <meta name="description" content="One-of-one shoreline stones, sea glass, and pendants from Niagara, Ontario. Pay What You Think Is Fair." />
 
-  <!-- Bump this number anytime you change CSS to force refresh -->
-  <link rel="stylesheet" href="style.css?v=702" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 
 <body>
 
-  <div class="drop-banner" role="note" aria-label="Curated Drop">
-    <span class="banner-main">CURATED DROP</span>
-    <span class="banner-sub">One-of-one shoreline finds • Niagara</span>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">Rebecca Finds</a>
+
+    <nav class="nav">
+      <a href="#featured">Featured</a>
+      <a href="#available">Available</a>
+      <a href="#how">How It Works</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
+</header>
 
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a href="index.html" class="brand" aria-label="Rebecca Finds Home">Rebecca Finds</a>
+<main id="top">
 
-      <nav class="nav" aria-label="Main Navigation">
-        <a href="#stones">Pieces</a>
-        <a href="#options">Jewelry</a>
-        <a href="#how">How it works</a>
-        <a href="education.html">Education</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="kicker">Niagara, Ontario • Shoreline Finds</p>
+        <h1>Collection Release</h1>
+        <p class="lede">
+          One-of-one pendants, sea glass, and statement stones — hand-collected and curated from the shore.
+          Each piece includes a <strong>pendant + chain</strong> and is offered using my <strong>Pay What You Think Is Fair</strong> model.
+        </p>
+
+        <div class="hero-badges">
+          <span class="badge">Local</span>
+          <span class="badge">Sustainable</span>
+          <span class="badge">One-of-one</span>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#featured">Shop Featured</a>
+          <a class="btn ghost" href="#how">How It Works</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-frame">
+          <img src="images/fossil-highlight.jpg" alt="Highlighted shoreline fossil stone" />
+        </div>
+        <p class="hero-note">New drops are curated in small releases. When a piece is claimed, it’s gone.</p>
+      </div>
     </div>
-  </header>
-
-  <main>
-
-    <section class="hero">
-      <div class="wrap hero-inner">
-
-        <div class="hero-copy">
-          <p class="kicker">Niagara • shoreline finds • one-of-one</p>
-          <h1>Curated Shoreline Pieces</h1>
-          <p class="hero-sub">
-            Hand-selected stones and simple wearable pieces — naturally unique, quietly luxurious, and thoughtfully priced.
-          </p>
-
-          <div class="hero-tags" aria-label="Values">
-            <span>Local</span>
-            <span>Low-waste</span>
-            <span>Pay what feels fair</span>
-          </div>
-
-          <div class="hero-mini">
-            <div class="mini">
-              <div class="mini-title">Included</div>
-              <div class="mini-text">Most pieces can be claimed as a pendant + chain (or stone-only).</div>
-            </div>
-            <div class="mini">
-              <div class="mini-title">Pricing</div>
-              <div class="mini-text">Minimums are listed per piece — pay based on your perceived value.</div>
-            </div>
-          </div>
-        </div>
-
-        <aside class="hero-feature" aria-label="Highlight">
-          <div class="feature-frame">
-            <img src="images/highlight1.jpg" alt="Highlight piece (not available)" loading="lazy" decoding="async">
-          </div>
-          <div class="feature-caption">
-            <span class="pill">Highlight • not available</span>
-            <p>
-              This is the tone-setter for the drop — here to show the kind of texture and story I love to curate.
-            </p>
-          </div>
-        </aside>
-
-      </div>
-    </section>
+  </section>
 
 
-    <section id="stones" class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 class="section-title">Pieces</h2>
-          <p class="section-sub">Every piece is one-of-one. Claim as pendant + chain, stone-only, or custom.</p>
-        </div>
-
-        <div id="grid" class="grid" aria-live="polite"></div>
-
-        <div class="tiny-note">
-          <span class="dot"></span>
-          Most pieces have a $17 minimum. Quartz Vein and Golden remain $20.
-        </div>
-      </div>
-    </section>
-
-
-    <section id="options" class="section soft">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 class="section-title">Jewelry options</h2>
-          <p class="section-sub">Choose simple, or make it personal.</p>
-        </div>
-
-        <div class="options-grid">
-          <div class="option-card">
-            <h4>Pendant + chain</h4>
-            <p>Most pieces can be finished as a pendant and come with a chain — ready to wear.</p>
-          </div>
-
-          <div class="option-card">
-            <h4>Stone-only</h4>
-            <p>If you’d rather keep it as a statement stone, you can claim it that way too.</p>
-          </div>
-
-          <div class="option-card">
-            <h4>Custom pieces</h4>
-            <p>Have a style, a length, a color, or a budget in mind? Email me and we’ll design it together.</p>
-          </div>
-        </div>
-
-        <p class="fine-note">
-          Not sure what to choose? Tell me the piece name and how you want to use it (wear, gift, display) — I’ll guide you.
+  <!-- FEATURED: NEW PENDANTS TOP -->
+  <section id="featured" class="section section-accent">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Featured Pendants</h2>
+        <p class="section-intro">
+          Freshly finished and ready to wear. These pieces are being highlighted at the top of the release.
+          (Each includes a pendant + chain.)
         </p>
       </div>
-    </section>
 
+      <div class="grid">
 
-    <section id="how" class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 class="section-title">How it works</h2>
-          <p class="section-sub">Simple, calm, and transparent.</p>
-        </div>
-
-        <div class="steps">
-          <div class="step">
-            <h4>1) Choose</h4>
-            <p>Browse the pieces and pick the one you feel drawn to.</p>
+        <!-- Pendant 1 -->
+        <article class="card featured">
+          <div class="img-wrap">
+            <img src="images/pendant1-4.jpg" alt="Pendant 1 — Olive Shorestone" />
+            <span class="tag">Featured</span>
           </div>
 
-          <div class="step">
-            <h4>2) Pay what feels fair</h4>
-            <p>Each piece lists a minimum. You choose your final amount based on your perceived value.</p>
+          <h3>Olive Shorestone</h3>
+          <p class="material">Serpentine • Natural polish</p>
+
+          <p class="desc">
+            A soft olive-green shoreline stone with gentle speckling and an earthy, grounded feel.
+            Hand-collected in Niagara and finished to keep its natural character.
+          </p>
+
+          <ul class="details">
+            <li>Includes pendant + chain</li>
+            <li>Locally found</li>
+            <li>One-of-one</li>
+          </ul>
+
+          <p class="price">Suggested Minimum: <strong>$20</strong></p>
+
+          <a class="btn primary"
+             href="mailto:rebecca.mcdonnell@outlook.com?subject=Claim%20Olive%20Shorestone%20(Pendant%201)&body=Hi%20Rebecca,%0A%0AI%E2%80%99d%20love%20to%20claim%20Olive%20Shorestone%20(Pendant%201).%0A%0AMy%20name:%0APostal%20code%20(for%20shipping%20quote):%0AHow%20much%20I%E2%80%99d%20like%20to%20pay:%0A%0AThank%20you!">
+            Claim Pendant 1
+          </a>
+        </article>
+
+        <!-- Pendant 2 -->
+        <article class="card featured">
+          <div class="img-wrap">
+            <img src="images/pendant1-4.jpg" alt="Pendant 2 — Blue Drift" />
+            <span class="tag">Featured</span>
           </div>
 
-          <div class="step">
-            <h4>3) Claim + arrange</h4>
-            <p>Email the piece name, your option (pendant + chain / stone-only / custom), and pickup or shipping.</p>
+          <h3>Blue Drift</h3>
+          <p class="material">Genuine sea glass • Frosted finish</p>
+
+          <p class="desc">
+            A dreamy blue piece of authentic sea glass, naturally softened by waves.
+            Luminous, rare, and beautiful in both daylight and warm indoor light.
+          </p>
+
+          <ul class="details">
+            <li>Includes pendant + chain</li>
+            <li>Naturally tumbled</li>
+            <li>Rare colour</li>
+          </ul>
+
+          <p class="price">Suggested Minimum: <strong>$25</strong></p>
+
+          <a class="btn primary"
+             href="mailto:rebecca.mcdonnell@outlook.com?subject=Claim%20Blue%20Drift%20(Pendant%202)&body=Hi%20Rebecca,%0A%0AI%E2%80%99d%20love%20to%20claim%20Blue%20Drift%20(Pendant%202).%0A%0AMy%20name:%0APostal%20code%20(for%20shipping%20quote):%0AHow%20much%20I%E2%80%99d%20like%20to%20pay:%0A%0AThank%20you!">
+            Claim Pendant 2
+          </a>
+        </article>
+
+        <!-- Pendant 3 -->
+        <article class="card featured">
+          <div class="img-wrap">
+            <img src="images/pendant1-4.jpg" alt="Pendant 3 — Midnight Vein" />
+            <span class="tag">Featured</span>
           </div>
-        </div>
+
+          <h3>Midnight Vein</h3>
+          <p class="material">Quartz vein in host rock • High polish</p>
+
+          <p class="desc">
+            A dramatic dark stone with a bright quartz vein running through it — like a natural lightning strike.
+            Bold, grounded, and completely one-of-one.
+          </p>
+
+          <ul class="details">
+            <li>Includes pendant + chain</li>
+            <li>Statement piece</li>
+            <li>One-of-one</li>
+          </ul>
+
+          <p class="price">Suggested Minimum: <strong>$25</strong></p>
+
+          <a class="btn primary"
+             href="mailto:rebecca.mcdonnell@outlook.com?subject=Claim%20Midnight%20Vein%20(Pendant%203)&body=Hi%20Rebecca,%0A%0AI%E2%80%99d%20love%20to%20claim%20Midnight%20Vein%20(Pendant%203).%0A%0AMy%20name:%0APostal%20code%20(for%20shipping%20quote):%0AHow%20much%20I%E2%80%99d%20like%20to%20pay:%0A%0AThank%20you!">
+            Claim Pendant 3
+          </a>
+        </article>
+
+        <!-- Pendant 4 -->
+        <article class="card featured">
+          <div class="img-wrap">
+            <img src="images/pendant1-4.jpg" alt="Pendant 4 — Peach Glow" />
+            <span class="tag">Featured</span>
+          </div>
+
+          <h3>Peach Glow</h3>
+          <p class="material">Peach-toned stone • Soft polish</p>
+
+          <p class="desc">
+            Warm, peachy tones with a gentle glow and a comforting feel.
+            This one reads soft and romantic without being too sweet — effortless everyday wear.
+          </p>
+
+          <ul class="details">
+            <li>Includes pendant + chain</li>
+            <li>Warm feminine tones</li>
+            <li>One-of-one</li>
+          </ul>
+
+          <p class="price">Suggested Minimum: <strong>$18</strong></p>
+
+          <a class="btn primary"
+             href="mailto:rebecca.mcdonnell@outlook.com?subject=Claim%20Peach%20Glow%20(Pendant%204)&body=Hi%20Rebecca,%0A%0AI%E2%80%99d%20love%20to%20claim%20Peach%20Glow%20(Pendant%204).%0A%0AMy%20name:%0APostal%20code%20(for%20shipping%20quote):%0AHow%20much%20I%E2%80%99d%20like%20to%20pay:%0A%0AThank%20you!">
+            Claim Pendant 4
+          </a>
+        </article>
+
       </div>
-    </section>
 
-
-    <section id="contact" class="section soft">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 class="section-title">Contact</h2>
-          <p class="section-sub">To claim a piece, send the name + your option.</p>
-        </div>
-
-        <div class="contact-box">
-          <div class="contact-row"><span class="label">Email</span><span class="value">rebecca.mcdonnell@outlook.com</span></div>
-          <div class="contact-row"><span class="label">Location</span><span class="value">Niagara Region</span></div>
-
-          <div class="message-template">
-            <div class="template-title">Email template</div>
-            <div class="template-body">
-              Subject: Claim — [piece name]<br>
-              Message: Hi Rebecca! I’d love to claim <strong>[piece name]</strong> — pendant + chain / stone-only / custom. Pickup or shipping?
-            </div>
-          </div>
-
-          <p class="fine">Tip: include the piece name exactly as shown on the site.</p>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-
-  <footer class="footer">
-    <div class="wrap">
-      <p class="footer-text">Rebecca Finds • One-of-one shoreline pieces</p>
-    </div>
-  </footer>
-
-
-  <script>
-const CLAIM_EMAIL = "rebecca.mcdonnell@outlook.com";
-
-function buildMailto(pieceName){
-  const subject = `Claim — ${pieceName}`;
-  const body =
-`Hi Rebecca!
-
-I’d love to claim: ${pieceName}
-
-Option:
-- Pendant + chain
-- Stone-only
-- Custom
-
-Pickup or shipping?
-
-Thank you!`;
-
-  return `mailto:${CLAIM_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-}
-
-const pieces = [
-  {
-    slug: "golden",
-    images:["1a.jpg","1b.jpg"],
-    name:"Golden",
-    tagline:"Warm gold tones • premium presence",
-    description:"A luminous golden shoreline stone with an elevated, heirloom-like feel. Warm, radiant, and quietly special.",
-    min:20,
-    status:"Available"
-  },
-  {
-    slug: "quartz-vein",
-    image:"2.jpg",
-    name:"Quartz Vein",
-    tagline:"High contrast • natural vein detail",
-    description:"A striking shoreline piece marked by a bright quartz line. Dramatic, rare, and collector-worthy.",
-    min:20,
-    status:"Available"
-  },
-  {
-    slug: "petrified-wood",
-    image:"3.jpg",
-    name:"Petrified Wood",
-    tagline:"Earthy grain • grounded presence",
-    description:"Ancient textures and warm grain come together in this deeply grounding, timeless piece.",
-    min:17,
-    status:"Available"
-  },
-  {
-    slug: "amber-shore",
-    image:"4.jpg",
-    name:"Amber Shore",
-    tagline:"Honey warmth • soft coastal glow",
-    description:"Golden-amber shoreline tones with a gentle, sunlit warmth. Calm, comforting, and easy to love.",
-    min:17,
-    status:"Available"
-  },
-  {
-    slug: "midnight-drift",
-    image:"5.jpg",
-    name:"Midnight Drift",
-    tagline:"Deep tones • quiet drama",
-    description:"A darker coastal stone with depth and mystery. Subtle, moody, and beautifully balanced.",
-    min:17,
-    status:"Available"
-  },
-  {
-    slug: "olive-current",
-    image:"6.jpg",
-    name:"Olive Current",
-    tagline:"Rich green • flowing pattern",
-    description:"Natural green movement and organic patterning give this piece a fresh, coastal elegance.",
-    min:17,
-    status:"Available"
-  },
-  {
-    slug: "sea-mist",
-    image:"7.jpg",
-    name:"Sea Mist",
-    tagline:"Soft tones • airy presence",
-    description:"Light, delicate shoreline colours with a calm, breezy feel. Effortless and serene.",
-    min:17,
-    status:"Available"
-  },
-  {
-    slug: "coastal-jade",
-    image:"8.jpg",
-    name:"Coastal Jade",
-    tagline:"Fresh green • smooth finish",
-    description:"A vibrant jade-toned stone with a soft natural polish. Bright, uplifting, and full of life.",
-    min:17,
-    status:"Available"
-  },
-  {
-    slug: "pebble-gray",
-    image:"9.jpg",
-    name:"Pebble Gray",
-    tagline:"Classic neutral • speckled character",
-    description:"A timeless gray shoreline stone with subtle texture. Understated, versatile, and enduring.",
-    min:17,
-    status:"Available"
-  },
-  {
-    slug: "sunset-sand",
-    image:"10.jpg",
-    name:"Sunset Sand",
-    tagline:"Warm beige • coastal glow",
-    description:"Soft sandy tones touched with warmth, reminiscent of golden-hour shoreline light.",
-    min:17,
-    status:"Available"
-  },
-  {
-    slug: "silverline",
-    image:"11.jpg",
-    name:"Silverline",
-    tagline:"Clean contrast • gallery-worthy",
-    description:"A high-contrast stone that photographs beautifully and feels like a curated gallery piece.",
-    min:17,
-    status:"Available"
-  },
-  {
-    slug: "wild-pattern",
-    image:"13.jpg",
-    name:"Wild Pattern",
-    tagline:"Bold markings • natural artistry",
-    description:"Striking organic patterns make this stone feel like a piece of wearable landscape art.",
-    min:17,
-    status:"Available"
-  },
-  {
-    slug: "soft-linen",
-    image:"14.jpg",
-    name:"Soft Linen",
-    tagline:"Light neutral • gentle elegance",
-    description:"Pale, clean tones with a soft presence. Refined, minimal, and endlessly wearable.",
-    min:17,
-    status:"Available"
-  },
-  {
-    slug: "hearthstone",
-    image:"15.jpg",
-    name:"Hearthstone",
-    tagline:"Warm depth • grounding energy",
-    description:"Rich, comforting tones with a steady, grounding feel. A stone that feels like home.",
-    min:17,
-    status:"Available"
-  }
-];
-
-const grid = document.getElementById("grid");
-
-pieces.forEach((p) => {
-  const card = document.createElement("article");
-  card.className = `card card--${p.slug}`;
-
-  let media = "";
-
-  // Golden: tap-to-switch between 1a / 1b
-  if (p.images && Array.isArray(p.images) && p.images.length >= 2) {
-    media = `
-      <div class="card-media dual-swap" data-img-a="images/${p.images[0]}" data-img-b="images/${p.images[1]}">
-        <img
-          src="images/${p.images[0]}"
-          alt="${p.name} (view 1)"
-          loading="lazy"
-          decoding="async">
-        <div class="swap-dots" aria-label="Two photo views">
-          <button class="dot-btn is-on" type="button" aria-label="View 1"></button>
-          <button class="dot-btn" type="button" aria-label="View 2"></button>
-        </div>
-        <button class="swap-hint" type="button" aria-label="Tap to switch photo">Tap to switch</button>
-      </div>`;
-  } else {
-    media = `
-      <div class="card-media">
-        <img
-          src="images/${p.image}"
-          alt="${p.name}"
-          loading="lazy"
-          decoding="async">
-      </div>`;
-  }
-
-  const mailto = buildMailto(p.name);
-
-  card.innerHTML = `
-    ${media}
-    <div class="card-body">
-      <h3>${p.name}</h3>
-      <p class="tagline">${p.tagline}</p>
-
-      <p class="price-line">
-        Minimum $${p.min} • pay based on your perceived value
+      <p class="mini-note">
+        Note: Right now the featured cards reference <code>images/pendant1-4.jpg</code>. If you split the photo into four files later
+        (pendant1.jpg, pendant2.jpg, pendant3.jpg, pendant4.jpg), I’ll swap the image links in 10 seconds.
       </p>
 
-      <p class="desc">${p.description}</p>
-      <p class="status">${p.status}</p>
-
-      <a class="claim-btn" href="${mailto}">
-        Claim via email
-      </a>
     </div>
-  `;
+  </section>
 
-  grid.appendChild(card);
-});
 
-// Dual-swap behavior
-document.querySelectorAll(".dual-swap").forEach((wrap) => {
-  const img = wrap.querySelector("img");
-  const dots = wrap.querySelectorAll(".dot-btn");
-  const a = wrap.getAttribute("data-img-a");
-  const b = wrap.getAttribute("data-img-b");
-  let onA = true;
+  <!-- AVAILABLE (YOUR MAIN LISTING AREA) -->
+  <section id="available" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Available Stones & Pieces</h2>
+        <p class="section-intro">
+          A mix of jewelry-ready stones and statement pieces. If you’re dreaming of a custom pendant,
+          email me with your idea — I love collaborating.
+        </p>
+      </div>
 
-  function setState(showA){
-    onA = showA;
-    img.src = showA ? a : b;
-    dots.forEach((d) => d.classList.remove("is-on"));
-    (showA ? dots[0] : dots[1]).classList.add("is-on");
-  }
+      <div class="grid">
 
-  wrap.addEventListener("click", (e) => {
-    const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : "";
-    if (tag === "button" || tag === "img" || tag === "div") setState(!onA);
-  });
+        <!-- Example existing item (keep/edit/replace freely) -->
+        <article class="card">
+          <div class="img-wrap">
+            <img src="images/goldjaspermedium.jpg" alt="Golden Shore stone" />
+          </div>
 
-  if (dots[0]) dots[0].addEventListener("click", (e) => { e.stopPropagation(); setState(true); });
-  if (dots[1]) dots[1].addEventListener("click", (e) => { e.stopPropagation(); setState(false); });
-});
-  </script>
+          <h3>Golden Shore</h3>
+          <p class="material">Golden jasper • Polished</p>
+
+          <p class="desc">
+            Warm golden tones with natural patterning — a sunshine stone that photographs beautifully
+            and feels like “Niagara summer” in your hand.
+          </p>
+
+          <ul class="details">
+            <li>Jewelry-ready option available</li>
+            <li>Locally found</li>
+            <li>One-of-one</li>
+          </ul>
+
+          <p class="price">Suggested Minimum: <strong>$20</strong></p>
+
+          <a class="btn"
+             href="mailto:rebecca.mcdonnell@outlook.com?subject=Claim%20Golden%20Shore&body=Hi%20Rebecca,%0A%0AI%E2%80%99d%20love%20to%20claim%20Golden%20Shore.%0A%0AMy%20name:%0APostal%20code%20(for%20shipping%20quote):%0AHow%20much%20I%E2%80%99d%20like%20to%20pay:%0A%0AThank%20you!">
+            Claim This Piece
+          </a>
+        </article>
+
+        <!-- Add the rest of your stones here (cards), or tell me and I’ll rebuild the full list again. -->
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="section section-soft">
+    <div class="wrap">
+      <h2>How It Works</h2>
+
+      <div class="two-col">
+        <div class="panel">
+          <h3>Pay What You Think Is Fair</h3>
+          <p>
+            Each listing has a suggested minimum to help cover materials and time.
+            You’re invited to pay based on what the piece is worth to you.
+            This keeps handmade jewelry more accessible while supporting local, small-batch work.
+          </p>
+        </div>
+
+        <div class="panel">
+          <h3>What’s Included</h3>
+          <p>
+            Jewelry listings include a pendant and chain unless noted otherwise.
+            Want a different chain length, a different bail colour, or a custom piece?
+            Email me — I’m happy to make it personal.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="wrap">
+      <h2>Claim a Piece</h2>
+      <p class="section-intro">
+        Click any “Claim” button to email me. First come, first served — I’ll confirm availability, total, and pickup/shipping.
+      </p>
+
+      <div class="contact-card">
+        <p><strong>Email:</strong> <a href="mailto:rebecca.mcdonnell@outlook.com">rebecca.mcdonnell@outlook.com</a></p>
+        <p class="mini-note">Tip: include your postal code for a quick shipping quote.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>© <span id="year"></span> Rebecca Finds • Niagara, Ontario</p>
+    <p class="muted">Hand-collected shoreline finds • small-batch releases</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
