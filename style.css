@@ -421,3 +421,21 @@ a{ color: inherit; }
 
   .two-col{ grid-template-columns: 1fr; }
 }
+.featured-hero{
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(214,180,140,0.40);
+  background: #fff;
+  box-shadow: var(--shadow);
+  margin: 12px 0 16px;
+}
+
+.featured-hero img{
+  width: 100%;
+  height: clamp(240px, 40vw, 360px);
+  object-fit: cover;
+}
+
+.featured-claims{
+  margin-top: 6px;
+}
