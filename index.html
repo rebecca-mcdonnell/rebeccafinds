@@ -6,7 +6,7 @@
   <title>Rebecca Finds — Collection Release</title>
   <meta name="description" content="One-of-one shoreline stones, sea glass, and pendants from Niagara, Ontario. Pay What You Think Is Fair." />
 
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=4" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
@@ -76,20 +76,22 @@
 
       <div class="grid featured-claims">
 
-        <article class="card featured">
+        <!-- PENDANT 1 (CLAIMED) -->
+        <article class="card featured is-claimed">
           <div class="img-wrap">
             <img src="pendant1.jpg" alt="Pendant 1" />
+            <span class="status-pill">Claimed</span>
           </div>
           <h3>Pendant 1</h3>
           <p class="material">Shoreline stone • Pendant + chain included</p>
           <p class="desc">One-of-one piece, finished and ready to wear.</p>
           <p class="price">Pay What You Think Is Fair • Suggested Minimum: <strong>$20</strong></p>
-          <a class="btn primary"
-             href="mailto:rebecca.mcdonnell@outlook.com?subject=Claim%20Pendant%201&body=Hi%20Rebecca,%0A%0AI%E2%80%99d%20love%20to%20claim%20Pendant%201.%0A%0AMy%20name:%0APostal%20code%20(for%20shipping%20quote):%0AHow%20much%20I%E2%80%99d%20like%20to%20pay:%0A%0AThank%20you!">
+          <button class="btn primary btn-disabled" type="button" disabled aria-disabled="true">
             CLAIMED
-          </a>
+          </button>
         </article>
 
+        <!-- PENDANT 2 -->
         <article class="card featured">
           <div class="img-wrap">
             <img src="pendant2.jpg" alt="Pendant 2" />
@@ -98,12 +100,17 @@
           <p class="material">Shoreline stone • Pendant + chain included</p>
           <p class="desc">One-of-one piece, finished and ready to wear.</p>
           <p class="price">Pay What You Think Is Fair • Suggested Minimum: <strong>$20</strong></p>
-          <a class="btn primary"
-             href="mailto:rebecca.mcdonnell@outlook.com?subject=Claim%20Pendant%202&body=Hi%20Rebecca,%0A%0AI%E2%80%99d%20love%20to%20claim%20Pendant%202.%0A%0AMy%20name:%0APostal%20code%20(for%20shipping%20quote):%0AHow%20much%20I%E2%80%99d%20like%20to%20pay:%0A%0AThank%20you!">
+          <button
+            class="btn primary claim-btn"
+            type="button"
+            data-item="Pendant 2"
+            data-subject="Claim Pendant 2"
+          >
             Claim Pendant 2
-          </a>
+          </button>
         </article>
 
+        <!-- PENDANT 3 -->
         <article class="card featured">
           <div class="img-wrap">
             <img src="pendant3.jpg" alt="Pendant 3" />
@@ -112,12 +119,17 @@
           <p class="material">Shoreline stone • Pendant + chain included</p>
           <p class="desc">One-of-one piece, finished and ready to wear.</p>
           <p class="price">Pay What You Think Is Fair • Suggested Minimum: <strong>$20</strong></p>
-          <a class="btn primary"
-             href="mailto:rebecca.mcdonnell@outlook.com?subject=Claim%20Pendant%203&body=Hi%20Rebecca,%0A%0AI%E2%80%99d%20love%20to%20claim%20Pendant%203.%0A%0AMy%20name:%0APostal%20code%20(for%20shipping%20quote):%0AHow%20much%20I%E2%80%99d%20like%20to%20pay:%0A%0AThank%20you!">
+          <button
+            class="btn primary claim-btn"
+            type="button"
+            data-item="Pendant 3"
+            data-subject="Claim Pendant 3"
+          >
             Claim Pendant 3
-          </a>
+          </button>
         </article>
 
+        <!-- PENDANT 4 -->
         <article class="card featured">
           <div class="img-wrap">
             <img src="pendant4.jpg" alt="Pendant 4" />
@@ -126,12 +138,17 @@
           <p class="material">Shoreline stone • Pendant + chain included</p>
           <p class="desc">One-of-one piece, finished and ready to wear.</p>
           <p class="price">Pay What You Think Is Fair • Suggested Minimum: <strong>$20</strong></p>
-          <a class="btn primary"
-             href="mailto:rebecca.mcdonnell@outlook.com?subject=Claim%20Pendant%204&body=Hi%20Rebecca,%0A%0AI%E2%80%99d%20love%20to%20claim%20Pendant%204.%0A%0AMy%20name:%0APostal%20code%20(for%20shipping%20quote):%0AHow%20much%20I%E2%80%99d%20like%20to%20pay:%0A%0AThank%20you!">
+          <button
+            class="btn primary claim-btn"
+            type="button"
+            data-item="Pendant 4"
+            data-subject="Claim Pendant 4"
+          >
             Claim Pendant 4
-          </a>
+          </button>
         </article>
 
+        <!-- PENDANT 5 -->
         <article class="card featured">
           <div class="img-wrap">
             <img src="pendant5.jpg" alt="Pendant 5" />
@@ -140,12 +157,17 @@
           <p class="material">Shoreline stone • Pendant + chain included</p>
           <p class="desc">One-of-one piece, finished and ready to wear.</p>
           <p class="price">Pay What You Think Is Fair • Suggested Minimum: <strong>$20</strong></p>
-          <a class="btn primary"
-             href="mailto:rebecca.mcdonnell@outlook.com?subject=Claim%20Pendant%205&body=Hi%20Rebecca,%0A%0AI%E2%80%99d%20love%20to%20claim%20Pendant%205.%0A%0AMy%20name:%0APostal%20code%20(for%20shipping%20quote):%0AHow%20much%20I%E2%80%99d%20like%20to%20pay:%0A%0AThank%20you!">
+          <button
+            class="btn primary claim-btn"
+            type="button"
+            data-item="Pendant 5"
+            data-subject="Claim Pendant 5"
+          >
             Claim Pendant 5
-          </a>
+          </button>
         </article>
 
+        <!-- PENDANT 6 -->
         <article class="card featured">
           <div class="img-wrap">
             <img src="pendant6.jpg" alt="Pendant 6" />
@@ -154,12 +176,17 @@
           <p class="material">Shoreline stone • Pendant + chain included</p>
           <p class="desc">One-of-one piece, finished and ready to wear.</p>
           <p class="price">Pay What You Think Is Fair • Suggested Minimum: <strong>$20</strong></p>
-          <a class="btn primary"
-             href="mailto:rebecca.mcdonnell@outlook.com?subject=Claim%20Pendant%206&body=Hi%20Rebecca,%0A%0AI%E2%80%99d%20love%20to%20claim%20Pendant%206.%0A%0AMy%20name:%0APostal%20code%20(for%20shipping%20quote):%0AHow%20much%20I%E2%80%99d%20like%20to%20pay:%0A%0AThank%20you!">
+          <button
+            class="btn primary claim-btn"
+            type="button"
+            data-item="Pendant 6"
+            data-subject="Claim Pendant 6"
+          >
             Claim Pendant 6
-          </a>
+          </button>
         </article>
 
+        <!-- PENDANT 7 -->
         <article class="card featured">
           <div class="img-wrap">
             <img src="pendant7.jpg" alt="Pendant 7" />
@@ -168,12 +195,17 @@
           <p class="material">Shoreline stone • Pendant + chain included</p>
           <p class="desc">One-of-one piece, finished and ready to wear.</p>
           <p class="price">Pay What You Think Is Fair • Suggested Minimum: <strong>$20</strong></p>
-          <a class="btn primary"
-             href="mailto:rebecca.mcdonnell@outlook.com?subject=Claim%20Pendant%207&body=Hi%20Rebecca,%0A%0AI%E2%80%99d%20love%20to%20claim%20Pendant%207.%0A%0AMy%20name:%0APostal%20code%20(for%20shipping%20quote):%0AHow%20much%20I%E2%80%99d%20like%20to%20pay:%0A%0AThank%20you!">
+          <button
+            class="btn primary claim-btn"
+            type="button"
+            data-item="Pendant 7"
+            data-subject="Claim Pendant 7"
+          >
             Claim Pendant 7
-          </a>
+          </button>
         </article>
 
+        <!-- PENDANT 8 -->
         <article class="card featured">
           <div class="img-wrap">
             <img src="pendant8.jpg" alt="Pendant 8" />
@@ -182,24 +214,29 @@
           <p class="material">Shoreline stone • Pendant + chain included</p>
           <p class="desc">One-of-one piece, finished and ready to wear.</p>
           <p class="price">Pay What You Think Is Fair • Suggested Minimum: <strong>$20</strong></p>
-          <a class="btn primary"
-             href="mailto:rebecca.mcdonnell@outlook.com?subject=Claim%20Pendant%208&body=Hi%20Rebecca,%0A%0AI%E2%80%99d%20love%20to%20claim%20Pendant%208.%0A%0AMy%20name:%0APostal%20code%20(for%20shipping%20quote):%0AHow%20much%20I%E2%80%99d%20like%20to%20pay:%0A%0AThank%20you!">
+          <button
+            class="btn primary claim-btn"
+            type="button"
+            data-item="Pendant 8"
+            data-subject="Claim Pendant 8"
+          >
             Claim Pendant 8
-          </a>
+          </button>
         </article>
 
-        <article class="card featured">
+        <!-- PENDANT 9 (CLAIMED) -->
+        <article class="card featured is-claimed">
           <div class="img-wrap">
             <img src="pendant9.jpg" alt="Pendant 9" />
+            <span class="status-pill">Claimed</span>
           </div>
           <h3>Pendant 9</h3>
           <p class="material">Shoreline stone • Pendant + chain included</p>
           <p class="desc">One-of-one piece, finished and ready to wear.</p>
           <p class="price">Pay What You Think Is Fair • Suggested Minimum: <strong>$20</strong></p>
-          <a class="btn primary"
-             href="mailto:rebecca.mcdonnell@outlook.com?subject=Claim%20Pendant%209&body=Hi%20Rebecca,%0A%0AI%E2%80%99d%20love%20to%20claim%20Pendant%209.%0A%0AMy%20name:%0APostal%20code%20(for%20shipping%20quote):%0AHow%20much%20I%E2%80%99d%20like%20to%20pay:%0A%0AThank%20you!">
+          <button class="btn primary btn-disabled" type="button" disabled aria-disabled="true">
             CLAIMED
-          </a>
+          </button>
         </article>
 
       </div>
@@ -258,8 +295,130 @@
   </div>
 </footer>
 
+<!-- ADD-ON MODAL -->
+<div class="modal" id="addonModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="addonTitle">
+  <div class="modal-backdrop" data-close="true"></div>
+
+  <div class="modal-panel" role="document">
+    <button class="modal-close" type="button" aria-label="Close" data-close="true">×</button>
+
+    <p class="modal-kicker">Before you send your claim…</p>
+    <h3 class="modal-title" id="addonTitle">Would you like to add a surprise shoreline find?</h3>
+
+    <p class="modal-sub">
+      Add a small, curated shoreline find to your order.
+      Suggested add-on price: <strong>$15</strong>.
+    </p>
+
+    <div class="modal-actions">
+      <button class="btn primary modal-choice" type="button" data-choice="Yes — add a Surprise Shoreline Find (+$15 suggested)">
+        ✨ Yes — add a surprise find
+      </button>
+
+      <button class="btn ghost modal-choice" type="button" data-choice="I’d like to pick an add-on (please send options)">
+        🌊 I’d like to pick an add-on
+      </button>
+
+      <button class="btn modal-choice" type="button" data-choice="No add-on — just the pendant">
+        No thanks
+      </button>
+    </div>
+
+    <p class="modal-foot mini-note">
+      You’ll still email me as usual — this just adds your choice to the message.
+    </p>
+  </div>
+</div>
+
 <script>
+  // Footer year
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Modal + mailto flow
+  (function () {
+    const EMAIL_TO = "rebecca.mcdonnell@outlook.com";
+
+    const modal = document.getElementById("addonModal");
+    const modalPanel = modal.querySelector(".modal-panel");
+    const claimButtons = document.querySelectorAll(".claim-btn");
+    const choiceButtons = modal.querySelectorAll(".modal-choice");
+
+    let pending = { item: "", subject: "" };
+
+    function openModal() {
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      // focus first actionable button
+      const first = modal.querySelector(".modal-choice");
+      if (first) first.focus();
+    }
+
+    function closeModal() {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      pending = { item: "", subject: "" };
+    }
+
+    function buildMailto(choiceText) {
+      const subject = pending.subject || "Claim a pendant";
+      const item = pending.item || "a pendant";
+
+      const bodyLines = [
+        "Hi Rebecca,",
+        "",
+        `I’d love to claim ${item}.`,
+        "",
+        `Add-on choice: ${choiceText}`,
+        "",
+        "My name:",
+        "Postal code (for shipping quote):",
+        "How much I’d like to pay:",
+        "",
+        "Thank you!"
+      ];
+
+      const mailto =
+        "mailto:" + encodeURIComponent(EMAIL_TO) +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(bodyLines.join("\n"));
+
+      return mailto;
+    }
+
+    // Open modal when clicking any Claim button
+    claimButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        pending.item = btn.getAttribute("data-item") || "";
+        pending.subject = btn.getAttribute("data-subject") || "";
+        openModal();
+      });
+    });
+
+    // Handle choice selection → open email
+    choiceButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const choice = btn.getAttribute("data-choice") || "No add-on — just the pendant";
+        const mailto = buildMailto(choice);
+        closeModal();
+        window.location.href = mailto;
+      });
+    });
+
+    // Close modal on backdrop / close button
+    modal.addEventListener("click", (e) => {
+      const target = e.target;
+      if (target && target.getAttribute && target.getAttribute("data-close") === "true") {
+        closeModal();
+      }
+    });
+
+    // Close on Escape
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("is-open")) {
+        closeModal();
+      }
+    });
+  })();
 </script>
 
 </body>
