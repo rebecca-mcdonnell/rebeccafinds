@@ -237,6 +237,16 @@ a{ color: inherit; }
   object-fit: cover;
 }
 
+/* special fix for pendants 3, 4, and 5 */
+.img-wrap.image-contain{
+  background: #f7f1ee;
+}
+.img-wrap.image-contain img{
+  object-fit: contain;
+  object-position: center;
+  padding: 8px;
+}
+
 .status-pill{
   position: absolute;
   top: 10px;
@@ -474,6 +484,7 @@ a{ color: inherit; }
   .lede{ font-size: 15px; }
   .grid{ grid-template-columns: 1fr; }
   .img-wrap img{ height: 240px; }
+  .img-wrap.image-contain img{ padding: 6px; }
   .two-col{ grid-template-columns: 1fr; }
   .modal-panel{ margin-top: 7vh; }
 }
