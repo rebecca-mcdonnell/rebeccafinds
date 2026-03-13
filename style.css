@@ -237,6 +237,12 @@ a{ color: inherit; }
   object-fit: cover;
 }
 
+/* pendant specific crop fixes */
+
+.img-wrap.pendant14 img{
+  object-position: center 30%;
+}
+
 /* special fix for pendants 3, 4, and 5 */
 .img-wrap.image-contain{
   background: #f7f1ee;
