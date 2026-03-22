@@ -462,16 +462,22 @@ button{
   color: var(--muted);
 }
 
-/* MODAL */
+/* MODAL - force hidden until opened */
 .modal{
-  position: fixed;
+  position: fixed !important;
   inset: 0;
-  display: none;
-  z-index: 100;
+  display: none !important;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
 }
 
 .modal.is-open{
-  display: block;
+  display: block !important;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal-backdrop{
